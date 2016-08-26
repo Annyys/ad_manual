@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Sample</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!--Header共通設定-->
+    <header style="background-color:white">
+        <img src="images/Annyys-msis-logo.jpg" class="img-responsive" alt="ANNYYS_D">
+        <div class="container-fluid" style="background-color:#19538a">
+            <div class="row">
+                <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
+                <div class="col-md-offset-3 col-md-3">
+                    <form class="navbar-form">
+                        <input type="text" class="search-query" placeholder="Search">
+                    </form>
+                </div>
+            </div>
+            <div class="row" style="background-color:#7ba3ca">
+                <nav class="navbar-static-top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+                            <span class="sr-only">メニュー</span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="gnavi" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">TOP</a></li>
+                            <li><a href="001.html">目次</a></li>
+                            <li><a href="001-001.html">はじめに</a></li>
+                            <li><a href="001-002.html">セットアップ</a></li>
+                            <li><a href="002-001.html">診療の流れ</a></li>
+                            <li><a href="002-002.html">来院受付</a></li>
+                            <li><a href="002-003.html">診療画面</a></li>
+                            <li><a href="002-004.html">カルテ記録</a></li>
+                            <li><a href="002-005.html">患者情報</a></li>
+                            <li><a href="002-006.html">マスタ管理</a></li>
+                            <li><a href="002-008.html">基本設計</a></li>
+                            <li><a href="002-008.html">日レセ連携</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--コンテンツ設定-->
+    <p>　　</p>
+    <p>　　</p>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1" style="background-color:#19538a">1</div>
+            <div class="col-md-1">2</div>
+            <div class="col-md-1" style="background-color:#19538a">3</div>
+            <div class="col-md-1">4</div>
+            <div class="col-md-1" style="background-color:#19538a">5</div>
+            <div class="col-md-1">6</div>
+            <div class="col-md-1" style="background-color:#19538a">7</div>
+            <div class="col-md-1">8</div>
+            <div class="col-md-1" style="background-color:#19538a">9</div>
+            <div class="col-md-1">10</div>
+            <div class="col-md-1" style="background-color:#19538a">11</div>
+            <div class="col-md-1">12</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2" style="background-color:white;"></div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->                
+                <!--本文-->
+                <div id="annys-tx">
+                </div>
+            </div>
+            <div class="col-md-2" style="background-color:white;"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                001-001　はじめに
+                <hr class="hborder">
+                <ol type="1">
+                    <li>はじめに</li>
+                    <li>ANNYYS_Dの特徴</li>
+                    <li>メンテナンス性</li>
+                    <li>サポート</li>
+                </ol>
+                <p>　</p>
+                <p>　</p>
+                001-002　セットアップ
+                 <hr class="hborder">
+                <ol type="1">
+                    <li>セットアップ</li>
+                    <li>ANNYYS_Dパッケージ内容とファイルの配置場所</li>
+                    <li>動作環境</li>
+                    <li>ネットワークの構成例とFileMakerProのインストール</li>
+                    <li>FileMakerServer(Advanced)およびFileMakerProのインストール</li>
+                    <li>セキュリティ</li>
+                </ol>
+                <p>　</p>
+                <p>　</p>
+                002-001　診察の流れ
+                 <hr class="hborder">
+                <ol type="1">
+                    <li>診察の流れ</li>
+                    <li>全体の構成（概略）</li>
+                    <li>マスタ更新（DBManager）</li>
+                    <li>自動処理に関する内容</li>
+                    <li>FileMakerのバージョン</li>
+                </ol>
+                <p>　</p>
+                <p>　</p>
+                002-002　来院受付
+                 <hr class="hborder">
+                <ol type="1">
+                    <li>来院受付</li>
+                    <li>受付処理</li>
+                    <li>患者情報の読み込み</li>
+                    <li>バイタルの記録</li>
+                    <li>受付リストの状態</li>
+                    <li>受付一覧</li>
+                    <li>指示一覧</li>
+                    <li>受付内容のチェックボックス</li>
+                    <li>各種ボタン</li>
+                    <li>予約登録</li>
+                    <li>備考</li>
+                </ol>
+                <p>　</p>
+                <p>　</p>
+                002-003　診察画面
+                 <hr class="hborder">
+                <ol type="1">
+                    <li>診察画面</li>
+                    <li>初期画面</li>
+                    <li>履歴の参照</li>
+                    <li>指示（オーダー）</li>
+                    <li>T[所見]</li>
+                    <li>T[診断名]</li>
+                    <li>T[課題]（プロブレムリスト）</li>
+                    <li>T[病名]</li>
+                    <li>T[バイタル]</li>
+                    <li>T[履歴]</li>
+                    <li>T[書類]</li>
+                    <li>T[情報]</li>
+                    <li>T[登録]T[所見項目登録]</li>
+                    <li>T[登録]T[診察セット登録]</li>
+                </ol>
+                <p>　</p>
+                <p>　</p>
+            </div>  
+            
+            <div class="col-md-offset-1 col-md-3">
+                002-004　カルテ記録
+                <hr class="hborder">
+                <ol type="1">
+                    <li>カルテ記録</li>
+                    <li>SOAPの入力</li>
+                    <li>診療行為の入力</li>
+                    <li>目的の部分に項目が入らない時は</li>
+                    <li>【診察】</li>
+                    <li>【医管】</li>
+                    <li>【在宅】</li>
+                    <li>【在宅薬】</li>
+                    <li>【在宅材】</li>
+                    <li>【処方/内服・頓服】</li>
+                    <li>【処方/外用】</li>
+                    <li>【皮下筋注】</li>
+                    <li>【静注】</li>
+                    <li>【その他の注射】</li>
+                    <li>【注射薬剤】</li>
+                    <li>【処置】</li>
+                    <li>【処置薬剤】</li>
+                    <li>【手術】</li>
+                    <li>【麻酔】</li>
+                    <li>【検査】</li>
+                    <li>【病理】</li>
+                    <li>【画像】</li>
+                    <li>【その他】</li>
+                    <li>【コメント】</li>
+                    <li>Set</li>
+                    <li>Do</li>
+                    <li>定期処方</li>
+                    <li>病名確認</li>
+                    <li>会計送信</li>
+                    <li>会計送信の修正</li>
+                </ol>
+                <p>　</p>
+                <p>　</p>
+                002-005　患者情報
+                 <hr class="hborder">
+                <ol type="1">
+                    <li>患者情報</li>
+                    <li>T[基本情報]</li>
+                    <li>T[連絡先]</li>
+                    <li>T[保険]</li>
+                    <li>T[公費]</li>
+                    <li>T[病名]</li>
+                    <li>T[世帯]</li>
+                    <li>T[所属]</li>
+                    <li>T[履歴]</li>
+                    <li>T[書類]</li>
+                    <li>T[文章]</li>
+                    <li>T[意見書]</li>
+                    <li>T[災害の疑い]</li>
+                    <li>T[バイタル]</li>
+                    <li>T[イメージ]</li>
+                    <li>T[サマリ]</li>
+                </ol>
+                <p>　</p>
+                <p>　</p>
+            </div> 
+            
+            <div class="col-md-offset-1 col-md-3">
+                002-006　マスタ管理
+             <hr class="hborder">
+                001-002　セットアップ
+                 <hr class="hborder">
+                <ol type="1">
+                    <li>マスタ管理</li>
+                    <li>B[SET登録]</li>
+                    <li>L[病名マスタ]</li>
+                    <li>L[診療行為マスタ]</li>
+                    <li>L[薬剤・生薬マスタ]</li>
+                    <li>L[材料・フィルムマスタ・自費マスタ]</li>
+                    <li>L[用法・コメントマスタ]</li>
+                    <li>L[採用コードマスタ]</li>
+                </ol>
+                <p>　</p>
+                <p>　</p>
+                002-007　基本設計
+                 <hr class="hborder">
+                <ol type="1">
+                    <li>基本設計</li>
+                    <li>医療機関情報</li>
+                    <li>医師名</li>
+                    <li>診療科</li>
+                    <li>診療内容</li>
+                    <li>病棟</li>
+                    <li>日レセ</li>
+                    <li>API</li>
+                    <li>その他</li>
+                    <li>B[Object]</li>
+                    <li>B[所見項目]</li>
+                    <li>B[問診項目]</li>
+                    <li>B[利用項目]</li>
+                </ol>
+                <p>　</p>
+                <p>　</p>
+                002-008　日レセ連携
+                 <hr class="hborder">
+                <ol type="1">
+                    <li>日レセ連携</li>
+                    <li>連携の方向とタイミング</li>
+                    <li>患者情報</li>
+                    <li>受付登録</li>
+                    <li>診療行為送信</li>
+                    <li>診療行為訂正1（日レセで未会計）</li>
+                    <li>診療行為訂正2（日レセで会計済）</li>
+                    <li>予約</li>
+                </ol>
+                <p>　</p>
+                <p>　</p>
+            </div> 
+            
+        </div>
+        <!--//コンテンツ部終了//-->
+    </div>
+    
+    <p>　　</p>
+    <p>　　</p>
+    <p>　　</p>
+    <p>　　</p>
+   
+    <!--Footer設定-->
+    <footer>
+        <div class="container-fluid">
+            <p>Copyright © Msis,Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+  </body>
+</html>
