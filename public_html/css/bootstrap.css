@@ -187,6 +187,8 @@ td,
 th {
   padding: 0;
 }
+
+
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
@@ -6754,4 +6756,49 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+
+/*==================================================
+=            Bootstrap 3 メディア・クエリ             =
+==================================================*/
+ 
+/*==========  モバイル・ファーストの場合  ==========*/
+ 
+/* カスタム, iPhone Retinaディスプレイ */ 
+@media only screen and (min-width : 320px) {
+    
+}
+ 
+/* XSサイズ : Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+ 
+}
+ 
+/* Sサイズ、タブレット : Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+ 
+}
+ 
+/* Mサイズ、デスクトップ : Medium Devices, Desktops */
+@media only screen and (min-width : 960px) {
+ 
+     .index_hr {
+         width: 100%;
+        height: 2px;
+        border-bottom: 3px solid #4e7eab;
+    }
+    
+}
+ 
+/* Lサイズ、ワイドスクリーン : Large Devices, Wide Screens */
+
+/*@media only screen and (min-width : 1200px) {
+ 
+      .index_hr {
+         width: 100%;
+        height: 2px;
+        border-bottom: 3px solid #4e7eab;
+    }
+    
+}*/
+ 
+ 
