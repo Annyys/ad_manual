@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Sample</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!--Header共通設定-->
+    <header style="background-color:white">
+        <img src="images/Annyys-msis-logo.jpg" class="img-responsive" alt="ANNYYS_D">
+        <div class="container-fluid" style="background-color:#19538a">
+            <div class="row">
+                <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
+                <div class="col-md-offset-3 col-md-3">
+                    <form class="navbar-form">
+                        <input type="text" class="search-query" placeholder="Search">
+                    </form>
+                </div>
+            </div>
+            <div class="row" style="background-color:#7ba3ca">
+                <nav class="navbar-static-top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+                            <span class="sr-only">メニュー</span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="gnavi" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="[000_000]index.html">TOP</a></li>
+                            <li><a href="[010_000]mokuji.html">目次</a></li>
+                            <li><a href="[020_000]hajimeni.html">はじめに</a></li>
+                            <li><a href="[030_000]setup.html">セットアップ</a></li>
+                            <li><a href="[040_000]nagare.html">診察の流れ</a></li>
+                            <li><a href="[050_000]uketsuke.html">来院受付</a></li>
+                            <li><a href="[060_000]gamen.html">診察画面</a></li>
+                            <li><a href="[070_000]karute.html">カルテ記録</a></li>
+                            <li><a href="[080_000]kanja.html">患者情報</a></li>
+                            <li><a href="[090_000]master.html">マスタ管理</a></li>
+                            <li><a href="[010_000]sekkei.html">基本設計</a></li>
+                            <li><a href="[011_000]renkei.html">日レセ連携</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--コンテンツ設定-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3" style="background-color:white;">
+                <!--メニュー-->
+                <figure>
+                    <figcaption>目次</figcaption>              
+                            <ul type="1">
+                                <li>来院受付</li>
+                                <li><ul>
+                                <li>受付処理</li>
+                                <li>患者情報の読み込み</li>
+                                <li>バイタルの記録</li>
+                                <li>受付リストの状態</li>
+                                <li>受付一覧</li>
+                                <li>指示一覧</li>
+                                <li>受付内容のチェクボックス</li>
+                                <li>各種ボタン</li>
+                                <li>予約登録</li>
+                                <li>備考</li>
+                                </ul></li>
+                            </ul>
+                </figure>
+
+            </div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->
+                <p>　</p>
+                <p>　</p>
+
+                <h3>来院受付</h3>
+                <hr class="hborder">
+                <blockquote>来院受付</blockquote>
+                <!--本文-->
+                <div id="annys-tx">
+                    <p>ANNYYS_Dでは来院毎に受付を処理を行います。受付を行った際に受付番号が発行され、患者ID、日付け、受付番号の3つのキーで受診内容を区別します。午前と午後など同じ日に2回受診するような場合は2回受付処理を行います。受付画面には#L[メインメニュー]#B[外来受付]で受付画面へ移動します。</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-3" style="background-color:white;">
+            </div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->
+                <p>　</p>
+                <p>　</p>
+
+                <h3>受付処理</h3>
+                <hr class="hborder">
+                <blockquote>受付処理</blockquote>
+                <!--本文-->
+                <div id="annys-tx">
+                    <p>#B[+]を押すと新しいレコードが表示されます。</p>
+                    <p>患者ＩＤを入力しentキーを押します。</p>
+                     <p><img class="" src="images/050_000_uketsuke.png" width="1061" height="773" alt="外来受付"></p> 
+                     <p>該当患者名が表示されればこれで受付は完了です。</p>
+                     <p>診療科、医師、診療内容、受付時間等適宜変更してください。</p>
+                     <p>もし、登録済みの患者で診察カードが無いような場合は#B[患者検索]ボタンを押せば、名前（漢字・カナ）で患者検索ができます。</p>
+                     <p><img class="" src="images/050_001_kanja_kensaku.png" width="1062" height="167" alt="患者検索"></p>
+                     <p>検索で表示されたリストの名前・年齢・性別・住所などで本人であることが確認できれば、該当リストをクリックして受付処理を完了させることもできます。</p>
+                    <p><img class="" src="images/050_002_kanja_list.png" width="1062" height="773" alt="患者リスト"></p>
+                    <p>※検索速度は登録患者数のデータ量によって変わります。概ね１万件程度まではストレスなく動作可能と推測されます。</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-3" style="background-color:white;">
+            </div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->
+                <p>　</p>
+                <p>　</p>
+
+                <h3>患者情報の読み込み</h3>
+                <hr class="hborder">
+                <blockquote>患者情報の読み込み</blockquote>
+                <!--本文-->
+                <div id="annys-tx">
+                    <p>受付処理をしても患者情報が登録されていない場合は患者名は表示されません。このような場合新たに患者登録が必要ですが、ORCAと連携している場合は簡単に取り込むことが可能です。</p>
+                    <p><img class="" src="images/050_003_kanja_nashi.png" width="1063" height="773" alt="患者情報該当なし"></p> 
+                    <p>患者ＩＤを入力し何も出てこないので　<img class="" src="images/050_000_kanja_button.png" width="38" height="36" alt="患者ボタン">ボタンを押して患者情報画面を表示します。</p>
+                    <p>患者情報画面右上にある#B[確認]を押すと日レセに登録のある患者情報が読み込まれます。</p>
+                    <p>#B[戻る]で受付リストに戻ると、登録できた患者名が表示されています。</p>
+                    <p><img class="" src="images/050_003_kanja_info.png" width="1061" height="773" alt="患者情報表示"></p>
+                    <p>ORCAの設定確認は、メインメニューから基本設定に切り替えて、ORCAタブをクリックしてください。</p>
+                    <p>接続確認ボタンにて、秒数が進む事を確認出来れば、通信されているとの事です。</p>
+                    <p><img class="" src="images/050_004_kanja_yomikomi.png" width="1061" height="774" alt="オルカ接続確認"></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-3" style="background-color:white;">
+            </div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->
+                <p>　</p>
+                <p>　</p>
+
+                <h3>バイタルの記録</h3>
+                <hr class="hborder">
+                <blockquote>バイタルの記録</blockquote>
+                <!--本文-->
+                <div id="annys-tx">
+                    <p>受付リスト上にある#B[♥]で当日のバイタルでーたの記録が行えます。</p>
+                    <p>バイタルボタンは診察画面と受付画面で２ヶ所から、操作が可能です。</p>
+                    <p><img class="" src="images/050_005_baitaru_uketsuke.png" width="1060" height="772" alt="バイタル記録・受付"></p>
+                    <p><img class="" src="images/050_005_baitaru_shinsatsu.png" width="1060" height="772" alt="バイタル記録・診察"></p>
+                    <p>記録されたバイタルデータは診察画面の中ほどに表示されています。</p>
+                    <p>#T[バイタル]から内容を変更することもできます。</p>
+                    <p><img class="" src="images/050_005_baitaru_henkou.png" width="1059" height="771" alt="バイタル記録変更"></p>
+                    <p>WindowsのタスクスケジューラーやMacOSではcronコマンドなどを使えば定期的に処理が行え手間がかかりません。</p> 
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-3" style="background-color:white;">
+            </div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->
+                <p>　</p>
+                <p>　</p>
+
+                <h3>受付リストの状態</h3>
+                <hr class="hborder">
+                <blockquote>受付リストの状態</blockquote>
+                <!--本文-->
+                <div id="annys-tx">
+                    <p><img class="" src="images/050_006_kaikei.png" width="1061" height="772" alt="受付状態"></p>
+                    <p>受付リストでは、行中ほどに表示される「空欄」「会計待ち」「会計済み」で受付済み患者の現在の状態を把握できます。</p>
+                    <p>受付した時点では「空欄」で、まだ何も進行していない状態を表します。</p>
+                    <p>医師が診察を終了した時点で「会計待ち」となり、会計処理が行える事を表示しています。</p>
+                    <p>会計が終了したものは「会計済み」となり、会計終了時間などが日レセより取り込まれます。（#B[本日]を押したときに読み込みます。）</p>
+                </div>
+            </div>
+                
+        </div>
+        <div class="row">
+            
+            <div class="col-md-3" style="background-color:white;">
+            </div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->
+                <p>　</p>
+                <p>　</p>
+
+                <h3>受付一覧</h3>
+                <hr class="hborder">
+                <blockquote>受付一覧</blockquote>
+                <!--本文-->
+                <div id="annys-tx">
+                    <p>#B[受付一覧]では受付リストを簡素化し一度に多くの行を見る事ができるリストです。こちらでも状態が確認できます。</p>
+                    <p><img class="" src="images/050_006_uketsuke_ichiran.png" width="1059" height="771" alt="受付一覧"></p>
+                </div>
+            </div>
+                
+        </div>
+        <div class="row">
+            
+            <div class="col-md-3" style="background-color:white;">
+            </div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->
+                <p>　</p>
+                <p>　</p>
+
+                <h3>指示一覧</h3>
+                <hr class="hborder">
+                <blockquote>指示一覧</blockquote>
+                <!--本文-->
+                <div id="annys-tx">
+                <p>#B[指示一覧]は処置室などで来院患者の診察状況を確認するための画面です。患者ごとに注射・処置・検査などが登録された内容がオンタイムで表示されるようになっています。</p>
+                <p><img class="" src="images/050_007_shiji_ichiran.png" width="1059" height="771" alt="指示一覧"></p>
+                <p>表示された内容は、例えば[注]（注射）があった場合はそこをクリックすると指示内容として内容を確認することができます。</p>
+                <p><img class="" src="images/050_007_shiji_chuusha.png" width="1060" height="772" alt="指示一覧"></p>
+                </div>
+            </div>
+                
+        </div>
+        <div class="row">
+            
+            <div class="col-md-3" style="background-color:white;">
+            </div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->
+                <p>　</p>
+                <p>　</p>
+
+                <h3>受付内容のチェクボックス</h3>
+                <hr class="hborder">
+                <blockquote>受付内容のチェクボックス</blockquote>
+                <!--本文-->
+                <div id="annys-tx">
+                <p><img class="" src="images/050_008_uketsuke_naiyo.png" width="1060" height="772" alt="指示一覧"></p>
+                <p>基本の受付画面には診察内容をさらに細かく判断できるようチェックする部分が設けられています。デフォルトではサンプルデータが入っていますが、この内容は自由に変更できます。</p>
+                <p>この部分の値が設定されている部分はEX_SOAPファイルの値一覧項目で、簡単に編集することができます。</p>
+                <p>EX_SOAPファイルそものは、カルテ記録そのものをテンプレート化して定型的な診察内容の入力を簡単するために利用する機能拡張ファイルです。</p>
+                <p>オリジナルの値一覧などは全てこのファイルに保管されています。</p><br>
+
+                <p>編集方法は次の通りです。</p>
+                <ol>
+                    <li>EX_SOAP(.fmp12)ファイルを開きます<br>
+                        <img class="" src="images/050_008_soap1.png" width="504" height="772" alt="ソープ1">
+                        <img class="" src="images/050_008_soap2.png" width="504" height="773" alt="ソープ2">
+                    </li>
+                    <li>EX_SOAP(.fmp12)ファイルが前面に来ている状態で「ファイル」>「管理」＞「値一覧」を選択します。<br>
+                        <img class="" src="images/050_008_soap3.png" width="811" height="464" alt="ソープ1"><br>
+                        “ファイル「EX_SOAP」の値一覧の管理”リストにある「OD_V1」と「OD_V2」の値を編集します。<br>
+                        ※受付リスト内容のOD_V1は左側、OD_V2は右側に反映されます。                    
+                    </li>
+                    <li>
+                        
+                    </li>
+                </ol>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+    <!--//コンテンツ部終了//-->
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <!--Footer設定-->
+    <footer>
+        <div class="container-fluid">
+            <p>Copyright © Msis,Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+  </body>
+</html>
