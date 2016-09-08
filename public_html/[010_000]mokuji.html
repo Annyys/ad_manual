@@ -11,8 +11,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="js/bootstrap.min.js"></script>
-    <!--slicknav読み込み-->
-
+    <!--SPトグル読み込み-->
+<script>
+    $(function(){
+        $(".globNav-toggle").on("click", function() {
+            $(this).next().slideToggle();
+        });
+    });
+</script>
   
 
   </head>
@@ -37,6 +43,27 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
+                    
+                    <!--スマホ用トグル-->
+                    <nav class="globNav-row">
+                        <span class="globNav-toggle">　メニュー</span>
+                             <ul class="globNav-inner" style="list-style:none">
+                                <li><a href="index_1.html">TOP</a></li>
+                                <li><a href="[010_000]mokuji.html">目次</a></li>
+                                <li><a href="[020_000]hajimeni.html">はじめに</a></li>
+                                <li><a href="[030_000]setup.html">セットアップ</a></li>
+                                <li><a href="[040_000]nagare.html">診察の流れ</a></li>
+                                <li><a href="[050_000]uketsuke.html">来院受付</a></li>
+                                <li><a href="[060_000]gamen.html">診察画面</a></li>
+                                <li><a href="[070_000]karute.html">カルテ記録</a></li>
+                                <li><a href="[080_000]kanja.html">患者情報</a></li>
+                                <li><a href="[090_000]master.html">マスタ管理</a></li>
+                                <li><a href="[010_000]sekkei.html">基本設計</a></li>
+                                <li><a href="[011_000]renkei.html">日レセ連携</a></li>
+                             </ul>
+　　　　　　　　　　　</nav>
+                    
+                    <!--PC用グローバルナビ-->
                     <div id="gnavi" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav" role="menu">
                             <li><a href="[000_000]index.html">TOP</a></li>

@@ -6784,6 +6784,20 @@ button.close {
 /* カスタム, iPhone Retinaディスプレイ */ 
 @media only screen and (min-width : 320px) {
     
+    
+     .col-md-1 {
+        display: none;
+    }
+    
+    .globNav-toggle { display: block;}
+.globNav-inner{ display: none
+                list-style: none;
+                }
+.globNav-inner > li { float: none;}
+
+globNav-inner{ display: block!important;}
+
+    
     .left-sp {
         font-size:21px;
     }
@@ -6797,16 +6811,27 @@ button.close {
     
     .mh4 {
         margin-top: 10px;
+        font-weight: bold;
     }
     
     .navbar-form {
   padding-bottom: 20px;
 }
-    
+
 }
  
 /* XSサイズ : Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
+    
+     .col-md-1 {
+        display: none;
+    }
+    
+    .globNav-toggle { display: block;}
+.globNav-inner{ display: none
+                list-style: none;
+               }
+.globNav-inner > li { float: none;}
     
     .left-sp {
         font-size:24px;
@@ -6820,16 +6845,30 @@ button.close {
     
     .mh4 {
         margin-top: 20px;
+         font-weight: bold;
     }
     
     .navbar-form {
   padding-bottom: 20px;
 }
  
+
 }
  
 /* Sサイズ、タブレット : Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+     .globNav-row {display: none;}
+    .globNav-toggle {display: none;}
+    .globNav-inner{ 
+        overflow: hidden;
+        list-style: none;
+    }
+    
+    .globNav-inner > li { float: left;}
+ 
+      .col-md-1 {
+        display: none;
+    }
     
      .index_hr {
          width: 100%;
@@ -6843,6 +6882,7 @@ button.close {
     
     .mh4 {
         margin-top: 10px;
+        font-weight: bold;
     }
  
     .left-sp {
@@ -6853,7 +6893,12 @@ button.close {
  
 /* Mサイズ、デスクトップ : Medium Devices, Desktops */
 @media only screen and (min-width : 960px) {
- 
+    .globNav-row {display: none;}
+    .globNav-toggle {display: none;}
+    .globNav-inner{ overflow: hidden;
+    list-style: none;
+    }
+    .globNav-inner > li { float: left;}
    
     .col-md-1 {
         display: none;
@@ -6867,6 +6912,7 @@ button.close {
     
     .mh4 {
         margin-top: 20px;
+        font-weight: bold;
     }
     
 }
