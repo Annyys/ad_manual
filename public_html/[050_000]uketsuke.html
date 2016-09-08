@@ -60,9 +60,8 @@
                 <!--メニュー-->
                 <figure>
                     <figcaption>目次</figcaption>              
-                            <ul type="1">
+                            <ul type="1" style="list-style: none;">
                                 <li>来院受付</li>
-                                <li><ul>
                                 <li>受付処理</li>
                                 <li>患者情報の読み込み</li>
                                 <li>バイタルの記録</li>
@@ -73,7 +72,6 @@
                                 <li>各種ボタン</li>
                                 <li>予約登録</li>
                                 <li>備考</li>
-                                </ul></li>
                             </ul>
                 </figure>
 
@@ -88,7 +86,7 @@
                 <blockquote>来院受付</blockquote>
                 <!--本文-->
                 <div id="annys-tx">
-                    <p>ANNYYS_Dでは来院毎に受付を処理を行います。受付を行った際に受付番号が発行され、患者ID、日付け、受付番号の3つのキーで受診内容を区別します。午前と午後など同じ日に2回受診するような場合は2回受付処理を行います。受付画面には#L[メインメニュー]#B[外来受付]で受付画面へ移動します。</p>
+                    <p>ANNYYS_Dでは来院毎に受付を処理を行います。受付を行った際に受付番号が発行され、<br>患者ID、日付け、受付番号の3つのキーで受診内容を区別します。<br>午前と午後など同じ日に2回受診するような場合は2回受付処理を行います。<br>受付画面には<strong>L[メインメニュー]</strong>→<strong>B[外来受付]</strong>で受付画面へ移動します。</p>
                 </div>
             </div>
         </div>
@@ -106,16 +104,16 @@
                 <blockquote>受付処理</blockquote>
                 <!--本文-->
                 <div id="annys-tx">
-                    <p>#B[+]を押すと新しいレコードが表示されます。</p>
-                    <p>患者ＩＤを入力しentキーを押します。</p>
-                     <p><img class="" src="images/050_000_uketsuke.png" width="1061" height="773" alt="外来受付"></p> 
-                     <p>該当患者名が表示されればこれで受付は完了です。</p>
+                    <p><strong>B[+]</strong>を押すとポップアップが表示されます。</p>
+                    <p>ボックスに患者ＩＤを入力しentキーを押します。</p>
+                     <p><img class="" src="images/050_000_uketsuke.png" width="1000" height="720" alt="外来受付"></p> 
+                     <p>該当患者名が表示され、<strong>B[受付]</strong>を押すと受付は完了です。</p>
                      <p>診療科、医師、診療内容、受付時間等適宜変更してください。</p>
-                     <p>もし、登録済みの患者で診察カードが無いような場合は#B[患者検索]ボタンを押せば、名前（漢字・カナ）で患者検索ができます。</p>
-                     <p><img class="" src="images/050_001_kanja_kensaku.png" width="1062" height="167" alt="患者検索"></p>
-                     <p>検索で表示されたリストの名前・年齢・性別・住所などで本人であることが確認できれば、該当リストをクリックして受付処理を完了させることもできます。</p>
-                    <p><img class="" src="images/050_002_kanja_list.png" width="1062" height="773" alt="患者リスト"></p>
-                    <p>※検索速度は登録患者数のデータ量によって変わります。概ね１万件程度まではストレスなく動作可能と推測されます。</p>
+                     <p>もし、登録済みの患者で診察カードが無いような場合は<strong>B[患者検索]</strong>ボタンを押せば、名前（漢字・カナ）で患者検索ができます。</p>
+                     <p><img class="" src="images/050_001_kanja_kensaku.png" width="1000" height="104" alt="患者検索"></p>
+                     <p>検索で表示されたリストの名前・年齢・性別・住所などで本人であることが確認できれば、<br>該当リストをクリックして受付処理を完了させることもできます。</p>
+                    <p><img class="" src="images/050_002_kanja_list.png" width="1000" height="694" alt="患者リスト"></p>
+                    <p>※検索速度は登録患者数のデータ量によって変わります。<br>概ね１万件程度まではストレスなく動作可能と推測されます。</p>
 
                 </div>
             </div>
@@ -134,15 +132,15 @@
                 <blockquote>患者情報の読み込み</blockquote>
                 <!--本文-->
                 <div id="annys-tx">
-                    <p>受付処理をしても患者情報が登録されていない場合は患者名は表示されません。このような場合新たに患者登録が必要ですが、ORCAと連携している場合は簡単に取り込むことが可能です。</p>
-                    <p><img class="" src="images/050_003_kanja_nashi.png" width="1063" height="773" alt="患者情報該当なし"></p> 
-                    <p>患者ＩＤを入力し何も出てこないので　<img class="" src="images/050_000_kanja_button.png" width="38" height="36" alt="患者ボタン">ボタンを押して患者情報画面を表示します。</p>
-                    <p>患者情報画面右上にある#B[確認]を押すと日レセに登録のある患者情報が読み込まれます。</p>
-                    <p>#B[戻る]で受付リストに戻ると、登録できた患者名が表示されています。</p>
-                    <p><img class="" src="images/050_003_kanja_info.png" width="1061" height="773" alt="患者情報表示"></p>
-                    <p>ORCAの設定確認は、メインメニューから基本設定に切り替えて、ORCAタブをクリックしてください。</p>
-                    <p>接続確認ボタンにて、秒数が進む事を確認出来れば、通信されているとの事です。</p>
-                    <p><img class="" src="images/050_004_kanja_yomikomi.png" width="1061" height="774" alt="オルカ接続確認"></p>
+                    <p>受付処理をしても患者情報が登録されていない場合は患者名は表示されません。<br>このような場合新たに患者登録が必要ですが、ORCAと連携している場合は簡単に取り込むことが可能です。</p>
+                    <p><img class="" src="images/050_003_kanja_list_0.png" width="1000" height="336" alt="患者情報該当なし"></p> 
+                    <p>患者ＩＤを入力し何も出てこないので<strong>L[患者検索]</strong>の<img class="" src="images/050_000_kanja_button.png" width="38" height="36" alt="患者ボタン">ボタンを押して患者情報画面を表示します。</p>
+                    <p><img class="" src="images/050_003_kanja_info.png" width="1000" height="727" alt="患者情報表示"></p>
+                    <p>患者情報画面右上にある<strong>B[確認]</strong>を押すと日レセに登録のある患者情報が読み込まれます。</p>
+                    <p><strong>B[戻る]</strong>で受付リストに戻ると、登録できた患者名が表示されています。</p>
+                    <p><img class="" src="images/050_003_kanja_list_1.png" width="1000" height="229" alt="患者情報該当あり"></p>
+                    <p>※【ORCAの設定確認】<br>メインメニューから基本設定に切り替え、ORCAタブをクリックしてください。<br>接続確認ボタンにて、秒数が進む事を確認出来れば、通信されているとの事です。</p>
+                    <p><img class="" src="images/050_004_kanja_yomikomi.png" width="1000" height="729" alt="オルカ接続確認"></p>
 
                 </div>
             </div>
@@ -161,14 +159,11 @@
                 <blockquote>バイタルの記録</blockquote>
                 <!--本文-->
                 <div id="annys-tx">
-                    <p>受付リスト上にある#B[♥]で当日のバイタルでーたの記録が行えます。</p>
-                    <p>バイタルボタンは診察画面と受付画面で２ヶ所から、操作が可能です。</p>
-                    <p><img class="" src="images/050_005_baitaru_uketsuke.png" width="1060" height="772" alt="バイタル記録・受付"></p>
-                    <p><img class="" src="images/050_005_baitaru_shinsatsu.png" width="1060" height="772" alt="バイタル記録・診察"></p>
-                    <p>記録されたバイタルデータは診察画面の中ほどに表示されています。</p>
-                    <p>#T[バイタル]から内容を変更することもできます。</p>
-                    <p><img class="" src="images/050_005_baitaru_henkou.png" width="1059" height="771" alt="バイタル記録変更"></p>
-                    <p>WindowsのタスクスケジューラーやMacOSではcronコマンドなどを使えば定期的に処理が行え手間がかかりません。</p> 
+                    <p>受付リスト上にある<strong>B[♥]</strong>で当日のバイタルデータの記録が行えます。</p>
+                    <p><img class="" src="images/050_005_baitaru_button.png" width="1000" height="158" alt="バイタルボタン"></p>
+                    <p><img class="" src="images/050_005_baitaru_button2.png" width="565" height="430" alt="バイタルボタン"></p>
+                    <p>記録されたバイタルデータは診察画面からも参照できます。<br><strong>T[バイタル]</strong>から内容を変更することもできます。</p>
+                    <p><img class="" src="images/050_005_baitaru_shinsatsu.png" width="1000" height="722" alt="バイタル記録変更"></p>
                 </div>
             </div>
         </div>
@@ -186,11 +181,11 @@
                 <blockquote>受付リストの状態</blockquote>
                 <!--本文-->
                 <div id="annys-tx">
-                    <p><img class="" src="images/050_006_kaikei.png" width="1061" height="772" alt="受付状態"></p>
+                    <p><img class="" src="images/050_006_kaikei.png" width="1000" height="721" alt="受付状態"></p>
                     <p>受付リストでは、行中ほどに表示される「空欄」「会計待ち」「会計済み」で受付済み患者の現在の状態を把握できます。</p>
                     <p>受付した時点では「空欄」で、まだ何も進行していない状態を表します。</p>
                     <p>医師が診察を終了した時点で「会計待ち」となり、会計処理が行える事を表示しています。</p>
-                    <p>会計が終了したものは「会計済み」となり、会計終了時間などが日レセより取り込まれます。（#B[本日]を押したときに読み込みます。）</p>
+                    <p>会計が終了したものは「会計済み」となり、会計終了時間などが日レセより取り込まれます。（<strong>B[本日]</strong>を押したときに読み込みます。）</p>
                 </div>
             </div>
                 
@@ -209,8 +204,8 @@
                 <blockquote>受付一覧</blockquote>
                 <!--本文-->
                 <div id="annys-tx">
-                    <p>#B[受付一覧]では受付リストを簡素化し一度に多くの行を見る事ができるリストです。こちらでも状態が確認できます。</p>
-                    <p><img class="" src="images/050_006_uketsuke_ichiran.png" width="1059" height="771" alt="受付一覧"></p>
+                    <p><strong>B[受付一覧]</strong>では受付リストを簡素化し一度に多くの行を見る事ができるリストです。こちらでも状態が確認できます。</p>
+                    <p><img class="" src="images/050_006_uketsuke_ichiran.png" width="1000" height="404" alt="受付一覧"></p>
                 </div>
             </div>
                 
@@ -229,10 +224,10 @@
                 <blockquote>指示一覧</blockquote>
                 <!--本文-->
                 <div id="annys-tx">
-                <p>#B[指示一覧]は処置室などで来院患者の診察状況を確認するための画面です。患者ごとに注射・処置・検査などが登録された内容がオンタイムで表示されるようになっています。</p>
-                <p><img class="" src="images/050_007_shiji_ichiran.png" width="1059" height="771" alt="指示一覧"></p>
-                <p>表示された内容は、例えば[注]（注射）があった場合はそこをクリックすると指示内容として内容を確認することができます。</p>
-                <p><img class="" src="images/050_007_shiji_chuusha.png" width="1060" height="772" alt="指示一覧"></p>
+                    <p><strong>B[指示一覧]</strong>は処置室などで来院患者の診察状況を確認するための画面です。患者ごとに注射・処置・検査などが登録された内容がオンタイムで表示されるようになっています。</p>
+                <p><img class="" src="images/050_007_shiji_ichiran.png" width="1000" height="269" alt="指示一覧"></p>
+                <p>表示された内容は、例えば<strong>[注]</strong>（注射）があった場合はそこをクリックすると指示内容として内容を確認することができます。</p>
+                <p><img class="" src="images/050_007_shiji_chuusha.png" width="1000" height="731" alt="指示注射"></p>
                 </div>
             </div>
                 
@@ -251,30 +246,104 @@
                 <blockquote>受付内容のチェクボックス</blockquote>
                 <!--本文-->
                 <div id="annys-tx">
-                <p><img class="" src="images/050_008_uketsuke_naiyo.png" width="1060" height="772" alt="指示一覧"></p>
-                <p>基本の受付画面には診察内容をさらに細かく判断できるようチェックする部分が設けられています。デフォルトではサンプルデータが入っていますが、この内容は自由に変更できます。</p>
-                <p>この部分の値が設定されている部分はEX_SOAPファイルの値一覧項目で、簡単に編集することができます。</p>
-                <p>EX_SOAPファイルそものは、カルテ記録そのものをテンプレート化して定型的な診察内容の入力を簡単するために利用する機能拡張ファイルです。</p>
-                <p>オリジナルの値一覧などは全てこのファイルに保管されています。</p><br>
+                <p><img class="" src="images/050_008_uketsuke_popup.png" width="1000" height="383" alt="受付ポップアップ"></p>
+                <p>基本の受付画面には診察内容をさらに細かく判断できるようチェックする部分が設けられています。<br>
+                デフォルトではサンプルデータが入っていますが、この内容は自由に変更できます。<br>
+                この部分の値が設定されている部分はEX_SOAPファイルの値一覧項目で、簡単に編集することができます。<br>
+                EX_SOAPファイルそのものは、カルテ記録そのものをテンプレート化して定型的な診察内容の入力を簡単するために利用する機能拡張ファイルです。<br>
+                オリジナルの値一覧などは全てこのファイルに保管されています。
+                </p><br>
+                <p>診察画面のアルファベット<strong>B[S]、B [O]、B [A]、B [P]</strong>を押すとポップアップが出てきます。</p>
+                <p><img class="" src="images/050_008_uketsuke_naiyo.png" width="1000" height="493" alt="受付ポップアップ"></p>
 
                 <p>編集方法は次の通りです。</p>
                 <ol>
                     <li>EX_SOAP(.fmp12)ファイルを開きます<br>
-                        <img class="" src="images/050_008_soap1.png" width="504" height="772" alt="ソープ1">
-                        <img class="" src="images/050_008_soap2.png" width="504" height="773" alt="ソープ2">
+                        <img class="" src="images/050_008_soap1.png" width="450" height="690" alt="ソープ1">
+                        <img class="" src="images/050_008_soap2.png" width="450" height="690" alt="ソープ2">
+                        <div style="border: solid 1px; width: 450px"><h4>なぜ別のファイル？</h4>
+                            <p>ANNYYS_Dがバージョンアップしたときでも（※）個々の設定した内容が<br>永続的に利用できるようにするため、このような方法を取っています。</p>
+                        </div>
                     </li>
                     <li>EX_SOAP(.fmp12)ファイルが前面に来ている状態で「ファイル」>「管理」＞「値一覧」を選択します。<br>
-                        <img class="" src="images/050_008_soap3.png" width="811" height="464" alt="ソープ1"><br>
+                        <img class="" src="images/050_008_soap20.png" width="206" height="156" alt="ソープ20"><br>
+                        <img class="" src="images/050_008_soap3.png" width="811" height="464" alt="ソープ3"><br>
                         “ファイル「EX_SOAP」の値一覧の管理”リストにある「OD_V1」と「OD_V2」の値を編集します。<br>
                         ※受付リスト内容のOD_V1は左側、OD_V2は右側に反映されます。                    
                     </li>
-                    <li>
+                    <li>「値一覧の編集」画面では”カスタム値を使用”部分にテキスト入力してゆきます。<br>
+                        項目ごとに改行で区切ります。<br>
+                        <img class="" src="images/050_008_soap4.png" width="468" height="384" alt="ソープ4">
                         
                     </li>
                 </ol>
                 </div>
             </div>
                 
+        </div>
+        <div class="row">
+            
+            <div class="col-md-3" style="background-color:white;">
+            </div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->
+                <p>　</p>
+                <p>　</p>
+
+                <h3>各種ボタン</h3>
+                <hr class="hborder">
+                <blockquote>各種ボタン</blockquote>
+                <!--本文-->
+                <div id="annys-tx">
+                <p><img class="" src="images/050_009_button.png" width="439" height="33" alt="ボタン"></p>
+                <p>受付リストには[現在][本日][前日][翌日][当月][前月][翌月][検索]などのボタンがあり、以下のように動作します。</p>
+                <p><strong>B[現在]</strong>：当日の「会計済み」以外のリストを表示します。（このボタンを押して該当レコードがなくなったら現在院内には誰も居ないという事になります。）</p>
+                <p><strong>B[本日]</strong>：当日のリストを表示します。</p>
+                <p><strong>B[前日]</strong>：前日のリストを表示します。続けて押す事で1日ずつ前の日付けに移行します。</p>
+                <p><strong>B[翌日]</strong>：翌日のリストを表示します。続けて押す事で1日ずつ次の日付けに移行します。</p>
+                <p><strong>B[当月]</strong>：今月のリストを表示します。</p>
+                <p><strong>B[前月]</strong>：前月のリストを表示します。続けて押す事で1月ずつ前の月に移行します。</p>
+                <p><strong>B[翌月]</strong>：翌月のリストを表示します。続けて押す事で1月ずつ次の月に移行します。</p>
+                <p><strong>B[検索]</strong>：任意の検索条件を指定できます。<strong>B[検索]</strong>を押し（赤くなる）条件を入力したら<strong>B[検索]</strong>を再び押すと検索が実行されます。</p>
+                </div>
+            </div>
+                
+        </div>
+        <div class="row">
+            
+            <div class="col-md-3" style="background-color:white;">
+            </div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->
+                <p>　</p>
+                <p>　</p>
+
+                <h3>予約登録</h3>
+                <hr class="hborder">
+                <blockquote>予約登録</blockquote>
+                <!--本文-->
+                <div id="annys-tx">
+                    <p>予約情報登録も日付けや時間を予約日に変更することでこの外来受付画面に登録します。<br>予約日が来た場合<strong>B｢現在」</strong>または<strong>B「当日」</strong>で登録済みの受付リストが表示されます。</p>
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            
+            <div class="col-md-3" style="background-color:white;">
+            </div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->
+                <p>　</p>
+                <p>　</p>
+
+                <h3>備考</h3>
+                <hr class="hborder">
+                <blockquote>備考</blockquote>
+                <!--本文-->
+                <div id="annys-tx">
+                    <p>受付処理した患者は１：受付日、２：受付番号、３：患者ＩＤの３つがキーとなりその後登録される診療所法や会計情報が管理されます。よって例えば同日の受診が２回以上発生した場合２の受付番号が変化する事になりこれらの受診内容は明確に分けて管理されますので受付処理を通し処理を続けるようにしてください。</p>
+                </div>
+            </div>    
         </div>
     </div>
     <!--//コンテンツ部終了//-->

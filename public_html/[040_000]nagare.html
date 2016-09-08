@@ -60,7 +60,7 @@
                 <!--メニュー-->
                 <figure>
                     <figcaption>目次</figcaption>              
-                            <ul type="1">
+                    <ul type="1" style="list-style: none;">
                                 <li>診察の流れ</li>
                                 <li>全体の構成（概略）</li>
                                 <li>マスタ更新（DBManager）</li>
@@ -108,24 +108,24 @@
                 <blockquote>全体の構成（概略）</blockquote>
                 <!--本文-->
                 <div id="annys-tx">
-                    <p>ANNYYS_Dを起動した際に表示される最初の画面で[メインメニュー]になっています。</p>
-                     <p><img class="" src="images/040_004_kousei.png" width="1061" height="773" alt="構成"></p> 
-                    <p>全他構成の概要としては[メインメニュー]を中心に４つのカテゴリに分かれています。</p>
-                     <p><img class="" src="images/040_005_mainmenu.png" width="1000" height="468" alt="構成"></p> 
+                    <p>ANNYYS_Dを起動した際に表示される最初の画面で<strong>[メインメニュー]</strong>になっています。</p>
+                     <p><img class="" src="images/040_004_kousei.png" width="1000" height="728" alt="構成"></p> 
+                     <p><img class="" src="images/040_005_mainmenu.png" width="1400" height="771" alt="構成"></p> 
                 </div>
+                <p>全他構成の概要としては<strong>[メインメニュー]</strong>>を中心に５つのカテゴリに分かれています。</p>
              <ul>
-                 <li>日常業務は[来院受付]⇔[診療記録]の繰り返しがほとんどです。たまに[患者情報]を参照する事もある。</li>
-                <li>[マスタ管理]や[基本設定]は設定の変更などがない限り日常ではほとんど使う事わないせん。</li>
-                 <li>[来院受付]来院患者の受付リストを作成します。<br>
-                    1回の来院につき1件の受付を行います。受付リストから[診療記録]へ移動する事ができます。<br>
-                    [診療記録]では来院毎の診療記録が行えます。診療行為など会計に送信するデータなどはリストから選択する形式で入力できるようになっています。</li>
-                 <li>[患者情報]患者情報を参照・修正が可能です。
+                 <li>日常業務は<strong>[来院受付]</strong>⇔<strong>[診療記録]</strong>の繰り返しがほとんどです。たまに<strong>[患者情報]</strong>を参照する事もある。</li>
+                <li><strong>[マスタ管理]</strong>や<strong>[基本設定]</strong>は設定の変更などがない限り日常ではほとんど使う事わないせん。</li>
+                 <li><strong>[来院受付]</strong>来院患者の受付リストを作成します。<br>
+                    1回の来院につき1件の受付を行います。受付リストから<strong>[診療記録]</strong>へ移動する事ができます。<br>
+                    <strong>[診療記録]</strong>では来院毎の診療記録が行えます。診療行為など会計に送信するデータなどはリストから選択する形式で入力できるようになっています。</li>
+                 <li><strong>[患者情報]</strong>患者情報を参照・修正が可能です。
                     名前・住所などの患者属性、保険公費情報、世帯情報、会社や学校の所属情報、診療記録およびサマリの閲覧が行えます。<br>
                     患者情報では、同データベース内の自宅電話番号１をキーとして家族世帯の関係を構築し、会社（学校）電話番号で所属組織関係を構築します。</li>
-                 <li>[マスタ管理]各種基本情報が収録されています。<br>
+                 <li><strong>[マスタ管理]</strong>各種基本情報が収録されています。<br>
                     病名マスタ、診療行為マスタ、薬剤マスタ、特定機材マスタなどの各種マスタなどが確認できます。<br>
-                    ※各種マスタ類で随時更新が必要なデータはDBManagerを使って更新できます。DBManagerは自動的に動作するように設定できほとんど手を煩わすことはありません。</li>
-                 <li>[基本設定]施設情報や医師名・診療科、日レセとの連携設定、その他設定を行います。</li>
+                    ※各種マスタ類で随時更新が必要なデータはDBManagerを使って更新できます。<br>DBManagerは自動的に動作するように設定できほとんど手を煩わすことはありません。</li>
+                 <li><strong>[基本設定]</strong>施設情報や医師名・診療科、日レセとの連携設定、その他設定を行います。</li>
              </ul>
             </div>
         </div>
@@ -204,8 +204,8 @@
                 <blockquote>FileMakerのバージョン</blockquote>
                 <!--本文-->
                 <div id="annys-tx">
-                    <p>&nbsp;&nbsp;&nbsp;FileMakerServer環境ではJDBC接続が行えないため、ロカールホスト(locakhost)のANNYYS_Dに対して処理を実行させる必要があります。このときFileMakerPro環境のJDBC接続を利用していますが、DB IP欄には「localhost」「127.0.0.1」アドレスしか指定はできません。（DB Managerと同じマシンで起動させる必要があります。）</p>
-                    <p>&nbsp;&nbsp;&nbsp;FileMakerServerホストのIPアドレスを指定してネットワーク上で処理を実行したい場合はFileMakerServerAdvancedのバージョンが必要です。</p> 
+                    <p>FileMakerServer環境ではJDBC接続が行えないため、ローカルホスト(localhost)のANNYYS_Dに対して処理を実行させる必要があります。このときFileMakerPro環境のJDBC接続を利用していますが、DB IP欄には「localhost」「127.0.0.1」アドレスしか指定はできません。（DB Managerと同じマシンで起動させる必要があります。）</p>
+                    <p>FileMakerServerホストのIPアドレスを指定してネットワーク上で処理を実行したい場合はFileMakerServer<strong>Advanced</strong>のバージョンが必要です。</p> 
                 </div>
             </div>
             <div class="col-xs-2" style="background-color:white;"></div>
