@@ -1118,6 +1118,8 @@ figure {
   margin: 0;
 }
 
+
+
 .navbar-nav li a {
     color: #fff;
     font-size: 16px;
@@ -4368,6 +4370,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-nav {
     float: left;
     margin: 0;
+}
   }
   .navbar-nav > li {
     float: left;
@@ -4445,11 +4448,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-form .form-group:last-child {
     margin-bottom: 0;
   }
+  
+  .navbar-form {
+  padding-bottom: 10px;
+}
 }
 @media (min-width: 768px) {
   .navbar-form {
     width: auto;
-    padding-top: 0;
+    padding-top: 20px;
     padding-bottom: 0;
     margin-right: 0;
     margin-left: 0;
@@ -6777,6 +6784,10 @@ button.close {
 /* カスタム, iPhone Retinaディスプレイ */ 
 @media only screen and (min-width : 320px) {
     
+    .left-sp {
+        font-size:21px;
+    }
+    
      .index_hr {
          width: 100%;
         height: 2px;
@@ -6788,10 +6799,18 @@ button.close {
         margin-top: 10px;
     }
     
+    .navbar-form {
+  padding-bottom: 20px;
+}
+    
 }
  
 /* XSサイズ : Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
+    
+    .left-sp {
+        font-size:24px;
+    }
     
      .index_hr {
          width: 100%;
@@ -6800,8 +6819,12 @@ button.close {
     }
     
     .mh4 {
-        margin-top: 10px;
+        margin-top: 20px;
     }
+    
+    .navbar-form {
+  padding-bottom: 20px;
+}
  
 }
  
@@ -6814,10 +6837,18 @@ button.close {
         border-bottom: 3px solid #4e7eab;
     }
     
+    .navbar-form {
+  padding-bottom: 20px;
+}
+    
     .mh4 {
         margin-top: 10px;
     }
  
+    .left-sp {
+        font-size:26px;
+    }
+    
 }
  
 /* Mサイズ、デスクトップ : Medium Devices, Desktops */
@@ -6835,7 +6866,7 @@ button.close {
     }
     
     .mh4 {
-        margin-top: ;
+        margin-top: 20px;
     }
     
 }
