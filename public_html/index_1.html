@@ -4,13 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Sample</title>
+    <title>ANNYYS_D Webマニュアル　TOP</title>
     <!-- BootstrapのCSS読み込み -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- jQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="js/bootstrap.min.js"></script>
+     <!--SPトグル読み込み-->
+<script>
+    $(function(){
+        $(".globNav-toggle").on("click", function() {
+            $(this).next().slideToggle();
+        });
+    });
+</script>
   </head>
   <body>
     <!--Header共通設定-->
@@ -27,16 +35,35 @@
             </div>
             <div class="row" style="background-color:#7ba3ca">
                 <nav class="navbar-static-top">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
-                            <span class="sr-only">メニュー</span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
+                    
+                         <!--スマホ用トグル-->
+                    <nav class="globNav-row">
+                       <span class="globNav-toggle"><a class="menu-trigger" href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a></span>
+                             <ul class="globNav-inner" style="list-style:none">
+                                <li><a href="index_1.html">　　TOP</a></li>
+                                <li><a href="[010_000]mokuji.html">　　目次</a></li>
+                                <li><a href="[020_000]hajimeni.html">　　はじめに</a></li>
+                                <li><a href="[030_000]setup.html">　　セットアップ</a></li>
+                                <li><a href="[040_000]nagare.html">　　診察の流れ</a></li>
+                                <li><a href="[050_000]uketsuke.html">　　来院受付</a></li>
+                                <li><a href="[060_000]gamen.html">　　診察画面</a></li>
+                                <li><a href="[070_000]karute.html">　　カルテ記録</a></li>
+                                <li><a href="[080_000]kanja.html">　　患者情報</a></li>
+                                <li><a href="[090_000]master.html">　　マスタ管理</a></li>
+                                <li><a href="[010_000]sekkei.html">　　基本設計</a></li>
+                                <li><a href="[011_000]renkei.html">　　日レセ連携</a></li>
+                             </ul>
+　　　　　　　　　　　</nav><!--スマホ用トグル終わり-->
+                    
+                    <!--PC用グローバルナビ-->
                     <div id="gnavi" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html">TOP</a></li>
-                            <li><a href="001.html">目次</a></li>
+                            <li><a class="current_page" href="[000_000]index.html">TOP</a></li>
+                            <li><a href="[010_000]mokuji.html">目次</a></li>
                             <li><a href="001-001.html">はじめに</a></li>
                             <li><a href="001-002.html">セットアップ</a></li>
                             <li><a href="002-001.html">診療の流れ</a></li>
