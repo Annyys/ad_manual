@@ -6782,21 +6782,38 @@ button.close {
 /*==========  モバイル・ファーストの場合  ==========*/
  
 /* カスタム, iPhone Retinaディスプレイ */ 
-@media only screen and (min-width : 320px) {
+@media only screen and (min-width : 280px) {
     
     
      .col-md-1 {
         display: none;
     }
     
+    
     .globNav-toggle { display: block;}
-.globNav-inner{ display: none
-                list-style: none;
-                }
+.globNav-inner{ display: none}
 .globNav-inner > li { float: none;}
+    
+    
+.globNav-inner{ 
+    margin-left:0;
+    padding-left: 0;
+}
 
-globNav-inner{ display: block!important;}
+.globNav-inner {
+    margin-top: 10px;
+}
 
+.globNav-inner li {
+   
+}
+
+.globNav-inner li a{
+    font-size: 14px;
+    color: #333;
+    line-height: 2.0;
+}
+    
     
     .left-sp {
         font-size:21px;
@@ -6818,6 +6835,75 @@ globNav-inner{ display: block!important;}
   padding-bottom: 20px;
 }
 
+.menu-trigger,
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+.menu-trigger {
+	position: relative;
+	width: 50px;
+	height: 40px;
+}
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: #333;
+	border-radius: 4px;
+}
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+.menu-trigger span:nth-of-type(2) {
+	top: 20px;
+}
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+  .navbar-header {
+        height: 0px;
+    }
+    
+    .navbar-form {
+  padding-bottom: 20px;
+}
+ 
+.menu-trigger,
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+.menu-trigger {
+	position: relative;
+	width: 30px;
+	height: 40px;
+        margin-left: 12px;
+        top: 3px;
+}
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #333;
+	border-radius: 4px;
+}
+.menu-trigger span:nth-of-type(1) {
+	top: 19px;
+}
+.menu-trigger span:nth-of-type(2) {
+	top: 28px;
+}
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+
 }
  
 /* XSサイズ : Extra Small Devices, Phones */ 
@@ -6828,10 +6914,28 @@ globNav-inner{ display: block!important;}
     }
     
     .globNav-toggle { display: block;}
-.globNav-inner{ display: none
-                list-style: none;
-               }
+.globNav-inner{ display: none}
 .globNav-inner > li { float: none;}
+    
+    
+.globNav-inner{ 
+    margin-left:0;
+    padding-left: 0;
+}
+
+.globNav-inner {
+    margin-top: 10px;
+}
+
+.globNav-inner li {
+   
+}
+
+.globNav-inner li a{
+    font-size: 16px;
+    color: #333;
+    line-height: 2.0;
+}
     
     .left-sp {
         font-size:24px;
@@ -6848,18 +6952,55 @@ globNav-inner{ display: block!important;}
          font-weight: bold;
     }
     
+   .navbar-header {
+        height: 0px;
+    }
+    
     .navbar-form {
   padding-bottom: 20px;
 }
  
+.menu-trigger,
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+.menu-trigger {
+	position: relative;
+	width: 30px;
+	height: 40px;
+        margin-left: 12px;
+        top: 3px;
+}
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #333;
+	border-radius: 4px;
+}
+.menu-trigger span:nth-of-type(1) {
+	top: 19px;
+}
+.menu-trigger span:nth-of-type(2) {
+	top: 28px;
+}
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
 
 }
  
 /* Sサイズ、タブレット : Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
      .globNav-row {display: none;}
-    .globNav-toggle {display: none;}
-    .globNav-inner{ 
+     
+     .globNav-toggle {display: none;}
+     
+     .globNav-inner{ 
         overflow: hidden;
         list-style: none;
     }
