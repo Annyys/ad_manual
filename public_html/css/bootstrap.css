@@ -1101,6 +1101,14 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
+
+
+
+.navbar-form input {
+    width: 200px;
+    text-align: left;
+}
+
 a {
   color: #337ab7;
   text-decoration: none;
@@ -1108,7 +1116,8 @@ a {
 a:hover,
 a:focus {
   color: #23527c;
-  text-decoration: underline;
+  text-decoration: none;
+  font-weight: bold;
 }
 a:focus {
   outline: 5px auto -webkit-focus-ring-color;
@@ -1123,6 +1132,10 @@ figure {
 .navbar-nav li a {
     color: #fff;
     font-size: 16px;
+}
+
+.navbar-nav li .current_page {
+    background: #437eab;
 }
 
 img {
@@ -1623,9 +1636,24 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
+.wrapper_1280 {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+    
+} 
+
+.wrapper_1180 {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+    
+} 
 .row {
   margin-right: -15px;
   margin-left: -15px;
+ 
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
@@ -4000,10 +4028,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   display: block;
   padding: 10px 15px;
 }
+
+
+
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
   background-color: #eee;
+  color: #0e3e6c;
 }
 .nav > li.disabled > a {
   color: #777;
@@ -4258,6 +4290,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-static-top {
   z-index: 1000;
   border-width: 0 0 1px;
+  max-width: 1180px;
+width: 100%;
+margin: 0 auto;
+
 }
 @media (min-width: 768px) {
   .navbar-static-top {
@@ -6775,6 +6811,9 @@ button.close {
   }
 }
 
+a:hover {
+    border: none;
+}
 /*==================================================
 =            Bootstrap 3 メディア・クエリ             =
 ==================================================*/
@@ -6903,6 +6942,16 @@ button.close {
 	bottom: 0;
 }
 
+ footer {
+        background: #7ba3ca;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    
+    footer p {
+        font-size: 14px;
+    }
 
 }
  
@@ -6991,6 +7040,17 @@ button.close {
 	bottom: 0;
 }
 
+ footer {
+        background: #7ba3ca;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    
+    footer p {
+        font-size: 14px;
+    }
+
 
 }
  
@@ -7030,6 +7090,18 @@ button.close {
         font-size:26px;
     }
     
+     footer {
+        background: #7ba3ca;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    
+    footer p {
+        font-size: 14px;
+    }
+    
+    
 }
  
 /* Mサイズ、デスクトップ : Medium Devices, Desktops */
@@ -7054,6 +7126,17 @@ button.close {
     .mh4 {
         margin-top: 20px;
         font-weight: bold;
+    }
+    
+    footer {
+        background: #7ba3ca;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    
+    footer p {
+        font-size: 16px;
     }
     
 }
