@@ -4,43 +4,81 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Sample</title>
+    <title>ANNYYS_D Webマニュアル　目次 20160910河野</title>
     <!-- BootstrapのCSS読み込み -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- jQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="js/bootstrap.min.js"></script>
+    <!--SPトグル読み込み-->
+<script>
+    $(function(){
+        $(".globNav-toggle").on("click", function() {
+            $(this).next().slideToggle();
+        });
+    });
+</script>
+  
+
   </head>
   <body>
     <!--Header共通設定-->
     <header style="background-color:white">
+        <div class="wrapper_1280">
         <img src="images/Annyys-msis-logo.jpg" class="img-responsive" alt="ANNYYS_D">
+        </div><!--wrapper-->
         <div class="container-fluid" style="background-color:#19538a">
+            <div class="wrapper_1180">
             <div class="row">
                 <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
-                <div class="col-md-offset-3 col-md-3">
+                <div class="col-md-offset-4 col-md-3">
                     <form class="navbar-form">
                         <input type="text" class="search-query" placeholder="Search">
                     </form>
                 </div>
             </div>
+            </div><!--wrapper-->
             <div class="row" style="background-color:#7ba3ca">
-                <nav class="navbar-static-top">
-                    <div class="navbar-header">
+               <nav class="navbar-static-top">
+                    <!--<div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
                             <span class="sr-only">メニュー</span>
                             <span class="icon-bar"></span>
                         </button>
-                    </div>
-                    <div id="gnavi" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
+                    </div>-->
+                    
+                    <!--スマホ用トグル-->
+                    <nav class="globNav-row">
+                       <span class="globNav-toggle"><a class="menu-trigger" href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a></span>
+                             <ul class="globNav-inner" style="list-style:none">
+                                <li><a href="index_1.html">　　TOP</a></li>
+                                <li><a href="[010_000]mokuji.html">　　目次</a></li>
+                                <li><a href="[020_000]hajimeni.html">　　はじめに</a></li>
+                                <li><a href="[030_000]setup.html">　　セットアップ</a></li>
+                                <li><a href="[040_000]nagare.html">　　診察の流れ</a></li>
+                                <li><a href="[050_000]uketsuke.html">　　来院受付</a></li>
+                                <li><a href="[060_000]gamen.html">　　診察画面</a></li>
+                                <li><a href="[070_000]karute.html">　　カルテ記録</a></li>
+                                <li><a href="[080_000]kanja.html">　　患者情報</a></li>
+                                <li><a href="[090_000]master.html">　　マスタ管理</a></li>
+                                <li><a href="[010_000]sekkei.html">　　基本設計</a></li>
+                                <li><a href="[011_000]renkei.html">　　日レセ連携</a></li>
+                             </ul>
+　　　　　　　　　　　</nav><!--スマホ用トグル終わり-->
+           <!--PC用グローバルナビ-->
+           <div id="gnavi" class="collapse navbar-collapse">
+               <ul class="nav navbar-nav" role="menu">
                             <li><a href="[000_000]index.html">TOP</a></li>
-                            <li><a href="[010_000]mokuji.html">目次</a></li>
+                            <li><a class="current_page" href="[010_000]mokuji.html">目次</a></li>
                             <li><a href="[020_000]hajimeni.html">はじめに</a></li>
                             <li><a href="[030_000]setup.html">セットアップ</a></li>
                             <li><a href="[040_000]nagare.html">診察の流れ</a></li>
-                            <li><a href="[050_000]uketsuke.html">来院受付</a></li>
+                            <li><a class="current_page" href="[050_000]uketsuke.html">来院受付</a></li>
                             <li><a href="[060_000]gamen.html">診察画面</a></li>
                             <li><a href="[070_000]karute.html">カルテ記録</a></li>
                             <li><a href="[080_000]kanja.html">患者情報</a></li>
@@ -54,7 +92,8 @@
         </div>
     </header>
     <!--コンテンツ設定-->
-    <div class="container-fluid">
+       <div class="wrapper_1180">
+           <div class="container-fluid">
         <div class="row">
             <div class="col-md-3" style="background-color:white;">
                 <!--メニュー-->
@@ -348,12 +387,7 @@
     </div>
     <!--//コンテンツ部終了//-->
     <p>　</p>
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
+      </div><!--wrapper_1180-->
     <!--Footer設定-->
     <footer>
         <div class="container-fluid">
