@@ -4,20 +4,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Sample</title>
+    <title>ANNYYS_D Webマニュアル　セットアップ 20160910河野</title>
     <!-- BootstrapのCSS読み込み -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- jQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="js/bootstrap.min.js"></script>
+     <!--SPトグル読み込み-->
+<script>
+    $(function(){
+        $(".globNav-toggle").on("click", function() {
+            $(this).next().slideToggle();
+        });
+    });
+</script>
   </head>
   <body>
     <!--Header共通設定-->
     <!--Header共通設定-->
     <header style="background-color:white">
+          <div class="wrapper_1280">
         <img src="images/Annyys-msis-logo.jpg" class="img-responsive" alt="ANNYYS_D">
+        </div><!--wrapper1280-->
         <div class="container-fluid" style="background-color:#19538a">
+             <div class="wrapper_1180">
             <div class="row">
                 <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
                 <div class="col-md-offset-3 col-md-3">
@@ -26,6 +37,7 @@
                     </form>
                 </div>
             </div>
+            </div><!--wrapper-->
             <div class="row" style="background-color:#7ba3ca">
                 <nav class="navbar-static-top">
                     <div class="navbar-header">
@@ -55,6 +67,7 @@
         </div>
     </header>
     <!--コンテンツ設定-->
+     <div class="wrapper_1180">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3" style="background-color:white;">
@@ -243,15 +256,9 @@
         </div>
     </div>
     <!--//コンテンツ部終了//-->
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
-
+  
+    </div><!--wrapper_1180-->
     <!--Footer設定--> 
-    <footer style="background-color:white"><p>　Copyright © 2003 ANNYYS® All Rights Reserved.</p></footer>
+    <footer style="background-color:#7ba3ca"><p>Copyright © 2003 ANNYYS® All Rights Reserved.</p></footer>
   </body>
 </html>
