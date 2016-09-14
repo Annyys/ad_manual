@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ANNYYS_D Webマニュアル　マスター管理</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+     <!--SPトグル読み込み-->
+<script>
+    $(function(){
+        $(".globNav-toggle").on("click", function() {
+            $(this).next().slideToggle();
+        });
+    });
+</script>
+
+<!--ページ上部へ戻る-->
+<script>
+$(function() {
+			var topBtn = $('#page-top');	
+			topBtn.hide();
+			//スクロールが100に達したらボタン表示
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					topBtn.fadeIn();
+				} else {
+					topBtn.fadeOut();
+				}
+			});
+			//スクロールしてトップ
+		    topBtn.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+		    });
+		});
+</script>
+
+
+<script type="text/javascript">
+jQuery(function($) {
+  
+var nav    = $('#fixedBox'),
+    offset = nav.offset();
+  
+$(window).scroll(function () {
+  if($(window).scrollTop() > offset.top) {
+    nav.addClass('fixed');
+  } else {
+    nav.removeClass('fixed');
+  }
+});
+  
+});
+</script>
+
+<!--クリック時変化-->
+
+
+
+
+  </head>
+  <body>
+    <!--Header共通設定-->
+    <header style="background-color:white">
+        <div class="wrapper_1280">
+            <img src="images/Annyys-msis-logo.jpg" class="img-responsive" alt="ANNYYS_D">
+        </div><!--wrapper-->
+        <div class="container-fluid" style="background-color:#19538a">
+            <div class="wrapper_1180">
+                <div class="row">
+                    <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
+                    <div class="col-md-offset-3 col-md-3">
+                        <form class="navbar-form">
+                            <input type="text" class="search-query" placeholder="Search">
+                        </form>
+                    </div>
+                </div>
+            </div><!--wrapper-->
+            <div class="row" style="background-color:#7ba3ca">
+                <nav class="navbar-static-top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+                            <span class="sr-only">メニュー</span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    
+                        <!--スマホ用トグル-->
+                    <nav class="globNav-row">
+                       <span class="globNav-toggle"><a class="menu-trigger" href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a></span>
+                             <ul class="globNav-inner" style="list-style:none">
+                                <li><a href="index_1.html">　　TOP</a></li>
+                                <li><a href="[010_000]mokuji.html">　　目次</a></li>
+                                <li><a href="[020_000]hajimeni.html">　　はじめに</a></li>
+                                <li><a href="[030_000]setup.html">　　セットアップ</a></li>
+                                <li><a href="[040_000]nagare.html">　　診察の流れ</a></li>
+                                <li><a href="[050_000]uketsuke.html">　　来院受付</a></li>
+                                <li><a href="[060_000]gamen.html">　　診察画面</a></li>
+                                <li><a href="[070_000]karute.html">　　カルテ記録</a></li>
+                                <li><a href="[080_000]kanja.html">　　患者情報</a></li>
+                                <li><a href="[090_000]master.html">　　マスタ管理</a></li>
+                                <li><a href="[100_000]settei.html">　　基本設定</a></li>
+                                <li><a href="[110_000]renkei.html">　　日レセ連携</a></li>
+                             </ul>
+　　　　　　　　　　　</nav><!--スマホ用トグル終わり-->
+           <!--PC用グローバルナビ-->
+                    <div id="gnavi" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="[000_000]index.html">TOP</a></li>
+                            <li><a href="[010_000]mokuji.html">目次</a></li>
+                            <li><a href="[020_000]hajimeni.html">はじめに</a></li>
+                            <li><a href="[030_000]setup.html">セットアップ</a></li>
+                            <li><a href="[040_000]nagare.html">診察の流れ</a></li>
+                            <li><a href="[050_000]uketsuke.html">来院受付</a></li>
+                            <li><a href="[060_000]gamen.html">診察画面</a></li>
+                            <li><a href="[070_000]karute.html">カルテ記録</a></li>
+                            <li><a href="[080_000]kanja.html">患者情報</a></li>
+                            <li><a href="[090_000]master.html">マスタ管理</a></li>
+                            <li><a class="current_page" href="[100_000]settei.html">基本設定</a></li>
+                            <li><a href="[110_000]renkei.html">日レセ連携</a></li>
+                        </ul>
+                    </div><!--gnav-->
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--コンテンツ設定-->
+   
+    <div class="container-fluid">
+        <div class="row">
+            <div class="title_wrapper">
+              <h3 id="a" class="page_title">目次</h3>
+            </div><!--title_wrapper-->
+            <div class="wrapper_1180">
+                <div class="col-md-2 fixed_menu clearfix" style="background-color:white;">
+                    <!--メニュー-->
+                  <div id="fixedBox" class="nav">
+                                <ul type="1" style="list-style: none;">
+                                    <li id="yamato"><a class="red" href="#a">基本設定</a></li>
+                                    <li><a href="#b">医療機関情報</a></li>
+                                    <li><a href="#c">医師名</a></li>
+                                    <li><a href="#d">診療科</a></li>
+                                    <li><a href="#e">診察内容</a></li>
+                                    <li><a href="#f">病棟</a></li>
+                                    <li><a href="#g">日レセ</a></li>
+                                    <li><a href="#h">ＡＰＩ</a></li>
+                                    <li><a href="#i">その他</a></li>
+                                    <li><a href="#j">B[Object]</a></li>
+                                    <li><a href="#k">B[所見項目]</a></li>
+                                    <li><a href="#l">B[問診項目]</a></li>
+                                    <li><a href="#m">B[利用項目]</a></li>
+                                </ul>
+                  </div><!--fixedBox-->
+                </div><!--co--md2-->
+                <div class="right_box clearfix">
+
+                    <div class="col-md-9" style="background-color:white;">
+                        <!--ページタイトル-->
+
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="a">基本設定</a></h3>
+                            </div>
+
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><em>マニュアルの表現に関して</em><br>
+                                    本マニュアルでは大文字の英語を組み合わせた記号表現があります。この意味以下のようになりますので、ご理解の上お読みいただけますようお願い申し上げます。</p>
+                            <table border="1">
+                                <tr><th>記号</th><th>読み方</th><th>説明</th></tr>
+                                <tr><td>L(エル)</td><td>レイアウト</td><td>表示されている画面の名称</td></tr>
+                                <tr><td>B(ビー)</td><td>ボタン</td><td>画面上のボタン</td></tr>
+                                <tr><td>F(エフ)</td><td>フィールド</td><td>画面上の入力スペースのこと</td></tr>
+                                <tr><td>T(タブ)</td><td>タブ</td><td>画面上のタブスペースのタイトル</td></tr>
+                                <tr><td>S(エス)</td><td>スクリプト</td><td>スクリプトメニューにあるスクリプト名</td></tr>
+                            </table>
+                                <p>例１）<strong>L[メインメニュー] B[外来受付]</strong><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メインメニュー画面の、外来受付ボタン（を押す）となります。</p>
+                                <p>例２）<strong>L[診療記録] T[病名] F[病名]</strong><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;診療記録画面の、病名タブの、病名入力スペースとなります。</p>
+
+                            </div><!--annys-tx-->
+                        <!--本文-->
+                            <div id="annys-tx">
+                                
+                                <p><img class="center-block" src="images/100_000_kihonsettei.png" alt="基本設定"></p> 
+                                <p><img class="center-block" src="images/100_000_kihonsettei1.png" alt="基本設定1"></p> 
+                                <p>基本設定は印刷物に主る出力される項目やソリューションの動作を決めるものがありますので、最初の段階である程度入力を済ませておいてください。</p>
+                                <p>ANNYYS_Dの設定情報には共有情報と固有情報の2種類があります。文字の通りですが共有情報はその内容が同じFileMakerServerを介しているネットワーク上の全てのANNYYS_Dに反映します。また固有情報は他のANNYYS_Dの設定に影響されることなく完全に同一のANNYYS_D上でのみ反映されます。いくつかのANNYYS_Dによる運営が必要な場合この区別が重要になります。</p>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="b">医療機関情報</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/100_000_iryoukikan.png" alt="医療機関"></p> 
+                                <ul>
+                                <li>更新日：以下の情報が有効となる開始日を登録します。YYYY-MM-DDまたはYYYY/MM/DD形式で入力してください。</li>
+                                <li>医療機関コード：保険請求する際に利用する数字7ケタの医療機関コードを登録します。</li>
+                                <li>医療ID：日レセなどと連携する際、日医総研から発行された医療ＩＤを登録します。</li>
+                                <li>代表者：施設代表者を役職名とともに登録します。</li>
+                                <li>郵便番号：郵便番号と登録します。</li>
+                                <li>住所：住所を登録します。</li>
+                                <li>TEL：代表の電話番号を登録します。</li>
+                                <li>FAX：代表のFAX番号を登録します。</li>
+                                <li>病院区分：病院：１　診療所：２　をポップアップから選択します。</li>
+                                <li>床数：床数を数字で登録します。</li>
+                                <li>処方：院内処方：１　院外処方：２　をポップアップから選択します。</li>
+                                <li>処方箋タイプ：ANNYYS上から印刷する処方箋の用紙サイズを選択します。</li>
+                                <li>URL：URLがある場合は登録します。</li>
+                                <li>mail：メールアドレスがある場合は登録します。</li>
+                                <li>アドレス：FileMakerServerのIPアドレスを指定します。</li>
+                                <li>処方せんヘッダ：変更しないでください。</li>
+                                </ul>
+                                <p>※医療機関情報はサーバー側のDB_ANNYYS/anys_prefのレコードに登録されいる共有情報で、DATE >= 更新日　の関係で認識します。そしてANNYYS_Dは開いたときに必ず日付けを確認し本日の日付けをDATEというフィールドに登録しています。この関係は医療法人化するなどして病院名が変わった場合に過去の情報はそのまま維持しながら新しい情報を登録する際に有効です。メインメニュ#B基本設定#T療機関情報では入力時による事故を減らすように配慮したインタフェースですがDB_ANNYYS/anys_prefを直接参照し行を追加する事によって日付けによる医療機関情報の変更にも対応できます。</p>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="c">医師名</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/100_000_ishimei.png" alt="医師名"></p> 
+                                <p>システム用ID:1から始まる5ケタの数字で医師名を登録します。(共有情報)</p>
+                                <ul>
+                                    <li>日レセでは数字4ケタで医師名が登録されていますがこの数字の前に１を加えたものをここに登録してください。<br>
+                                        &nbsp;例：日レセ：0001　山田太郎　⇒　10001 山田太郎</li>
+                                    <li>ここで登録された医師名は同じFileMakerServerを使う全てのANNYYS_D上に反映されます。</li>
+                                </ul>
+                                <p>デフォルト設定（固有情報）：このANNYYS_Dで<strong>[来院受付]</strong>で受付処理をしたときに自動で登録される医師名を指定できます。</p>
+                                <ul>
+                                    <li>この設定は固有情報なので他のANNYYS_Dファイルには影響しません。</li>
+                                    <li>日レセに診療行為情報を送信する際は担当した医師コードが必要となります。</li>
+                                </ul>
+                                
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="d">診療科</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/100_000_shinryouka.png" alt="診療科"></p> 
+                                <p>診療科にはあらかじめ以下の３４の診療科が登録されています。</p>
+                                <table border="1">
+                                    <tr>
+                                        <td>01	内科<br>
+                                            02	精神科<br>
+                                            03	神経科<br>
+                                            04	神経内科<br>
+                                            05	呼吸器科<br>
+                                            06	消化器科<br>
+                                            07	胃腸科<br>
+                                            08	循環器科<br>
+                                            09	小児科<br>
+                                            10	外科<br>
+                                            11	整形外科<br>
+                                            12	形成外科	</td>
+                                        <td>13	美容外科<br>
+                                            14	脳神経外科<br>
+                                            15	呼吸器外科<br>
+                                            16	心臓血管外科<br>
+                                            17	小児外科<br>
+                                            18	皮膚ひ尿器科<br>
+                                            19	皮膚科<br>
+                                            20	ひ尿器科<br>
+                                            21	性病科<br>
+                                            22	こう門科<br>
+                                            23	産婦人科<br>
+                                            24	産科	</td>
+                                        <td>25	婦人科<br>
+                                            26	眼科<br>
+                                            27	耳鼻いんこう科<br>
+                                            28	気管食道科<br>
+                                            30	放射線科<br>
+                                            31	麻酔科<br>
+                                            33	心療内科<br>
+                                            34	アレルギー科<br>
+                                            35	リウマチ科<br>
+                                            36	リハ科<br><br><br></td>
+                                    </tr>
+                                </table>
+                                <p>これら診療科に設定されている2ケタの番号は決められたものがあり既に登録されていますので決して変更はしないでくさい。ただ、全部の診療科があっても利用する診療科はあって数種類だと思います。そこで必要のない診療科はリストの右にある緑色のボタンでポップアップ対象から省く事ができるようにしています。</p>
+                                <p><img class="center-block" src="images/100_000_shinryouka1.png" alt="診療科1"></p>
+                                <p>グレーアウトしたリストは再度右にある緑色のボタンを押せば復活します。</p>
+                                <ul>
+                                    <li>これらポータル内の指定内容は全て共有情報です。</li>
+                                    <li>日レセと連携する場合は、日レセ側の設定と同じになるようにしてください。</li>
+                                </ul>
+                                <p><img class="center-block" src="images/100_000_shinryouka2.png" alt="診療科2"></p>
+                                <p>デフォルト設定（固有情報）：このANNYYS_Dで<strong>[来院受付]</strong>で受付処理をしたときに自動で登録される診療科を指定できます。</p>
+                                <ul>
+                                    <li>この設定は固有情報なので他のANNYYS_Dファイルには影響しません。</li>
+                                </ul>
+                                <p><img class="center-block" src="images/100_000_shinryouka3.png" alt="診療科3"></p>
+                                
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="e">診察内容</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/100_000_shinryounaiyou.png" alt="診療内容"></p> 
+                                <p>来院受付時の受付情報に対し来院目的を登録す再に利用する項目です。</p>
+                                <table border="1">
+                                    <tr><td>99	該当なし<br>
+                                            01	診察<br>
+                                            02	薬のみ<br>
+                                            03	注射のみ<br>
+                                            04	検査のみ<br>
+                                            05	手術<br>
+                                            06	健康診断<br>
+                                            07	予防注射</td></tr>
+                                </table>
+                                <p>あらかじめこれだけの内容が登録されていますが、必要に応じポータル内のデータを追加できます。</p>
+                                <ul>
+                                    <li>これらポータル内の指定内容は全て共有情報です。</li>
+                                    <li>日レセと連携する場合は、日レセ側の設定と同じになるようにしてください。</li>
+                                </ul>
+                                <p>デフォルト設定（固有情報）：このANNYYS_Dで<strong>[来院受付]</strong>で受付処理をしたときに自動で登録される診療科を指定できます。</p>
+                                <ul>
+                                    <li>この設定は固有情報なので他のANNYYS_Dファイルには影響しません。</li>
+                                </ul>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"> <a name="f">病棟</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/100_000_byoutou.png" alt="病棟"></p> 
+                                <p>病棟に関する登録項目です。必要に応じて内容を編集できます。</p>
+                                <ul>
+                                    <li>これらポータル内の指定内容は全て共有情報です。</li>
+                                    <li>日レセと連携する場合は、日レセ側の設定と同じになるようにしてください。</li>
+                                </ul>
+                                <p>デフォルト設定（固有情報）：このANNYYS_Dで<strong>[来院受付]</strong>で受付処理をしたときに自動で登録される診療科を指定できます。</p>
+                                <ul>
+                                    <li>この設定は固有情報なので他のANNYYS_Dファイルには影響しません。</li>
+                                </ul>
+                                <p>※2013年4月時点では入院に関するサポートはまだ行っていません。</p>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="g">日レセ</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/100_000_nichisere.png" alt="日セレ"></p> 
+                                <p>日レセと連携する際に設定す情報です。</p>
+                                <ul>
+                                    <li>この設定は固有情報なので他のANNYYS_Dファイルには影響しません。</li>
+                                    <li>日レセhttpプロトコル通信により連携します。</li>
+                                </ul>
+                                <p>連携するにはAnnyysPluginと連携用プログラム（WEBフォルダ以下）が正しい場所に配置されている必要があります。<br>
+                                「ANNYYS_D版の動作環境」プラグイン（AnnyysPlugin）の登録・インストール<br>
+                                「ANNYYS_D版の動作環境」ANNYYS_D版の配置場所<br>
+                                をよく読んで、ANNYYS_Dフォルダ以下にあるWEBフォルダを正しい場所に配置してください。</p>
+                                <p>設定方法</p>
+                                <ol>
+                                    <li>IP:ポートを正しく入力します。([IPアドレス]:8000とします。半角英数で入力してください。）</li>
+                                    <li>利用している日レセバージョンをポップアップから選択します。（対象は4.5.0と4.6.0です。）</li>
+                                    <li>アカウント情報を入力します。#B[アカウント]から日レセクライアント(monsiaj)で利用しているアカウントを入力してください。</li>
+                                    <li>最後に接続=1にすると、接続テストが行われます。正しく接続できた場合[接続確認]横に[Online]　と　[OK]日時が表示されます。</li>
+                                    <li>エラーが出る場合は設定内容やAnnyysPlugin のインストール状態、及び連携ツールANNYYS_D/WEBフォルダ以下が正しい場所に配置されているかどうか確認してください。</li>
+                                </ol>
+                                
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="h">ＡＰＩ</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/100_000_api.png" alt="API"></p> 
+                                <p>各種情報と画面遷移方法が指定できます。<br>
+                                ANNYYS：ANNYYS_D版のバージョン情報です。<br>
+                                API_PATH：連携ツールなどの配置やバックアップデータを作成する場所などローカルのＰＣ上でANNYYS_D特有の作業場所となるパスを表示しています。（変更はできません）<br>
+                                Plugin：プラグインのバージョンを表示しています。プラグインがインストールされているかどうかは「編集」>「環境設定」＞「プラグイン」で確認できます。</p>
+                                <p><img class="center-block" src="images/100_000_api1.png" alt="API1"></p>
+                                <p>WVCheck：Webビューワで利用されているブラウザの種類とANNYYS_Dで利用しているライブラリのバージョンを確認できます。</p>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="h">その他</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/100_000_sonota.png" alt="その他"></p> 
+                                <ul>
+                                    <li>薬剤登録時：マスタから新しい薬剤を登録する際、その薬剤の登録状態を決めます。</li>
+                                    <li>空白：マスタのまま登録　「般」：一般名にて登録　「×」：マスタ項目のままで変更不可扱い</li>
+                                    <li>用法呼出：診察画面において初めて処方した薬剤の場合、続けて用法を指定すると次回より同じ薬剤を指定したときに自動的に用法が呼び出されるように機能するスイッチです。自動で呼び出された用法はキャンセルの後別の用法を登録すればその後は新たに選択した用法が呼び出されるようになります。</li>
+                                    <li>サマリ：診察画面において診療記録を#B[確定]した際には画面上に記録されたＳＯＡＰなどの診療記録がサマリ（※１）に記録されるようになっています。その際診療行為内容も含めるかどうかの指定です。<br>
+                                    ※	サマリ：１患者につき、１つのテキストデータで各診療毎の記録がまとまって記録されているデータです。「診療行為#Tサマリ」または「患者情報#Tサマリ」で確認できます。また１つのテキストでーたなので見やすく編集する事も可能です。</li>
+                                    <li>診察画面NO：診察画面はデフォルトの画面を元に自分にあった画面レイアウトを追加できます。現在少しの違ったレイアウトを2種類設定していますが好みに合ったレイアウトを自作してもかまいません。その場合レイアウト名を「診察画面（番号）」としてこの番号を設定すれば常にそのレイアウトが表示されるようにできます。<br>
+                                    ※自作レイアウトを追加する場合99番までは予約番号としていますので、100番以上の番号をつけるようにしてください。（今後の為の方針で勝手ですが申し訳ありません）</li>
+                                    <li>画面最大化：標準ではその下にある縦横サイズで画面表示されます。<br>
+                                    最大化を１にすると縦横サイズは関係なく画面が最大化するようになります。お好みがあると思うので実際に試しながら選択すると良いでしょう。<br>
+                                    縦横：画面最大化0の場合の通常の表示サイズを指定できます。</li>
+                                    <li>初期値：縦768px 横1056pxが設定されます。</li>
+                                </ul>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="h">B[Object]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/100_000_object.png" alt="B[Object]"></p> 
+                                <p><img class="center-block" src="images/100_000_object1.png" alt="B[Object]1"></p> 
+                                <p>ANNYYS_Dを構成しているオブジェクト類が取得できます。カスタマイズする際にデザインの一貫性を保ちたい場合などはこちらをご利用頂けます。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="h">B[所見項目]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/100_000_shokenkoumoku.png" alt="B[所見項目]"></p> 
+                                <p><img class="center-block" src="images/100_000_shokenkoumoku1.png" alt="B[所見項目]1"></p> 
+                                <p>実際の操作は「診察画面#T所見」、内容の編集は｢診察画面#T登録#T所見項目登録」で行います。この画面で操作を行う事はあまりないと思います。</p>
+                                <ul>
+                                    <li>所見項目は固有情報なので他のANNYYS_Dファイルには影響しません。</li>
+                                </ul>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="h">B[問診項目]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/100_000_monshin.png" alt="B[問診項目]"></p> 
+                                <p><img class="center-block" src="images/100_000_monshin1.png" alt="B[問診項目]1"></p> 
+                                <p>詳細追加する予定の機能の一つです。現在は利用していません。</p>
+                                <ul>
+                                    <li>問診項目は固有情報なので他のANNYYS_Dファイルには影響しません。</li>
+                                </ul>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="h">B[利用項目]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/100_000_riyoukoumoku.png" alt="B[利用項目]"></p> 
+                                <p><img class="center-block" src="images/100_000_riyoukoumoku1.png" alt="B[利用項目]1"></p> 
+                                <p>診療画面において診療行為や処方する薬剤など利用している項目が登録されている固有情報データです。これらは共有情報であるDB_ANNYYS/tbl_tensuから抜粋されたもので利用者（医師）や診療科によって個別に登録できるようになっています。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                    </div><!--col-md-9-->
+
+                </div><!--rightbox_clearfix-->
+            </div><!--wrapper_1180-->
+    <!--//コンテンツ部終了//-->
+        </div><!--row-->
+    </div><!--contaner_fluid-->
+    
+    <!--ページトップへ戻る-->
+     <p id="page-top"><a href="#wrap"></a></p>
+    <!--Footer設定-->
+    <footer>
+        <div class="container-fluid">
+            <p>Copyright © Msis,Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+  </body>
+</html>
