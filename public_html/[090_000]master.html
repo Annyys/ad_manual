@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ANNYYS_D Webマニュアル　マスター管理</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+     <!--SPトグル読み込み-->
+<script>
+    $(function(){
+        $(".globNav-toggle").on("click", function() {
+            $(this).next().slideToggle();
+        });
+    });
+</script>
+
+<!--ページ上部へ戻る-->
+<script>
+$(function() {
+			var topBtn = $('#page-top');	
+			topBtn.hide();
+			//スクロールが100に達したらボタン表示
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					topBtn.fadeIn();
+				} else {
+					topBtn.fadeOut();
+				}
+			});
+			//スクロールしてトップ
+		    topBtn.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+		    });
+		});
+</script>
+
+
+<script type="text/javascript">
+jQuery(function($) {
+  
+var nav    = $('#fixedBox'),
+    offset = nav.offset();
+  
+$(window).scroll(function () {
+  if($(window).scrollTop() > offset.top) {
+    nav.addClass('fixed');
+  } else {
+    nav.removeClass('fixed');
+  }
+});
+  
+});
+</script>
+
+<!--クリック時変化-->
+
+
+
+
+  </head>
+  <body>
+    <!--Header共通設定-->
+    <header style="background-color:white">
+        <div class="wrapper_1280">
+            <img src="images/Annyys-msis-logo.jpg" class="img-responsive" alt="ANNYYS_D">
+        </div><!--wrapper-->
+        <div class="container-fluid" style="background-color:#19538a">
+            <div class="wrapper_1180">
+                <div class="row">
+                    <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
+                    <div class="col-md-offset-3 col-md-3">
+                        <form class="navbar-form">
+                            <input type="text" class="search-query" placeholder="Search">
+                        </form>
+                    </div>
+                </div>
+            </div><!--wrapper-->
+            <div class="row" style="background-color:#7ba3ca">
+                <nav class="navbar-static-top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+                            <span class="sr-only">メニュー</span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    
+                        <!--スマホ用トグル-->
+                    <nav class="globNav-row">
+                       <span class="globNav-toggle"><a class="menu-trigger" href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a></span>
+                             <ul class="globNav-inner" style="list-style:none">
+                                <li><a href="index_1.html">　　TOP</a></li>
+                                <li><a href="[010_000]mokuji.html">　　目次</a></li>
+                                <li><a href="[020_000]hajimeni.html">　　はじめに</a></li>
+                                <li><a href="[030_000]setup.html">　　セットアップ</a></li>
+                                <li><a href="[040_000]nagare.html">　　診察の流れ</a></li>
+                                <li><a href="[050_000]uketsuke.html">　　来院受付</a></li>
+                                <li><a href="[060_000]gamen.html">　　診察画面</a></li>
+                                <li><a href="[070_000]karute.html">　　カルテ記録</a></li>
+                                <li><a href="[080_000]kanja.html">　　患者情報</a></li>
+                                <li><a href="[090_000]master.html">　　マスタ管理</a></li>
+                                <li><a href="[010_000]sekkei.html">　　基本設計</a></li>
+                                <li><a href="[011_000]renkei.html">　　日レセ連携</a></li>
+                             </ul>
+　　　　　　　　　　　</nav><!--スマホ用トグル終わり-->
+           <!--PC用グローバルナビ-->
+                    <div id="gnavi" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="[000_000]index.html">TOP</a></li>
+                            <li><a href="[010_000]mokuji.html">目次</a></li>
+                            <li><a href="[020_000]hajimeni.html">はじめに</a></li>
+                            <li><a href="[030_000]setup.html">セットアップ</a></li>
+                            <li><a href="[040_000]nagare.html">診察の流れ</a></li>
+                            <li><a href="[050_000]uketsuke.html">来院受付</a></li>
+                            <li><a href="[060_000]gamen.html">診察画面</a></li>
+                            <li><a href="[070_000]karute.html">カルテ記録</a></li>
+                            <li><a href="[080_000]kanja.html">患者情報</a></li>
+                            <li><a class="current_page" href="[090_000]master.html">マスタ管理</a></li>
+                            <li><a href="[010_000]sekkei.html">基本設計</a></li>
+                            <li><a href="[011_000]renkei.html">日レセ連携</a></li>
+                        </ul>
+                    </div><!--gnav-->
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--コンテンツ設定-->
+   
+    <div class="container-fluid">
+        <div class="row">
+            <div class="title_wrapper">
+              <h3 id="a" class="page_title">目次</h3>
+            </div><!--title_wrapper-->
+            <div class="wrapper_1180">
+                <div class="col-md-2 fixed_menu clearfix" style="background-color:white;">
+                    <!--メニュー-->
+                  <div id="fixedBox" class="nav">
+                                <ul type="1" style="list-style: none;">
+                                    <li id="yamato"><a class="red" href="#a">マスタ管理</a></li>
+                                    <li><a href="#b">B[SET登録]</a></li>
+                                    <li><a href="#c">L[病名マスタ]</a></li>
+                                    <li><a href="#d">L[診療行為マスタ]</a></li>
+                                    <li><a href="#e">L[薬剤・生薬マスタ]</a></li>
+                                    <li><a href="#f">L[材料・フィルムマスタ・自費マスタ]</a></li>
+                                    <li><a href="#g">L[用法・コメントマスタ]</a></li>
+                                    <li><a href="#h">L[採用コードマスタ]</a></li>
+                                </ul>
+                  </div><!--fixedBox-->
+                </div><!--co--md2-->
+                <div class="right_box clearfix">
+
+                    <div class="col-md-9" style="background-color:white;">
+                        <!--ページタイトル-->
+
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="a">マスタ管理</a></h3>
+                            </div>
+
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><em>マニュアルの表現に関して</em><br>
+                                    本マニュアルでは大文字の英語を組み合わせた記号表現があります。この意味以下のようになりますので、ご理解の上お読みいただけますようお願い申し上げます。</p>
+                            <table border="1">
+                                <tr><th>記号</th><th>読み方</th><th>説明</th></tr>
+                                <tr><td>L(エル)</td><td>レイアウト</td><td>表示されている画面の名称</td></tr>
+                                <tr><td>B(ビー)</td><td>ボタン</td><td>画面上のボタン</td></tr>
+                                <tr><td>F(エフ)</td><td>フィールド</td><td>画面上の入力スペースのこと</td></tr>
+                                <tr><td>T(タブ)</td><td>タブ</td><td>画面上のタブスペースのタイトル</td></tr>
+                                <tr><td>S(エス)</td><td>スクリプト</td><td>スクリプトメニューにあるスクリプト名</td></tr>
+                            </table>
+                                <p>例１）<strong>L[メインメニュー] B[外来受付]</strong><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メインメニュー画面の、外来受付ボタン（を押す）となります。</p>
+                                <p>例２）<strong>L[診療記録] T[病名] F[病名]</strong><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;診療記録画面の、病名タブの、病名入力スペースとなります。</p>
+
+                            </div><!--annys-tx-->
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/090_000_masterkanri.png" alt="マスター管理"></p> 
+                                <p><img class="center-block" src="images/090_000_masterkanri1.png" alt="マスター管理1"></p> 
+                                <p>マスタ管理は各種マスタ情報を調べたり確認したりするためのデザインとなっています。マスタは随時更新されますが更新は別のDBManagerプログラムにおいて更新されます。</p>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="b">B[SET登録]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/090_000_settouroku.png" alt="セット登録"></p> 
+                                <p><img class="center-block" src="images/090_000_settouroku1.png" alt="セット登録1"></p> 
+                                <p>セット登録画面が開きます。セット登録は診察画面と同じ画面で診療行為を選択しながら登録する必要があります。<strong>B[SET登録]</strong>では、患者番号0,受付番号=0の受付内容が無効状態で診察画面を開き、セット登録が行えるようになっています。詳細は[診察画面]の<strong>T[診察セット登録]</strong>を参照してください。</p>
+                                <p><img class="center-block" src="images/090_000_settouroku2.png" alt="セット登録2"></p> 
+                                <p><img class="center-block" src="images/090_000_settouroku3.png" alt="セット登録3"></p> 
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="c">L[病名マスタ]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p>データソース：DB_ANNYYS/tbl_byomei（※DBManager更新対象）</p>
+                                <p><img class="center-block" src="images/090_000_byoumei.png" alt="病名"></p> 
+                                <p><img class="center-block" src="images/090_000_byoumei1.png" alt="病名1"></p> 
+                                
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="d">L[診療行為マスタ]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p>データソース：DB_ANNYYS/tbl_tensu（※DBManager更新対象）</p>
+                                <p><img class="center-block" src="images/090_000_shinryoukoui.png" alt="診療行為"></p> 
+                                <p><img class="center-block" src="images/090_000_shinryoukoui1.png" alt="診療行為1"></p> 
+                                <p>このレイアウトではDB_ANNYYS/tbl_tensu収録データのうち現在有効なもので診療行為に関るものを表示できるようになっています。主だった項目区分は上部に配置された各種ボタンで表示内容を切り替えられます。<br>
+                                    ボタン：B[診察] B[医管] B[在宅] B[注射] B[処置] B[手術] B[検査] B[画像] B[その他] B[検索]</p>
+                                <p>【診療行為項目の採用登録】</p>
+                                <ul>
+                                    <li>コード番号をクリックして青字にする事で L[診察画面] T[行為]リスト内に表示され選択できるようになります。</li>
+                                    <li>青字をさらにクリックするとリスト対象から外れます。※DBManager更新対象テーブルです。</li>
+                                </ul>
+                                <p><img class="center-block" src="images/090_000_shinryoukoui2.png" alt="診療行為2"></p> 
+                                
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="e">L[薬剤・生薬マスタ]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p>データソース：DB_ANNYYS/tbl_tensu（※DBManager更新対象）</p>
+                                <p><img class="center-block" src="images/090_000_yakuzai.png" alt="薬剤"></p> 
+                                <p><img class="center-block" src="images/090_000_yakuzai1.png" alt="薬剤1"></p> 
+                                <p>このレイアウトではDB_ANNYYS/tbl_tensu収録データのうち現在有効なもので薬剤・生薬に関るものを表示できるようになっています。主だった項目区分は上部に配置された各種ボタンで表示内容を切り替えられます。<br>
+                                ボタン：B[内服] B[外用] B[注射] B[生薬] B[造影] B[検索]</p>
+                                <p>【薬剤・生薬の採用登録】</p>
+                                <ul>
+                                    <li>コード番号をクリックして青字にする事で L[診察画面] T[薬剤]リスト内に表示され選択できるようになります。</li>
+                                    <li>青字をさらにクリックするとリスト対象から外れます。</li>
+                                </ul>
+                                <p><img class="center-block" src="images/090_000_yakuzai2.png" alt="薬剤2"></p> 
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"> <a name="f">L[材料・フィルムマスタ・自費マスタ]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p>データソース：DB_ANNYYS/tbl_tensu（※DBManager更新対象）</p>
+                                <p><img class="center-block" src="images/090_000_zairyou.png" alt="材料"></p> 
+                                <p><img class="center-block" src="images/090_000_zairyou1.png" alt="材料1"></p> 
+                                <p>このレイアウトではDB_ANNYYS/tbl_tensu収録データのうち現在有効なもので特定機材に関るものを表示できるようになっています。主だった項目区分は上部に配置された各種ボタンで表示内容を切り替えられます。<br>
+                                    ボタン：B[材料] B[フィルム] B[検索]</p>
+                                <p>【材料・フィルム・自費の採用登録】</p>
+                                <ul>
+                                <li>コード番号をクリックして青字にする事で<strong>L[診察画面] T[材料]</strong>リスト内に表示され選択できるようになります。</li>
+                                <li>青字をさらにクリックするとリスト対象から外れます。</li>
+                                </ul>
+                                <p>【自費項目の追加登録】</p>
+                                <p><strong>B[自費+]</strong>をクリックして新しく追加されたレコードにコード番号・名称・金額・単位を入力します。<br>
+                                    ※ORCA連携の場合はORCA側の登録内容と同じコードで登録してください。</p>
+                                <p><img class="center-block" src="images/090_000_zairyou2.png" alt="材料2"></p> 
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="g">L[用法・コメントマスタ]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p>データソース：DB_ANNYYS/tbl_tensu（※DBManager更新対象）</p>
+                                <p><img class="center-block" src="images/090_000_youhou.png" alt="用法"></p> 
+                                <p><img class="center-block" src="images/090_000_youhou1.png" alt="用法1"></p>
+                                <p>このレイアウトではDB_ANNYYS/tbl_tensu収録データのうち現在有効なものでコメントに関るものを表示できるようになっています。主だった項目区分は上部に配置された各種ボタンで表示内容を切り替えられます。<br>
+                                    ボタン：B[用法] B[部位] B[定型] B[補足] B[数日] B[その他] B[検索]</p>
+                                <p>【用法・コメントの採用登録】</p>
+                                <ul>
+                                    <li>コード番号をクリックして青字にする事で<strong>L[診察画面] T[用法]</strong>リスト内に表示され選択できるようになります。</li>
+                                    <li>青字をさらにクリックするとリスト対象から外れます。</li>
+                                    <li>用法が無い場合はフリーコメントコード[810000001]で入力してください。</li>
+                                </ul>
+                                <p><img class="center-block" src="images/090_000_youhou2.png" alt="用法2"></p>                             
+                                <p><img class="center-block" src="images/090_000_youhou3.png" alt="用法3"></p>                             
+                                <p><img class="center-block" src="images/090_000_youhou4.png" alt="用法4"></p>                             
+                            
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="h">L[採用コードマスタ]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p>データソース：ANNYYS_D/tbl_inputcd(S[メンテナンス]>S[バックアップ],S[リストア]対象データ)</p>
+                                <p><img class="center-block" src="images/090_000_saiyou.png" alt="採用"></p> 
+                                <p><img class="center-block" src="images/090_000_saiyou1.png" alt="採用1"></p> 
+                                <p>各マスタで採用登録を行ったデータです。採用登録したデータはANNYYS_D内のtbl_inputcdに収録されているので他のANNYYS_Dと内容が重複しません。そのため診療科や医師別に利用する項目だけを登録し診療行為入力を簡素化することができます。</p>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                    </div><!--col-md-9-->
+
+
+                </div><!--rightbox_clearfix-->
+            </div><!--wrapper_1180-->
+    <!--//コンテンツ部終了//-->
+        </div><!--row-->
+    </div><!--contaner_fluid-->
+    
+    <!--ページトップへ戻る-->
+     <p id="page-top"><a href="#wrap"></a></p>
+    <!--Footer設定-->
+    <footer>
+        <div class="container-fluid">
+            <p>Copyright © Msis,Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+  </body>
+</html>
