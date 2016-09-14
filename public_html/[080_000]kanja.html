@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ANNYYS_D Webマニュアル　患者情報</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+     <!--SPトグル読み込み-->
+<script>
+    $(function(){
+        $(".globNav-toggle").on("click", function() {
+            $(this).next().slideToggle();
+        });
+    });
+</script>
+
+<!--ページ上部へ戻る-->
+<script>
+$(function() {
+			var topBtn = $('#page-top');	
+			topBtn.hide();
+			//スクロールが100に達したらボタン表示
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					topBtn.fadeIn();
+				} else {
+					topBtn.fadeOut();
+				}
+			});
+			//スクロールしてトップ
+		    topBtn.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+		    });
+		});
+</script>
+
+
+<script type="text/javascript">
+jQuery(function($) {
+  
+var nav    = $('#fixedBox'),
+    offset = nav.offset();
+  
+$(window).scroll(function () {
+  if($(window).scrollTop() > offset.top) {
+    nav.addClass('fixed');
+  } else {
+    nav.removeClass('fixed');
+  }
+});
+  
+});
+</script>
+
+<!--クリック時変化-->
+
+
+
+
+  </head>
+  <body>
+    <!--Header共通設定-->
+    <header style="background-color:white">
+        <div class="wrapper_1280">
+            <img src="images/Annyys-msis-logo.jpg" class="img-responsive" alt="ANNYYS_D">
+        </div><!--wrapper-->
+        <div class="container-fluid" style="background-color:#19538a">
+            <div class="wrapper_1180">
+                <div class="row">
+                    <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
+                    <div class="col-md-offset-3 col-md-3">
+                        <form class="navbar-form">
+                            <input type="text" class="search-query" placeholder="Search">
+                        </form>
+                    </div>
+                </div>
+            </div><!--wrapper-->
+            <div class="row" style="background-color:#7ba3ca">
+                <nav class="navbar-static-top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+                            <span class="sr-only">メニュー</span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    
+                        <!--スマホ用トグル-->
+                    <nav class="globNav-row">
+                       <span class="globNav-toggle"><a class="menu-trigger" href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a></span>
+                             <ul class="globNav-inner" style="list-style:none">
+                                <li><a href="index_1.html">　　TOP</a></li>
+                                <li><a href="[010_000]mokuji.html">　　目次</a></li>
+                                <li><a href="[020_000]hajimeni.html">　　はじめに</a></li>
+                                <li><a href="[030_000]setup.html">　　セットアップ</a></li>
+                                <li><a href="[040_000]nagare.html">　　診察の流れ</a></li>
+                                <li><a href="[050_000]uketsuke.html">　　来院受付</a></li>
+                                <li><a href="[060_000]gamen.html">　　診察画面</a></li>
+                                <li><a href="[070_000]karute.html">　　カルテ記録</a></li>
+                                <li><a href="[080_000]kanja.html">　　患者情報</a></li>
+                                <li><a href="[090_000]master.html">　　マスタ管理</a></li>
+                                <li><a href="[010_000]sekkei.html">　　基本設計</a></li>
+                                <li><a href="[011_000]renkei.html">　　日レセ連携</a></li>
+                             </ul>
+　　　　　　　　　　　</nav><!--スマホ用トグル終わり-->
+           <!--PC用グローバルナビ-->
+                    <div id="gnavi" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="[000_000]index.html">TOP</a></li>
+                            <li><a href="[010_000]mokuji.html">目次</a></li>
+                            <li><a href="[020_000]hajimeni.html">はじめに</a></li>
+                            <li><a href="[030_000]setup.html">セットアップ</a></li>
+                            <li><a href="[040_000]nagare.html">診察の流れ</a></li>
+                            <li><a href="[050_000]uketsuke.html">来院受付</a></li>
+                            <li><a href="[060_000]gamen.html">診察画面</a></li>
+                            <li><a href="[070_000]karute.html">カルテ記録</a></li>
+                            <li><a class="current_page" href="[080_000]kanja.html">患者情報</a></li>
+                            <li><a href="[090_000]master.html">マスタ管理</a></li>
+                            <li><a href="[010_000]sekkei.html">基本設計</a></li>
+                            <li><a href="[011_000]renkei.html">日レセ連携</a></li>
+                        </ul>
+                    </div><!--gnav-->
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--コンテンツ設定-->
+   
+    <div class="container-fluid">
+        <div class="row">
+            <div class="title_wrapper">
+              <h3 id="a" class="page_title">目次</h3>
+            </div><!--title_wrapper-->
+            <div class="wrapper_1180">
+                <div class="col-md-2 fixed_menu clearfix" style="background-color:white;">
+                    <!--メニュー-->
+                  <div id="fixedBox" class="nav">
+                                <ul type="1" style="list-style: none;">
+                                    <li id="yamato"><a class="red" href="#a">患者情報</a></li>
+                                    <li><a href="#b">T[基本情報]</a></li>
+                                    <li><a href="#c">T[連絡先]</a></li>
+                                    <li><a href="#d">T[保険]</a></li>
+                                    <li><a href="#e">T[公費]</a></li>
+                                    <li><a href="#f">T[病名]</a></li>
+                                    <li><a href="#g">T[世帯]</a></li>
+                                    <li><a href="#h">T[所属]</a></li>
+                                    <li><a href="#i">T[履歴]</a></li>
+                                    <li><a href="#j">T[書類]</a></li>
+                                    <li><a href="#k">T[文書]</a></li>
+                                    <li><a href="#l">T[意見書]</a></li>
+                                    <li><a href="#m">T[災害の疑い]</a></li>
+                                    <li><a href="#n">T[バイタル]</a></li>
+                                    <li><a href="#o">T[イメージ]</a></li>
+                                    <li><a href="#p">T[サマリ]</a></li>
+                                </ul>
+                  </div><!--fixedBox-->
+                </div><!--co--md2-->
+                <div class="right_box clearfix">
+
+                    <div class="col-md-9" style="background-color:white;">
+                        <!--ページタイトル-->
+
+                        <div class="contents_wrapper">
+
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="a">患者情報</a></h3>
+                            </div><!--hr_h3-->
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><em>マニュアルの表現に関して</em><br>
+                                    本マニュアルでは#(シャープ)と大文字の英語を組み合わせた記号表現があります。この意味以下のようになりますので、ご理解の上お読みいただけますようお願い申し上げます。</p>
+                            <table border="1">
+                                <tr><th>記号</th><th>読み方</th><th>説明</th></tr>
+                                <tr><td>L(エル)</td><td>レイアウト</td><td>表示されている画面の名称</td></tr>
+                                <tr><td>B(ビー)</td><td>ボタン</td><td>画面上のボタン</td></tr>
+                                <tr><td>F(エフ)</td><td>フィールド</td><td>画面上の入力スペースのこと</td></tr>
+                                <tr><td>T(タブ)</td><td>タブ</td><td>画面上のタブスペースのタイトル</td></tr>
+                                <tr><td>S(エス)</td><td>スクリプト</td><td>スクリプトメニューにあるスクリプト名</td></tr>
+                            </table>
+                                <p>例１）<strong>L[メインメニュー] B[外来受付]</strong><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メインメニュー画面の、外来受付ボタン（を押す）となります。</p>
+                                <p>例２）<strong>L[診療記録] T[病名] F[病名]</strong><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;診療記録画面の、病名タブの、病名入力スペースとなります。</p>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="b">T[基本情報]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_kihonjouhou.png" alt="基本情報"></p> 
+                                <p><img class="center-block" src="images/080_000_kihonjouhou1.png" alt="基本情報1"></p> 
+                                <p>適宜項目名に従い情報を入力してください。<br>
+                                ※自宅電話１は他レコードと関連性があり同一データのものは<strong>T[世帯]</strong>にリストアップされるようになります。
+                                <strong>B[地図]</strong>はブラウザを開きGoogleの地図を表示し住所所在地を確認できます。
+                                <strong>B[表紙]</strong>で標準でカルテ１号用紙の印刷用画面が表示されます。</p>
+                                <p><img class="center-block" src="images/080_000_kihonjouhou2.png" alt="基本情報2"></p> 
+                                <p><img class="center-block" src="images/080_000_kihonjouhou3.png" alt="基本情報3"></p>
+                                <p>病名が１ページに入りきらない場合は<strong>B[>]</strong>で続紙２を表示させて印刷してください。<br>
+                                    ※カルテ１号用紙（様式第１号（一）の１（第二十二条関係）に準ずる）は続紙として３ページまで用意があり、最大５６病名まで印刷できます。</p>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="c">T[連絡先]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_renrakusaki.png" alt="連絡先"></p> 
+                                <p><img class="center-block" src="images/080_000_renrakusaki2.png" alt="連絡先2"></p> 
+                                <p>適宜項目名に従い情報を入力してください。
+                                ※会社（学校）電話は他レコードと関連性があり同一データのものは<strong>T[所属]</strong>にリストアップされるようになります。
+                                <strong>B[地図]</strong>はブラウザを開きGoogleの地図を表示し住所所在地を確認できます。</p>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="d">T[保険]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_hoken.png" alt="保険"></p> 
+                                <p>適宜項目名に従い情報を入力してください。</p>
+                                <table>
+                                    <tr><td><img class="center-block" src="images/080_000_hoken1.png" alt="保険1"></td><td>新しいレコードを追加します。</td></tr>
+                                    <tr><td><img class="center-block" src="images/080_000_hoken2.png" alt="保険2"></td><td>該当の情報を無効にします。（最下部へデータが配置されます。）</td></tr>
+                                    <tr><td><img class="center-block" src="images/080_000_hoken3.png" alt="保険3"></td><td>該当の情報を削除します。</td></tr>
+                                </table>
+                                <p>最後に<strong>B[追加]</strong>で確定します。</p>
+
+                                
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="e">T[公費]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_kouhi.png" alt="公費"></p> 
+                                <p>適宜項目名に従い情報を入力してください。</p>
+                                <table>
+                                    <tr><td><img class="center-block" src="images/080_000_hoken1.png" alt="公費1"></td><td>新しいレコードを追加します。</td></tr>
+                                    <tr><td><img class="center-block" src="images/080_000_hoken2.png" alt="公費2"></td><td>該当の情報を無効にします。（最下部へデータが配置されます。）</td></tr>
+                                    <tr><td><img class="center-block" src="images/080_000_hoken3.png" alt="公費3"></td><td>該当の情報を削除します。</td></tr>
+                                </table>
+                                <p>最後に<strong>B[追加]</strong>で確定します。</p>
+
+                                
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="f">T[病名]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_byoumei.png" alt="病名"></p> 
+                                <p>病名を確認・登録・編集できます。<strong>L[診断] T[病名]</strong>で確認できます。</p>
+                                <p><img class="center-block" src="images/080_000_byoumei2.png" alt="病名2"></p> 
+                                <p><strong>L[診察画面] T[病名]</strong>で確認できる情報と同一のものです。</p>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"> <a name="g">T[世帯]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_setai.png" alt="世帯"></p> 
+                                <p>T[基本情報] F[電話番号１]が同一のものを同一世帯とみなしリストアップしています。リスト右にあるボタンでそれぞれの情報画面へ移行できます。</p>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="h">T[所属]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_shozoku.png" alt="所属"></p> 
+                                <p>T[連絡先] F[会社（学校）電話] が同一のものを同一所属先とみなしリストアップしています。リスト右にあるボタンでそれぞれの情報画面へ移行できます。</p>
+                            
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="i">T[履歴]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_rireki.png" alt="履歴"></p> 
+                                <p>過去診療記録が閲覧できます。<strong>L[診察画面] T[履歴]</strong>の内容と同一のものです。</p>
+                                <p><img class="center-block" src="images/080_000_rireki_2.png" alt="履歴2"></p> 
+                                <table>
+                                    <tr><td><img class="center-block" src="images/080_000_rireki1.png" alt="履歴1"></td><td>該当患者の印刷用カルテ２号用紙を全て表示します。</td></tr>
+                                    <tr><td><img class="center-block" src="images/080_000_rireki2.png" alt="履歴2"></td><td>選択レコード以後のサマリデータを作成し直します。</td></tr>
+                                    <tr><td><img class="center-block" src="images/080_000_rireki3.png" alt="履歴3"></td><td>該当レコードの診察画面を表示します。</td></tr>
+                                    <tr><td><img class="center-block" src="images/080_000_rireki4.png" alt="履歴4"></td><td>該当レコードの印刷用カルテ２号用紙を表示します。</td></tr>
+                                    <tr><td><img class="center-block" src="images/080_000_rireki5.png" alt="履歴5"></td><td>該当レコードのサマリデータを更新します。</td></tr>
+                                </table>
+                                
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="j">T[書類]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="k">T[文書]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_bunsho.png" alt="文書"></p> 
+                                <p>紹介状などの書類を閲覧・編集できます。<strong>B[文書]</strong>で該当の書類を表示できます。</p>
+                                <p><img class="center-block" src="images/080_000_bunsho2.png" alt="文書2"></p> 
+                                <p><strong>L[診察画面] T[書類] T[文書]</strong>で確認できる情報と同一のものです。</p>
+                                
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="l">T[意見書]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_ikensho.png" alt="意見書"></p> 
+                                <p>傷病手当金支給申請の「労務不能に関する意見」欄に記載する内容を記録するところです。<strong>L[診察画面] T[書類] T[意見書]</strong>で確認できる情報と同一のものです。<strong>B(><)</strong>で該当の内容を無効にするとカルテ１号用紙には印刷されません。</p>
+                                <p><img class="center-block" src="images/080_000_ikensho2.png" alt="意見書2"></p> 
+                            
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="m">T[災害の疑い]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_saigainoutagai.png" alt="災害の疑い"></p> 
+                                <p>「業務災害又は通勤災害の疑い」に関する内容を記録するところです。<strong>L[診察画面] T[書類] T[災害の疑い]</strong>で確認できる情報と同一のものです。<strong>B(><)</strong>で該当の内容を無効にするとカルテ１号用紙には印刷されません。</p>
+                                <p><img class="center-block" src="images/080_000_saigainoutagai2.png" alt="災害の疑い2"></p> 
+                            
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="n">T[バイタル]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_baitaru.png" alt="バイタル"></p> 
+                                <p>バイタルデータを閲覧・編集できます。<strong>L[診察画面] T[バイタル]</strong>で確認できる情報と同一のものです。</p>
+                                <p><img class="center-block" src="images/080_000_baitaru2.png" alt="バイタル2"></p> 
+                            
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="o">T[データ]</a></h3>
+                            </div>
+                        <!--本文-->
+                        <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_image.png" alt="データ"></p> 
+                                <p>各種画像データなど様々なデータファイルを日付およびメモとともに保管できます。<br>
+                                    保管できるデータ形式は主に以下のようになります。</p>
+                                <table border="1">
+                                    <tr><td>画像の形式</td><td>QuickTime およびその他のマルチメディアファイルの形式</td><td>サウンドの形式</td></tr>
+                                    <tr><td>Encapsulated Postscript（.eps）</td><td>AVI（.avi）</td><td>AIFF（.aif）</td></tr>
+                                    <tr><td>FlashPix（.fpx）</td><td>Cubic VR</td><td>AU</td></tr>
+                                    <tr><td>GIF（.gif）</td><td>DV（.dv）</td><td>オーディオ CD データ（Mac OS）</td></tr>
+                                    <tr><td>JPEG/JFIF（.jpg）</td><td>FLC</td><td>MIDI（.mid）</td></tr>
+                                    <tr><td>JPEG 2000（.jp2）（Mac OS）</td><td>Karaoke（.kar）</td><td>MP3（.mp3）</td></tr>
+                                    <tr><td>MacPaint（.mac）（Mac OS）</td><td>Macromedia Flash 5</td><td>SoundFont 2（.sf2）</td></tr>
+                                    <tr><td>PDF（.pdf）（Mac OS）</td><td>MPEG（再生）</td><td>Sound（.snd）</td></tr>
+                                    <tr><td>Photoshop（.psd）</td><td>QuickTime ムービー（.qtm）</td><td>WAV（.wav）</td></tr>
+                                    <tr><td>PICS（.pcs）（Mac OS）</td><td>QuickTime VR</td><td></td></tr>
+                                    <tr><td>PICT（.pct）</td><td>バーチャルリアリティ（VR）</td><td></td></tr>
+                                    <tr><td>PNG（.png）</td><td></td><td></td></tr>
+                                    <tr><td>QuickTime イメージファイル（.qt）</td><td></td><td></td></tr>
+                                    <tr><td>SGI（.sgi）</td><td></td><td></td></tr>
+                                    <tr><td>Targa（.tga）</td><td></td><td></td></tr>
+                                    <tr><td>TIFF（.tif）</td><td></td><td></td></tr>
+                                    <tr><td>Windows ビットマップ（.bmp）</td><td></td><td></td></tr>
+                                    <tr><td>Windows メタファイル/拡張メタファイル（.wmf/.emf）（Windows）</td><td></td><td></td></tr>
+                                </table>
+                            
+                        </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+                        <!--メニュー-->
+                        <div class="contents_wrapper">
+                            <div class="hr_h3">
+                                 <h3 id="b" class="contents_title margin-top30"><a name="p">T[サマリ]</a></h3>
+                            </div>
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><img class="center-block" src="images/080_000_summary.png" alt="サマリ"></p> 
+                                <p>サマリデータを閲覧・編集できます。<strong>L[診察画面] T[サマリ]</strong>で確認できる情報と同一のものです。</p>
+                                <p><img class="center-block" src="images/080_000_summary2.png" alt="サマリ2"></p> 
+                            
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                    </div><!--col-md-9-->
+
+
+                </div><!--rightbox_clearfix-->
+            </div><!--wrapper_1180-->
+    <!--//コンテンツ部終了//-->
+        </div><!--row-->
+    </div><!--contaner_fluid-->
+    
+    <!--ページトップへ戻る-->
+     <p id="page-top"><a href="#wrap"></a></p>
+    <!--Footer設定-->
+    <footer>
+        <div class="container-fluid">
+            <p>Copyright © Msis,Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+  </body>
+</html>
