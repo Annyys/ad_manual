@@ -70,19 +70,20 @@ $(window).scroll(function () {
   <body>
     <!--Header共通設定-->
     <header style="background-color:white">
-        <div class="wrapper_1280">
-            <img src="images/Annyys-msis-logo.jpg" class="img-responsive" alt="ANNYYS_D">
-        </div><!--wrapper-->
+         <div class="wrapper_1180 img_p clearfix">
+         <img id="A_logo" class="margin-top20" src="images/ANNYYS_logo.jpg" class="img-responsive" alt="ANNYYS_D">
+         <img class="m_logo margin-top30" src="images/msis_logo.jpg" class="img-responsive" alt="msis">
+           </div><!--wrapper-->
         <div class="container-fluid" style="background-color:#19538a">
-            <div class="wrapper_1180">
-                <div class="row">
-                    <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
-                    <div class="col-md-offset-3 col-md-3">
-                        <form class="navbar-form">
-                            <input type="text" class="search-query" placeholder="Search">
-                        </form>
-                    </div>
+              <div class="wrapper_1180">
+            <div class="row">
+                <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
+                <div class="col-md-offset-3 col-md-3">
+                    <form class="navbar-form">
+                        <input type="text" class="search-query" placeholder="Search">
+                    </form>
                 </div>
+            </div>
             </div><!--wrapper-->
             <div class="row" style="background-color:#7ba3ca">
                 <nav class="navbar-static-top">
@@ -140,14 +141,15 @@ $(window).scroll(function () {
    
     <div class="container-fluid">
         <div class="row">
-            <div class="title_wrapper">
+            <!--<div class="title_wrapper">
               <h3 id="a" class="page_title">目次</h3>
             </div><!--title_wrapper-->
             <div class="wrapper_1180">
                 <div class="col-md-2 fixed_menu clearfix" style="background-color:white;">
                     <!--メニュー-->
                   <div id="fixedBox" class="nav">
-                                <ul type="1" style="list-style: none;">
+                   <h4 class="side-title">マスタ管理</h4>
+                               <ul type="1" style="list-style: none;">
                                     <li id="yamato"><a class="red" href="#a">マスタ管理</a></li>
                                     <li><a href="#b">B[SET登録]</a></li>
                                     <li><a href="#c">L[病名マスタ]</a></li>
@@ -164,9 +166,9 @@ $(window).scroll(function () {
                     <div class="col-md-9" style="background-color:white;">
                         <!--ページタイトル-->
 
-                        <div class="contents_wrapper">
+                        <div id="a" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="a">マスタ管理</a></h3>
+                                 <h3 class="contents_title margin-top20">マスタ管理</h3>
                             </div>
 
                         <!--本文-->
@@ -197,9 +199,9 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="b" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="b">B[SET登録]</a></h3>
+                                 <h3 class="contents_title margin-top20">B[SET登録]</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -213,9 +215,9 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="c" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="c">L[病名マスタ]</a></h3>
+                                 <h3 class="contents_title margin-top20">L[病名マスタ]</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -227,9 +229,9 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="d" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="d">L[診療行為マスタ]</a></h3>
+                                 <h3 class="contents_title margin-top20">L[診療行為マスタ]</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -249,9 +251,9 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="e" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="e">L[薬剤・生薬マスタ]</a></h3>
+                                 <h3 class="contents_title margin-top20">L[薬剤・生薬マスタ]</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -271,9 +273,9 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="f" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"> <a name="f">L[材料・フィルムマスタ・自費マスタ]</a></h3>
+                                 <h3 class="contents_title margin-top20">L[材料・フィルムマスタ・自費マスタ]</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -296,9 +298,9 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="g" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="g">L[用法・コメントマスタ]</a></h3>
+                                 <h3 class="contents_title margin-top20">L[用法・コメントマスタ]</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -321,9 +323,9 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="h" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="h">L[採用コードマスタ]</a></h3>
+                                 <h3 class="contents_title margin-top20">L[採用コードマスタ]</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
