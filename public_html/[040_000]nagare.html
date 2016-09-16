@@ -20,19 +20,65 @@
     });
 </script>
   
+<!--ページ上部へ戻る-->
+<script>
+$(function() {
+			var topBtn = $('#page-top');	
+			topBtn.hide();
+			//スクロールが100に達したらボタン表示
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					topBtn.fadeIn();
+				} else {
+					topBtn.fadeOut();
+				}
+			});
+			//スクロールしてトップ
+		    topBtn.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+		    });
+		});
+</script>
+
+
+<script type="text/javascript">
+jQuery(function($) {
+  
+var nav    = $('#fixedBox'),
+    offset = nav.offset();
+  
+$(window).scroll(function () {
+  if($(window).scrollTop() > offset.top) {
+    nav.addClass('fixed');
+  } else {
+    nav.removeClass('fixed');
+  }
+});
+  
+});
+</script>
+
+<!--クリック時変化-->
+
+
+
 
   </head>
   <body>
     <!--Header共通設定-->
     <header style="background-color:white">
-        <div class="wrapper_1280">
-        <img src="images/Annyys-msis-logo.jpg" class="img-responsive" alt="ANNYYS_D">
-        </div><!--wrapper-->
+         <div class="wrapper_1180 img_p clearfix">
+         <img id="A_logo" class="margin-top20" src="images/ANNYYS_logo.jpg" class="img-responsive" alt="ANNYYS_D">
+         <img class="m_logo margin-top30" src="images/msis_logo.jpg" class="img-responsive" alt="msis">
+           </div><!--wrapper-->
         <div class="container-fluid" style="background-color:#19538a">
-            <div class="wrapper_1180">
+              <div class="wrapper_1180">
             <div class="row">
                 <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
-                <div class="col-md-offset-4 col-md-3">
+                <div class="col-md-offset-3 col-md-3">
                     <form class="navbar-form">
                         <input type="text" class="search-query" placeholder="Search">
                     </form>
@@ -41,12 +87,12 @@
             </div><!--wrapper-->
             <div class="row" style="background-color:#7ba3ca">
                <nav class="navbar-static-top">
-                    <!--<div class="navbar-header">
+                    <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
                             <span class="sr-only">メニュー</span>
                             <span class="icon-bar"></span>
                         </button>
-                    </div>-->
+                    </div>
                     
                     <!--スマホ用トグル-->
                     <nav class="globNav-row">
@@ -66,8 +112,8 @@
                                 <li><a href="[070_000]karute.html">　　カルテ記録</a></li>
                                 <li><a href="[080_000]kanja.html">　　患者情報</a></li>
                                 <li><a href="[090_000]master.html">　　マスタ管理</a></li>
-                                <li><a href="[010_000]sekkei.html">　　基本設計</a></li>
-                                <li><a href="[011_000]renkei.html">　　日レセ連携</a></li>
+                                <li><a href="[100_000]settei.html">　　基本設定</a></li>
+                                <li><a href="[110_000]renkei.html">　　日レセ連携</a></li>
                              </ul>
 　　　　　　　　　　　</nav><!--スマホ用トグル終わり-->
            <!--PC用グローバルナビ-->
@@ -83,8 +129,8 @@
                             <li><a href="[070_000]karute.html">カルテ記録</a></li>
                             <li><a href="[080_000]kanja.html">患者情報</a></li>
                             <li><a href="[090_000]master.html">マスタ管理</a></li>
-                            <li><a href="[010_000]sekkei.html">基本設計</a></li>
-                            <li><a href="[011_000]renkei.html">日レセ連携</a></li>
+                            <li><a href="[100_000]settei.html">基本設定</a></li>
+                            <li><a href="[110_000]renkei.html">日レセ連携</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -92,66 +138,64 @@
         </div>
     </header>
     <!--コンテンツ設定-->
-      <div class="wrapper_1180">
+   
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3" style="background-color:white;">
-                <!--メニュー-->
-                <figure>
-                    <figcaption>目次</figcaption>              
+            <!--<div class="title_wrapper">
+              <h3 id="a" class="page_title">目次</h3>
+            </div><!--title_wrapper-->
+            <div class="wrapper_1180">
+                <div class="col-md-2 fixed_menu clearfix" style="background-color:white;">
+                    <!--メニュー-->
+                  <div id="fixedBox" class="nav">
+                   <h4 class="side-title">診察の流れ</h4>
                     <ul type="1" style="list-style: none;">
-                                <li>診察の流れ</li>
-                                <li>全体の構成（概略）</li>
-                                <li>マスタ更新（DBManager）</li>
-                                <li>自動処理に関する内容</li>
-                                <li>FileMakerのバージョン</li>
+                                <li id="yamato"><a class="red" href="#a">診察の流れ</a></li>
+                                <li><a href="#b">全体の構成（概略）</a></li>
+                                <li><a href="#c">マスタ更新（DBManager）</a></li>
+                                <li><a href="#d">自動処理に関する内容</a></li>
+                                <li><a href="#e">FileMakerのバージョン</a></li>
                             </ul>
-                </figure>
+                  </div><!--fixedBox-->
+                </div><!--co--md2-->
+                <div class="right_box clearfix">
 
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                    <div class="col-md-9" style="background-color:white;">
+                        <!--ページタイトル-->
 
-                <h3>診察の流れ</h3>
-                <hr class="hborder">
-                <blockquote>診察の流れ</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><img class="" src="images/040_001_nichisere_icon.png" width="50" height="61" alt="日セレ">&nbsp;日セレでの処理&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="" src="images/040_002_annyysd_icon.png" width="87" height="62" alt="エニーズ">&nbsp;ANNYYS_Dでの処理</p>
-                </div>
-             <p><img class="" src="images/040_003_nagare.png" alt="ながれ"></p> 
-             <p>※日レセと連携している場合、</p>
-             <ul>
-                 <li>[窓口]患者情報および保険情報の登録は日レセ側で行います。<br>
-                ※日レセに登録された内容（患者属性・保険・公費）をANNYYS_Dは読み込むことができます。</li>
-                <li>[診察]診察内容の記録（カルテ記載）はANNYYS_Dで行います。<br>
-                ※診察が終了したら日レセに診療情報が送信されます。</li>
-                 <li>[窓口]医事会計は日レセで行います。</li>
-                 <li>[事務]月次処理の請求業務は日レセで行います。</li>
-             </ul>
-            </div>
-        </div>
-        <div class="row">
+                        <div id="a" class="contents_wrapper padding-bottom10 margin-bottom30">
 
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">診察の流れ</h3>
+                            </div><!--hr_h3-->
+                        <!--本文-->
+                            <div id="annys-tx">
+                                    <p><img class="" src="images/040_001_nichisere_icon.png" width="50" height="61" alt="日セレ">&nbsp;日セレでの処理&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="" src="images/040_002_annyysd_icon.png" width="87" height="62" alt="エニーズ">&nbsp;ANNYYS_Dでの処理</p>
+                             <p><img class="" src="images/040_003_nagare.png" alt="ながれ"></p> 
+                             <p>※日レセと連携している場合、</p>
+                             <ul>
+                                 <li>[窓口]患者情報および保険情報の登録は日レセ側で行います。<br>
+                                ※日レセに登録された内容（患者属性・保険・公費）をANNYYS_Dは読み込むことができます。</li>
+                                <li>[診察]診察内容の記録（カルテ記載）はANNYYS_Dで行います。<br>
+                                ※診察が終了したら日レセに診療情報が送信されます。</li>
+                                 <li>[窓口]医事会計は日レセで行います。</li>
+                                 <li>[事務]月次処理の請求業務は日レセで行います。</li>
+                             </ul>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>全体の構成（概略）</h3>
-                <hr class="hborder">
-                <blockquote>全体の構成（概略）</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
+                        <!--メニュー-->
+                        <div id="b" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">全体の構成（概略）</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
                     <p>ANNYYS_Dを起動した際に表示される最初の画面で<strong>[メインメニュー]</strong>になっています。</p>
                      <p><img class="" src="images/040_004_mainmenu.PNG" alt="メインメニュー"></p> 
                      <p><img class="" src="images/040_005_kousei.png" alt="構成"></p> 
-                </div>
-                <p>全他構成の概要としては<strong>[メインメニュー]</strong>>を中心に５つのカテゴリに分かれています。</p>
+
+                     <p>全他構成の概要としては<strong>[メインメニュー]</strong>>を中心に５つのカテゴリに分かれています。</p>
              <ul>
                  <li>日常業務は<strong>[来院受付]</strong>⇔<strong>[診療記録]</strong>の繰り返しがほとんどです。たまに<strong>[患者情報]</strong>を参照する事もある。</li>
                 <li><strong>[マスタ管理]</strong>や<strong>[基本設定]</strong>は設定の変更などがない限り日常ではほとんど使う事わないせん。</li>
@@ -166,29 +210,22 @@
                     ※各種マスタ類で随時更新が必要なデータはDBManagerを使って更新できます。<br>DBManagerは自動的に動作するように設定できほとんど手を煩わすことはありません。</li>
                  <li><strong>[基本設定]</strong>施設情報や医師名・診療科、日レセとの連携設定、その他設定を行います。</li>
              </ul>
-            </div>
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>マスタ更新（DBManager）</h3>
-                <hr class="hborder">
-                <blockquote>マスタ更新（DBManager）</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
+                        <!--メニュー-->
+                        <div id="c" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">マスター更新（DBManager）</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
                     <p>ANNYYS_D版では各種マスタ更新用のプログラムを別途用意しています。</p>
                      <p><img class="" src="images/040_006_dbmanager.png" alt="マスター更新"></p> 
                     <p>DBManager（ディービーマネージャー）<br>
                     このプログラムは指定しているように、www.annyys.netより更新プログラムをダウンロードし更新処理を行います。</p>
                      <p>診療報酬情報提供サービスによる<br>
                     http://www.iryohoken.go.jp/shinryohoshu/</p> 
-                </div>
              <ul>
                  <li>医科診療行為</li>
                 <li>医薬品</li>
@@ -203,58 +240,49 @@
                     <li>医薬品一般名</li>
                 </ul>
                 <p>※Java1.6以上の実行環境が必要です。</p>
-                <p>※インターネットネット環境が必要です。</p>
-            </div>
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                <p class="padding-bottom30">※インターネットネット環境が必要です。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>自動処理に関する内容</h3>
-                <hr class="hborder">
-                <blockquote>自動処理に関する内容</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
+                        <!--メニュー-->
+                        <div id="d" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">自動処理に関する内容</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
                     <p>AutoRunにチェックを入れている状態で起動のとき。</p>
                     <p>&nbsp;&nbsp;&nbsp;「データ取得」→「更新作業」を実行します。</p> 
                     <p>&nbsp;&nbsp;&nbsp;「データ取得」時に新しいデータがない場合は１０秒後に自動でプログラムは終了します。</p>
                     <p>&nbsp;&nbsp;&nbsp;「更新作業」時は更新作業が完了したら１０秒後に自動でプログラムは終了します。</p>
                     <br>
-                    <p>WindowsのタスクスケジューラーやMacOSではcronコマンドなどを使えば定期的に処理が行え手間がかかりません。</p> 
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                    <p class="padding-bottom30">WindowsのタスクスケジューラーやMacOSではcronコマンドなどを使えば定期的に処理が行え手間がかかりません。</p> 
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>FileMakerのバージョン</h3>
-                <hr class="hborder">
-                <blockquote>FileMakerのバージョン</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
+                        <!--メニュー-->
+                        <div id="e" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">FileMakerのバージョン</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
                     <p>FileMakerServer環境ではJDBC接続が行えないため、ローカルホスト(localhost)のANNYYS_Dに対して処理を実行させる必要があります。このときFileMakerPro環境のJDBC接続を利用していますが、DB IP欄には「localhost」「127.0.0.1」アドレスしか指定はできません。（DB Managerと同じマシンで起動させる必要があります。）</p>
-                    <p>FileMakerServerホストのIPアドレスを指定してネットワーク上で処理を実行したい場合はFileMakerServer<strong>Advanced</strong>のバージョンが必要です。</p> 
-                </div>
-            </div>
-            <div class="col-xs-2" style="background-color:white;"></div>
-                
-        </div>
-    </div>
-           </div><!--wrapper_1180-->
+                    <p class="padding-bottom30">FileMakerServerホストのIPアドレスを指定してネットワーク上で処理を実行したい場合はFileMakerServer<strong>Advanced</strong>のバージョンが必要です。</p> 
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                    </div><!--col-md-9-->
+
+
+                </div><!--rightbox_clearfix-->
+            </div><!--wrapper_1180-->
     <!--//コンテンツ部終了//-->
-   
-    <p>　</p>
+        </div><!--row-->
+    </div><!--contaner_fluid-->
+    
+    <!--ページトップへ戻る-->
+     <p id="page-top"><a href="#wrap"></a></p>
     <!--Footer設定-->
     <footer>
         <div class="container-fluid">
