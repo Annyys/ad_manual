@@ -4,19 +4,78 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Sample</title>
+    <title>ANNYYS_D Webマニュアル　カルテ記録</title>
     <!-- BootstrapのCSS読み込み -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- jQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="js/bootstrap.min.js"></script>
+     <!--SPトグル読み込み-->
+<script>
+    $(function(){
+        $(".globNav-toggle").on("click", function() {
+            $(this).next().slideToggle();
+        });
+    });
+</script>
+
+<!--ページ上部へ戻る-->
+<script>
+$(function() {
+			var topBtn = $('#page-top');	
+			topBtn.hide();
+			//スクロールが100に達したらボタン表示
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					topBtn.fadeIn();
+				} else {
+					topBtn.fadeOut();
+				}
+			});
+			//スクロールしてトップ
+		    topBtn.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+		    });
+		});
+</script>
+
+
+<script type="text/javascript">
+jQuery(function($) {
+  
+var nav    = $('#fixedBox'),
+    offset = nav.offset();
+  
+$(window).scroll(function () {
+  if($(window).scrollTop() > offset.top) {
+    nav.addClass('fixed');
+  } else {
+    nav.removeClass('fixed');
+  }
+});
+  
+});
+</script>
+
+<!--クリック時変化-->
+
+
+
+
   </head>
   <body>
     <!--Header共通設定-->
     <header style="background-color:white">
-        <img src="images/Annyys-msis-logo.jpg" class="img-responsive" alt="ANNYYS_D">
+         <div class="wrapper_1180 img_p clearfix">
+         <img id="A_logo" class="margin-top20" src="images/ANNYYS_logo.jpg" class="img-responsive" alt="ANNYYS_D">
+         <img class="m_logo margin-top30" src="images/msis_logo.jpg" class="img-responsive" alt="msis">
+           </div><!--wrapper-->
         <div class="container-fluid" style="background-color:#19538a">
+              <div class="wrapper_1180">
             <div class="row">
                 <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
                 <div class="col-md-offset-3 col-md-3">
@@ -25,6 +84,7 @@
                     </form>
                 </div>
             </div>
+            </div><!--wrapper-->
             <div class="row" style="background-color:#7ba3ca">
                 <nav class="navbar-static-top">
                     <div class="navbar-header">
@@ -33,6 +93,30 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
+                    
+                        <!--スマホ用トグル-->
+                    <nav class="globNav-row">
+                       <span class="globNav-toggle"><a class="menu-trigger" href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a></span>
+                             <ul class="globNav-inner" style="list-style:none">
+                                <li><a href="index_1.html">　　TOP</a></li>
+                                <li><a href="[010_000]mokuji.html">　　目次</a></li>
+                                <li><a href="[020_000]hajimeni.html">　　はじめに</a></li>
+                                <li><a href="[030_000]setup.html">　　セットアップ</a></li>
+                                <li><a href="[040_000]nagare.html">　　診察の流れ</a></li>
+                                <li><a href="[050_000]uketsuke.html">　　来院受付</a></li>
+                                <li><a href="[060_000]gamen.html">　　診察画面</a></li>
+                                <li><a href="[070_000]karute.html">　　カルテ記録</a></li>
+                                <li><a href="[080_000]kanja.html">　　患者情報</a></li>
+                                <li><a href="[090_000]master.html">　　マスタ管理</a></li>
+                                <li><a href="[100_000]settei.html">　　基本設定</a></li>
+                                <li><a href="[110_000]renkei.html">　　日レセ連携</a></li>
+                             </ul>
+　　　　　　　　　　　</nav><!--スマホ用トグル終わり-->
+           <!--PC用グローバルナビ-->
                     <div id="gnavi" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="[000_000]index.html">TOP</a></li>
@@ -42,1182 +126,937 @@
                             <li><a href="[040_000]nagare.html">診察の流れ</a></li>
                             <li><a href="[050_000]uketsuke.html">来院受付</a></li>
                             <li><a href="[060_000]gamen.html">診察画面</a></li>
-                            <li><a href="[070_000]karute.html">カルテ記録</a></li>
+                            <li><a class="current_page" href="[070_000]karute.html">カルテ記録</a></li>
                             <li><a href="[080_000]kanja.html">患者情報</a></li>
                             <li><a href="[090_000]master.html">マスタ管理</a></li>
-                            <li><a href="[010_000]sekkei.html">基本設計</a></li>
-                            <li><a href="[011_000]renkei.html">日レセ連携</a></li>
+                            <li><a href="[100_000]settei.html">基本設定</a></li>
+                            <li><a href="[110_000]renkei.html">日レセ連携</a></li>
                         </ul>
-                    </div>
+                    </div><!--gnav-->
                 </nav>
             </div>
         </div>
     </header>
     <!--コンテンツ設定-->
+    
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3" style="background-color:white;">
-                <!--メニュー-->
-                <figure>
-                    <figcaption>内容</figcaption>              
+            <!--<div class="title_wrapper">
+              <h3 id="a" class="page_title">目次</h3>
+            </div><!--title_wrapper-->
+            <div class="wrapper_1180">
+                <div class="col-md-2 fixed_menu clearfix" style="background-color:white;">
+                    <!--メニュー-->
+                  <div id="fixedBox" class="nav">
+                   <h4 class="side-title">カルテ記録</h4>
                             <ul type="1" style="list-style: none;">
-                                <li>カルテ記録</li>
-                                <li>ＳＯＡＰの入力</li>
-                                <li>診療行為の入力<ul><li>重要</li></ul></li>
-                                <li>画像の入力<ul style="list-style: none;"><li>目的の部分に項目が入らない時は</li></ul></li>
-                                <li>【診察】</li>
-                                <li>【医管】</li>
-                                <li>【在宅】</li>
-                                <li>【在宅薬】</li>
-                                <li>【在宅材】</li>
-                                <li>【処方/内服・頓服】</li>
-                                <li>【処方/外用】</li>
-                                <li>【皮下筋注】</li>
-                                <li>【静注】</li>
-                                <li>【その他の注射】</li>
-                                <li>【注射薬剤】</li>
-                                <li>【処置】</li>
-                                <li>【処置薬剤】</li>
-                                <li>【手術】</li>
-                                <li>【麻酔】</li>
-                                <li>【検査】</li>
-                                <li>【病理】</li>
-                                <li>【画像】</li>
-                                <li>【その他】</li>
-                                <li>【コメント】</li>
-                                <li>Set</li>
-                                <li>Do</li>
-                                <li>定期処方</li>
-                                <li>病名確認</li>
-                                <li>病名索引</li>
-                                <li>会計送信</li>
-                                <li>会計送信の修正</li>
-                                <li>トラブル！うっかり記録内容を消してしまった。
-                                    <ul style="list-style: none;"><li>その１</li><li>その２</li></ul></li>
+                                <li id="yamato"><a class="red" href="#a">カルテ記録</a></li>
+                                <li><a href="#b">ＳＯＡＰの入力</a></li>
+                                <li><a href="#c">診療行為の入力</a><ul style="list-style: none;"><li><a href="#c1">重要</a></li></ul></li>
+                                <li><a href="#d">画像の入力</a><ul style="list-style: none;"><li><a href="#d1">目的の部分に項目が入らない時は</a></li></ul></li>
+                                <li><a href="#e">【診察】</a></li>
+                                <li><a href="#f">【医管】</a></li>
+                                <li><a href="#g">【在宅】</a></li>
+                                <li><a href="#h">【在宅薬】</a></li>
+                                <li><a href="#i">【在宅材】</a></li>
+                                <li><a href="#j">【処方/内服・頓服】</a></li>
+                                <li><a href="#k">【処方/外用】</a></li>
+                                <li><a href="#l">【皮下筋注】</a></li>
+                                <li><a href="#m">【静注】</a></li>
+                                <li><a href="#n">【その他の注射】</a></li>
+                                <li><a href="#o">【注射薬剤】</a></li>
+                                <li><a href="#p">【処置】</a></li>
+                                <li><a href="#q">【処置薬剤】</a></li>
+                                <li><a href="#r">【手術】</a></li>
+                                <li><a href="#s">【麻酔】</a></li>
+                                <li><a href="#t">【検査】</a></li>
+                                <li><a href="#u">【病理】</a></li>
+                                <li><a href="#v">【画像】</a></li>
+                                <li><a href="#w">【その他】</a></li>
+                                <li><a href="#x">【コメント】</a></li>
+                                <li><a href="#y">Set</a></li>
+                                <li><a href="#z">Do</a></li>
+                                <li><a href="#za">定期処方</a></li>
+                                <li><a href="#zb">病名確認</a></li>
+                                <li><a href="#zc">病名索引</a></li>
+                                <li><a href="#zd">会計送信</a></li>
+                                <li><a href="#ze">会計送信の修正</a></li>
+                                <li><a href="#zf">トラブル！うっかり記録内容を消してしまった。</a>
+                                    <ul style="list-style: none;"><li><a href="#zf1">その１</a></li><li><a href="#zf2">その２</a></li></ul></li>
                             </ul>
-                </figure>
+                  </div><!--fixedBox-->
+                </div><!--co--md2-->
+                <div class="right_box clearfix">
 
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p><em>マニュアルの表現に関して</em><br>本マニュアルでは#(シャープ)と大文字の英語を組み合わせた記号表現があります。この意味以下のようになりますので、ご理解の上お読みいただけますようお願い申し上げます。</p>
-                <table border="1">
-                    <tr><th>記号</th><th>読み方</th><th>説明</th></tr>
-                    <tr><td>L(エル)</td><td>レイアウト</td><td>表示されている画面の名称</td></tr>
-                    <tr><td>B(ビー)</td><td>ボタン</td><td>画面上のボタン</td></tr>
-                    <tr><td>F(エフ)</td><td>フィールド</td><td>画面上の入力スペースのこと</td></tr>
-                    <tr><td>T(タブ)</td><td>タブ</td><td>画面上のタブスペースのタイトル</td></tr>
-                    <tr><td>S(エス)</td><td>スクリプト</td><td>スクリプトメニューにあるスクリプト名</td></tr>
-                </table>
-                <p>例１）<strong>L[メインメニュー]</strong>→<strong>B[外来受付]</strong><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メインメニュー画面の、外来受付ボタン（を押す）となります。<br>
-                例２）<strong>L[診療記録]</strong>→<strong>T[病名]</strong>→<strong>F[病名]</strong><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;診療記録画面の、病名タブの、病名入力スペースとなります。<br>
-                </p>
+                    <div class="col-md-9" style="background-color:white;">
+                        <!--ページタイトル-->
 
-                <h3>カルテ記録</h3>
-                <hr class="hborder">
-                <blockquote>カルテ記録</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p>カルテ記録はSOAPのテキスト入力と、左タブ内リストから選択して処方などを入力する診療行為入力があります。入力した内容は「処方せん」「２号用紙」で出力する事も可能で、紹介状などの出力フォームもあります。また、Doやセット入力機能もあり利用形態に合わせて効率よく診療録を記録することができます。</p>                <ol>
+                        <div id="a" class="contents_wrapper padding-bottom10 margin-bottom30">
 
-                </div>
-            </div>
-        </div>
-        <div class="row">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">カルテ記録</h3>
+                            </div><!--hr_h3-->
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><em>マニュアルの表現に関して</em><br>本マニュアルでは#(シャープ)と大文字の英語を組み合わせた記号表現があります。この意味以下のようになりますので、ご理解の上お読みいただけますようお願い申し上げます。</p>
+                                <table border="1">
+                                    <tr><th>記号</th><th>読み方</th><th>説明</th></tr>
+                                    <tr><td>L(エル)</td><td>レイアウト</td><td>表示されている画面の名称</td></tr>
+                                    <tr><td>B(ビー)</td><td>ボタン</td><td>画面上のボタン</td></tr>
+                                    <tr><td>F(エフ)</td><td>フィールド</td><td>画面上の入力スペースのこと</td></tr>
+                                    <tr><td>T(タブ)</td><td>タブ</td><td>画面上のタブスペースのタイトル</td></tr>
+                                    <tr><td>S(エス)</td><td>スクリプト</td><td>スクリプトメニューにあるスクリプト名</td></tr>
+                                </table>
+                                <p>例１）<strong>L[メインメニュー]</strong>→<strong>B[外来受付]</strong><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メインメニュー画面の、外来受付ボタン（を押す）となります。<br>
+                                例２）<strong>L[診療記録]</strong>→<strong>T[病名]</strong>→<strong>F[病名]</strong><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;診療記録画面の、病名タブの、病名入力スペースとなります。<br>
+                                </p>
 
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                                    <p class="padding-bottom30">カルテ記録はSOAPのテキスト入力と、左タブ内リストから選択して処方などを入力する診療行為入力があります。入力した内容は「処方せん」「２号用紙」で出力する事も可能で、紹介状などの出力フォームもあります。また、Doやセット入力機能もあり利用形態に合わせて効率よく診療録を記録することができます。</p>                <ol>
 
-                <h3>ＳＯＡＰの入力</h3>
-                <hr class="hborder">
-                <blockquote>ＳＯＡＰの入力</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p>基本はいずれの項目もキーボードから適宜入力してください。</p>
-                    <p><img class="" src="images/070_000_soap_nyuryoku.png" width="1000" height="727" alt="SOAP画面"></p> 
-                    <p><img class="" src="images/070_000_soap_nyuryoku2.png" width="1000" height="727" alt="SOAP内容"></p> 
-                    <p>また、S,O,A,Pの文字（○枠の部分）をクリックすると、診療行為入力の補助画面、L[SOAP補助]が表示されます。こちらは入力を簡便化するために、定型内容を登録しておけるので必要な時は「定型を利用して部分的な修正を行う」などのような利用できます。</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>診療行為の入力</h3>
-                <hr class="hborder">
-                <blockquote>診療行為の入力</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p>診療行為は<strong>右のタブ項目から必要事項を選択する形式で事で入力します。</strong></p>
-                    <p>これら診療行為の情報はレセコンに会計情報を送信する元データとなるため診療行為コードとともに記録されます。判断料や加算項目などの多くはレセコン側で自動的に判断されるためここでは主だった行為のみを入力します。</p>
-                    <p>入力された内容はテキスト方式で入力されていますので必要に応じて修正可能です。（コード番号は修正削除しないでください）</p>
-                    <p>特徴として、これら診療行為データも<strong>テキスト形式で入力されているだけ</strong>なので、数量の変更や部分的な修正が容易に行えます。</p>
-                    <p><img class="" src="images/070_000_shinsatsu_nyuryoku.png" width="1000" height="727" alt="診察画面"></p>
-                    <p><strong>重要</strong><br>
-                    診察記録が完了したら必ず<strong>B[確]</strong>を押すようにしてください。このボタンを押したタイミングで記録のバックアップが取られますので「保全性・真正性」の意味で重要な機能が含まれています。</p>
+                        <!--メニュー-->
+                        <div id="b" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">SOAPの入力</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p>基本はいずれの項目もキーボードから適宜入力してください。</p>
+                                    <p><img class="" src="images/070_000_soap_nyuryoku.png" width="1000" height="727" alt="SOAP画面"></p> 
+                                    <p><img class="" src="images/070_000_soap_nyuryoku2.png" width="1000" height="727" alt="SOAP内容"></p> 
+                                    <p class="padding-bottom30">また、S,O,A,Pの文字（○枠の部分）をクリックすると、診療行為入力の補助画面、L[SOAP補助]が表示されます。こちらは入力を簡便化するために、定型内容を登録しておけるので必要な時は「定型を利用して部分的な修正を行う」などのような利用できます。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                        <!--メニュー-->
+                        <div id="c" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">診療行為の入力</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p>診療行為は<strong>右のタブ項目から必要事項を選択する形式で事で入力します。</strong></p>
+                                    <p>これら診療行為の情報はレセコンに会計情報を送信する元データとなるため診療行為コードとともに記録されます。判断料や加算項目などの多くはレセコン側で自動的に判断されるためここでは主だった行為のみを入力します。</p>
+                                    <p>入力された内容はテキスト方式で入力されていますので必要に応じて修正可能です。（コード番号は修正削除しないでください）</p>
+                                    <p>特徴として、これら診療行為データも<strong>テキスト形式で入力されているだけ</strong>なので、数量の変更や部分的な修正が容易に行えます。</p>
+                                    <p><img class="" src="images/070_000_shinsatsu_nyuryoku.png" width="1000" height="727" alt="診察画面"></p>
+                                    <h4 id="c1">重要</h4>
+                                    <p>診察記録が完了したら必ず<strong>B[確]</strong>を押すようにしてください。このボタンを押したタイミングで記録のバックアップが取られますので「保全性・真正性」の意味で重要な機能が含まれています。</p>
 
 
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>画像の入力</h3>
-                <hr class="hborder">
-                <blockquote>画像の入力</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><img class="" src="images/070_000_gazou_nyuryoku.png" width="1000" height="727" alt="画像入力"></p>
-                    <p>[O]object部分にあるT[画像]を選択すると、画像などが挿入できるオブジェクトフィールドが表示されます。<br>
-                    この部分は、あらゆるバイナリデータを保存できますがANNYYS_D版では画像もしくはイメージを挿入する事を前提に用意しています。<br>
-                    このオブジェクトフィールドをクリックすると（データがない場合）、WindowsではOSに標準で付いているペイントソフトが立ち上がります。（MacOSの場合は、何かしらインストールして、呼び出せるように登録する必要があります。）<br><br>
+                        <!--メニュー-->
+                        <div id="d" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">画像の入力</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><img class="" src="images/070_000_gazou_nyuryoku.png" width="1000" height="727" alt="画像入力"></p>
+                                    <p>[O]object部分にあるT[画像]を選択すると、画像などが挿入できるオブジェクトフィールドが表示されます。<br>
+                                    この部分は、あらゆるバイナリデータを保存できますがANNYYS_D版では画像もしくはイメージを挿入する事を前提に用意しています。<br>
+                                    このオブジェクトフィールドをクリックすると（データがない場合）、WindowsではOSに標準で付いているペイントソフトが立ち上がります。（MacOSの場合は、何かしらインストールして、呼び出せるように登録する必要があります。）<br><br>
 
-                    ※Win,Macどちらでも手書きイラストを挿入する場合、最終的にはお絵かきソフトで書いたものをコピー＆ペーストで貼り付けます。</p>
-                    <p><img class="" src="images/070_000_gazou_nyuryoku2.png" width="1000" height="727" alt="画像入力2"></p>
-                    <p>ペイントは簡単なソフトです。<br>
-                    そのまま記録してもかまいませんが、シェーマからイラストを編集する事も簡単です。</p>
-                    <p><img class="" src="images/070_000_gazou_nyuryoku3.png" width="171" height="50" alt="画像入力3"></p>
-                    <p>右上の「貼り付け」部分をクリックして「ファイルから貼り付け」を選択します。</p>
-                    <p><img class="" src="images/070_000_gazou_nyuryoku4.png" width="1000" height="727" alt="画像入力4"></p>
-                    <p>必要なシェーマを選択します。<br>
-                    ※一部シェーマはダウンロードしたファイルに梱包されていますので、解凍したものを利用のＰＣ上に配置しておくと便利です。</p>
-                    <p><img class="" src="images/070_000_gazou_nyuryoku5.png" width="1000" height="727" alt="画像入力5"></p>
-                    <p>えを書き終わったら、「選択」メニューから四角形選択を選びます。</p>
-                    <p><img class="" src="images/070_000_gazou_nyuryoku6.png" width="171" height="50" alt="画像入力6"></p>
-                    <p>取込みたい場所を囲んだら「右クリック」>「コピー」を選択します。</p>
-                    <p><img class="" src="images/070_000_gazou_nyuryoku7.png" width="1000" height="727" alt="画像入力7"></p>
-                    <p>ANNYYS_Dの画像部分へ戻り、オブジェクトフィールドの上で「右クリック」＞「貼り付け」を選択します。
-                    ※MacOSの場合コマンド+Vでペーストできます。</p><br>
-                    <p>MacOSの場合、OS標準のペイントソフトがありませんが何かしらペイントフソフトウェアをインストールすれば同じようにスクリプトから呼び出せるようになります。<br>
-                        編集するスクリプトは<strong>S[F:診察画面/スケッチ]</strong>です。
-                    </p>
-                    <p><img class="" src="images/070_000_gazou_nyuryoku8.png" width="1000" height="727" alt="画像入力8"></p>
-                    <p><img class="" src="images/070_000_gazou_nyuryoku9.png" width="1000" height="727" alt="画像入力9"></p>
-                    <p>スクリプトのEventを送信部分を有効（代わりに「フィールドへ移動・・」は無効にする）にして、開きたいアプリケーションを指定すれば完了です。
-                    ※カスタマイズは<strong>L[基本設定] B[UserMemo]</strong>に記録しておき、アップデートやメンテナンスのときに同じ作業ができるように保管しておいてください。
-                    </p>
-                 
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                                    ※Win,Macどちらでも手書きイラストを挿入する場合、最終的にはお絵かきソフトで書いたものをコピー＆ペーストで貼り付けます。</p>
+                                    <p><img class="" src="images/070_000_gazou_nyuryoku2.png" width="1000" height="727" alt="画像入力2"></p>
+                                    <p>ペイントは簡単なソフトです。<br>
+                                    そのまま記録してもかまいませんが、シェーマからイラストを編集する事も簡単です。</p>
+                                    <p><img class="" src="images/070_000_gazou_nyuryoku3.png" width="171" height="50" alt="画像入力3"></p>
+                                    <p>右上の「貼り付け」部分をクリックして「ファイルから貼り付け」を選択します。</p>
+                                    <p><img class="" src="images/070_000_gazou_nyuryoku4.png" width="1000" height="727" alt="画像入力4"></p>
+                                    <p>必要なシェーマを選択します。<br>
+                                    ※一部シェーマはダウンロードしたファイルに梱包されていますので、解凍したものを利用のＰＣ上に配置しておくと便利です。</p>
+                                    <p><img class="" src="images/070_000_gazou_nyuryoku5.png" width="1000" height="727" alt="画像入力5"></p>
+                                    <p>えを書き終わったら、「選択」メニューから四角形選択を選びます。</p>
+                                    <p><img class="" src="images/070_000_gazou_nyuryoku6.png" width="171" height="50" alt="画像入力6"></p>
+                                    <p>取込みたい場所を囲んだら「右クリック」>「コピー」を選択します。</p>
+                                    <p><img class="" src="images/070_000_gazou_nyuryoku7.png" width="1000" height="727" alt="画像入力7"></p>
+                                    <p>ANNYYS_Dの画像部分へ戻り、オブジェクトフィールドの上で「右クリック」＞「貼り付け」を選択します。
+                                    ※MacOSの場合コマンド+Vでペーストできます。</p><br>
+                                    <p>MacOSの場合、OS標準のペイントソフトがありませんが何かしらペイントフソフトウェアをインストールすれば同じようにスクリプトから呼び出せるようになります。<br>
+                                        編集するスクリプトは<strong>S[F:診察画面/スケッチ]</strong>です。
+                                    </p>
+                                    <p><img class="" src="images/070_000_gazou_nyuryoku8.png" width="1000" height="727" alt="画像入力8"></p>
+                                    <p><img class="" src="images/070_000_gazou_nyuryoku9.png" width="1000" height="727" alt="画像入力9"></p>
+                                    <p>スクリプトのEventを送信部分を有効（代わりに「フィールドへ移動・・」は無効にする）にして、開きたいアプリケーションを指定すれば完了です。
+                                    ※カスタマイズは<strong>L[基本設定] B[UserMemo]</strong>に記録しておき、アップデートやメンテナンスのときに同じ作業ができるように保管しておいてください。
+                                    </p>
 
-                <h3>目的の部分に項目が入らない時は</h3>
-                <hr class="hborder">
-                <blockquote>目的の部分に項目が入らない時は</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p>選択した項目がなかなか思った場所に入力されないときはテキスト内を直接編集する事も可能です。<br>
-                    <table border="1">
-                        <tr><td>【注射薬剤】<br>
-                            [643310182]生理食塩液　２０ｍＬ[.2管]<br>
-                            【処置】<br>
-                            [140000610]創傷処置（１００ｃｍ２未満）
-                            </td><td><img class="" src="images/070_000_sentaku_koumoku.png" width="238" height="91" alt="選択項目"><br>
-                            [6・・]生理食塩液　２０ｍＬ[・管]の行を選択し処置の項目のところへ移動（カット＆ペーストも可）</td></tr>
-                        <tr><td>【処置】<br>
-                            [140000610]創傷処置（１００ｃｍ２未満）<br>
-                            [643310182]生理食塩液　２０ｍＬ[.2管]
-                            </td><td>不意に入力されてしまった【注射薬剤】が必要なければカットしておく。</td></tr>
-                    </table>
-                    <p>【重要】診療行為欄はテキスト形式になっていて直接編集できますが、このスペースの内容で重要なのは以下の通りです。</p>
-                    <ul>
-                        <li>【？？】=診療行為の区分</li>
-                        <li>[999999999]=行頭の[]で挟まれた9ケタの数字は診療行為コード（変更不可）</li>
-                        <li>[99個]または[99日]=行末の[]で挟まれた数字は数量や日数・回数（適宜修正化。ある場合は省略不可）</li>
-                    </ul>
-                    <p>※これらの内容は意味なく修正したり削除したりしなようにしてください。データ通信に支障をきたす場合があります。</p>
+                                <h4 id="d1">目的の部分に項目が入らない時は</h4>
+                                <hr class="hborder">
+                                    <p>選択した項目がなかなか思った場所に入力されないときはテキスト内を直接編集する事も可能です。<br>
+                                        例えば、【処置】に[生理食塩液　２０ｍＬ]を入力しようとしたが【注射薬剤】になってしまった場合などは<br>
+                                        【注射薬剤】にある[生理食塩液　２０ｍＬ]をカット＆ペーストか移動させて、目的の【処置】に入力してください。</p>
+                                    <table border="1">
+                                        <tr><td>【注射薬剤】<br>
+                                            [643310182]生理食塩液　２０ｍＬ[.2管]<br>
+                                            【処置】<br>
+                                            [140000610]創傷処置（１００ｃｍ２未満）
+                                            </td><td><img class="" src="images/070_000_sentaku_koumoku.png" width="238" height="91" alt="選択項目"><br>
+                                            [6・・]生理食塩液　２０ｍＬ[・管]の行を選択し処置の項目のところへ移動（カット＆ペーストも可）</td></tr>
+                                        <tr><td>【処置】<br>
+                                            [140000610]創傷処置（１００ｃｍ２未満）<br>
+                                            [643310182]生理食塩液　２０ｍＬ[.2管]
+                                            </td><td>不意に入力されてしまった【注射薬剤】が必要なければカットしておく。</td></tr>
+                                    </table>
+                                    <p>【重要】診療行為欄はテキスト形式になっていて直接編集できますが、このスペースの内容で重要なのは以下の通りです。</p>
+                                    <ul>
+                                        <li>【？？】=診療行為の区分</li>
+                                        <li>[999999999]=行頭の[]で挟まれた9ケタの数字は診療行為コード（変更不可）</li>
+                                        <li>[99個]または[99日]=行末の[]で挟まれた数字は数量や日数・回数（適宜修正化。ある場合は省略不可）</li>
+                                    </ul>
+                                    <p class="padding-bottom30">※これらの内容は意味なく修正したり削除したりしなようにしてください。データ通信に支障をきたす場合があります。</p>
 
-                </div>
-            </div>
-                
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【診察】</h3>
-                <hr class="hborder">
-                <blockquote>【診察】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p>#T[行為]#B[診医]</p>
-                    <p><img class="" src="images/070_000_shinsatsu.png" width="355" height="489" alt="診察"></p>
-                    <p>初診・再診関連項目から該当する診療行為を選択します。</p>
-                    <table border="1">
-                        <tr><td>診療行為欄には例として以下のように入力されます。<br>
-                        【診察】<br>
-                        [111000110]初診
-                        </td></tr>
-                        <tr><td>【診察】<br>
-                        [112007410]再診
-                        </td></tr>
-                        <tr><td>【診察】<br>
-                        [112007950]電話等再診
-                        </td></tr>
-                    </table><br>
-                    <p>[ORCA]入力後に特に修正する必要はありません。また初再診項目が無い場合は自動で判別されます。</p>
-                </div>
-            </div>
-                
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="e" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【診察】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p>T[行為] B[診医]</p>
+                                    <p><img class="" src="images/070_000_shinsatsu.png" width="355" height="489" alt="診察"></p>
+                                    <p>初診・再診関連項目から該当する診療行為を選択します。</p>
+                                    <table border="1">
+                                        <tr><td>診療行為欄には例として以下のように入力されます。<br>
+                                        【診察】<br>
+                                        [111000110]初診
+                                        </td></tr>
+                                        <tr><td>【診察】<br>
+                                        [112007410]再診
+                                        </td></tr>
+                                        <tr><td>【診察】<br>
+                                        [112007950]電話等再診
+                                        </td></tr>
+                                    </table><br>
+                                    <p class="padding-bottom30">[ORCA]入力後に特に修正する必要はありません。また初再診項目が無い場合は自動で判別されます。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【医管】</h3>
-                <hr class="hborder">
-                <blockquote>【医管】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                <p>T[行為] B[診医]</p>
-                <p><img class="" src="images/070_000_ikan.png" width="355" height="489" alt="医管"></p>
-                <p>医学管理料関連項目から該当する診療行為を選択します。<br>
-                診療行為欄には例として以下のように入力されます。
-                <table border="1">
-                    <tr><td>【医管】<br>
-                    [120002370]薬剤情報提供料
-                    </td></tr>
-                    <tr><td>【医管】<br>
-                    [113002850]てんかん指導料
-                    </td></tr>
-                    <tr><td>【医管】<br>
-                    [180016110]診療情報提供料（１）<br>
-                    [810000001]ABC病院（←テキスト入力）<br>
-                    ※診療情報提供料など紹介先用法が必要な場合フリーコメントコードと共に紹介先病院名などをテキスト入力する必要があります。<br>
-                    コメントコードは<strong>T[用法]</strong>にあり<strong>B[定型]・B[補足]・B[数日]・B[他コ]</strong>の分類から選択できます。フリーコメントは<strong>T[用法]B[他]</strong>にある[810000001]です。<br>
-                    [HINT]コメント入力が必須の項目などはSET登録をお勧めします。
-                    </td></tr>
-                </table>
-                </div>
-            </div>
-                
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="f" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【医官】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                <p>T[行為] B[診医]</p>
+                                <p><img class="" src="images/070_000_ikan.png" width="355" height="489" alt="医管"></p>
+                                <p>医学管理料関連項目から該当する診療行為を選択します。<br>
+                                診療行為欄には例として以下のように入力されます。
+                                <table border="1">
+                                    <tr><td>【医管】<br>
+                                    [120002370]薬剤情報提供料
+                                    </td></tr>
+                                    <tr><td>【医管】<br>
+                                    [113002850]てんかん指導料
+                                    </td></tr>
+                                    <tr><td>【医管】<br>
+                                    [180016110]診療情報提供料（１）<br>
+                                    [810000001]ABC病院（←テキスト入力）<br>
+                                    ※診療情報提供料など紹介先用法が必要な場合フリーコメントコードと共に紹介先病院名などをテキスト入力する必要があります。<br>
+                                    コメントコードは<strong>T[用法]</strong>にあり<strong>B[定型]・B[補足]・B[数日]・B[他コ]</strong>の分類から選択できます。フリーコメントは<strong>T[用法]B[他]</strong>にある[810000001]です。<br>
+                                    [HINT]コメント入力が必須の項目などはSET登録をお勧めします。
+                                    </td></tr>
+                                </table>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【在宅】</h3>
-                <hr class="hborder">
-                <blockquote>【在宅】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                <p>T[行為] B[診医]</p>
-                <p><img class="" src="images/070_000_zaitaku.png" width="355" height="489" alt="在宅"></p>
-                <p>在宅医療関連項目から該当する診療行為を選択します。<br>
-                【診察】や【医管】と同じ場所で下の方にリストされています。<br>
-                診療行為欄には例として以下のように入力されます</p>
-                <table border="1">
-                    <tr><td>【在宅】<br>
-                    [114009210]在宅自己注射指導管理料（１以外の場合）
-                    </td></tr>
-                </table><br>
-                <p>※在宅薬剤を処方せんに記載する場合には【在宅薬】を参照してください。</p>
-                </div>
-            </div>
-                
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="g" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【在宅】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                <p>T[行為] B[診医]</p>
+                                <p><img class="" src="images/070_000_zaitaku.png" width="355" height="489" alt="在宅"></p>
+                                <p>在宅医療関連項目から該当する診療行為を選択します。<br>
+                                【診察】や【医管】と同じ場所で下の方にリストされています。<br>
+                                診療行為欄には例として以下のように入力されます</p>
+                                <table border="1">
+                                    <tr><td>【在宅】<br>
+                                    [114009210]在宅自己注射指導管理料（１以外の場合）
+                                    </td></tr>
+                                </table><br>
+                                <p class="padding-bottom30">※在宅薬剤を処方せんに記載する場合には【在宅薬】を参照してください。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【在宅薬】</h3>
-                <hr class="hborder">
-                <blockquote>【在宅薬】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                <p>T[薬剤] B[注射] R[在]</p>
-                <p><img class="" src="images/070_000_zaitakuyaku.png" width="355" height="489" alt="在宅薬"></p>
-                <p>【在宅】で在宅自己注射指導管理料などを算定した場合処方する注射薬剤を選択します。<br>
-                <strong>T[薬剤] B[注射] R[在]</strong>を指定してから注射薬剤から適宜選択します。<br>
-                診療行為欄には例として以下のように入力されます</p>
-                <table border="1">
-                    <tr><td>【在宅薬】<br>
-                    [620006199]イミグランキット皮下注３ｍｇ　０．５ｍＬ[4筒]<br>
-                    [001000101]医師の指示通りに<br>
-                    ※「[001000101]医師の指示通りに」は、#T[用法]#B[用法]で選択できます。
-                    </td></tr>
-                </table><br>
-                <p>【在宅薬】として入力された項目は処方せんとして発行されます。</p>
-                </div>
-            </div>
-                
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="h" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【在宅薬】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                <p>T[薬剤] B[注射] R[在]</p>
+                                <p><img class="" src="images/070_000_zaitakuyaku.png" width="355" height="489" alt="在宅薬"></p>
+                                <p>【在宅】で在宅自己注射指導管理料などを算定した場合処方する注射薬剤を選択します。<br>
+                                <strong>T[薬剤] B[注射] R[在]</strong>を指定してから注射薬剤から適宜選択します。<br>
+                                診療行為欄には例として以下のように入力されます</p>
+                                <table border="1">
+                                    <tr><td>【在宅薬】<br>
+                                    [620006199]イミグランキット皮下注３ｍｇ　０．５ｍＬ[4筒]<br>
+                                    [001000101]医師の指示通りに<br>
+                                    ※「[001000101]医師の指示通りに」は、#T[用法]#B[用法]で選択できます。
+                                    </td></tr>
+                                </table><br>
+                                <p class="padding-bottom30">【在宅薬】として入力された項目は処方せんとして発行されます。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【在宅材】</h3>
-                <hr class="hborder">
-                <blockquote>【在宅材】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p>T[機材] B[材料] R[在処]</p>
-                    <p><img class="" src="images/070_000_zaitakuzai.png" width="355" height="489" alt="在宅材"></p>
-                    <p>在宅処方として何らかの特定機材を算定する場合には<strong>R[在宅]</strong>を選択してください。処方せんに記載する場合には<strong>R[在処]</strong>を選択してください。<br>
-                    診療行為欄には例として以下のように入力されます</p>
-                    <table border="1">
-                        <tr><td>【在宅材】<br>
-                        [777770000]（その他の特定器材）
-                        </td></tr>
-                    </table>
-                    <p>※用法などが必要な場合ははT[用法]から適宜入力してください。</p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="i" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【在宅材】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p>T[機材] B[材料] R[在処]</p>
+                                    <p><img class="" src="images/070_000_zaitakuzai.png" width="355" height="489" alt="在宅材"></p>
+                                    <p>在宅処方として何らかの特定機材を算定する場合には<strong>R[在宅]</strong>を選択してください。処方せんに記載する場合には<strong>R[在処]</strong>を選択してください。<br>
+                                    診療行為欄には例として以下のように入力されます</p>
+                                    <table border="1">
+                                        <tr><td>【在宅材】<br>
+                                        [777770000]（その他の特定器材）
+                                        </td></tr>
+                                    </table>
+                                    <p class="padding-bottom30">※用法などが必要な場合ははT[用法]から適宜入力してください。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【処方/内服・頓服】</h3>
-                <hr class="hborder">
-                <blockquote>【処方/内服・頓服】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p>【内服】<br>
-                        <strong>T[薬剤] B[内服]</strong>
-                    </p>
-                    <p><img class="" src="images/070_000_shohou1.png" width="355" height="489" alt="処方"></p>
-                    <p>【頓服】<br>
-                        <strong>T[薬剤] B[内服] R[頓]</strong>
-                    </p>
-                    <p><img class="" src="images/070_000_shohou2.png" width="355" height="489" alt="処方2"></p>
-                    <p>目的の薬剤該当画面から薬剤を処方します。<br>
-                        表示されたダイアログで数量を確認します。</p>
-                    <p><img class="" src="images/070_000_shohou3.png" width="410" height="206" alt="処方3"></p>
-                    <p>次に用法#T[用法]#B[用法]から用法を選択します。<br>
-                        ※薬剤に対して用法を選択した場合記憶されていますので２回目からは次の用法確認画面が出てきます。</p>
-                    <p><img class="" src="images/070_000_shohou4.png" width="355" height="489" alt="処方4"></p>
-                    <p>内服・頓服の場合は日数または回数を確認します。</p>
-                    <p><img class="" src="images/070_000_shohou5.png" width="410" height="206" alt="処方5"></p>
-                    <p>複数薬剤がある場合はこれらを繰り返します。<br>
-                    診療行為欄には例として以下のように入力されます</p>
-                    <table border="1">
-                        <tr><td>【内服】<br>
-                        [611130089](Ｘ)デパケンＲ錠２００　２００ｍｇ[2錠]<br>
-                        [001000206]１日２回朝夕食後に[30日分]<br>
-                        [611240378](Ｘ)テルネリン錠１ｍｇ[1錠]<br>
-                        [611170513](Ｘ)デパス錠０．５ｍｇ[1錠]<br>
-                        [001000113]１日１回就寝前に[30日分]<br>
-                        【頓服】<br>
-                        [610462006](Ｘ)レルパックス錠２０ｍｇ[1錠]<br>
-                        [001000123]頭痛時に[6回分]<br>
-                        [621558101](Ｘ)ＳＧ配合顆粒[1ｇ]<br>
-                        [001000123]頭痛時に[10回分]
-                        </td></tr>
-                    </table>
-                    
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="j" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【処方/内服・頓服】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p>【内服】<br>
+                                        <strong>T[薬剤] B[内服]</strong>
+                                    </p>
+                                    <p><img class="" src="images/070_000_shohou1.png" width="355" height="489" alt="処方"></p>
+                                    <p>【頓服】<br>
+                                        <strong>T[薬剤] B[内服] R[頓]</strong>
+                                    </p>
+                                    <p><img class="" src="images/070_000_shohou2.png" width="355" height="489" alt="処方2"></p>
+                                    <p>目的の薬剤該当画面から薬剤を処方します。<br>
+                                        表示されたダイアログで数量を確認します。</p>
+                                    <p><img class="" src="images/070_000_shohou3.png" width="410" height="206" alt="処方3"></p>
+                                    <p>次に用法#T[用法]#B[用法]から用法を選択します。<br>
+                                        ※薬剤に対して用法を選択した場合記憶されていますので２回目からは次の用法確認画面が出てきます。</p>
+                                    <p><img class="" src="images/070_000_shohou4.png" width="355" height="489" alt="処方4"></p>
+                                    <p>内服・頓服の場合は日数または回数を確認します。</p>
+                                    <p><img class="" src="images/070_000_shohou5.png" width="410" height="206" alt="処方5"></p>
+                                    <p>複数薬剤がある場合はこれらを繰り返します。<br>
+                                    診療行為欄には例として以下のように入力されます</p>
+                                    <table border="1">
+                                        <tr><td>【内服】<br>
+                                        [611130089](Ｘ)デパケンＲ錠２００　２００ｍｇ[2錠]<br>
+                                        [001000206]１日２回朝夕食後に[30日分]<br>
+                                        [611240378](Ｘ)テルネリン錠１ｍｇ[1錠]<br>
+                                        [611170513](Ｘ)デパス錠０．５ｍｇ[1錠]<br>
+                                        [001000113]１日１回就寝前に[30日分]<br>
+                                        【頓服】<br>
+                                        [610462006](Ｘ)レルパックス錠２０ｍｇ[1錠]<br>
+                                        [001000123]頭痛時に[6回分]<br>
+                                        [621558101](Ｘ)ＳＧ配合顆粒[1ｇ]<br>
+                                        [001000123]頭痛時に[10回分]
+                                        </td></tr>
+                                    </table>
 
-                <h3>【処方/外用】</h3>
-                <hr class="hborder">
-                <blockquote>【処方/外用】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p>【外用】<br>
-                        <strong>T[薬剤] B[内服]</strong>
-                    </p>
-                    <p><img class="" src="images/070_000_shohou_gaiyou.png" width="355" height="489" alt="外用"></p>
-                    <p>【頓服】【外用】も同じ要領で入力します。<br>
-                        ※入力後に数量などの変更がある場合は直接修正してください。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="k" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【処方/外用】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p>【外用】<br>
+                                        <strong>T[薬剤] B[内服]</strong>
+                                    </p>
+                                    <p><img class="" src="images/070_000_shohou_gaiyou.png" width="355" height="489" alt="外用"></p>
+                                    <p class="padding-bottom30">【頓服】【外用】も同じ要領で入力します。<br>
+                                        ※入力後に数量などの変更がある場合は直接修正してください。</p>
 
-                <h3>【皮下筋注】</h3>
-                <hr class="hborder">
-                <blockquote>【皮下筋注】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[行為] B[注処]</strong></p>
-                    <p><img class="" src="images/070_000_hika1.png" width="355" height="489" alt="皮下"></p>
-                    <p><strong>[130000510]皮内、皮下及び筋肉内注射</strong>を選択します。
-                    続けて<strong>T[薬剤] B[注射]</strong>から薬剤を選択します。
-                    </p>
-                    <p><img class="" src="images/070_000_hika2.png" width="355" height="172" alt="皮下2"></p>
-                    <p>表示されたダイアログで数量を確認します。</p>
-                    <p><img class="" src="images/070_000_hika3.png" width="410" height="206" alt="皮下3"></p>
-                    <p>診療行為欄には例として以下のように入力されます</p>
-                    <table border="1">
-                        <tr><td>【皮下筋注】<br>
-                        [130000510]皮内、皮下及び筋肉内注射<br>
-                        [620006199]イミグランキット皮下注３ｍｇ　０．５ｍＬ[2筒]
-                        </td></tr>
-                    </table>
-                    <p>※入力後に数量などの変更がある場合は直接修正してください。</p>
-                    
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【静注】</h3>
-                <hr class="hborder">
-                <blockquote>【静注】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p>T[行為] B[注処]</p>
-                    <p><img class="" src="images/070_000_seichu.png" width="355" height="489" alt="静注"></p>
-                    <p>[130003510]静脈内注射を選択します。<br>
-                        続けて#T[薬剤]#B[注射]から薬剤を選択します。</p>
-                    <p><img class="" src="images/070_000_seichu2.png" width="355" height="172" alt="静注2"></p>
-                    <p>表示されたダイアログで数量を確認します。</p>
-                    <p><img class="" src="images/070_000_seichu3.png" width="355" height="172" alt="静注3"></p>
-                    <p>診療行為欄には例として以下のように入力されます</p>
-                    <table border="1">
-                        <tr><td>【静注】<br>
-                        [130003510]静脈内注射<br>
-                        [620006199]イミグランキット皮下注３ｍｇ　０．５ｍＬ[2筒]
-                        </td></tr>
-                    </table>
-                    <p>※入力後に数量などの変更がある場合は直接修正してください。</p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="l" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【皮下筋注】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[行為] B[注処]</strong></p>
+                                    <p><img class="" src="images/070_000_hika1.png" width="355" height="489" alt="皮下"></p>
+                                    <p><strong>[130000510]皮内、皮下及び筋肉内注射</strong>を選択します。
+                                    続けて<strong>T[薬剤] B[注射]</strong>から薬剤を選択します。
+                                    </p>
+                                    <p><img class="" src="images/070_000_hika2.png" width="355" height="172" alt="皮下2"></p>
+                                    <p>表示されたダイアログで数量を確認します。</p>
+                                    <p><img class="" src="images/070_000_hika3.png" width="410" height="206" alt="皮下3"></p>
+                                    <p>診療行為欄には例として以下のように入力されます</p>
+                                    <table border="1">
+                                        <tr><td>【皮下筋注】<br>
+                                        [130000510]皮内、皮下及び筋肉内注射<br>
+                                        [620006199]イミグランキット皮下注３ｍｇ　０．５ｍＬ[2筒]
+                                        </td></tr>
+                                    </table>
+                                    <p class="padding-bottom30">※入力後に数量などの変更がある場合は直接修正してください。</p>
 
-                <h3>【その他の注射】</h3>
-                <hr class="hborder">
-                <blockquote>【その他の注射】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[行為] B[注処]</strong></p>
-                    <p><img class="" src="images/070_000_sonota.png" width="355" height="489" alt="その他"></p>
-                    <p><strong>点滴注射</strong>による診療行為点数は対象年齢や注射容量によって違うため、これらは概ねレセコン側で自動的に判別されますので手技料は２項あるうちどちらを選択してもコメントとして入力されます。<strong>点滴注射の場合は</strong>ここで診療行為を選択せずに次の【注射薬剤】で薬剤だけを入力しても点滴注射として判断されます。</p>
-                    <p>点滴注射関連項目から該当する診療行為を選択します。<br>
-                    続けて<strong>T[薬剤] B[注射]</strong>から薬剤を選択します。</p>
-                    <p><img class="" src="images/070_000_sonota2.png" width="355" height="172" alt="その他2"></p>
-                    <p>表示されたダイアログで数量を確認します。</p>
-                    <p><img class="" src="images/070_000_sonota3.png" width="410" height="206" alt="その他3"></p>
-                    <p>診療行為欄には例として以下のように入力されます</p>
-                    <table border="1">
-                        <tr><td>【点滴】<br>
-                        [130005310]関節腔内注射<br>
-                        [620004685]スベニールディスポ関節注２５ｍｇ　１％２．５ｍＬ[1筒]
-                        </td></tr>
-                    </table>
-                    <p>点滴注射の場合は以下のように入力されます</p>
-                    <table border="1">
-                        <tr><td>【点滴】<br>
-                        /*点滴注射*/（←コメントとして入力される）<br>
-                        [620006199]イミグランキット皮下注３ｍｇ　０．５ｍＬ[2筒]
-                        </td></tr>
-                    </table>
-                    <p>※入力後に数量などの変更がある場合は直接修正してください。</p>
-                    
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【注射薬剤】</h3>
-                <hr class="hborder">
-                <blockquote>【注射薬剤】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[薬剤] B[注射]</strong></p>
-                    <p><img class="" src="images/070_000_chusha_yakuzai.png" width="355" height="489" alt="注射薬剤"></p>
-                    <p><strong>T[薬剤] B[注射]</strong>から注射薬剤を選択した場合、概ね点滴注射とみなされます。<br>
-                    点滴注射の場合、年齢や注射容量または入院・外来によって点数が違うためここで注射薬剤だけを選択するだけでもかまいません。（レセコンが自動判断できる場合。「日レセ可」）<br>
-                    診療行為欄には例として以下のように入力されます</p>
-                    <table border="1">
-                        <tr><td>【注射薬剤】<br>
-                        [640412105]生理食塩液　１００ｍＬ[1 袋]
-                        </td></tr>
-                    </table>
-                    
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="m" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【静注】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p>T[行為] B[注処]</p>
+                                    <p><img class="" src="images/070_000_seichu.png" width="355" height="489" alt="静注"></p>
+                                    <p>[130003510]静脈内注射を選択します。<br>
+                                        続けて#T[薬剤]#B[注射]から薬剤を選択します。</p>
+                                    <p><img class="" src="images/070_000_seichu2.png" width="355" height="172" alt="静注2"></p>
+                                    <p>表示されたダイアログで数量を確認します。</p>
+                                    <p><img class="" src="images/070_000_seichu3.png" width="355" height="172" alt="静注3"></p>
+                                    <p>診療行為欄には例として以下のように入力されます</p>
+                                    <table border="1">
+                                        <tr><td>【静注】<br>
+                                        [130003510]静脈内注射<br>
+                                        [620006199]イミグランキット皮下注３ｍｇ　０．５ｍＬ[2筒]
+                                        </td></tr>
+                                    </table>
+                                    <p class="padding-bottom30">※入力後に数量などの変更がある場合は直接修正してください。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【処置】</h3>
-                <hr class="hborder">
-                <blockquote>【処置】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[行為] B[注処]</strong></p>
-                    <p><img class="" src="images/070_000_shochi.png" width="355" height="489" alt="処置"></p>
-                    <p>処置関連項目から該当する診療行為を選択します。<br>
-                    診療行為欄には例として以下のように入力されます
-                    </p>
-                    <table border="1">
-                        <tr><td>【処置】<br>
-                        [140040310]消炎鎮痛等処置（器具等による療法）
-                        </td></tr>
-                    </table>
-                    <p>酸素吸入などで材料や薬剤等の入力が必要な場合はT[薬剤]またはT[機材]の中から続けて選択し数量を指定します。</p> 
-                    <p><img class="" src="images/070_000_shochi2.png" width="410" height="206" alt="処置2"></p>
-                    <p>診療行為欄には例として以下のように入力されます</p>
-                    <table border="1">
-                        <tr><td>【処置】<br>
-                        [140005610]酸素吸入<br>
-                        [739230000]酸素ボンベ・小型[1000Ｌ]
-                        </td></tr>
-                    </table>
+                        <!--メニュー-->
+                        <div id="n" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【その他の注射】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[行為] B[注処]</strong></p>
+                                    <p><img class="" src="images/070_000_sonota.png" width="355" height="489" alt="その他"></p>
+                                    <p><strong>点滴注射</strong>による診療行為点数は対象年齢や注射容量によって違うため、これらは概ねレセコン側で自動的に判別されますので手技料は２項あるうちどちらを選択してもコメントとして入力されます。<strong>点滴注射の場合は</strong>ここで診療行為を選択せずに次の【注射薬剤】で薬剤だけを入力しても点滴注射として判断されます。</p>
+                                    <p>点滴注射関連項目から該当する診療行為を選択します。<br>
+                                    続けて<strong>T[薬剤] B[注射]</strong>から薬剤を選択します。</p>
+                                    <p><img class="" src="images/070_000_sonota2.png" width="355" height="172" alt="その他2"></p>
+                                    <p>表示されたダイアログで数量を確認します。</p>
+                                    <p><img class="" src="images/070_000_sonota3.png" width="410" height="206" alt="その他3"></p>
+                                    <p>診療行為欄には例として以下のように入力されます</p>
+                                    <table border="1">
+                                        <tr><td>【点滴】<br>
+                                        [130005310]関節腔内注射<br>
+                                        [620004685]スベニールディスポ関節注２５ｍｇ　１％２．５ｍＬ[1筒]
+                                        </td></tr>
+                                    </table>
+                                    <p>点滴注射の場合は以下のように入力されます</p>
+                                    <table border="1">
+                                        <tr><td>【点滴】<br>
+                                        /*点滴注射*/（←コメントとして入力される）<br>
+                                        [620006199]イミグランキット皮下注３ｍｇ　０．５ｍＬ[2筒]
+                                        </td></tr>
+                                    </table>
+                                    <p class="padding-bottom30">※入力後に数量などの変更がある場合は直接修正してください。</p>
 
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【処置薬剤】</h3>
-                <hr class="hborder">
-                <blockquote>【処置薬剤】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[薬剤] B[任意] R[処]</strong></p>
-                    <p><img class="" src="images/070_000_shochi_yakuzai.png" width="355" height="489" alt="処置薬剤"></p>
-                    <p>処置で利用した薬剤だけを入力する場合、<strong>T[薬剤] B[任意] R[処]</strong>を指定して目的の薬剤を選択します。<br>
-                    表示されたダイアログで数量を確認します。
-                    </p>
-                    <p><img class="" src="images/070_000_shochi_yakuzai2.png" width="410" height="206" alt="処置薬剤2"></p>
-                    <p>診療行為欄には例として以下のように入力されます</p>
-                    <table border="1">
-                        <tr><td>【処置】<br>
-                        [620007805](Ｘ)モーラステープ２０ｍｇ・・・[2枚]
-                        </td></tr>
-                    </table>
+                        <!--メニュー-->
+                        <div id="o" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【注射薬剤】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[薬剤] B[注射]</strong></p>
+                                    <p><img class="" src="images/070_000_chusha_yakuzai.png" width="355" height="489" alt="注射薬剤"></p>
+                                    <p><strong>T[薬剤] B[注射]</strong>から注射薬剤を選択した場合、概ね点滴注射とみなされます。<br>
+                                    点滴注射の場合、年齢や注射容量または入院・外来によって点数が違うためここで注射薬剤だけを選択するだけでもかまいません。（レセコンが自動判断できる場合。「日レセ可」）<br>
+                                    診療行為欄には例として以下のように入力されます</p>
+                                    <table border="1">
+                                        <tr><td>【注射薬剤】<br>
+                                        [640412105]生理食塩液　１００ｍＬ[1 袋]
+                                        </td></tr>
+                                    </table>
 
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【手術】</h3>
-                <hr class="hborder">
-                <blockquote>【手術】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[行為] B[注処]</strong></p>
-                    <p><img class="" src="images/070_000_shujutsu.png" width="355" height="489" alt="手術"></p>
-                    <p>手術で利用した薬剤だけを入力する場合は<strong>T[薬剤] B[任意] R[手]</strong>から薬剤を指定すると【手術】以下に選択した薬剤が登録されます。
-                    </p>
-                    <p>手術関連項目から該当する診療行為を選択します。<br>
-                        使用した薬剤があれば<strong>T[薬剤] B[任意] R[手]</strong>から薬剤を選択します。</p>
-                    <p><img class="" src="images/070_000_shujutsu2.png" width="355" height="176" alt="手術2"></p>
-                    <p>表示されたダイアログで数量を確認します。</p>
-                    <p><img class="" src="images/070_000_shujutsu3.png" width="410" height="206" alt="手術3"></p>
-                    <p>複数薬剤がある場合は繰り返し薬剤を選択し数量を入力します。<br>
-                    診療行為欄には例として以下のように入力されます</p>
+                        <!--メニュー-->
+                        <div id="p" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【処置】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[行為] B[注処]</strong></p>
+                                    <p><img class="" src="images/070_000_shochi.png" width="355" height="489" alt="処置"></p>
+                                    <p>処置関連項目から該当する診療行為を選択します。<br>
+                                    診療行為欄には例として以下のように入力されます
+                                    </p>
+                                    <table border="1">
+                                        <tr><td>【処置】<br>
+                                        [140040310]消炎鎮痛等処置（器具等による療法）
+                                        </td></tr>
+                                    </table>
+                                    <p>酸素吸入などで材料や薬剤等の入力が必要な場合はT[薬剤]またはT[機材]の中から続けて選択し数量を指定します。</p> 
+                                    <p><img class="" src="images/070_000_shochi2.png" width="410" height="206" alt="処置2"></p>
+                                    <p>診療行為欄には例として以下のように入力されます</p>
+                                    <table border="1">
+                                        <tr><td>【処置】<br>
+                                        [140005610]酸素吸入<br>
+                                        [739230000]酸素ボンベ・小型[1000Ｌ]
+                                        </td></tr>
+                                    </table>
 
-                    <table border="1">
-                        <tr><td>【手術】<br>
-                        [150001010]創傷処理（筋肉、臓器に・・・<br>
-                        [620002937]キシロカイン注シリンジ１％　１０ｍＬ[1筒]<br>
-                        [620008993]ゲンタシン軟膏０．１％　１ｍｇ[2ｇ]
-                        </td></tr>
-                    </table>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="q" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【処置薬剤】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[薬剤] B[任意] R[処]</strong></p>
+                                    <p><img class="" src="images/070_000_shochi_yakuzai.png" width="355" height="489" alt="処置薬剤"></p>
+                                    <p>処置で利用した薬剤だけを入力する場合、<strong>T[薬剤] B[任意] R[処]</strong>を指定して目的の薬剤を選択します。<br>
+                                    表示されたダイアログで数量を確認します。
+                                    </p>
+                                    <p><img class="" src="images/070_000_shochi_yakuzai2.png" width="410" height="206" alt="処置薬剤2"></p>
+                                    <p>診療行為欄には例として以下のように入力されます</p>
+                                    <table border="1">
+                                        <tr><td>【処置】<br>
+                                        [620007805](Ｘ)モーラステープ２０ｍｇ・・・[2枚]
+                                        </td></tr>
+                                    </table>
 
-                <h3>【麻酔】</h3>
-                <hr class="hborder">
-                <blockquote>【麻酔】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[行為] B[注処]間</strong></p>
-                    <p><img class="" src="images/070_000_masui.png" width="355" height="489" alt="麻酔"></p>
-                    <p>麻酔で利用した薬剤だけを入力する場合は<strong>T[薬剤] B[任意] R[麻]</strong>から薬剤を指定すると【麻酔】以下に選択した薬剤が登録されます。</p>
-                    <p>麻酔関連項目から該当する診療行為を選択します。<br>
-                    使用した薬剤を<strong>T[薬剤] B[任意] R[麻]</strong>から薬剤を選択します。
-                    </p>
-                    <p><img class="" src="images/070_000_masui2.png" width="355" height="176" alt="麻酔2"></p>
-                    <p>表示されたダイアログで数量を確認します。</p>
-                    <p><img class="" src="images/070_000_masui3.png" width="410" height="206" alt="麻酔3"></p>
-                    <p>複数薬剤がある場合は繰り返し薬剤を選択し数量を入力します。<br>
-                    診療行為欄には例として以下のように入力されます
-                    </p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                    <table border="1">
-                        <tr><td>【麻酔】<br>
-                        [150333410]神経ブロック（眼瞼痙攣、片側顔・・・）<br>
-                        [620173601]ボトックス注用１００単位[1瓶]<br>
-                        [643310182]生理食塩液　２０ｍＬ[1管]
-                        </td></tr>
-                    </table>
+                        <!--メニュー-->
+                        <div id="r" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【手術】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[行為] B[注処]</strong></p>
+                                    <p><img class="" src="images/070_000_shujutsu.png" width="355" height="489" alt="手術"></p>
+                                    <p>手術で利用した薬剤だけを入力する場合は<strong>T[薬剤] B[任意] R[手]</strong>から薬剤を指定すると【手術】以下に選択した薬剤が登録されます。
+                                    </p>
+                                    <p>手術関連項目から該当する診療行為を選択します。<br>
+                                        使用した薬剤があれば<strong>T[薬剤] B[任意] R[手]</strong>から薬剤を選択します。</p>
+                                    <p><img class="" src="images/070_000_shujutsu2.png" width="355" height="176" alt="手術2"></p>
+                                    <p>表示されたダイアログで数量を確認します。</p>
+                                    <p><img class="" src="images/070_000_shujutsu3.png" width="410" height="206" alt="手術3"></p>
+                                    <p>複数薬剤がある場合は繰り返し薬剤を選択し数量を入力します。<br>
+                                    診療行為欄には例として以下のように入力されます</p>
 
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                                    <table border="1">
+                                        <tr><td>【手術】<br>
+                                        [150001010]創傷処理（筋肉、臓器に・・・<br>
+                                        [620002937]キシロカイン注シリンジ１％　１０ｍＬ[1筒]<br>
+                                        [620008993]ゲンタシン軟膏０．１％　１ｍｇ[2ｇ]
+                                        </td></tr>
+                                    </table>
 
-                <h3>【検査】</h3>
-                <hr class="hborder">
-                <blockquote>【検査】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[行為] B[検査]</strong></p>
-                    <p><img class="" src="images/070_000_kensa.png" width="355" height="489" alt="検査"></p>
-                    <p>検査で利用した薬剤を入力する場合は<strong>T[薬剤] B[任意] R[検]</strong>から薬剤を指定すると【検査】以下に選択した薬剤が登録されます。</p>
-                    <p>検査関連項目から該当する診療行為を選択します。<br>
-                    複数項目がある場合は繰り返し入力します。</p>
-                    <table border="1">
-                        <tr><td>【検査】<br>
-                        [160020010]ＡＬＰ<br>
-                        [160022610]ＡＬＴ<br>
-                        [160020410]γ ＧＴ<br>
-                        [160020610]ＣＫ<br>
-                        [160167250]ＬＤＬ コレステロール<br>
-                        [160019310]ＵＡ<br>
-                        [160019010]ＢＵＮ<br>
-                        ・・以下略
-                        </td></tr>
-                    </table>
-                    <p>※検査項目は利用マスタによって呼び名が違う場合があります。<br>
-                    ※検査による判断料（月１回のみの算定項目）は入力しないでくさい。これらはレセコンが判断します。<br>
-                    ※複数項目による検査はセット登録から選択する事をお勧めします。</p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【病理】</h3>
-                <hr class="hborder">
-                <blockquote>【病理】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[行為] B[病検]</strong></p>
-                    <p><img class="" src="images/070_000_byori.png" width="355" height="489" alt="病理"></p>
-                    <p>病理検査関連項目から該当する診療行為を選択します。<br>
-                    複数項目がある場合は繰り返し入力します。<br>
-                    回数などが必要な場合はダイアログで数量を確認します。</p>
-                    <p><img class="" src="images/070_000_byori2.png" width="410" height="206" alt="病理2"></p>
-                    <p>診療行為欄には例として以下のように入力されます</p>
-                    <table border="1">
-                        <tr><td>【病理】<br>
-                        [160060010]Ｔ－Ｍ[12臓器]
-                        </td></tr>
-                    </table>
-                    <p>※検査項目は利用マスタによって呼び名が違う場合があります。<br>
-                    ※検査による判断料（月１回のみの算定項目）は入力しないでくさい。これらはレセコンが判断します。<br>
-                    ※複数項目による検査はセット登録から選択する事をお勧めします。</p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="s" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【麻酔】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[行為] B[注処]間</strong></p>
+                                    <p><img class="" src="images/070_000_masui.png" width="355" height="489" alt="麻酔"></p>
+                                    <p>麻酔で利用した薬剤だけを入力する場合は<strong>T[薬剤] B[任意] R[麻]</strong>から薬剤を指定すると【麻酔】以下に選択した薬剤が登録されます。</p>
+                                    <p>麻酔関連項目から該当する診療行為を選択します。<br>
+                                    使用した薬剤を<strong>T[薬剤] B[任意] R[麻]</strong>から薬剤を選択します。
+                                    </p>
+                                    <p><img class="" src="images/070_000_masui2.png" width="355" height="176" alt="麻酔2"></p>
+                                    <p>表示されたダイアログで数量を確認します。</p>
+                                    <p><img class="" src="images/070_000_masui3.png" width="410" height="206" alt="麻酔3"></p>
+                                    <p>複数薬剤がある場合は繰り返し薬剤を選択し数量を入力します。<br>
+                                    診療行為欄には例として以下のように入力されます
+                                    </p>
 
-                <h3>【画像】</h3>
-                <hr class="hborder">
-                <blockquote>【画像】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[行為] B[画像]</strong></p>
-                    <p><img class="" src="images/070_000_gazou.png" width="355" height="489" alt="画像"></p>
-                    <p>（規則があります）<br>
-                    =MRI.CT=の場合<br>
-                    ＜部位＞<br>
-                    ＜撮影方法＞<br><br>
+                                    <table border="1">
+                                        <tr><td>【麻酔】<br>
+                                        [150333410]神経ブロック（眼瞼痙攣、片側顔・・・）<br>
+                                        [620173601]ボトックス注用１００単位[1瓶]<br>
+                                        [643310182]生理食塩液　２０ｍＬ[1管]
+                                        </td></tr>
+                                    </table>
 
-                    =XP=の場合<br>
-                    ＜部位＞<br>
-                    ＜撮影方法＞*＜撮影枚数＞<br>
-                    ＜仕様フィルム＞*＜枚数＞<br>
-                    ＜機材＞or＜フィルム＞(必要な場合<br>
-                    の順番で入力。<br>
-                    ※１：ＭＲＩ，ＣＴ２回目以後などの行為はレセコンが判断します。<br>
-                    ※２：Ｘ－Ｐの写真診断料などはレセコンが判断します。<br>
-                    ※部位などが無い場合はマスタ設定を確認し事前登録作業を行う必要があります。<br>
-                    ※３部位コードはORCA側と同じコードを利用するようにしてください。<br>
-                    ORCAではマスタ登録>点数マスタで部位コードを作成します。</p>
-                    <p>画像関連は部位+撮影方法の組合せで入力する必要があります。診断料や判断料はレセコン側が自動算定を行います。</p>
-                    <ol>
-                        <li>部位を選択します。(002で始まるコード)</li>
-                        <li>続いて撮影方法を選択します。</li>
-                        <li>Ｘ－Ｐの場合は撮影枚数を確認します。<br>
-                        <img class="" src="images/070_000_gazou2.png" width="410" height="206" alt="画像2"></li>
-                        <li>フィルムを使った場合種類を選択し枚数を確認します。<br>
-                        <img class="" src="images/070_000_gazou3.png" width="355" height="176" alt="画像3"><br>
-                        <img class="" src="images/070_000_gazou4.png" width="410" height="206" alt="画像4">
-                        </li>
-                    </ol>
-                    <p>診療行為欄には例として以下のように入力されます</p>
-                    <table border="1">
-                        <tr><td>【画像】<br>
-                        [002000025]胸部X-P<br>
-                        [170027910]単純撮影（デジタル撮影）[2枚]<br>
-                        [700750000]画像記録用フィルム（大四ツ切）[2枚]
-                        </td></tr>
-                        <tr><td>【画像】<br>
-                        [002100006]頭部CT<br>
-                       [170033410]ＣＴ撮影（６４列以上マルチスライス型機器）
-                       </td></tr>
-                        <tr><td>【画像】<br>
-                        [002100001]頭部MRI<br>
-                        [170020110]単純ＭＲＩ撮影（１．５テスラ以上の機器）
-                        </td></tr>
-                    </table>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【その他】</h3>
-                <hr class="hborder">
-                <blockquote>【その他】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[行為] B[他]</strong></p>
-                    <p><img class="" src="images/070_000_sonota_koui.png" width="355" height="489" alt="その他行為"></p>
-                    <p>これまでに述べた区分以外の項目は<strong>T[行為] B[他]</strong>に分類されます。<br>
-                    他関連項目から該当する診療行為を選択します。<br>
-                    数量・回数の指定が必要な場合はダイアログで数量・回数を確認します。</p>
-                    <p><img class="" src="images/070_000_sonota_koui2.png" width="410" height="206" alt="その他行為2"></p>
-                    <p>診療行為欄には例として以下のように入力されます</p>
-                    <table border="1">
-                        <tr><td>【その他】<br>
-                        [101800130]運動器リハビリテーション料（２）[1単位]
-                        </td></tr>
-                    </table>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="t" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【検査】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[行為] B[検査]</strong></p>
+                                    <p><img class="" src="images/070_000_kensa.png" width="355" height="489" alt="検査"></p>
+                                    <p>検査で利用した薬剤を入力する場合は<strong>T[薬剤] B[任意] R[検]</strong>から薬剤を指定すると【検査】以下に選択した薬剤が登録されます。</p>
+                                    <p>検査関連項目から該当する診療行為を選択します。<br>
+                                    複数項目がある場合は繰り返し入力します。</p>
+                                    <table border="1">
+                                        <tr><td>【検査】<br>
+                                        [160020010]ＡＬＰ<br>
+                                        [160022610]ＡＬＴ<br>
+                                        [160020410]γ ＧＴ<br>
+                                        [160020610]ＣＫ<br>
+                                        [160167250]ＬＤＬ コレステロール<br>
+                                        [160019310]ＵＡ<br>
+                                        [160019010]ＢＵＮ<br>
+                                        ・・以下略
+                                        </td></tr>
+                                    </table>
+                                    <p class="padding-bottom30">※検査項目は利用マスタによって呼び名が違う場合があります。<br>
+                                    ※検査による判断料（月１回のみの算定項目）は入力しないでくさい。これらはレセコンが判断します。<br>
+                                    ※複数項目による検査はセット登録から選択する事をお勧めします。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>【コメント】</h3>
-                <hr class="hborder">
-                <blockquote>【コメント】</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[用保]<br>B[定型][補足][数日][他コ]</strong></p>
-                    <p><img class="" src="images/070_000_komento.png" width="355" height="489" alt="コメント"></p>
-                    <p>診療行為に記録する場合のコメントは#B[定型][補足][数日][他コ]<br>
-                    の種類があります。それぞれの以下の様な意味となります。<br>
-                    <strong>B[定型]</strong>：決まった内容のもの<br>
-                    例：[820000006]健康診断から　[820000014]生活保護受給者　など<br>
-                    <strong>B [補足]</strong>：うしろに必要項目を書き加えるもの<br>
-                    例：[830000032]保険医氏名：<span>山田太郎</span><br>
-                    <strong>B [数日]</strong>：日時や数量など数字を埋めるもの<br>
-                    例：[840000056]算定開始　<span>２３年１２月</span><br>
-                    <strong>B [他コ]</strong>上記以外　フリーコメントコードは810000001<br>
-                    例：[810000001]<span>自由に書き込める</span></p>
-                    <p><strong>※注
-                    ORCA側で作成したコメントがある場合同じコメントコードを作成・追加して利用するようにしてください。</strong></p>
+                        <!--メニュー-->
+                        <div id="u" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【病理】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[行為] B[病検]</strong></p>
+                                    <p><img class="" src="images/070_000_byori.png" width="355" height="489" alt="病理"></p>
+                                    <p>病理検査関連項目から該当する診療行為を選択します。<br>
+                                    複数項目がある場合は繰り返し入力します。<br>
+                                    回数などが必要な場合はダイアログで数量を確認します。</p>
+                                    <p><img class="" src="images/070_000_byori2.png" width="410" height="206" alt="病理2"></p>
+                                    <p>診療行為欄には例として以下のように入力されます</p>
+                                    <table border="1">
+                                        <tr><td>【病理】<br>
+                                        [160060010]Ｔ－Ｍ[12臓器]
+                                        </td></tr>
+                                    </table>
+                                    <p class="padding-bottom30">※検査項目は利用マスタによって呼び名が違う場合があります。<br>
+                                    ※検査による判断料（月１回のみの算定項目）は入力しないでくさい。これらはレセコンが判断します。<br>
+                                    ※複数項目による検査はセット登録から選択する事をお勧めします。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="v" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【画像】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[行為] B[画像]</strong></p>
+                                    <p><img class="" src="images/070_000_gazou.png" width="355" height="489" alt="画像"></p>
+                                    <p>（規則があります）<br>
+                                    =MRI.CT=の場合<br>
+                                    ＜部位＞<br>
+                                    ＜撮影方法＞<br><br>
 
-                <h3>Set</h3>
-                <hr class="hborder">
-                <blockquote>Set</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[記録]B[全Do]orB[薬Do]</strong></p>
-                    <p><img class="" src="images/070_000_set.png" width="359" height="488" alt="セット"></p>
-                    <p>SETはあらかじめ登録しておいた内容を効率よく入力する方法の一つです。よく使う項目や組合せ内容をある程度固定化できる内容をSET登録しておくと、診察の度にあちこち選択する必要がありません。</p>                    
-                    <p><img class="" src="images/070_000_set2.png" width="435" height="140" alt="セット2"></p>
-                    <p>ＯＫ：入力し、次の項目を表示します。<br>
-                    スキップ：表示されている項目は無視し次の項目を表示します。<br>
-                    終了：入力処理を中止します。</p>
-                    <p>SET登録方法は[診察画面] #T[登録]#T[診療セット登録]に詳細があります。</p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                                    =XP=の場合<br>
+                                    ＜部位＞<br>
+                                    ＜撮影方法＞*＜撮影枚数＞<br>
+                                    ＜仕様フィルム＞*＜枚数＞<br>
+                                    ＜機材＞or＜フィルム＞(必要な場合<br>
+                                    の順番で入力。<br>
+                                    ※１：ＭＲＩ，ＣＴ２回目以後などの行為はレセコンが判断します。<br>
+                                    ※２：Ｘ－Ｐの写真診断料などはレセコンが判断します。<br>
+                                    ※部位などが無い場合はマスタ設定を確認し事前登録作業を行う必要があります。<br>
+                                    ※３部位コードはORCA側と同じコードを利用するようにしてください。<br>
+                                    ORCAではマスタ登録>点数マスタで部位コードを作成します。</p>
+                                    <p>画像関連は部位+撮影方法の組合せで入力する必要があります。診断料や判断料はレセコン側が自動算定を行います。</p>
+                                    <ol>
+                                        <li>部位を選択します。(002で始まるコード)</li>
+                                        <li>続いて撮影方法を選択します。</li>
+                                        <li>Ｘ－Ｐの場合は撮影枚数を確認します。<br>
+                                        <img class="" src="images/070_000_gazou2.png" width="410" height="206" alt="画像2"></li>
+                                        <li>フィルムを使った場合種類を選択し枚数を確認します。<br>
+                                        <img class="" src="images/070_000_gazou3.png" width="355" height="176" alt="画像3"><br>
+                                        <img class="" src="images/070_000_gazou4.png" width="410" height="206" alt="画像4">
+                                        </li>
+                                    </ol>
+                                    <p>診療行為欄には例として以下のように入力されます</p>
+                                    <table border="1">
+                                        <tr><td>【画像】<br>
+                                        [002000025]胸部X-P<br>
+                                        [170027910]単純撮影（デジタル撮影）[2枚]<br>
+                                        [700750000]画像記録用フィルム（大四ツ切）[2枚]
+                                        </td></tr>
+                                        <tr><td>【画像】<br>
+                                        [002100006]頭部CT<br>
+                                       [170033410]ＣＴ撮影（６４列以上マルチスライス型機器）
+                                       </td></tr>
+                                        <tr><td>【画像】<br>
+                                        [002100001]頭部MRI<br>
+                                        [170020110]単純ＭＲＩ撮影（１．５テスラ以上の機器）
+                                        </td></tr>
+                                    </table>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>Do</h3>
-                <hr class="hborder">
-                <blockquote>Do</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[記録] B[※Do]</strong></p>
-                    <p><img class="" src="images/070_000_do.png" width="362" height="486" alt="do"></p>
-                    <p>Doは前回行った診療行為を今回も適用する場合に利用できる複製機能のようなものです。対象となるのは左の<strong>T[記録]</strong>に表示されている内容で<strong>B[<]</strong>か<strong>B[>]</strong>で対象日を変更できます。</p>
-                    <p><img class="" src="images/070_000_do2.png" width="410" height="140" alt="do2"></p>
-                    <p>ＯＫ：入力し、次の項目を表示します。<br>
-                    スキップ：表示されている項目は無視し次の項目を表示します。<br>
-                    終了：Do処理を中止します。</p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="w" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【その他】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[行為] B[他]</strong></p>
+                                    <p><img class="" src="images/070_000_sonota_koui.png" width="355" height="489" alt="その他行為"></p>
+                                    <p>これまでに述べた区分以外の項目は<strong>T[行為] B[他]</strong>に分類されます。<br>
+                                    他関連項目から該当する診療行為を選択します。<br>
+                                    数量・回数の指定が必要な場合はダイアログで数量・回数を確認します。</p>
+                                    <p><img class="" src="images/070_000_sonota_koui2.png" width="410" height="206" alt="その他行為2"></p>
+                                    <p>診療行為欄には例として以下のように入力されます</p>
+                                    <table border="1">
+                                        <tr><td>【その他】<br>
+                                        [101800130]運動器リハビリテーション料（２）[1単位]
+                                        </td></tr>
+                                    </table>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>定期処方</h3>
-                <hr class="hborder">
-                <blockquote>定期処方</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>T[記録] B[定期処方]</strong></p>
-                    <p><img class="" src="images/070_000_teiki_shohou.png" width="362" height="255" alt="定期処方"></p>
-                    <p>「約束処方」とも呼ばれる事があります。<br>
-                    L[患者情報] F[定期処方]に記録されている患者専用の処方を登録します。</p>
-                    <p><img class="" src="images/070_000_teiki_shohou2.png" width="410" height="140" alt="定期処方2"></p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="x" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">【コメント】</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[用保]<br>B[定型][補足][数日][他コ]</strong></p>
+                                    <p><img class="" src="images/070_000_komento.png" width="355" height="489" alt="コメント"></p>
+                                    <p>診療行為に記録する場合のコメントは#B[定型][補足][数日][他コ]<br>
+                                    の種類があります。それぞれの以下の様な意味となります。<br>
+                                    <strong>B[定型]</strong>：決まった内容のもの<br>
+                                    例：[820000006]健康診断から　[820000014]生活保護受給者　など<br>
+                                    <strong>B [補足]</strong>：うしろに必要項目を書き加えるもの<br>
+                                    例：[830000032]保険医氏名：<span>山田太郎</span><br>
+                                    <strong>B [数日]</strong>：日時や数量など数字を埋めるもの<br>
+                                    例：[840000056]算定開始　<span>２３年１２月</span><br>
+                                    <strong>B [他コ]</strong>上記以外　フリーコメントコードは810000001<br>
+                                    例：[810000001]<span>自由に書き込める</span></p>
+                                    <p><strong>※注
+                                    ORCA側で作成したコメントがある場合同じコメントコードを作成・追加して利用するようにしてください。</strong></p>
 
-                <h3>病名確認</h3>
-                <hr class="hborder">
-                <blockquote>病名確認</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p>診察記録が完了し、<strong>B[確]</strong>を押すと、記録データが確定され診療行為内容に応じた適応病名の確認画面が表示されます。</p>
-                    <p><img class="" src="images/070_000_byoumei_kakunin.png" width="362" height="255" alt="病名確認"></p>
-                    <ul><li>左にある#T[病名]のリストには、適応病名が登録されている診療行為名または薬剤名が表示されています。</li>
-                    <li>登録済み病名がある場合には青字、そうでない場合は赤字で表示されます。</li>
-                    <li>赤字の部分は▼ーーをクリックすると対応する適応病名が表示され選択できます。<br>
-                        <img class="" src="images/070_000_byoumei_kakunin2.png" width="358" height="261" alt="病名確認2"></li>
-                    <li>病名を選択したら右側の#B(+)を押すと、病名が登録され診療行為名が青字に変わります。<br>
-                        <img class="" src="images/070_000_byoumei_kakunin3.png" width="358" height="261" alt="病名確認3"><br>
-                        ※登録後の病名開始日などは適宜修正してください。
-                    </li></ul>
-                    <p>※<strong>B[確]</strong>を押すと、一時的なデータ保護が行わます。これは診療記録全般を別フィールドにコピーしている単純なものですがキーボードの操作ミスなどで記録内容が消された場合など一時的なデータ復帰が行えます。<strong>S[診療行為]>S[一時データからの復帰]</strong>></p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>病名索引</h3>
-                <hr class="hborder">
-                <blockquote>病名索引</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><img class="" src="images/070_000_byoumei_sakuin.png" width="364" height="489" alt="病名索引"></p>
-                    <p>病名のみを索引したいときは#T[病名]#T[病名索引]で行えます。<br>
-                    入力欄には全角カナを入力するようにしてください。<br>
-                    ※英字・数字も全角です。<br>
-                    ２文字以上の入力で該当する項目を索引できます。</p>
-                    <p>該当する病名が見つかったら、その病名をクリックする事でコンピュータのクリップボード上にコピーされますので入力したい部分でペーストしてください。</p>
-                    <p><img class="" src="images/070_000_byoumei_sakuin2.png" width="443" height="180" alt="病名索引2"></p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="y" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">Set</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[記録]B[全Do]orB[薬Do]</strong></p>
+                                    <p><img class="" src="images/070_000_set.png" width="359" height="488" alt="セット"></p>
+                                    <p>SETはあらかじめ登録しておいた内容を効率よく入力する方法の一つです。よく使う項目や組合せ内容をある程度固定化できる内容をSET登録しておくと、診察の度にあちこち選択する必要がありません。</p>                    
+                                    <p><img class="" src="images/070_000_set2.png" width="435" height="140" alt="セット2"></p>
+                                    <p>ＯＫ：入力し、次の項目を表示します。<br>
+                                    スキップ：表示されている項目は無視し次の項目を表示します。<br>
+                                    終了：入力処理を中止します。</p>
+                                    <p class="padding-bottom30">SET登録方法は[診察画面] #T[登録]#T[診療セット登録]に詳細があります。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>会計送信</h3>
-                <hr class="hborder">
-                <blockquote>会計送信</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p>｢日レセ」連携している場合は、<strong>B[終]</strong>で診療行為内容が日レセに対して送信されます。<br>
-                    ※注意：「病名確認」で行った病名も一緒に送信されます。</p>
-                    <p><img class="" src="images/070_000_kaikei_soushin.png" width="443" height="180" alt="会計送信"></p>
-                    <ul>
-                    <li>送信が正常に行われたことを示す「登録処理終了」メッセージが画面左上に表示されます。何らかのエラーが発生した場合もここにその旨が表示されます。</li>
-                    <li>診療行為欄下にORCAから戻された<strong>管理番号(UUID)</strong>が表示されます。（このUUIDは削除依頼するときに必要です。）</li>
-                    <li>診療行為内容全体が青文字で表示されます。</li></ul>
-                    <p>※もしなんらかのエラーが発生しうまく送信できない場合はいったん[受付画面]に戻り、再度#B[診察]でこの画面に戻ってから<strong>B[終]</strong>を押してみてください。診察画面を開いた時、患者情報欄に保険情報が表示されているか確認してください。ここに表示されている保険情報はORCAから取得しているものです。</p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="z" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">Do</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[記録] B[※Do]</strong></p>
+                                    <p><img class="" src="images/070_000_do.png" width="362" height="486" alt="do"></p>
+                                    <p>Doは前回行った診療行為を今回も適用する場合に利用できる複製機能のようなものです。対象となるのは左の<strong>T[記録]</strong>に表示されている内容で<strong>B[<]</strong>か<strong>B[>]</strong>で対象日を変更できます。</p>
+                                    <p><img class="" src="images/070_000_do2.png" width="410" height="140" alt="do2"></p>
+                                    <p class="padding-bottom30">ＯＫ：入力し、次の項目を表示します。<br>
+                                    スキップ：表示されている項目は無視し次の項目を表示します。<br>
+                                    終了：Do処理を中止します。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>会計送信の修正</h3>
-                <hr class="hborder">
-                <blockquote>会計送信の修正</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><strong>B[終]</strong>の後、診療行為に何かしら情報を追加した場合これらの内容は<strong>「会計オーダーとして送信されていない」</strong>部分としては赤字で記録されます。</p>
-                    <p><img class="" src="images/070_000_shusei.png" width="443" height="180" alt="修正"></p>
-                    <p>送信済みデータを修正する場合は一旦「削除」を送信し、続いて再度「登録」送信します。<br>
-                        既に、送信済みの場合<strong>B[終]</strong>を押すと削除する旨のメッセージが表示されますので<strong>B[削除]</strong>を押します。</p>
-                    <p><img class="" src="images/070_000_shusei2.png" width="410" height="140" alt="修正2"></p>
-                    <p><img class="" src="images/070_000_shusei3.png" width="410" height="140" alt="修正3"></p>
-                    <ul>
-                        <li>処理が正常に行われたことを示す「削除処理終了」メッセージが画面左上に表示されます。何らかのエラーが発生した場合もここにその旨が表示されます。</li>
-                        <li>診療行為欄下に表示されていた<strong>管理番号(UUID)が消えて</strong>送信前の状態に戻ります。</li>
-                        <li>診療行為内容全体が黒文字に戻ります。（削除したいだけの場合はこれで終わりです。）</li>
-                        <li>続いて<strong>B[終]</strong>を押すと、最初に送信したときと同じ状態で再度登録処理が行われます。<br>
-                        ※少々面倒ですが送信データを送りなおすには[削除]→[登録]という手順を行ってください。</li>
-                    </ul>
-                    <p>正しく送信が行われた場合受付リストには"会計待ち"と表示されます。</p>
-                    <p><img class="" src="images/070_000_shusei4.png" width="410" height="140" alt="修正4"></p>
-                    <p><img class="" src="images/070_000_shusei5.png" width="410" height="140" alt="修正5"></p>
-                    <p>※会計待ちレコードはORCAなどで会計が終了した場合。<strong>「会計済み」</strong>となります。（<strong>B[本日]</strong>を押したときに日レセよりデータを取得します。）<br>
-                        その他ORCAとの連携についての詳細は「日レセ連携」を参照してください。</p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="za" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">定期処方</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>T[記録] B[定期処方]</strong></p>
+                                    <p><img class="" src="images/070_000_teiki_shohou.png" width="362" height="255" alt="定期処方"></p>
+                                    <p>「約束処方」とも呼ばれる事があります。<br>
+                                    L[患者情報] F[定期処方]に記録されている患者専用の処方を登録します。</p>
+                                    <p><img class="" src="images/070_000_teiki_shohou2.png" width="410" height="140" alt="定期処方2"></p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>トラブル！うっかり記録内容を消してしまった。</h3>
-                <hr class="hborder">
-                <blockquote>トラブル！うっかり記録内容を消してしまった。</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                <p>ANNYS_D版の診療記録部分は、ほとんどがテキスト入力による簡単な方法ではありますが。しかしながら、これらテキスト入力部分の編集権限を持つユーザーが、過去データを見返したりしている最中に「うっかりデータを消してしまった！」なんて事も想定されます。</p>
-                <p>そんな時ANNYYSでは「一時データからの復帰」という処理を用意していますので次の事を覚えていれば慌ててずにトラブル対処ができます。</p>
-                <p>※「一時データの復帰」が機能するのなマニュアルの冒頭にもあったB[確]を押して確定処理された記録だけですのでご注意ください。「確定」処理された記録かどうかは診察画面のB[確]ボタンの色で判別できます。</p>
-                <p><img class="" src="images/070_000_trouble.png" width="604" height="144" alt="トラブル"></p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="zb" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">病名確認</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p>診察記録が完了し、<strong>B[確]</strong>を押すと、記録データが確定され診療行為内容に応じた適応病名の確認画面が表示されます。</p>
+                                    <p><img class="" src="images/070_000_byoumei_kakunin.png" width="362" height="255" alt="病名確認"></p>
+                                    <ul><li>左にある#T[病名]のリストには、適応病名が登録されている診療行為名または薬剤名が表示されています。</li>
+                                    <li>登録済み病名がある場合には青字、そうでない場合は赤字で表示されます。</li>
+                                    <li>赤字の部分は▼ーーをクリックすると対応する適応病名が表示され選択できます。<br>
+                                        <img class="" src="images/070_000_byoumei_kakunin2.png" width="358" height="261" alt="病名確認2"></li>
+                                    <li>病名を選択したら右側の#B(+)を押すと、病名が登録され診療行為名が青字に変わります。<br>
+                                        <img class="" src="images/070_000_byoumei_kakunin3.png" width="358" height="261" alt="病名確認3"><br>
+                                        ※登録後の病名開始日などは適宜修正してください。
+                                    </li></ul>
+                                    <p class="padding-bottom30">※<strong>B[確]</strong>を押すと、一時的なデータ保護が行わます。これは診療記録全般を別フィールドにコピーしている単純なものですがキーボードの操作ミスなどで記録内容が消された場合など一時的なデータ復帰が行えます。<strong>S[診療行為]>S[一時データからの復帰]</strong>></p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>その１</h3>
-                <hr class="hborder">
-                <blockquote>その１</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                <p>「一時データからの復帰」は、ツールバーにある「ANNYYS」>｢診療行為」>「一時データからの復帰」で選択できます。</p>
-                <p><img class="" src="images/070_000_sono1.png" width="772" height="312" alt="その1"></p>
-                <p><img class="" src="images/070_000_sono12.png" width="439" height="140" alt="その12"></p>
-                <p>表示されたダイアログの「OK」を選択すれば直前の確定処理を行った際のデータが各フィールドに復帰します。</p>
-                <p><img class="" src="images/070_000_sono13.png" width="626" height="179" alt="その13"></p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="zc" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">病名索引</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><img class="" src="images/070_000_byoumei_sakuin.png" width="364" height="489" alt="病名索引"></p>
+                                    <p>病名のみを索引したいときは#T[病名]#T[病名索引]で行えます。<br>
+                                    入力欄には全角カナを入力するようにしてください。<br>
+                                    ※英字・数字も全角です。<br>
+                                    ２文字以上の入力で該当する項目を索引できます。</p>
+                                    <p>該当する病名が見つかったら、その病名をクリックする事でコンピュータのクリップボード上にコピーされますので入力したい部分でペーストしてください。</p>
+                                    <p><img class="" src="images/070_000_byoumei_sakuin2.png" width="443" height="180" alt="病名索引2"></p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>その２</h3>
-                <hr class="hborder">
-                <blockquote>その２</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                <p>さらに遡ってデータを復帰させたい場合は「ログ取得」を選択します。</p>
-                <p><img class="" src="images/070_000_sono2.png" width="365" height="116" alt="その2"></p>
-                <p>これで過去の<strong>B[確]</strong>したときのデータが全てコンピュータのクリップボードにコピーされます。</p>
-                <p><img class="" src="images/070_000_sono22.png" width="439" height="140" alt="その22"></p>
-                <p>ワードパットなどのテキストエディタを開き、ペースト（右クリック&貼り付け）をすれば過去のログが表示されますので復帰用データに利用できます。</p>
-                <p><img class="" src="images/070_000_sono23.png" width="793" height="591" alt="その23"></p>
-                <p>このログは、カルテの記録履歴にも使えます。</p>
-                </div>
-            </div>    
-        </div>
-    </div>
+                        <!--メニュー-->
+                        <div id="zd" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">会計送信</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p>｢日レセ」連携している場合は、<strong>B[終]</strong>で診療行為内容が日レセに対して送信されます。<br>
+                                    ※注意：「病名確認」で行った病名も一緒に送信されます。</p>
+                                    <p><img class="" src="images/070_000_kaikei_soushin.png" width="443" height="180" alt="会計送信"></p>
+                                    <ul>
+                                    <li>送信が正常に行われたことを示す「登録処理終了」メッセージが画面左上に表示されます。何らかのエラーが発生した場合もここにその旨が表示されます。</li>
+                                    <li>診療行為欄下にORCAから戻された<strong>管理番号(UUID)</strong>が表示されます。（このUUIDは削除依頼するときに必要です。）</li>
+                                    <li>診療行為内容全体が青文字で表示されます。</li></ul>
+                                    <p class="padding-bottom30">※もしなんらかのエラーが発生しうまく送信できない場合はいったん[受付画面]に戻り、再度#B[診察]でこの画面に戻ってから<strong>B[終]</strong>を押してみてください。診察画面を開いた時、患者情報欄に保険情報が表示されているか確認してください。ここに表示されている保険情報はORCAから取得しているものです。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                        <!--メニュー-->
+                        <div id="ze" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">会計送信の修正</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><strong>B[終]</strong>の後、診療行為に何かしら情報を追加した場合これらの内容は<strong>「会計オーダーとして送信されていない」</strong>部分としては赤字で記録されます。</p>
+                                    <p><img class="" src="images/070_000_shusei.png" width="443" height="180" alt="修正"></p>
+                                    <p>送信済みデータを修正する場合は一旦「削除」を送信し、続いて再度「登録」送信します。<br>
+                                        既に、送信済みの場合<strong>B[終]</strong>を押すと削除する旨のメッセージが表示されますので<strong>B[削除]</strong>を押します。</p>
+                                    <p><img class="" src="images/070_000_shusei2.png" width="410" height="140" alt="修正2"></p>
+                                    <p><img class="" src="images/070_000_shusei3.png" width="410" height="140" alt="修正3"></p>
+                                    <ul>
+                                        <li>処理が正常に行われたことを示す「削除処理終了」メッセージが画面左上に表示されます。何らかのエラーが発生した場合もここにその旨が表示されます。</li>
+                                        <li>診療行為欄下に表示されていた<strong>管理番号(UUID)が消えて</strong>送信前の状態に戻ります。</li>
+                                        <li>診療行為内容全体が黒文字に戻ります。（削除したいだけの場合はこれで終わりです。）</li>
+                                        <li>続いて<strong>B[終]</strong>を押すと、最初に送信したときと同じ状態で再度登録処理が行われます。<br>
+                                        ※少々面倒ですが送信データを送りなおすには[削除]→[登録]という手順を行ってください。</li>
+                                    </ul>
+                                    <p>正しく送信が行われた場合受付リストには"会計待ち"と表示されます。</p>
+                                    <p><img class="" src="images/070_000_shusei4.png" width="410" height="140" alt="修正4"></p>
+                                    <p><img class="" src="images/070_000_shusei5.png" width="410" height="140" alt="修正5"></p>
+                                    <p class="padding-bottom30">※会計待ちレコードはORCAなどで会計が終了した場合。<strong>「会計済み」</strong>となります。（<strong>B[本日]</strong>を押したときに日レセよりデータを取得します。）<br>
+                                        その他ORCAとの連携についての詳細は「日レセ連携」を参照してください。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                        <!--メニュー-->
+                        <div id="zf" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">トラブル！うっかり記録内容を消してしまった。</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                <p>ANNYS_D版の診療記録部分は、ほとんどがテキスト入力による簡単な方法ではありますが。しかしながら、これらテキスト入力部分の編集権限を持つユーザーが、過去データを見返したりしている最中に「うっかりデータを消してしまった！」なんて事も想定されます。</p>
+                                <p>そんな時ANNYYSでは「一時データからの復帰」という処理を用意していますので次の事を覚えていれば慌ててずにトラブル対処ができます。</p>
+                                <p>※「一時データの復帰」が機能するのなマニュアルの冒頭にもあったB[確]を押して確定処理された記録だけですのでご注意ください。「確定」処理された記録かどうかは診察画面のB[確]ボタンの色で判別できます。</p>
+                                <p><img class="" src="images/070_000_trouble.png" width="604" height="144" alt="トラブル"></p>
+
+                                <h4 id="zf1">その１</h4>
+                                <hr class="hborder">
+                                <!--本文-->
+                                <div>
+                                <p>「一時データからの復帰」は、ツールバーにある「ANNYYS」>｢診療行為」>「一時データからの復帰」で選択できます。</p>
+                                <p><img class="" src="images/070_000_sono1.png" width="772" height="312" alt="その1"></p>
+                                <p><img class="" src="images/070_000_sono12.png" width="439" height="140" alt="その12"></p>
+                                <p>表示されたダイアログの「OK」を選択すれば直前の確定処理を行った際のデータが各フィールドに復帰します。</p>
+                                <p><img class="" src="images/070_000_sono13.png" width="626" height="179" alt="その13"></p>
+                                </div>
+
+                                <h4 id="zf2">その２</h4>
+                                <hr class="hborder">
+                                <!--本文-->
+                                <div>
+                                <p>さらに遡ってデータを復帰させたい場合は「ログ取得」を選択します。</p>
+                                <p><img class="" src="images/070_000_sono2.png" width="365" height="116" alt="その2"></p>
+                                <p>これで過去の<strong>B[確]</strong>したときのデータが全てコンピュータのクリップボードにコピーされます。</p>
+                                <p><img class="" src="images/070_000_sono22.png" width="439" height="140" alt="その22"></p>
+                                <p>ワードパットなどのテキストエディタを開き、ペースト（右クリック&貼り付け）をすれば過去のログが表示されますので復帰用データに利用できます。</p>
+                                <p><img class="" src="images/070_000_sono23.png" width="793" height="591" alt="その23"></p>
+                                <p class="padding-bottom30">このログは、カルテの記録履歴にも使えます。</p>
+                                </div>
+                                
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                    </div><!--col-md-9-->
+
+
+                </div><!--rightbox_clearfix-->
+            </div><!--wrapper_1180-->
     <!--//コンテンツ部終了//-->
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
+        </div><!--row-->
+    </div><!--contaner_fluid-->
+    
+    <!--ページトップへ戻る-->
+     <p id="page-top"><a href="#wrap"></a></p>
     <!--Footer設定-->
     <footer>
         <div class="container-fluid">
