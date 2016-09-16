@@ -70,19 +70,20 @@ $(window).scroll(function () {
   <body>
     <!--Header共通設定-->
     <header style="background-color:white">
-        <div class="wrapper_1280">
-            <img src="images/Annyys-msis-logo.jpg" class="img-responsive" alt="ANNYYS_D">
-        </div><!--wrapper-->
+         <div class="wrapper_1180 img_p clearfix">
+         <img id="A_logo" class="margin-top20" src="images/ANNYYS_logo.jpg" class="img-responsive" alt="ANNYYS_D">
+         <img class="m_logo margin-top30" src="images/msis_logo.jpg" class="img-responsive" alt="msis">
+           </div><!--wrapper-->
         <div class="container-fluid" style="background-color:#19538a">
-            <div class="wrapper_1180">
-                <div class="row">
-                    <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
-                    <div class="col-md-offset-3 col-md-3">
-                        <form class="navbar-form">
-                            <input type="text" class="search-query" placeholder="Search">
-                        </form>
-                    </div>
+              <div class="wrapper_1180">
+            <div class="row">
+                <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
+                <div class="col-md-offset-3 col-md-3">
+                    <form class="navbar-form">
+                        <input type="text" class="search-query" placeholder="Search">
+                    </form>
                 </div>
+            </div>
             </div><!--wrapper-->
             <div class="row" style="background-color:#7ba3ca">
                 <nav class="navbar-static-top">
@@ -140,13 +141,14 @@ $(window).scroll(function () {
    
     <div class="container-fluid">
         <div class="row">
-            <div class="title_wrapper">
-              <h3 id="a" class="page_title">目次</h3>
+            <!--<div class="title_wrapper">
+              <h3 id="a" class="page_title">基本設定</h3>
             </div><!--title_wrapper-->
             <div class="wrapper_1180">
                 <div class="col-md-2 fixed_menu clearfix" style="background-color:white;">
                     <!--メニュー-->
                   <div id="fixedBox" class="nav">
+                  <h4 class="side-title">基本設定</h4>
                                 <ul type="1" style="list-style: none;">
                                     <li id="yamato"><a class="red" href="#a">基本設定</a></li>
                                     <li><a href="#b">医療機関情報</a></li>
@@ -169,9 +171,9 @@ $(window).scroll(function () {
                     <div class="col-md-9" style="background-color:white;">
                         <!--ページタイトル-->
 
-                        <div class="contents_wrapper">
+                        <div id="a" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="a">基本設定</a></h3>
+                                 <h3 class="contents_title margin-top20">基本設定</h3>
                             </div>
 
                         <!--本文-->
@@ -198,15 +200,15 @@ $(window).scroll(function () {
                                 <p><img class="center-block" src="images/100_000_kihonsettei.png" alt="基本設定"></p> 
                                 <p><img class="center-block" src="images/100_000_kihonsettei1.png" alt="基本設定1"></p> 
                                 <p>基本設定は印刷物に主る出力される項目やソリューションの動作を決めるものがありますので、最初の段階である程度入力を済ませておいてください。</p>
-                                <p>ANNYYS_Dの設定情報には共有情報と固有情報の2種類があります。文字の通りですが共有情報はその内容が同じFileMakerServerを介しているネットワーク上の全てのANNYYS_Dに反映します。また固有情報は他のANNYYS_Dの設定に影響されることなく完全に同一のANNYYS_D上でのみ反映されます。いくつかのANNYYS_Dによる運営が必要な場合この区別が重要になります。</p>
+                                <p class="padding-bottom30">ANNYYS_Dの設定情報には共有情報と固有情報の2種類があります。文字の通りですが共有情報はその内容が同じFileMakerServerを介しているネットワーク上の全てのANNYYS_Dに反映します。また固有情報は他のANNYYS_Dの設定に影響されることなく完全に同一のANNYYS_D上でのみ反映されます。いくつかのANNYYS_Dによる運営が必要な場合この区別が重要になります。</p>
 
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="b" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="b">医療機関情報</a></h3>
+                                 <h3 class="contents_title margin-top20">医療機関情報</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -229,15 +231,15 @@ $(window).scroll(function () {
                                 <li>アドレス：FileMakerServerのIPアドレスを指定します。</li>
                                 <li>処方せんヘッダ：変更しないでください。</li>
                                 </ul>
-                                <p>※医療機関情報はサーバー側のDB_ANNYYS/anys_prefのレコードに登録されいる共有情報で、DATE >= 更新日　の関係で認識します。そしてANNYYS_Dは開いたときに必ず日付けを確認し本日の日付けをDATEというフィールドに登録しています。この関係は医療法人化するなどして病院名が変わった場合に過去の情報はそのまま維持しながら新しい情報を登録する際に有効です。メインメニュ#B基本設定#T療機関情報では入力時による事故を減らすように配慮したインタフェースですがDB_ANNYYS/anys_prefを直接参照し行を追加する事によって日付けによる医療機関情報の変更にも対応できます。</p>
+                                <p class="padding-bottom30">※医療機関情報はサーバー側のDB_ANNYYS/anys_prefのレコードに登録されいる共有情報で、DATE >= 更新日　の関係で認識します。そしてANNYYS_Dは開いたときに必ず日付けを確認し本日の日付けをDATEというフィールドに登録しています。この関係は医療法人化するなどして病院名が変わった場合に過去の情報はそのまま維持しながら新しい情報を登録する際に有効です。メインメニュ#B基本設定#T療機関情報では入力時による事故を減らすように配慮したインタフェースですがDB_ANNYYS/anys_prefを直接参照し行を追加する事によって日付けによる医療機関情報の変更にも対応できます。</p>
 
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="c" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="c">医師名</a></h3>
+                                 <h3 class="contents_title margin-top20">医師名</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -258,9 +260,9 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="d" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="d">診療科</a></h3>
+                                 <h3 class="contents_title margin-top20">診療科</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -322,9 +324,9 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="e" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="e">診察内容</a></h3>
+                                 <h3 class="contents_title margin-top20">診察内容</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -354,9 +356,9 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="f" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"> <a name="f">病棟</a></h3>
+                                 <h3 class="contents_title margin-top20">病棟</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -370,15 +372,15 @@ $(window).scroll(function () {
                                 <ul>
                                     <li>この設定は固有情報なので他のANNYYS_Dファイルには影響しません。</li>
                                 </ul>
-                                <p>※2013年4月時点では入院に関するサポートはまだ行っていません。</p>
+                                <p class="padding-bottom30">※2013年4月時点では入院に関するサポートはまだ行っていません。</p>
 
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="g" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="g">日レセ</a></h3>
+                                 <h3 class="contents_title margin-top20">日レセ</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -405,9 +407,9 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
                         
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="h" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="h">ＡＰＩ</a></h3>
+                                 <h3 class="contents_title margin-top20">ＡＰＩ</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -417,15 +419,15 @@ $(window).scroll(function () {
                                 API_PATH：連携ツールなどの配置やバックアップデータを作成する場所などローカルのＰＣ上でANNYYS_D特有の作業場所となるパスを表示しています。（変更はできません）<br>
                                 Plugin：プラグインのバージョンを表示しています。プラグインがインストールされているかどうかは「編集」>「環境設定」＞「プラグイン」で確認できます。</p>
                                 <p><img class="center-block" src="images/100_000_api1.png" alt="API1"></p>
-                                <p>WVCheck：Webビューワで利用されているブラウザの種類とANNYYS_Dで利用しているライブラリのバージョンを確認できます。</p>
+                                <p class="padding-bottom30">WVCheck：Webビューワで利用されているブラウザの種類とANNYYS_Dで利用しているライブラリのバージョンを確認できます。</p>
 
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="i" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="h">その他</a></h3>
+                                 <h3 class="contents_title margin-top20">その他</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -448,22 +450,22 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="j" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="h">B[Object]</a></h3>
+                                 <h3 class="contents_title margin-top20">B[Object]</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
                                 <p><img class="center-block" src="images/100_000_object.png" alt="B[Object]"></p> 
                                 <p><img class="center-block" src="images/100_000_object1.png" alt="B[Object]1"></p> 
-                                <p>ANNYYS_Dを構成しているオブジェクト類が取得できます。カスタマイズする際にデザインの一貫性を保ちたい場合などはこちらをご利用頂けます。</p>
+                                <p class="padding-bottom30">ANNYYS_Dを構成しているオブジェクト類が取得できます。カスタマイズする際にデザインの一貫性を保ちたい場合などはこちらをご利用頂けます。</p>
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="k" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="h">B[所見項目]</a></h3>
+                                 <h3 class="contents_title margin-top20">B[所見項目]</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -477,9 +479,9 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="l" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="h">B[問診項目]</a></h3>
+                                 <h3 class="contents_title margin-top20">B[問診項目]</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -493,15 +495,15 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
-                        <div class="contents_wrapper">
+                        <div id="m" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="b" class="contents_title margin-top30"><a name="h">B[利用項目]</a></h3>
+                                 <h3 class="contents_title margin-top20">B[利用項目]</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
                                 <p><img class="center-block" src="images/100_000_riyoukoumoku.png" alt="B[利用項目]"></p> 
                                 <p><img class="center-block" src="images/100_000_riyoukoumoku1.png" alt="B[利用項目]1"></p> 
-                                <p>診療画面において診療行為や処方する薬剤など利用している項目が登録されている固有情報データです。これらは共有情報であるDB_ANNYYS/tbl_tensuから抜粋されたもので利用者（医師）や診療科によって個別に登録できるようになっています。</p>
+                                <p class="padding-bottom30">診療画面において診療行為や処方する薬剤など利用している項目が登録されている固有情報データです。これらは共有情報であるDB_ANNYYS/tbl_tensuから抜粋されたもので利用者（医師）や診療科によって個別に登録できるようになっています。</p>
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
 
