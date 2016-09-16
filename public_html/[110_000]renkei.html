@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ANNYYS_D Webマニュアル　日レセ連携</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+     <!--SPトグル読み込み-->
+<script>
+    $(function(){
+        $(".globNav-toggle").on("click", function() {
+            $(this).next().slideToggle();
+        });
+    });
+</script>
+
+<!--ページ上部へ戻る-->
+<script>
+$(function() {
+			var topBtn = $('#page-top');	
+			topBtn.hide();
+			//スクロールが100に達したらボタン表示
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					topBtn.fadeIn();
+				} else {
+					topBtn.fadeOut();
+				}
+			});
+			//スクロールしてトップ
+		    topBtn.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+		    });
+		});
+</script>
+
+
+<script type="text/javascript">
+jQuery(function($) {
+  
+var nav    = $('#fixedBox'),
+    offset = nav.offset();
+  
+$(window).scroll(function () {
+  if($(window).scrollTop() > offset.top) {
+    nav.addClass('fixed');
+  } else {
+    nav.removeClass('fixed');
+  }
+});
+  
+});
+</script>
+
+<!--クリック時変化-->
+
+
+
+
+  </head>
+  <body>
+    <!--Header共通設定-->
+    <header style="background-color:white">
+         <div class="wrapper_1180 img_p clearfix">
+         <img id="A_logo" class="margin-top20" src="images/ANNYYS_logo.jpg" class="img-responsive" alt="ANNYYS_D">
+         <img class="m_logo margin-top30" src="images/msis_logo.jpg" class="img-responsive" alt="msis">
+           </div><!--wrapper-->
+        <div class="container-fluid" style="background-color:#19538a">
+              <div class="wrapper_1180">
+            <div class="row">
+                <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
+                <div class="col-md-offset-3 col-md-3">
+                    <form class="navbar-form">
+                        <input type="text" class="search-query" placeholder="Search">
+                    </form>
+                </div>
+            </div>
+            </div><!--wrapper-->
+            <div class="row" style="background-color:#7ba3ca">
+                <nav class="navbar-static-top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+                            <span class="sr-only">メニュー</span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    
+                        <!--スマホ用トグル-->
+                    <nav class="globNav-row">
+                       <span class="globNav-toggle"><a class="menu-trigger" href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a></span>
+                             <ul class="globNav-inner" style="list-style:none">
+                                <li><a href="index_1.html">　　TOP</a></li>
+                                <li><a href="[010_000]mokuji.html">　　目次</a></li>
+                                <li><a href="[020_000]hajimeni.html">　　はじめに</a></li>
+                                <li><a href="[030_000]setup.html">　　セットアップ</a></li>
+                                <li><a href="[040_000]nagare.html">　　診察の流れ</a></li>
+                                <li><a href="[050_000]uketsuke.html">　　来院受付</a></li>
+                                <li><a href="[060_000]gamen.html">　　診察画面</a></li>
+                                <li><a href="[070_000]karute.html">　　カルテ記録</a></li>
+                                <li><a href="[080_000]kanja.html">　　患者情報</a></li>
+                                <li><a href="[090_000]master.html">　　マスタ管理</a></li>
+                                <li><a href="[100_000]settei.html">　　基本設定</a></li>
+                                <li><a href="[110_000]renkei.html">　　日レセ連携</a></li>
+                             </ul>
+　　　　　　　　　　　</nav><!--スマホ用トグル終わり-->
+           <!--PC用グローバルナビ-->
+                    <div id="gnavi" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="[000_000]index.html">TOP</a></li>
+                            <li><a href="[010_000]mokuji.html">目次</a></li>
+                            <li><a href="[020_000]hajimeni.html">はじめに</a></li>
+                            <li><a href="[030_000]setup.html">セットアップ</a></li>
+                            <li><a href="[040_000]nagare.html">診察の流れ</a></li>
+                            <li><a href="[050_000]uketsuke.html">来院受付</a></li>
+                            <li><a href="[060_000]gamen.html">診察画面</a></li>
+                            <li><a href="[070_000]karute.html">カルテ記録</a></li>
+                            <li><a href="[080_000]kanja.html">患者情報</a></li>
+                            <li><a href="[090_000]master.html">マスタ管理</a></li>
+                            <li><a href="[100_000]settei.html">基本設定</a></li>
+                            <li><a class="current_page" href="[110_000]renkei.html">日レセ連携</a></li>
+                        </ul>
+                    </div><!--gnav-->
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--コンテンツ設定-->
+   
+    <div class="container-fluid">
+        <div class="row">
+            <!--<div class="title_wrapper">
+              <h3 class="page_title">はじめに</h3>
+              </div><!--title_wrapper-->
+               <div class="wrapper_1180">
+            <div class="col-md-2 fixed_menu clearfix" style="background-color:white;">
+                <!--メニュー-->
+              <div id="fixedBox" class="nav">
+                  <h4 class="side-title">日レセ連携</h4>
+                            <ul type="1" style="list-style: none;">
+                                <li id="yamato"><a class="red" href="#a" class="click">日レセ連携</a></li>
+                                <li><a href="#b">連携の方向とタイミング</a></li>
+                                <li><a href="#c">患者情報</a></li>
+                                <li><a href="#d">受付登録</a></li>
+                                <li><a href="#e">診療行為送信</a></li>
+                                <li><a href="#f">診療行為訂正１（日レセで未会計）</a></li>
+                                <li><a href="#g">診療行為訂正２（日レセで会計済）</a></li>
+                                <li><a href="#h">処方変更（院内⇔院外）</a></li>
+                                <li><a href="#i">予約</a></li>
+                            </ul>
+              </div><!--fixedBox-->
+            </div><!--co--md2-->
+            <div class="right_box clearfix">
+               
+            <div class="col-md-9" style="background-color:white;">
+                <!--ページタイトル-->
+                
+                <div id="a" class="contents_wrapper margin-top30">
+                 <div class="hr_h3">
+                <h3 class="contents_title">日レセ連携</h3>
+                </div><!--hr_h3-->
+                <p><em>マニュアルの表現に関して</em><br>
+                    本マニュアルでは大文字の英語を組み合わせた記号表現があります。この意味以下のようになりますので、ご理解の上お読みいただけますようお願い申し上げます。</p>
+                <table border="1">
+                    <tr><th>記号</th><th>読み方</th><th>説明</th></tr>
+                    <tr><td>L(エル)</td><td>レイアウト</td><td>表示されている画面の名称</td></tr>
+                    <tr><td>B(ビー)</td><td>ボタン</td><td>画面上のボタン</td></tr>
+                    <tr><td>F(エフ)</td><td>フィールド</td><td>画面上の入力スペースのこと</td></tr>
+                    <tr><td>T(タブ)</td><td>タブ</td><td>画面上のタブスペースのタイトル</td></tr>
+                    <tr><td>S(エス)</td><td>スクリプト</td><td>スクリプトメニューにあるスクリプト名</td></tr>
+                </table>
+                <p>例１）<strong>L[メインメニュー] B[外来受付]</strong><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メインメニュー画面の、外来受付ボタン（を押す）となります。</p>
+                <p>例２）<strong>L[診療記録] T[病名] F[病名]</strong><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;診療記録画面の、病名タブの、病名入力スペースとなります。</p>
+                <br>
+                <p>電子カルテはレセコンと連動する事で、院内の業務の効率化を図ることができます。
+                ANNYYS_D版は日医標準レセプトソフト Ver.4.5.0以降に対応しており、glserverのHTTPプロトコル通信によって以下の連携を可能にしています。</p>
+
+                <p>注意点：
+                日レセと連携する場合、医師名、診療科、来院目的の３つのコード番号は日レセ側の内容に統一しておいてください。
+                ※医師名コードは頭に１をつけた内容でANNYYSに登録します。
+                例：0001：山田太郎　=> 10001：山田太郎</p>
+
+
+                <p class="padding-bottom30">※本内容に一部日レセ上での会計情報の削除方法などを掲載しています。万が一実データの消失した場合などのトラブルに対して対応はできませんのであらかじめご了承ください。実際に操作する場合はサポートベンダー等のサポートの上で、慎重に行うようにしてください。</p>
+
+                </div><!--contents_wrapper-->
+            <!--<div class="col-xs-2" style="background-color:white;"></div>-->
+             <p></p>
+                 </div><!--col-md-9-->
+      
+        <!--<div class="row">
+            <div class="col-md-3" style="background-color:white;">
+            </div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->
+                
+                <!--メニュー-->
+             <div class="col-md-9" style="background-color:white;">
+                <div id="b"class="contents_wrapper">
+                 <div class="hr_h3">
+                  <h3 class="contents_title margin-top20">連携の方向とタイミング</h3>
+                 </div><!--hr_h3-->
+                <!--本文-->
+                <div id="annys-tx">
+                    <table border="1">
+                        <tr><td>ANNYYS_D</td><td>方向<br>タイミング</td><td>日レセ</td></tr>
+                        <tr><td>患者情報（保険・公費）</td><td>←<br>L[患者情報] B[確認]</td><td>患者情報(保険・公費)</td></tr>
+                        <tr><td>受付登録<br>後で会計オーダーを送信する際に当該患者の保険情報を取得することが目的である。</td><td>→<br>L[外来受付] B[診察]<br>L[受付一覧] B[診]<br>※診察記録画面を開いた時</td><td>受付情報<br>日レセで受付しても問題ありません。</td></tr>
+                        <tr><td>診療行為情報<br>病名も一緒に送信されます。</td><td>→<br>L[診察画面] B[終]<br></td><td>診療行為情報日レセのみで会計も可。</td></tr>
+                        <tr><td>予約情報</td><td>→<br>L[外来受付] B[予約]確定時</td><td>予約情報<br>日レセで予約しても問題ありません。</td></tr>
+                    </table>
+                    <p>ANNYYS_Dと日レセの連携に関する情報の関係はこのようになっています。</p>
+
+                    <p>登録に関する業務（患者情報や保険・公費などの登録）は日レセ側で行うようにしてください。</p>
+
+                    <p>ANNYYS_Dでは<strong>L[患者情報]#B[確認]</strong>で、日レセから最新の情報を受け取る事ができます。</p>                    
+
+                    <p>会計オーダーでは先んじて該当患者の最新の保険情報を受け取る必要があるため<strong>L[外来受付] B[診察]</strong>または<strong>L[受付一覧/指示一覧] B[診]</strong>で診察画面を表示した際に受付リクエストを送信していて日レセに該当患者の受付処理が行われます。この時、該当患者の保険(組合せ)情報が戻ってきていますのでANNYYS_Dではこの保険(組合せ)情報を取得しています。もしこの時日レセ側で既に受付されている場合はプログラム内部の動きとして単純なエラーが返答として帰ってきますが、保険(組合せ)情報はやはり正しく返答されてきます。</p>
+
+                    <p>最後に<strong>L[診察画面] B[終]</strong>で診療記録による会計情報が送信されますが、この時ANNYYS_Dで登録した病名なども一緒に送信されます。診療行為内容の送信は「会計オーダー」と呼んでいますが、日レセで会計オーダーを元に会計処理が行われるまではANNYYS_Dから会計オーダーを修正(削除&登録)する事ができます。
+                        ※注意：日レセ側で会計処理が完了した後に修正情報などを送信したい場合は、まず日レセで該当の処理済み会計情報を取り消す必要があります。そのうえでANNYYS_Dの<strong>S[日レセ]> S[UUID強制削除]</strong>を行い送信した内容をリセットする事ができます。</p>
+
+                    <p>予約情報は<strong>L[外来受付] B[診察] B[予約]</strong>を押し、予約日・予約時間を設定し確定した場合に日レセに送信されます。</p>
+
+                    <p class="padding-bottom30">日レセとANNYYS_Dの情報のやりとりに関する事ですが、日レセ側だけで業務を行う事も可能です。LANによる連携では設定の変更や新しい機器の導入、さらには想定しない様々な要因で何かしらドラブルが発生し情報のやりとりができなくなったりする事があります。このような場合でも完全に業務が停止しないよう、それぞれ単独でも業務が行える準備をしておいてください。</p>
+
+                </div><!--annys-tx-->
+                </div><!--contents_wrapper-->
+             </div><!--col-md-9-->
+           <!-- <div class="col-xs-2" style="background-color:white;"></div>-->
+                
+       
+                  
+        <!--<div class="row">
+            <div class="col-md-3" style="background-color:white;">
+            </div>
+            <div class="col-md-8" style="background-color:white;">
+                <!--ページタイトル-->
+                 <div class="col-md-9" style="background-color:white;">
+              <div id="c"class="contents_wrapper">
+                   <div class="hr_h3">
+                <h3 class="contents_title margin-top20">患者情報</h3>
+                 </div><!--hr_h3-->
+                <!--本文-->
+                <div id="annys-tx">
+                    <p>ANNYYS_Dには登録が無く、日レセには登録済であること。</p>
+                    <p><img class="center-block" src="images/110_000_kanjajouhou.png" alt="患者情報"></p>
+                    <p><img class="center-block" src="images/110_000_kanjajouhou2.png" alt="患者情報2"></p>
+                    <p><strong>B[確認]</strong>で取込み（※既存情報は上書き更新されます。）</p>
+                    <p><img class="center-block" src="images/110_000_kanjajouhou3.png" alt="患者情報3"></p>
+                    <p class="padding-bottom30">患者情報（名前・カナ・郵便番号・住所）<br>
+                    保健情報<br>
+                    公費情報<br>
+                    が読み込まれます。</p>
+                </div><!--annyy-tx-->
+            </div><!--contents_wrapper-->
+            </div><!--col-md-9-->
+           
+                
+        
+        <div class="col-md-9" style="background-color:white;">
+              <div id="d"class="contents_wrapper padding-bottom10 margin-bottom30">
+                   <div class="hr_h3">
+                    <h3 class="contents_title margin-top20">受付登録</h3>
+                   </div><!--hr_h3-->
+                <!--本文-->
+                <div id="annys-tx">
+                    <p><strong>L[外来受付] B[診察]</strong>で受付リクエストが日レセに送信されます。</p>
+                    <p><img class="center-block" src="images/110_000_uketsuketouroku.png" alt="受付登録"></p>
+                    <p><strong>L[診察画面]</strong>の患者情報部分に日レセから取得した患者の保険組合せ内容が表示されます。</p>
+                    <p><img class="center-block" src="images/110_000_uketsuketouroku1.png" alt="受付登録1"></p>
+                    <p>日レセに受付登録が無い場合は受付内容が登録されます。診療科、医師、診察内容、時間など登録した内容で送信されます。</p>
+                    <p><img class="center-block" src="images/110_000_uketsuketouroku2.png" alt="受付登録2"></p>
+               </div><!--annyy-tx-->
+             </div><!--contents_wrapper-->
+            </div><!--col-md-9-->
+          
+        
+        <div class="col-md-9" style="background-color:white;">
+              <div id="d"class="contents_wrapper padding-bottom10 margin-bottom30">
+                   <div class="hr_h3">
+                    <h3 class="contents_title margin-top20">診療行為送信</h3>
+                   </div><!--hr_h3-->
+                <!--本文-->
+                <div id="annys-tx">
+                    <p>会計オーダーは L[診察画面] B[終]で受付時に取得した保険情報と登録済みの病名(T[病名])とともに送信されます。</p>
+                    <p><img class="center-block" src="images/110_000_soushin.png" alt="診療行為送信"></p>
+                    <p>一緒に送信される保険情報と病名</p>
+                    <p><img class="center-block" src="images/110_000_soushin1.png" alt="診療行為送信1"></p>
+                    <p>日レセでは受付リストから該当患者を選択し下の [診療行為]ボタンを押すと送信した内容が表示されます。</p>
+                    <p><img class="center-block" src="images/110_000_soushin2.png" alt="診療行為送信2"></p>
+                    <p>日レセ診療行為入力画面で、送信された診療行為・保険・病名が確認できます。</p>
+                    <p><img class="center-block" src="images/110_000_soushin3.png" alt="診療行為送信3"></p>
+                    <p>あとは日レセの仕様に従い会計処理を完了させてください。</p>
+               </div><!--annyy-tx-->
+             </div><!--contents_wrapper-->
+            </div><!--col-md-9-->
+          
+        
+        <div class="col-md-9" style="background-color:white;">
+              <div id="d"class="contents_wrapper padding-bottom10 margin-bottom30">
+                   <div class="hr_h3">
+                    <h3 class="contents_title margin-top20">診療行為訂正１（日レセで未会計）</h3>
+                   </div><!--hr_h3-->
+                <!--本文-->
+                <div id="annys-tx">
+                    <p>会計オーダー送信後、日レセ側でまた会計処理をしていない場合
+                        <strong>L[診察画面] B[終]</strong>で表示されたダイアログから[削除]を選択し一旦削除リクエストを送信します。</p>
+                    <p><img class="center-block" src="images/110_000_teisei.png" alt="診療行為訂正"></p>
+                    <p><img class="center-block" src="images/110_000_teisei1.png" alt="診療行為訂正1"></p>
+                    <p>「削除処理完了」のメッセージが表示されたら削除完了です。
+                    診療行為内容を修正し、再び<strong>L[診察画面] B[終]</strong>で診療行為内容を登録できます。</p>
+                    <p><img class="center-block" src="images/110_000_teisei2.png" alt="診療行為訂正2"></p>
+                    <p>新しいUUIDが登録されます。</p>
+               </div><!--annyy-tx-->
+             </div><!--contents_wrapper-->
+            </div><!--col-md-9-->
+          
+        
+        <div class="col-md-9" style="background-color:white;">
+              <div id="d"class="contents_wrapper padding-bottom10 margin-bottom30">
+                   <div class="hr_h3">
+                    <h3 class="contents_title margin-top20">診療行為訂正２（日レセで会計済）</h3>
+                   </div><!--hr_h3-->
+                <!--本文-->
+                <div id="annys-tx">
+                    <p>日レセ側で会計処理済みの場合は日レセで一旦会計内容を削除する必要があります。
+                    日レセで診療行為画面を出して[Ｄｏ検索]をクリックします。</p>
+                    <p><img class="center-block" src="images/110_000_teisei_2.png" alt="診療行為訂正_2"></p>
+                    <p>[訂正診療日]という名称に変わったら下のリストから該当日を選択します。</p>
+                    <p><img class="center-block" src="images/110_000_teisei_21.png" alt="診療行為訂正_21"></p>
+                    <p>診療内容が展開されたら[クリア]→[登録]をクリックして削除処理を進め「継続分も含め受診履歴を削除します。<br>
+                    というメッセージがでるので「ＯＫ」を押し削除処理を完了させます。</p>
+                    <p>ANNYYS_Dでは<strong>L[診察画面] B[終]</strong>で表示されたダイアログから[再送信]を選択し診療行為を送信します。</p>
+                    <p><img class="center-block" src="images/110_000_teisei_22.png" alt="診療行為訂正_22"></p>
+                    <p><img class="center-block" src="images/110_000_teisei_23.png" alt="診療行為訂正_23"></p>
+                    <p>新しいUUIDが登録されます。</p>
+                    <p>もし、ANNYYS_D側のUUIDを削除したい場合はS[日レセ]> S[UUID強制削除]を実行すると登録済みのUUIDが削除されます。</p>
+               </div><!--annyy-tx-->
+             </div><!--contents_wrapper-->
+            </div><!--col-md-9-->
+          
+        
+        <div class="col-md-9" style="background-color:white;">
+              <div id="d"class="contents_wrapper padding-bottom10 margin-bottom30">
+                   <div class="hr_h3">
+                    <h3 class="contents_title margin-top20">処方変更（院内⇔院外）</h3>
+                   </div><!--hr_h3-->
+                <!--本文-->
+                <div id="annys-tx">
+                    <p>ANNYYS_Dでは基本設定に設定した処方（院内or院外）内容で日レセに情報が送信されます。たまに設定と違う方法で処方を処理したい場合はORCA側で処方内容を修正してください。</p>
+                    <p>例）院外処方を院内処方に変更する場合</p>
+                    <p><img class="center-block" src="images/110_000_shohouhenkou.png" alt="処方変更"></p>
+                    <p>基本設定が院外なので全て院外処方で受信されています。</p>
+                    <p><img class="center-block" src="images/110_000_shohouhenkou1.png" alt="処方変更1"></p>
+                    <p>院外を院内に変えるには処方の２１２の部分を２１１に変更します。これで院外処方が院内処方に変更できます。
+                    院内処方を院外処方に変えるにはこの逆の操作で行えます。
+                    院内処方=２１１　院外処方＝２１２　となっています。
+                    </p>
+               </div><!--annyy-tx-->
+             </div><!--contents_wrapper-->
+            </div><!--col-md-9-->
+          
+        
+        <div class="col-md-9" style="background-color:white;">
+              <div id="d"class="contents_wrapper padding-bottom10 margin-bottom30">
+                   <div class="hr_h3">
+                    <h3 class="contents_title margin-top20">予約</h3>
+                   </div><!--hr_h3-->
+                <!--本文-->
+                <div id="annys-tx">
+                    <p>ANNYYS_Dで登録した予約情報も日レセに送信されます。
+                        L[外来受付]#B[予約]で予約内容を登録します。</p>
+                    <p><img class="center-block" src="images/110_000_yoyaku.png" alt="予約"></p>
+                    <p>予約処理内容に日時・時間を入力します。</p>
+                    <p><img class="center-block" src="images/110_000_yoyaku1.png" alt="予約1"></p>
+                    <p><img class="center-block" src="images/110_000_yoyaku2.png" alt="予約2"></p>
+                    <p>送信された旨のメッセージが表示されますので「OK」を押します。</p>
+                    <p><img class="center-block" src="images/110_000_yoyaku3.png" alt="予約3"></p>
+                    <p>日レセでの予約登録画面で登録した予約内容が確認できます。</p>
+                    <p><img class="center-block" src="images/110_000_yoyaku4.png" alt="予約4"></p>
+               </div><!--annyy-tx-->
+             </div><!--contents_wrapper-->
+            </div><!--col-md-9-->
+          
+                
+        
+        </div><!--right_box-->
+    <!--//コンテンツ部終了//-->
+    </div><!--wrapper1180-->
+    </div><!--contaner_fluid-->
+    </div><!--wrapper1180-->
+    <!--ページトップへ戻る-->
+     <p id="page-top"><a href="#wrap"></a></p>
+    <!--Footer設定-->
+    <footer>
+        <div class="container-fluid">
+            <p>Copyright © Msis,Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+  </body>
+</html>
