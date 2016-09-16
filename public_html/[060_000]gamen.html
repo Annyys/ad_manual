@@ -20,19 +20,65 @@
     });
 </script>
   
+<!--ページ上部へ戻る-->
+<script>
+$(function() {
+			var topBtn = $('#page-top');	
+			topBtn.hide();
+			//スクロールが100に達したらボタン表示
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					topBtn.fadeIn();
+				} else {
+					topBtn.fadeOut();
+				}
+			});
+			//スクロールしてトップ
+		    topBtn.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+		    });
+		});
+</script>
+
+
+<script type="text/javascript">
+jQuery(function($) {
+  
+var nav    = $('#fixedBox'),
+    offset = nav.offset();
+  
+$(window).scroll(function () {
+  if($(window).scrollTop() > offset.top) {
+    nav.addClass('fixed');
+  } else {
+    nav.removeClass('fixed');
+  }
+});
+  
+});
+</script>
+
+<!--クリック時変化-->
+
+
+
 
   </head>
   <body>
     <!--Header共通設定-->
     <header style="background-color:white">
-        <div class="wrapper_1280">
-        <img src="images/Annyys-msis-logo.jpg" class="img-responsive" alt="ANNYYS_D">
-        </div><!--wrapper-->
+         <div class="wrapper_1180 img_p clearfix">
+         <img id="A_logo" class="margin-top20" src="images/ANNYYS_logo.jpg" class="img-responsive" alt="ANNYYS_D">
+         <img class="m_logo margin-top30" src="images/msis_logo.jpg" class="img-responsive" alt="msis">
+           </div><!--wrapper-->
         <div class="container-fluid" style="background-color:#19538a">
-            <div class="wrapper_1180">
+              <div class="wrapper_1180">
             <div class="row">
                 <div class="col-md-5" style="background-color:#19538a"><h2 style="color:white" class="left-sp">ANNYYS_D Webマニュアル</h2></div>
-                <div class="col-md-offset-4 col-md-3">
+                <div class="col-md-offset-3 col-md-3">
                     <form class="navbar-form">
                         <input type="text" class="search-query" placeholder="Search">
                     </form>
@@ -41,12 +87,12 @@
             </div><!--wrapper-->
             <div class="row" style="background-color:#7ba3ca">
                <nav class="navbar-static-top">
-                    <!--<div class="navbar-header">
+                    <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
                             <span class="sr-only">メニュー</span>
                             <span class="icon-bar"></span>
                         </button>
-                    </div>-->
+                    </div>
                     
                     <!--スマホ用トグル-->
                     <nav class="globNav-row">
@@ -66,8 +112,8 @@
                                 <li><a href="[070_000]karute.html">　　カルテ記録</a></li>
                                 <li><a href="[080_000]kanja.html">　　患者情報</a></li>
                                 <li><a href="[090_000]master.html">　　マスタ管理</a></li>
-                                <li><a href="[010_000]sekkei.html">　　基本設計</a></li>
-                                <li><a href="[011_000]renkei.html">　　日レセ連携</a></li>
+                                <li><a href="[100_000]settei.html">　　基本設定</a></li>
+                                <li><a href="[110_000]renkei.html">　　日レセ連携</a></li>
                              </ul>
 　　　　　　　　　　　</nav><!--スマホ用トグル終わり-->
            <!--PC用グローバルナビ-->
@@ -83,8 +129,8 @@
                             <li><a href="[070_000]karute.html">カルテ記録</a></li>
                             <li><a href="[080_000]kanja.html">患者情報</a></li>
                             <li><a href="[090_000]master.html">マスタ管理</a></li>
-                            <li><a href="[010_000]sekkei.html">基本設計</a></li>
-                            <li><a href="[011_000]renkei.html">日レセ連携</a></li>
+                            <li><a href="[100_000]settei.html">基本設定</a></li>
+                            <li><a href="[110_000]renkei.html">日レセ連携</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -93,484 +139,384 @@
     </header>
     <!--コンテンツ設定-->
    
-      <div class="wrapper_1180">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3" style="background-color:white;">
-                <!--メニュー-->
-                <figure>
-                    <figcaption>目次</figcaption>              
+            <!--<div class="title_wrapper">
+              <h3 id="a" class="page_title">目次</h3>
+            </div><!--title_wrapper-->
+            <div class="wrapper_1180">
+                <div class="col-md-2 fixed_menu clearfix" style="background-color:white;">
+                    <!--メニュー-->
+                  <div id="fixedBox" class="nav">
+                   <h4 class="side-title">診察画面</h4>
                             <ul type="1" style="list-style: none;">
-                                <li>診察画面</li>
-                                <li>受付処理</li>
-                                <li>初期画面</li>
-                                <li>履歴の参照</li>
-                                <li>指示（オーダー）</li>
-                                <li>T[所見]</li>
-                                <li>T[診断名]</li>
-                                <li>T[課題]（プロブレムリスト）</li>
-                                <li>T[病名]</li>
-                                <li>T[バイタル]</li>
-                                <li>T[履歴]</li>
-                                <li>T[書類]</li>
-                                <li>T[情報]</li>
-                                <li>T[登録]#T[所見項目登録]</li>
-                                <li>T[登録]#T[診療セット登録]</li>
+                                <li id="yamato"><a class="red" href="#a">診察画面</a></li>
+                                <li><a href="#b">初期画面</a></li>
+                                <li><a href="#c">履歴の参照</a></li>
+                                <li><a href="#d">指示（オーダー）</a></li>
+                                <li><a href="#e">T[所見]</a></li>
+                                <li><a href="#f">T[診断名]</a></li>
+                                <li><a href="#g">T[課題]（プロブレムリスト）</a></li>
+                                <li><a href="#h">T[病名]</a></li>
+                                <li><a href="#i">T[バイタル]</a></li>
+                                <li><a href="#j">T[履歴]</a></li>
+                                <li><a href="#k">T[書類]</a></li>
+                                <li><a href="#l">T[情報]</a></li>
+                                <li><a href="#m">T[登録] T[所見項目登録]</a></li>
+                                <li><a href="#n">T[登録] T[診療セット登録]</a></li>
                             </ul>
-                </figure>
+                  </div><!--fixedBox-->
+                </div><!--co--md2-->
+                <div class="right_box clearfix">
 
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p><em>マニュアルの表現に関して</em><br>本マニュアルでは#(シャープ)と大文字の英語を組み合わせた記号表現があります。この意味以下のようになりますので、ご理解の上お読みいただけますようお願い申し上げます。</p>
-                <table border="1">
-                    <tr><th>記号</th><th>読み方</th><th>説明</th></tr>
-                    <tr><td>L(エル)</td><td>レイアウト</td><td>表示されている画面の名称</td></tr>
-                    <tr><td>B(ビー)</td><td>ボタン</td><td>画面上のボタン</td></tr>
-                    <tr><td>F(エフ)</td><td>フィールド</td><td>画面上の入力スペースのこと</td></tr>
-                    <tr><td>T(タブ)</td><td>タブ</td><td>画面上のタブスペースのタイトル</td></tr>
-                    <tr><td>S(エス)</td><td>スクリプト</td><td>スクリプトメニューにあるスクリプト名</td></tr>
-                </table>
-                <p>例１）<strong>L[メインメニュー]</strong>→<strong>B[外来受付]</strong><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メインメニュー画面の、外来受付ボタン（を押す）となります。<br>
-                例２）<strong>L[診療記録]</strong>→<strong>T[病名]</strong>→<strong>F[病名]</strong><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;診療記録画面の、病名タブの、病名入力スペースとなります。<br>
-                </p>
+                    <div class="col-md-9" style="background-color:white;">
+                        <!--ページタイトル-->
 
-                <h3>診察画面</h3>
-                <hr class="hborder">
-                <blockquote>診察画面</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                <p>診察画面では、受診毎の診察内容や診療行為（会計オーダー）を記録します。<br>
-                保険病名の入力補填機能がありますので診療行為入力後<strong>B[確]</strong>で確認または処理が行えます。<br>
-                必要に応じて<strong>B[処]</strong>(処方せん)、<strong>B[２]</strong>（カルテ２号用紙）、<strong>B[診]</strong>（診療情報提供書）などが出力できます。<br>
-                診療記録が終了したら、まず<strong>B[確]</strong>で入力した診療項目の適応病名の確認と編集が行えます。<br>
-                全て完了したら<strong>B「終」</strong>ボタンでレセコンに入力が完了したデータを送信できます。</p>
-                <p><img class="" src="images/060_000_gamen_setsumei.png" width="1000" height="727" alt="画面説明"></p>
-                <p>診療記録画面へは、<strong>L[外来受付]</strong>リストの右側にある<strong>B[診察]</strong>か、<strong>L[受付一覧]</strong>リストの右にある<strong>B[診]</strong>で移行できます。</p>
-                <p><img class="" src="images/060_000_gamen_setsumei1.png" width="700" height="509" alt="画面説明"></p>
-                <p><img class="" src="images/060_000_gamen_setsumei2.png" width="700" height="509" alt="画面説明"></p>
-                <p class="">[重要]1回の診療記録が終わったら次の２ステップを行うよう心がけてください。</p>
-                <ol>
-                    <li><strong>B[確]</strong>を押す
-                        <ul><li>記録内容による適応病名判別スクリプトが動き、保険対応病名が簡単に登録できるようになります。</li>
-                            <li>サマリ内容への登録処理が行われます。</li>
-                            <li>診療内容が一次的に保存され、万が一の損失を防ぎます。（損失を防ぐ事を完全に防止するものではありません）</li></ul></li>
-                    <li><strong>B[終]</strong>を押す
-                        <ul><li>L「受付リスト」上に「会計待ち」である事表示がされます。</li>
-                            <li>日レセ連携している場合にはORCAに会計情報と保険病名が送信されます。</li>
-                            <li>ORCA送信完了後に再度#B[終]を押した場合には削除依頼が送信されます。</li>
-                        </ul></li>
-                    <li>何もしない
-                        <ul><li>入力中の状態で情報を保持しています。再度この画面に戻れば元の状態から始められます</li></ul></li>
-                </ol>
-                
-                </div>
-            </div>
-        </div>
-        <div class="row">
+                        <div id="a" class="contents_wrapper padding-bottom10 margin-bottom30">
 
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">診察画面</h3>
+                            </div><!--hr_h3-->
+                        <!--本文-->
+                            <div id="annys-tx">
+                                <p><em>マニュアルの表現に関して</em><br>本マニュアルでは#(シャープ)と大文字の英語を組み合わせた記号表現があります。この意味以下のようになりますので、ご理解の上お読みいただけますようお願い申し上げます。</p>
+                                <table border="1">
+                                    <tr><th>記号</th><th>読み方</th><th>説明</th></tr>
+                                    <tr><td>L(エル)</td><td>レイアウト</td><td>表示されている画面の名称</td></tr>
+                                    <tr><td>B(ビー)</td><td>ボタン</td><td>画面上のボタン</td></tr>
+                                    <tr><td>F(エフ)</td><td>フィールド</td><td>画面上の入力スペースのこと</td></tr>
+                                    <tr><td>T(タブ)</td><td>タブ</td><td>画面上のタブスペースのタイトル</td></tr>
+                                    <tr><td>S(エス)</td><td>スクリプト</td><td>スクリプトメニューにあるスクリプト名</td></tr>
+                                </table>
+                                <p>例１）<strong>L[メインメニュー]</strong>→<strong>B[外来受付]</strong><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メインメニュー画面の、外来受付ボタン（を押す）となります。<br>
+                                例２）<strong>L[診療記録]</strong>→<strong>T[病名]</strong>→<strong>F[病名]</strong><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;診療記録画面の、病名タブの、病名入力スペースとなります。<br>
+                                </p>
 
-                <h3>初期画面</h3>
-                <hr class="hborder">
-                <blockquote>初期画面</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p>診察画面を最初に開いたときの最初の状態です。</p>
-                     <p><img class="" src="images/060_000_gamen_shoki.png" width="1000" height="727" alt="初期画面"></p> 
-                     <ul><li>画面上部には「[受付番号]日付　前回初診日　診療科：担当医」が表示されています。<br>
-                             もし日付けが現在の日付けでない場合黄色で表示されます。</li>
-                         <li>左上には患者属性と保険情報（日レセ連携の場合）が表示されます。<br>
-                            <img class="" src="images/060_000_gamen_nichirese.png" width="357" height="94" alt="画面日レセ"><br>
-                            ※名前左に人マークはボタンになっていて患者情報画面に遷移します。<br>
-                            ※保険情報はORCA連携している場合に読み込まれます。
-                            </li>
-                         <li>診察歴には過去履歴と診察内容の概要がリスト表示されます。<br>
-                        ※行を選択すると該当の受診時の記録が表示されます。<br>
-                        ※診察暦のラベルにもなっている<strong>B[診察歴]</strong>をクリックすると最初に開いた状態（たいていは現在の診療時）の画面に戻ります。<br>
-                        ※画面左下の<strong>T[記録]</strong>に表示されている行の文字が茶色になります。
-                        </li></ul>
-                     <p>画面左下の<strong>T[記録]</strong>には前回までに行った診療内容が表示されます。<br>
-                         ※<strong>B[<]</strong>や<strong>B[>]</strong>で過去履歴内容の表示を変更できます。<br>
-                         ※この表示が<strong>B[全Do]</strong>、<strong>B[薬Do]</strong>の対象データとなります。(詳細は[診療記録]/Do参照)</p>
+                                <p>診察画面では、受診毎の診察内容や診療行為（会計オーダー）を記録します。<br>
+                                保険病名の入力補填機能がありますので診療行為入力後<strong>B[確]</strong>で確認または処理が行えます。<br>
+                                必要に応じて<strong>B[処]</strong>(処方せん)、<strong>B[２]</strong>（カルテ２号用紙）、<strong>B[診]</strong>（診療情報提供書）などが出力できます。<br>
+                                診療記録が終了したら、まず<strong>B[確]</strong>で入力した診療項目の適応病名の確認と編集が行えます。<br>
+                                全て完了したら<strong>B「終」</strong>ボタンでレセコンに入力が完了したデータを送信できます。</p>
+                                <p><img class="" src="images/060_000_gamen_setsumei.png" width="1000" height="727" alt="画面説明"></p>
+                                <p>診療記録画面へは、<strong>L[外来受付]</strong>リストの右側にある<strong>B[診察]</strong>か、<strong>L[受付一覧]</strong>リストの右にある<strong>B[診]</strong>で移行できます。</p>
+                                <p><img class="" src="images/060_000_gamen_setsumei1.png" width="700" height="509" alt="画面説明"></p>
+                                <p><img class="" src="images/060_000_gamen_setsumei2.png" width="700" height="509" alt="画面説明"></p>
+                                <p class="">[重要]1回の診療記録が終わったら次の２ステップを行うよう心がけてください。</p>
+                                <ol>
+                                    <li><strong>B[確]</strong>を押す
+                                        <ul><li>記録内容による適応病名判別スクリプトが動き、保険対応病名が簡単に登録できるようになります。</li>
+                                            <li>サマリ内容への登録処理が行われます。</li>
+                                            <li>診療内容が一次的に保存され、万が一の損失を防ぎます。（損失を防ぐ事を完全に防止するものではありません）</li></ul></li>
+                                    <li><strong>B[終]</strong>を押す
+                                        <ul><li>L「受付リスト」上に「会計待ち」である事表示がされます。</li>
+                                            <li>日レセ連携している場合にはORCAに会計情報と保険病名が送信されます。</li>
+                                            <li>ORCA送信完了後に再度#B[終]を押した場合には削除依頼が送信されます。</li>
+                                        </ul></li>
+                                    <li>何もしない
+                                        <ul><li>入力中の状態で情報を保持しています。再度この画面に戻れば元の状態から始められます</li></ul></li>
+                                </ol>
 
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>履歴の参照</h3>
-                <hr class="hborder">
-                <blockquote>履歴の参照</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><img class="" src="images/060_000_gamen_rireki.png" width="1000" height="727" alt="画面履歴"></p> 
-                    <p>診察歴リスト部分をクリックすると該当日付の診療記録が表示されます。</p>
-                    <ul><li>当日でない場合、上部日付け部分が黄色文字で表示されます。</li>
-                        <li>右画面に展開されている内容は、診察歴リストで選択（青く反転している）した日付の記録です。</li>
-                        <li>デフォルトでは画面右下の<strong>T[記録]</strong>には「選択された日付けの前回の診療記録」が表示されます。<strong>T[記録]</strong>の表示内容は<strong>B[<]</strong>または<strong>B[>]</strong>で任意の日付けに切り替える事ができます。<br>
-                        <img class="" src="images/060_000_gamen_rireki_btn.png" width="204" height="77" alt="画面履歴"></li>
-                        <li>診察歴の表題の部分はボタンになっており、<strong>B[診察歴]</strong>で最初に開いたときの日付(※)に戻る事ができます。<br>
-                        <img class="" src="images/060_000_gamen_rireki_btn2.png" width="364" height="88" alt="画面履歴">
-                    </li></ul>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="b" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">初期画面</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p>診察画面を最初に開いたときの最初の状態です。</p>
+                                     <p><img class="" src="images/060_000_gamen_shoki.png" width="1000" height="727" alt="初期画面"></p> 
+                                     <ul><li>画面上部には「[受付番号]日付　前回初診日　診療科：担当医」が表示されています。<br>
+                                             もし日付けが現在の日付けでない場合黄色で表示されます。</li>
+                                         <li>左上には患者属性と保険情報（日レセ連携の場合）が表示されます。<br>
+                                            <img class="" src="images/060_000_gamen_nichirese.png" width="357" height="94" alt="画面日レセ"><br>
+                                            ※名前左に人マークはボタンになっていて患者情報画面に遷移します。<br>
+                                            ※保険情報はORCA連携している場合に読み込まれます。
+                                            </li>
+                                         <li>診察歴には過去履歴と診察内容の概要がリスト表示されます。<br>
+                                        ※行を選択すると該当の受診時の記録が表示されます。<br>
+                                        ※診察暦のラベルにもなっている<strong>B[診察歴]</strong>をクリックすると最初に開いた状態（たいていは現在の診療時）の画面に戻ります。<br>
+                                        ※画面左下の<strong>T[記録]</strong>に表示されている行の文字が茶色になります。
+                                        </li></ul>
+                                     <p class="padding-bottom30">画面左下の<strong>T[記録]</strong>には前回までに行った診療内容が表示されます。<br>
+                                         ※<strong>B[<]</strong>や<strong>B[>]</strong>で過去履歴内容の表示を変更できます。<br>
+                                         ※この表示が<strong>B[全Do]</strong>、<strong>B[薬Do]</strong>の対象データとなります。(詳細は[診療記録]/Do参照)</p>
 
-                <h3>指示（オーダー）</h3>
-                <hr class="hborder">
-                <blockquote>指示（オーダー）</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p>離れた場所にいる看護師さんなどに指示を出したい場合があります。そんな時はB[指示確認]を選択して指示内容をコメントすることができます。例えば注射を指示する場合の例で説明します。</p>
-                    <p><img class="" src="images/060_000_shiji_order.png" width="1000" height="727" alt="指示オーダー"></p>
-                    <p>注射内容を登録したらB[指示確認]ボタンを押します。</p>
-                    <p><img class="" src="images/060_000_shiji_order2.png" width="1000" height="727" alt="指示オーダー2"></p>
-                    <p>指示画面が表示されたら、目的の項目を選び指示内容を記録します。<br>
-                    画面にあるように指示内容はポップアップで表示させることも可能です。ポップアップ項目の内容はいつでも編集可能です。<br>
-                    このように指示を登録することが可能で、例えば看護師さん側では指示内容を確認したかどうかのチェックや署名（iOS）が可能です。<br><br>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                    指示画面は、医学管理料、処方、処置、検査、手術、画像の分類があります。</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="c" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">履歴の参照</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><img class="" src="images/060_000_gamen_rireki.png" width="1000" height="727" alt="画面履歴"></p> 
+                                    <p>診察歴リスト部分をクリックすると該当日付の診療記録が表示されます。</p>
+                                    <ul><li>当日でない場合、上部日付け部分が黄色文字で表示されます。</li>
+                                        <li>右画面に展開されている内容は、診察歴リストで選択（青く反転している）した日付の記録です。</li>
+                                        <li>デフォルトでは画面右下の<strong>T[記録]</strong>には「選択された日付けの前回の診療記録」が表示されます。<strong>T[記録]</strong>の表示内容は<strong>B[<]</strong>または<strong>B[>]</strong>で任意の日付けに切り替える事ができます。<br>
+                                        <img class="" src="images/060_000_gamen_rireki_btn.png" width="204" height="77" alt="画面履歴"></li>
+                                        <li>診察歴の表題の部分はボタンになっており、<strong>B[診察歴]</strong>で最初に開いたときの日付(※)に戻る事ができます。<br>
+                                        <img class="" src="images/060_000_gamen_rireki_btn2.png" width="364" height="88" alt="画面履歴">
+                                    </li></ul>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>T[所見]</h3>
-                <hr class="hborder">
-                <blockquote>T[所見]</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><img class="" src="images/060_000_t_shoken.png" width="649" height="665" alt="t所見"></p>
-                    <p>あらかじめ設定しておいた内容からポップアップ形式または選択形式で内容を登録できるようになります。</p>
-                    <p>所見内容がある場合はタブタイトル<strong>T[所見]</strong>にマウスをかざせばポップアップヘルプ形式で内容を確認する事ができます。</p>
-                    <p><img class="" src="images/060_000_t_shoken1.png" width="413" height="150" alt="t所見"></p>
-                    <p>所見項目はいくつでも作成する事ができるので必要に応じて個別に作成できます。</p>
-                    <p>登録は<strong>T[登録] T[所見項目登録]</strong>から行えます。詳細は[所見項目の登録]をご覧ください。</p>
-                </div>
-            </div>
-                
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="d" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">指示（オーダー）</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p>離れた場所にいる看護師さんなどに指示を出したい場合があります。そんな時はB[指示確認]を選択して指示内容をコメントすることができます。例えば注射を指示する場合の例で説明します。</p>
+                                    <p><img class="" src="images/060_000_shiji_order.png" width="1000" height="727" alt="指示オーダー"></p>
+                                    <p>注射内容を登録したらB[指示確認]ボタンを押します。</p>
+                                    <p><img class="" src="images/060_000_shiji_order2.png" width="1000" height="727" alt="指示オーダー2"></p>
+                                    <p class="padding-bottom30">指示画面が表示されたら、目的の項目を選び指示内容を記録します。<br>
+                                    画面にあるように指示内容はポップアップで表示させることも可能です。ポップアップ項目の内容はいつでも編集可能です。<br>
+                                    このように指示を登録することが可能で、例えば看護師さん側では指示内容を確認したかどうかのチェックや署名（iOS）が可能です。<br><br>
 
-                <h3>T[診断名]</h3>
-                <hr class="hborder">
-                <blockquote>T[診断名]</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><img class="" src="images/060_000_t_shindanmei.png" width="643" height="667" alt="t診断名"></p>
-                    <p>診断名は医師が実際の治療方針を決定するための診断名を記録してください。</p>
-                    <p>診断名は日付情報と一緒に記録できます。また、診断名のなの[主]となるものをマークする事もできます。古くなった過去の診断名(=現在の治療とは関係ないもの)はリスト右にある緑色のボタン<strong>B(><)</strong>で無効にする（グレー反転する）ことができます。無効となった診断名は列下に表示されるようになり、過去歴として参照できます。</p>
-                    <p>診断名はタブタイトル<strong>T[診断名]</strong>にマウスをかざせばポップアップヘルプ形式で内容を確認する事ができます。</p>
-                    <p><img class="" src="images/060_000_t_shindanmei1.png" width="413" height="123" alt="t診断名1"></p>
-                </div>
-            </div>
-                
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                                    指示画面は、医学管理料、処方、処置、検査、手術、画像の分類があります。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>T[課題]（プロブレムリスト）</h3>
-                <hr class="hborder">
-                <blockquote>T[課題]（プロブレムリスト）</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                <p><img class="" src="images/060_000_t_kadai.png" width="643" height="667" alt="t課題"></p>
-                <p>T[課題]とはプログレムリストのことです。</p>
-                <p>プロブレムリストには日付情報と一緒に記録できます。また、古くなったり必要なくなったリストはリスト右にある緑色のボタン<strong>B(><)</strong>で無効にする（グレー反転する）ことができます。無効となったプロブレムリストは列下に表示されるようになり、過去歴として参照できます。</p>
-                <p>プロブレムリストはタブタイトル<strong>T[課題]</strong>にマウスをかざせばポップアップヘルプ形式で内容を確認する事ができます。</p>
-                <p><img class="" src="images/060_000_t_kadai2.png" width="413" height="123" alt="t課題2"></p>
-                </div>
-            </div>
-                
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="e" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">T[所見]</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><img class="" src="images/060_000_t_shoken.png" width="649" height="665" alt="t所見"></p>
+                                    <p>あらかじめ設定しておいた内容からポップアップ形式または選択形式で内容を登録できるようになります。</p>
+                                    <p>所見内容がある場合はタブタイトル<strong>T[所見]</strong>にマウスをかざせばポップアップヘルプ形式で内容を確認する事ができます。</p>
+                                    <p><img class="" src="images/060_000_t_shoken1.png" width="413" height="150" alt="t所見"></p>
+                                    <p>所見項目はいくつでも作成する事ができるので必要に応じて個別に作成できます。</p>
+                                    <p class="padding-bottom30">登録は<strong>T[登録] T[所見項目登録]</strong>から行えます。詳細は[所見項目の登録]をご覧ください。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>T[病名]</h3>
-                <hr class="hborder">
-                <blockquote>T[病名]</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                <p><img class="" src="images/060_000_t_byoumei.png" width="643" height="667" alt="病名"></p>
-                <p>ここで登録する病名は診療行為や薬剤等に対する適応病名（保険病名ともいう）を登録します。</p>
-                <p>各病名には開始日や転帰、転帰日が記録できるようになっています。また[主]病名や[疑]い病名となるものをクリックする事でマークする事ができます。</p>               
-                <p>ORCAと連動している場合は個々に登録された病名が会計情報とともに送信されるようになります。</p>
+                        <!--メニュー-->
+                        <div id="f" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">T[診断名]</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><img class="" src="images/060_000_t_shindanmei.png" width="643" height="667" alt="t診断名"></p>
+                                    <p>診断名は医師が実際の治療方針を決定するための診断名を記録してください。</p>
+                                    <p>診断名は日付情報と一緒に記録できます。また、診断名のなの[主]となるものをマークする事もできます。古くなった過去の診断名(=現在の治療とは関係ないもの)はリスト右にある緑色のボタン<strong>B(><)</strong>で無効にする（グレー反転する）ことができます。無効となった診断名は列下に表示されるようになり、過去歴として参照できます。</p>
+                                    <p>診断名はタブタイトル<strong>T[診断名]</strong>にマウスをかざせばポップアップヘルプ形式で内容を確認する事ができます。</p>
+                                    <p><img class="" src="images/060_000_t_shindanmei1.png" width="413" height="123" alt="t診断名1"></p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <p>古くなったり必要なくなったリストはリスト右にある緑色のボタン<strong>B(><)</strong>で無効にする（グレー反転する）ことができます。</p>
-                <p>病名はタブタイトル<strong>T[病名]</strong>にマウスをかざせばポップアップヘルプ形式で内容を確認する事ができます。</p>
-                <p><img class="" src="images/060_000_t_byoumei1.png" width="413" height="150" alt="病名"></p>
-                </div>
-            </div>
-                
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="g" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">T[課題]（プロブレムリスト）</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                <p><img class="" src="images/060_000_t_kadai.png" width="643" height="667" alt="t課題"></p>
+                                <p>T[課題]とはプログレムリストのことです。</p>
+                                <p>プロブレムリストには日付情報と一緒に記録できます。また、古くなったり必要なくなったリストはリスト右にある緑色のボタン<strong>B(><)</strong>で無効にする（グレー反転する）ことができます。無効となったプロブレムリストは列下に表示されるようになり、過去歴として参照できます。</p>
+                                <p>プロブレムリストはタブタイトル<strong>T[課題]</strong>にマウスをかざせばポップアップヘルプ形式で内容を確認する事ができます。</p>
+                                <p><img class="" src="images/060_000_t_kadai2.png" width="413" height="123" alt="t課題2"></p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>T[バイタル]</h3>
-                <hr class="hborder">
-                <blockquote>T[バイタル]</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                <p><img class="" src="images/060_000_t_baitaru.png" width="643" height="667" alt="バイタル"></p>
-                <p>バイタルデータとして来院日の状態を記録する事ができます。</p>
-                <p>バイタルデータはタブタイトル<strong>T[バイタル]</strong>にマウスをかざせばポップアップヘルプ形式で最後に調査した日付の内容を確認する事ができます。</p>
-                <p><img class="" src="images/060_000_t_baitaru1.png" width="450" height="150" alt="バイタル"></p>
-                </div>
-            </div>
-                
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="h" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">T[病名]</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                <p><img class="" src="images/060_000_t_byoumei.png" width="643" height="667" alt="病名"></p>
+                                <p>ここで登録する病名は診療行為や薬剤等に対する適応病名（保険病名ともいう）を登録します。</p>
+                                <p>各病名には開始日や転帰、転帰日が記録できるようになっています。また[主]病名や[疑]い病名となるものをクリックする事でマークする事ができます。</p>               
+                                <p>ORCAと連動している場合は個々に登録された病名が会計情報とともに送信されるようになります。</p>
 
-                <h3>T[履歴]</h3>
-                <hr class="hborder">
-                <blockquote>T[履歴]</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><img class="" src="images/060_000_t_rireki.png" width="643" height="667" alt="履歴"></p>
-                    <p>履歴は該当患者の過去に記録した診療記録一覧リストです。</p>
-                    <p>スクロールしながら過去の情報を見渡す事ができます。</p>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                                <p>古くなったり必要なくなったリストはリスト右にある緑色のボタン<strong>B(><)</strong>で無効にする（グレー反転する）ことができます。</p>
+                                <p>病名はタブタイトル<strong>T[病名]</strong>にマウスをかざせばポップアップヘルプ形式で内容を確認する事ができます。</p>
+                                <p><img class="" src="images/060_000_t_byoumei1.png" width="413" height="150" alt="病名"></p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>T[書類]</h3>
-                <hr class="hborder">
-                <blockquote>T[書類]</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><img class="" src="images/060_000_t_shorui.png" width="645" height="661" alt="書類"></p>
-                    <p>各種書類を作成できます。</p>
-                    <p>書類の種類は以下の組合せが用意されていますが必要に応じてこれら表題を編集する事もできます。</p>
-                    <table border="1">
-                        <tr><td>御依頼<br>御返事<br>御連絡<br>その他</td>
-                            <td>X</td>
-                            <td>診療情報提供書<br>一般文書<br>連絡事項<br>診断書<br>証明書</td></tr>
-                    </table>
-                    <p><img class="" src="images/060_000_t_shorui1.png" width="605" height="855" alt="書類"></p>
-                    
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="i" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">T[バイタル]</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                <p><img class="" src="images/060_000_t_baitaru.png" width="643" height="667" alt="バイタル"></p>
+                                <p>バイタルデータとして来院日の状態を記録する事ができます。</p>
+                                <p>バイタルデータはタブタイトル<strong>T[バイタル]</strong>にマウスをかざせばポップアップヘルプ形式で最後に調査した日付の内容を確認する事ができます。</p>
+                                <p><img class="" src="images/060_000_t_baitaru1.png" width="450" height="150" alt="バイタル"></p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>L[診断書],L[証明書]</h3>
-                <hr class="hborder">
-                <blockquote>L[診断書],L[証明書]</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><img class="" src="images/060_000_t_shoumei.png" width="621" height="855" alt="診断書"></p>
-                    <p>診断書・証明書は表題のポップアップを変更すれば自動的にレイアウトが変わります。</p>
-                    <p><img class="" src="images/060_000_t_shoumei2.png" width="605" height="177" alt="選択"></p>
-                    <p>また、本体部部にはあらかじめ定型文章を作成しておき、ポップアップから選択して入力する事も可能です。</p>
-                    
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="j" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">T[履歴]</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><img class="" src="images/060_000_t_rireki.png" width="643" height="667" alt="履歴"></p>
+                                    <p>履歴は該当患者の過去に記録した診療記録一覧リストです。</p>
+                                    <p class="padding-bottom30">スクロールしながら過去の情報を見渡す事ができます。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                <h3>T[情報]</h3>
-                <hr class="hborder">
-                <blockquote>T[情報]</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><img class="" src="images/060_000_t_info.png" width="643" height="667" alt="情報"></p>
-                    <p><strong>T[情報]</strong>にはいくつかの項目があり、それぞれの情報を収録できるようになっています。現在ある項目は以下の通りで、タブで切替えて利用してください。</p>
-                    <p><strong>T[既往歴]</strong><br>
-                    <strong>T[家族歴]</strong><br>
-                    <strong>T[入院歴]</strong><br>
-                    <strong>T[手術歴]</strong><br>
-                    <strong>T[感染症]</strong><br>
-                    <strong>T[紹介歴]</strong><br>
-                    <strong>T[検査歴]</strong><br>
-                    <strong>T[予防接種]</strong>
-                    </p>
-                    
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="k" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">T[書類]</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><img class="" src="images/060_000_t_shorui.png" width="645" height="661" alt="書類"></p>
+                                    
+                                    <h4>L[診断書]、L[証明書]</h4>
+                                    <p><img class="" src="images/060_000_t_shoumei.png" width="621" height="855" alt="診断書"></p>
 
-                <h3>T[登録] T[所見項目登録]</h3>
-                <hr class="hborder">
-                <blockquote>T[登録] T[所見項目登録]</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><img class="" src="images/060_000_t_touroku.png" width="643" height="667" alt="所見項目"></p>
-                    <p><strong>T[所見]</strong>で利用する所見項目と内容を登録・編集できます。</p>
-                    <p>所見1項目につき「単独解答項目」グループと｢複数解答項目」グループが１つずつ登録できます。</p>
+                                    <p>各種書類を作成できます。</p>
+                                    <p>書類の種類は以下の組合せが用意されていますが必要に応じてこれら表題を編集する事もできます。</p>
+                                    <table border="1">
+                                        <tr><td>御依頼<br>御返事<br>御連絡<br>その他</td>
+                                            <td>X</td>
+                                            <td>診療情報提供書<br>一般文書<br>連絡事項<br>診断書<br>証明書</td></tr>
+                                    </table>
+                                    <p><img class="" src="images/060_000_t_shorui1.png" width="605" height="855" alt="書類"></p>
 
-                    <p>SINGLE項目は<strong>T[所見]</strong>で答えに対する解答がポップアップ形式により１つしか選択できません。</p>
+                                    <p>診断書・証明書は表題のポップアップを変更すれば自動的にレイアウトが変わります。</p>
+                                    <p><img class="" src="images/060_000_t_shoumei2.png" width="605" height="177" alt="選択"></p>
+                                    <p class="padding-bottom30">また、本体部部にはあらかじめ定型文章を作成しておき、ポップアップから選択して入力する事も可能です。</p>
 
-                    <p>MULTI項目は<strong>T[所見]</strong>で答えに対する解答がチェックボックス形式により<strong>複数</strong>選択できます。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                    <p>いづれも項目も、解答内容は改行で区別されるようになっています。</p>
-                    
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            
-            <div class="col-md-3" style="background-color:white;">
-            </div>
-            <div class="col-md-8" style="background-color:white;">
-                <!--ページタイトル-->
-                <p>　</p>
-                <p>　</p>
+                        <!--メニュー-->
+                        <div id="l" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">T[情報]</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><img class="" src="images/060_000_t_info.png" width="643" height="667" alt="情報"></p>
+                                    <p><strong>T[情報]</strong>にはいくつかの項目があり、それぞれの情報を収録できるようになっています。現在ある項目は以下の通りで、タブで切替えて利用してください。</p>
+                                    <p><strong>T[既往歴]</strong><br>
+                                    <strong>T[家族歴]</strong><br>
+                                    <strong>T[入院歴]</strong><br>
+                                    <strong>T[手術歴]</strong><br>
+                                    <strong>T[感染症]</strong><br>
+                                    <strong>T[紹介歴]</strong><br>
+                                    <strong>T[検査歴]</strong><br>
+                                    <strong>T[予防接種]</strong>
+                                    </p>
 
-                <h3>T[登録] T[診療セット登録]</h3>
-                <hr class="hborder">
-                <blockquote>T[登録] T[診療セット登録]</blockquote>
-                <!--本文-->
-                <div id="annys-tx">
-                    <p><img class="" src="images/060_000_t_set_touroku.png" width="643" height="667" alt="セット登録"></p>
-                    <p>※例えば「診療情報提供料」などは、紹介先の病院名の記述が必要なります。通常の入力方法だと</p>
-                    <ol><li>[180016110]診療情報提供料（１)</li>
-                        <li>[810000001]（空欄：ここに書き込む）</li></ol>
-                    <p>と選択入力し、コメント欄に病院名を書き込む必要がありますが、セット登録しておくと<strong>T[SET]</strong>内の項目から選択するだけであとは病院名を記入するだけで済むようになります。</p>
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
 
-                    <p><strong>T[診療セット登録]</strong>では、ある程度定型化できる診療行為などをここでセット登録しておく事で、後の診療行為の入力の手間を軽減する事ができます。</p>
-                    <p>特に複数項目の入力が必要な診療行為はセット登録すると何回もクリックしたりする必要がなくなります。</p><br>
+                        <!--メニュー-->
+                        <div id="m" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">T[登録]T[所見項目登録]</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><img class="" src="images/060_000_t_touroku.png" width="643" height="667" alt="所見項目"></p>
+                                    <p><strong>T[所見]</strong>で利用する所見項目と内容を登録・編集できます。</p>
+                                    <p>所見1項目につき「単独解答項目」グループと｢複数解答項目」グループが１つずつ登録できます。</p>
 
-                    <p>診療行為に入力（した）された内容を#T[診察セット登録]の③部分にコピー&ペーストすることでセット登録が行えます。</p>
-                    <p>ここで編集・登録したセット内容は診療画面右の<strong>T[SET]</strong>で選択できるようになります。</p>
-                    <p><img class="" src="images/060_000_t_set_touroku2.png" width="1056" height="768" alt="セット"></p>
-                    
-                    <p>サンプル１</p>
-                    <ol><li>診療情報提供料１</li>
-                        <li>【医管】</li>
-                        <li></li></ol>
-                    <div style="border: 1px solid;">
-                        <p>【医管】<br>
-                        [180016110]診療情報提供料（１）<br>
-                        [810000001]
-                        </p>
-                    </div>
-                    <p>サンプル２</p>
-                    <ol><li>（在）自己注射</li>
-                        <li>【在宅】</li>
-                        <li></li></ol>
-                    <div style="border: 1px solid;">
-                        <p>【在宅】<br>
-                        [114009210]在宅自己注射指導管理料（１以外の場合）<br>
-                        [620006199]イミグランキット皮下注３ｍｇ　０．５ｍＬ[2筒]
-                        </p>
-                    </div>
-                    <p>サンプル３：複数区分</p>
-                    <ol><li>初診セット</li>
-                        <li>【診察】-【検査】-【画像】</li>
-                        <li></li></ol>
-                    <div style="border: 1px solid;">
-                        <p>【診察】<br>
-                            [111000110]初診<br>
-                            【検査】<br>
-                            [160183210]神経学的検査<br>
-                            【画像】<br>
-                            [170020110]ＭＲＩ撮影（１．５テスラ以上の機器）<br>
-                            [002100001]頭部MRI<br>
-                        </p>
-                    </div>
-                    
-                </div>
-            </div>    
-        </div>
-    </div>
-          
-              </div><!--wrapper_1180-->
+                                    <p>SINGLE項目は<strong>T[所見]</strong>で答えに対する解答がポップアップ形式により１つしか選択できません。</p>
+
+                                    <p>MULTI項目は<strong>T[所見]</strong>で答えに対する解答がチェックボックス形式により<strong>複数</strong>選択できます。</p>
+
+                                    <p class="padding-bottom30">いづれも項目も、解答内容は改行で区別されるようになっています。</p>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                        <!--メニュー-->
+                        <div id="n" class="contents_wrapper padding-bottom10 margin-bottom30">
+                            <div class="hr_h3">
+                                 <h3 class="contents_title margin-top20">T[登録]T[診療セット登録]</h3>
+                            </div>
+                        <!--本文-->
+                               <div id="annys-tx">
+                                    <p><img class="" src="images/060_000_t_set_touroku.png" width="643" height="667" alt="セット登録"></p>
+                                    <p>※例えば「診療情報提供料」などは、紹介先の病院名の記述が必要なります。通常の入力方法だと</p>
+                                    <ol><li>[180016110]診療情報提供料（１)</li>
+                                        <li>[810000001]（空欄：ここに書き込む）</li></ol>
+                                    <p>と選択入力し、コメント欄に病院名を書き込む必要がありますが、セット登録しておくと<strong>T[SET]</strong>内の項目から選択するだけであとは病院名を記入するだけで済むようになります。</p>
+
+                                    <p><strong>T[診療セット登録]</strong>では、ある程度定型化できる診療行為などをここでセット登録しておく事で、後の診療行為の入力の手間を軽減する事ができます。</p>
+                                    <p>特に複数項目の入力が必要な診療行為はセット登録すると何回もクリックしたりする必要がなくなります。</p><br>
+
+                                    <p>診療行為に入力（した）された内容を#T[診察セット登録]の③部分にコピー&ペーストすることでセット登録が行えます。</p>
+                                    <p>ここで編集・登録したセット内容は診療画面右の<strong>T[SET]</strong>で選択できるようになります。</p>
+                                    <p><img class="" src="images/060_000_t_set_touroku2.png" width="1056" height="768" alt="セット"></p>
+
+                                    <p>サンプル１</p>
+                                    <ol><li>診療情報提供料１</li>
+                                        <li>【医管】</li>
+                                        <li></li></ol>
+                                    <div style="border: 1px solid;">
+                                        <p>【医管】<br>
+                                        [180016110]診療情報提供料（１）<br>
+                                        [810000001]
+                                        </p>
+                                    </div>
+                                    <p>サンプル２</p>
+                                    <ol><li>（在）自己注射</li>
+                                        <li>【在宅】</li>
+                                        <li></li></ol>
+                                    <div style="border: 1px solid;">
+                                        <p>【在宅】<br>
+                                        [114009210]在宅自己注射指導管理料（１以外の場合）<br>
+                                        [620006199]イミグランキット皮下注３ｍｇ　０．５ｍＬ[2筒]
+                                        </p>
+                                    </div>
+                                    <p>サンプル３：複数区分</p>
+                                    <ol><li>初診セット</li>
+                                        <li>【診察】-【検査】-【画像】</li>
+                                        <li></li></ol>
+                                    <div style="border: 1px solid;">
+                                        <p>【診察】<br>
+                                            [111000110]初診<br>
+                                            【検査】<br>
+                                            [160183210]神経学的検査<br>
+                                            【画像】<br>
+                                            [170020110]ＭＲＩ撮影（１．５テスラ以上の機器）<br>
+                                            [002100001]頭部MRI<br>
+                                        </p>
+                                    </div>
+
+                            </div><!--annys-tx-->
+                        </div><!--contents_wrapper-->
+
+                    </div><!--col-md-9-->
+
+
+                </div><!--rightbox_clearfix-->
+            </div><!--wrapper_1180-->
     <!--//コンテンツ部終了//-->
-    <p>　</p>
-    <p>　</p>
-   
+        </div><!--row-->
+    </div><!--contaner_fluid-->
+    
+    <!--ページトップへ戻る-->
+     <p id="page-top"><a href="#wrap"></a></p>
     <!--Footer設定-->
     <footer>
         <div class="container-fluid">
