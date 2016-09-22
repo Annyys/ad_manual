@@ -154,16 +154,15 @@ $(window).scroll(function () {
                                 <li><a href="#b">初期画面</a></li>
                                 <li><a href="#c">履歴の参照</a></li>
                                 <li><a href="#d">指示（オーダー）</a></li>
-                                <li><a href="#e">T[所見]</a></li>
-                                <li><a href="#f">T[診断名]</a></li>
-                                <li><a href="#g">T[課題]（プロブレムリスト）</a></li>
-                                <li><a href="#h">T[病名]</a></li>
-                                <li><a href="#i">T[バイタル]</a></li>
-                                <li><a href="#j">T[履歴]</a></li>
-                                <li><a href="#k">T[書類]</a></li>
-                                <li><a href="#l">T[情報]</a></li>
-                                <li><a href="#m">T[登録] T[所見項目登録]</a></li>
-                                <li><a href="#n">T[登録] T[診療セット登録]</a></li>
+                                <li><a href="#e">T[診断名]</a></li>
+                                <li><a href="#f">T[課題]（プロブレムリスト）</a></li>
+                                <li><a href="#g">T[病名]</a></li>
+                                <li><a href="#h">T[バイタル]</a></li>
+                                <li><a href="#i">T[履歴]</a></li>
+                                <li><a href="#j">T[書類]</a></li>
+                                <li><a href="#k">T[情報]</a></li>
+                                <li><a href="#l">T[登録] T[所見項目登録]</a></li>
+                                <li><a href="#m">T[登録] T[診療セット登録]</a></li>
                             </ul>
                   </div><!--fixedBox-->
                 </div><!--co--md2-->
@@ -179,7 +178,7 @@ $(window).scroll(function () {
                             </div><!--hr_h3-->
                         <!--本文-->
                             <div id="annys-tx">
-                                <p><em>マニュアルの表現に関して</em><br>本マニュアルでは#(シャープ)と大文字の英語を組み合わせた記号表現があります。この意味以下のようになりますので、ご理解の上お読みいただけますようお願い申し上げます。</p>
+                                <p><em>マニュアルの表現に関して</em><br>本マニュアルでは大文字英語の記号表現があります。この意味以下のようになりますので、ご理解の上お読みいただけますようお願い申し上げます。</p>
                                 <table border="1">
                                     <tr><th>記号</th><th>読み方</th><th>説明</th></tr>
                                     <tr><td>L(エル)</td><td>レイアウト</td><td>表示されている画面の名称</td></tr>
@@ -212,7 +211,7 @@ $(window).scroll(function () {
                                     <li><strong>B[終]</strong>を押す
                                         <ul><li>L「受付リスト」上に「会計待ち」である事表示がされます。</li>
                                             <li>日レセ連携している場合にはORCAに会計情報と保険病名が送信されます。</li>
-                                            <li>ORCA送信完了後に再度#B[終]を押した場合には削除依頼が送信されます。</li>
+                                            <li>ORCA送信完了後に再度 B[終]を押した場合には削除依頼が送信されます。</li>
                                         </ul></li>
                                     <li>何もしない
                                         <ul><li>入力中の状態で情報を保持しています。再度この画面に戻れば元の状態から始められます</li></ul></li>
@@ -290,36 +289,20 @@ $(window).scroll(function () {
                         <!--メニュー-->
                         <div id="e" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 class="contents_title margin-top20">T[所見]</h3>
-                            </div>
-                        <!--本文-->
-                               <div id="annys-tx">
-                                    <p><img class="" src="images/060_000_t_shoken.png" width="649" height="665" alt="t所見"></p>
-                                    <p>あらかじめ設定しておいた内容からポップアップ形式または選択形式で内容を登録できるようになります。</p>
-                                    <p>所見内容がある場合はタブタイトル<strong>T[所見]</strong>にマウスをかざせばポップアップヘルプ形式で内容を確認する事ができます。</p>
-                                    <p><img class="" src="images/060_000_t_shoken1.png" width="413" height="150" alt="t所見"></p>
-                                    <p>所見項目はいくつでも作成する事ができるので必要に応じて個別に作成できます。</p>
-                                    <p class="padding-bottom30">登録は<strong>T[登録] T[所見項目登録]</strong>から行えます。詳細は[所見項目の登録]をご覧ください。</p>
-                            </div><!--annys-tx-->
-                        </div><!--contents_wrapper-->
-
-                        <!--メニュー-->
-                        <div id="f" class="contents_wrapper padding-bottom10 margin-bottom30">
-                            <div class="hr_h3">
                                  <h3 class="contents_title margin-top20">T[診断名]</h3>
                             </div>
                         <!--本文-->
                                <div id="annys-tx">
                                     <p><img class="" src="images/060_000_t_shindanmei.png" width="643" height="667" alt="t診断名"></p>
                                     <p>診断名は医師が実際の治療方針を決定するための診断名を記録してください。</p>
-                                    <p>診断名は日付情報と一緒に記録できます。また、診断名のなの[主]となるものをマークする事もできます。古くなった過去の診断名(=現在の治療とは関係ないもの)はリスト右にある緑色のボタン<strong>B(><)</strong>で無効にする（グレー反転する）ことができます。無効となった診断名は列下に表示されるようになり、過去歴として参照できます。</p>
-                                    <p>診断名はタブタイトル<strong>T[診断名]</strong>にマウスをかざせばポップアップヘルプ形式で内容を確認する事ができます。</p>
+                                    <p>診断名は日付情報と一緒に記録できます。また、診断の中の[主]となるものをマークする事もできます。古くなった過去の診断名(=現在の治療とは関係ないもの)はリスト右にある緑色のボタン<strong>B(><)</strong>で無効にする（グレー反転する）ことができます。無効となった診断名は列下に表示されるようになり、過去歴として参照できます。</p>
+                                    <p>診断名はタブタイトル<strong>T[診断]</strong>にマウスをかざせばポップアップヘルプ形式で内容を確認する事ができます。</p>
                                     <p><img class="" src="images/060_000_t_shindanmei1.png" width="413" height="123" alt="t診断名1"></p>
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
-                        <div id="g" class="contents_wrapper padding-bottom10 margin-bottom30">
+                        <div id="f" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
                                  <h3 class="contents_title margin-top20">T[課題]（プロブレムリスト）</h3>
                             </div>
@@ -334,7 +317,7 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
-                        <div id="h" class="contents_wrapper padding-bottom10 margin-bottom30">
+                        <div id="g" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
                                  <h3 class="contents_title margin-top20">T[病名]</h3>
                             </div>
@@ -352,7 +335,7 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
-                        <div id="i" class="contents_wrapper padding-bottom10 margin-bottom30">
+                        <div id="h" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
                                  <h3 class="contents_title margin-top20">T[バイタル]</h3>
                             </div>
@@ -360,13 +343,11 @@ $(window).scroll(function () {
                                <div id="annys-tx">
                                 <p><img class="" src="images/060_000_t_baitaru.png" width="643" height="667" alt="バイタル"></p>
                                 <p>バイタルデータとして来院日の状態を記録する事ができます。</p>
-                                <p>バイタルデータはタブタイトル<strong>T[バイタル]</strong>にマウスをかざせばポップアップヘルプ形式で最後に調査した日付の内容を確認する事ができます。</p>
-                                <p><img class="" src="images/060_000_t_baitaru1.png" width="450" height="150" alt="バイタル"></p>
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
-                        <div id="j" class="contents_wrapper padding-bottom10 margin-bottom30">
+                        <div id="i" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
                                  <h3 class="contents_title margin-top20">T[履歴]</h3>
                             </div>
@@ -379,7 +360,7 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
-                        <div id="k" class="contents_wrapper padding-bottom10 margin-bottom30">
+                        <div id="j" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
                                  <h3 class="contents_title margin-top20">T[書類]</h3>
                             </div>
@@ -402,12 +383,13 @@ $(window).scroll(function () {
                                     <p>診断書・証明書は表題のポップアップを変更すれば自動的にレイアウトが変わります。</p>
                                     <p><img class="" src="images/060_000_t_shoumei2.png" width="605" height="177" alt="選択"></p>
                                     <p class="padding-bottom30">また、本体部部にはあらかじめ定型文章を作成しておき、ポップアップから選択して入力する事も可能です。</p>
+                                    <p>本文の入力はカーソルを本文の枠に合わせてマウスを右クリックすれば入力できます。</p>
 
-                            </div><!--annys-tx-->
+                               </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
-                        <div id="l" class="contents_wrapper padding-bottom10 margin-bottom30">
+                        <div id="k" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
                                  <h3 class="contents_title margin-top20">T[情報]</h3>
                             </div>
@@ -429,7 +411,7 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
-                        <div id="m" class="contents_wrapper padding-bottom10 margin-bottom30">
+                        <div id="l" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
                                  <h3 class="contents_title margin-top20">T[登録]T[所見項目登録]</h3>
                             </div>
@@ -449,7 +431,7 @@ $(window).scroll(function () {
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
-                        <div id="n" class="contents_wrapper padding-bottom10 margin-bottom30">
+                        <div id="m" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
                                  <h3 class="contents_title margin-top20">T[登録]T[診療セット登録]</h3>
                             </div>
@@ -464,7 +446,7 @@ $(window).scroll(function () {
                                     <p><strong>T[診療セット登録]</strong>では、ある程度定型化できる診療行為などをここでセット登録しておく事で、後の診療行為の入力の手間を軽減する事ができます。</p>
                                     <p>特に複数項目の入力が必要な診療行為はセット登録すると何回もクリックしたりする必要がなくなります。</p><br>
 
-                                    <p>診療行為に入力（した）された内容を#T[診察セット登録]の③部分にコピー&ペーストすることでセット登録が行えます。</p>
+                                    <p>診療行為に入力（した）された内容を T[診察セット登録]の③部分にコピー&ペーストすることでセット登録が行えます。</p>
                                     <p>ここで編集・登録したセット内容は診療画面右の<strong>T[SET]</strong>で選択できるようになります。</p>
                                     <p><img class="" src="images/060_000_t_set_touroku2.png" width="1056" height="768" alt="セット"></p>
 

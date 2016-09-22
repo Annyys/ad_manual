@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ANNYYS_D Webマニュアル　セットアップ 20160910河野</title>
+    <title>ANNYYS_D Webマニュアル　セットアップ 20160920河野</title>
     <!-- BootstrapのCSS読み込み -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- jQuery読み込み -->
@@ -19,7 +19,7 @@
         });
     });
 </script>
-  
+
 <!--ページ上部へ戻る-->
 <script>
 $(function() {
@@ -43,7 +43,7 @@ $(function() {
 		});
 </script>
 
-
+<!--fixedbox-->
 <script type="text/javascript">
 jQuery(function($) {
   
@@ -61,14 +61,11 @@ $(window).scroll(function () {
 });
 </script>
 
-<!--クリック時変化-->
-
-
-
-
   </head>
   <body>
     <!--Header共通設定-->
+    <!--Header共通設定-->
+ 
     <header style="background-color:white">
          <div class="wrapper_1180 img_p clearfix">
          <img id="A_logo" class="margin-top20" src="images/ANNYYS_logo.jpg" class="img-responsive" alt="ANNYYS_D">
@@ -94,159 +91,184 @@ $(window).scroll(function () {
                         </button>
                     </div>
                     
-                    <!--スマホ用トグル-->
+                        <!--スマホ用トグル-->
                     <nav class="globNav-row">
                        <span class="globNav-toggle"><a class="menu-trigger" href="#">
                             <span></span>
                             <span></span>
                             <span></span>
                         </a></span>
+                             <ul class="globNav-inner" style="list-style:none">
+                                <li><a href="[000_000]index.htmll">　▶ TOP</a></li>
+                                <li><a href="[010_000]mokuji.html">　▶ 目次</a></li>
+                                <li><a href="[020_000]hajimeni.html">　▶ はじめに</a></li>
+                                <li class="current_page"><a href="[030_000]setup.html">　▶セットアップ</a></li>
+                                <li><a href="[040_000]nagare.html">　▶ 診察の流れ</a></li>
+                                <li><a href="[050_000]uketsuke.html">　▶ 来院受付</a></li>
+                                <li><a href="[060_000]gamen.html">　▶ 診察画面</a></li>
+                                <li><a href="[070_000]karute.html">　▶ カルテ記録</a></li>
+                                <li><a href="[080_000]kanja.html">　▶ 患者情報</a></li>
+                                <li><a href="[090_000]master.html">　▶ マスタ管理</a></li>
+                                <li><a href="[100_000]sekkei.html">　▶ 基本設定</a></li>
+                                <li><a href="[110_000]renkei.html">　▶ 日レセ連携</a></li>
+                             </ul>
+　　　　　　　　　　　</nav><!--スマホ用トグル終わり-->
+           <!--PC用グローバルナビ-->
+                    <div id="gnavi" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="[000_000]index.html">TOP</a></li>
                             <li><a href="[010_000]mokuji.html">目次</a></li>
                             <li><a href="[020_000]hajimeni.html">はじめに</a></li>
-                            <li><a class="current_page" href="[030_000]setup.html">セットアップ</a></li>
+                            <li><a  class="current_page" href="[030_000]setup.html">セットアップ</a></li>
                             <li><a href="[040_000]nagare.html">診察の流れ</a></li>
                             <li><a href="[050_000]uketsuke.html">来院受付</a></li>
                             <li><a href="[060_000]gamen.html">診察画面</a></li>
                             <li><a href="[070_000]karute.html">カルテ記録</a></li>
                             <li><a href="[080_000]kanja.html">患者情報</a></li>
                             <li><a href="[090_000]master.html">マスタ管理</a></li>
-                            <li><a href="[100_000]settei.html">　　基本設定</a></li>
-                            <li><a href="[110_000]renkei.html">　　日レセ連携</a></li>
-                        </ul>
-　　　　　　　　　　　</nav><!--スマホ用トグル終わり-->
-           <!--PC用グローバルナビ-->
-           <div id="gnavi" class="collapse navbar-collapse">
-               <ul class="nav navbar-nav" role="menu">
-                            <li><a href="[000_000]index.html">TOP</a></li>
-                            <li><a href="[010_000]mokuji.html">目次</a></li>
-                            <li><a href="[020_000]hajimeni.html">はじめに</a></li>
-                            <li><a class="current_page" href="[030_000]setup.html">セットアップ</a></li>
-                            <li><a href="[040_000]nagare.html">診察の流れ</a></li>
-                            <li><a href="[050_000]uketsuke.html">来院受付</a></li>
-                            <li><a href="[060_000]gamen.html">診察画面</a></li>
-                            <li><a href="[070_000]karute.html">カルテ記録</a></li>
-                            <li><a href="[080_000]kanja.html">患者情報</a></li>
-                            <li><a href="[090_000]master.html">マスタ管理</a></li>
-                            <li><a href="[100_000]settei.html">基本設定</a></li>
+                            <li><a href="[100_000]sekkei.html">基本設定</a></li>
                             <li><a href="[110_000]renkei.html">日レセ連携</a></li>
                         </ul>
-                    </div>
+                    </div><!--gnav-->
                 </nav>
             </div>
         </div>
     </header>
+    
+    
+    
     <!--コンテンツ設定-->
-   
+     
     <div class="container-fluid">
         <div class="row">
-            <!--<div class="title_wrapper">
-              <h3 id="a" class="page_title">目次</h3>
-            </div><!--title_wrapper-->
             <div class="wrapper_1180">
                 <div class="col-md-2 fixed_menu clearfix" style="background-color:white;">
-                    <!--メニュー-->
-                  <div id="fixedBox" class="nav">
-                   <h4 class="side-title">セットアップ</h4>
+            
+                     <div id="fixedBox" class="nav">
+                  <h4 class="side-title">セットアップ</h4>
                     <ul type="1" style="list-style: none;">
-                    <li id="yamato"><a class="red" href="#a">セットアップ</a></li>
-                    <li><a href="#b">ANNYYS_Dパッケージ内容とファイルの配置場所</a></li>
-                    <li><a href="#c">動作環境</a></li>
-                    <li><a href="#d">ネットワークの構成例とFileMakerProのインストール</a></li>
-                    <li><ul style="list-style: none;">
-                        <li><a href="#e">FileMaker Server(Advanced)およびFileMakerProのインストール</a></li>
-                        </ul></li>
-                    <li><a href="#f">セキュリティ</a></li>
-                </ul>
+                                <li id="#a"><a class="red" href="#a" class="click">●セットアップ</a></li>
+                                <li id="#b"><a class="red" href="#a" class="click">●ANNYYS_Dパッケージ内容とファイルの設置場所</a></li>
+                                <li><a href="#c">●動作環境</a></li>
+                                <li><a href="#d">●ネットワークの構成例とFileMakerProのインストール</a></li>
+                                <li><a href="#e">●FileMaker Server(Advenced)およびFileMakerProのインストール</a></li>
+                                <li><a href="#f">●セキュリティ</a></li>
+                        </ul>
+                                
                   </div><!--fixedBox-->
-                </div><!--co--md2-->
-                <div class="right_box clearfix">
 
-                    <div class="col-md-9" style="background-color:white;">
-                        <!--ページタイトル-->
-
-                        <div id="a" class="contents_wrapper padding-bottom10 margin-bottom30">
-
-                            <div class="hr_h3">
-                                 <h3 class="contents_title margin-top20">セットアップ</h3>
-                            </div><!--hr_h3-->
-                        <!--本文-->
-                            <div id="annys-tx">
+            </div><!--co--md2-->
+            
+              <div class="right_box clearfix">
+            
+                  
+            <div class="col-md-9" style="background-color:white;">
+                <!--ページタイトル-->
+                <div id="a" class="contents_wrapper margin-top30">
+                 <div class="hr_h3">
+                
+                <h3 class="contents_title">セットアップ</h3>
+                 </div><!--hr_h3-->
+                <!--本文-->
+               
                     <p>ANNYYS_Dを正しく機能させるには専用のプラグインとJAVA実行環境が必要です。<br>この文書は最後までお読みください。</p> 
-                    <p class="padding-bottom30">【※注意事項】<br>本番環境において、FileMaker Server(Advanced) 無しでの運用は推奨していません。<br>動作速度が他の端末の処理内容によって大きく左右されやすく、実用において動作が非常に鈍くなることがあります。<br>ANNYYS_D版の運用上の保守や保全性に関しても、性質上、保つことができないことがあります。</p>
-                            </div><!--annys-tx-->
-                        </div><!--contents_wrapper-->
-
-                        <!--メニュー-->
-                        <div id="b" class="contents_wrapper padding-bottom10 margin-bottom30">
-                            <div class="hr_h3">
-                                 <h3 class="contents_title margin-top20">ANNYYS_Dパッケージ内容とファイルの配置場所</h3>
-                            </div>
-                        <!--本文-->
-                               <div id="annys-tx">
+                    <p class="padding-bottom20 margin-bottom5">【※注意事項】<br>本番環境において、FileMaker Server(Advanced) 無しでの運用は推奨していません。<br>動作速度が他の端末の処理内容によって大きく左右されやすく、実用において動作が非常に鈍くなることがあります。<br>ANNYYS_D版の運用上の保守や保全性に関しても、性質上、保つことができないことがあります。</p>
+                 </div><!--contents_wrapper-->
+            </div><!--col-md-9-->
+            
+            
+            <div class="col-md-9" style="background-color:white;">
+              <div id="b"class="contents_wrapper padding-bottom10 margin-bottom20">
+                   <div class="hr_h3">
+                    <h3 class="contents_title margin-top20">ANNYYS_Dパッケージ内容とファイルの設置場所</h3>
+                   </div><!--hr_h3-->
+                <!--本文-->
+                <div id="annys-tx">
                     <p>ダウンロードしたANNYYS_Dパッケージは解凍すると以下のようになっています。（基本動作に関係のないファイル・フォルダ類は表示していません。）</p>
                     <p>これらのファイルをFileMaker Serverが稼働するマシン上に配置してください。</p>
                     <p>※動作確認など試験的に起動したい場合。FileMakerProV11以上がインストールされているＰＣであればANNYYS_DファイルをWクリックしてすると起動できます。（使い方や動作内容はFileMaker Serverでホストされている内容とまったく同じです。）</p>
                     <p>※解凍時にトップフォルダのANNYYS_D（赤字部分）が二重構造になっていないか注意してください。</p>
-
-                    <p><img class="center-block" src="images/030_000_file_haichi.png" alt="ファイル配置"></p> 
-                            </div><!--annys-tx-->
-                        </div><!--contents_wrapper-->
-
-                        <!--メニュー-->
-                        <div id="c" class="contents_wrapper padding-bottom10 margin-bottom30">
-                            <div class="hr_h3">
-                                 <h3 class="contents_title margin-top20">動作環境</h3>
-                            </div>
-                        <!--本文-->
-                               <div id="annys-tx">
-             <table border="1">
+               </div><!--annyy-tx-->
+               <div class="frame">
+             <img class="center-block" src="images/030_001_file_haichi.png" alt="ファイル配置">
+             </div><!--frame-->
+             </div><!--contents_wrapper-->
+            </div><!--col-md-9-->
+       
+            
+             <div class="col-md-9" style="background-color:white;">
+              <div id="c" class="contents_wrapper padding-bottom10 margin-bottom20">
+                   <div class="hr_h3">
+                    <h3 class="contents_title">動作環境</h3>
+                   </div><!--hr_h3-->
+                <!--本文-->
+                <div id="annys-tx">
+                      <table class="margin-bottom20" border="1">
              <caption></caption>
              <tr><th>種類</th><th></th><th></th></tr>
-             <tr><td rowspan="3">サーバー<br><img src="images/030_001_server.png" alt="サーバー"></td><td colspan="2">FileMaker Server(Advanced)11 またはFileMaker Server(Advanced)12の動作する環境</td></tr>
+             <tr><td rowspan="3" style="text-align: center; padding-left: 0; padding-top: 10px;">サーバー<br><img src="images/030_002_server.png" alt="サーバー"></td><td colspan="2">FileMaker Server(Advanced)11 またはFileMaker Server(Advanced)12の動作する環境</td></tr>
              <tr><td>OS</td><td>Windows2003 Server, Windows2008 Server<br>OS X Mountain Lion および OS X Mountain Lion Server v10.8 * (64-bit)</td></tr>
              <tr><td>CPU他</td><td>Dual Core 2Ghz以上 / Memory:4GB / HDD:500GB<br>※実装メモリは8GB以上推奨、但しOSによるメモリ読み込制限があるので注意(Windows)</td></tr>
-             <tr><td rowspan="3">クライアント<br><img src="images/030_002_client.png" alt="クライアント"></td><td colspan="2">FileMakerPro(Advanced)11 またはFileMakerPro(Advanced)12の動作する環境</td></tr>
+             <tr><td rowspan="3" style="text-align: center; padding-left: 0; padding-top: 10px;">クライアント<br><img src="images/030_002_client.png" alt="クライアント"></td><td colspan="2" style="padding: 8px 10px;">FileMakerPro(Advanced)11 またはFileMakerPro(Advanced)12の動作する環境</td></tr>
              <tr><td>OS</td><td>Windows 8, Windows 8 Pro*<br>Windows 7 Ultimate, Professional, Home Premium*<br>Windows Vista Ultimate, Business, Home Premium (Service Pack 2)*<br>Windows XP Professional, Home Edition (Service Pack 3)*<br>OS X Mountain Lion v10.6,7,8*</td></tr>
              <tr><td>CPU他</td><td>Dual Core 2Ghz以上 / Memory:4GB / HDD:500GB</td></tr>
-             <tr><td>プリンタ<br><img src="images/030_003_printer.png" alt="プリンタ"></td><td colspan="2">任意、但しクライアントが実装するＯＳに対応したものである事。<br>ネットワークインターフェースを有しTCP/IPプロトコルで接続可能なプリンタを推奨。</td></tr>
+             <tr><td style="text-align: center; padding-left: 0; padding-top: 10px;">プリンタ<br><img src="images/030_002_printer.png" alt="プリンタ"></td><td colspan="2">任意、但しクライアントが実装するＯＳに対応したものである事。<br>ネットワークインターフェースを有しTCP/IPプロトコルで接続可能なプリンタを推奨。</td></tr>
              </table>
-                <div>
+               </div><!--annyy-tx-->
+                 <div id="annys-tx" class="margin-top20">
                     <p>※FileMakerPro(Advanced)およびFileMaker Server(Advanced)の最新の動作環境はhttp://www.filemaker.co.jp/を参照してください。</p>
-                    <p class="padding-bottom30">※サーバおよびクライアントを仮想環境において実装する場合において割り当てる場合のリソーススペックも同程度に設定してください。</p>
+                    <p>※サーバおよびクライアントを仮想環境において実装する場合において割り当てる場合のリソーススペックも同程度に設定してください。</p>
                 </div>
-                            </div><!--annys-tx-->
-                        </div><!--contents_wrapper-->
-
-                        <!--メニュー-->
-                        <div id="d" class="contents_wrapper padding-bottom10 margin-bottom30">
-                            <div class="hr_h3">
-                                 <h3 class="contents_title margin-top20">ネットワークの構成例とFileMakerProのインストール</h3>
-                            </div>
-                        <!--本文-->
-                               <div id="annys-tx">
+            
+             </div><!--contents_wrapper-->
+            </div><!--col-md-9-->
+        
+        
+    
+              
+                       
+            <div class="col-md-9" style="background-color:white;">
+           
+                <div id="d" class="contents_wrapper margin-top5 padding-bottom10 margin-bottom20">
+                 <div class="hr_h3">
+                
+                <h3 class="contents_title ">ネットワークの構成例とFileMakerProのインストール</h3>
+                 </div><!--hr_h3-->
+                <div id="annys-tx">
                     <p>例えば、以下のような環境において、日レセを稼働させている環境が既にあると仮定します。</p> 
                     <p>図のように、日レセのインフラは何処かしらのベンダーのサポートを受けており、<br>サーバーは主従2台構成で端末が2台あるという想定です。</p> 
                     <p>端末はWindows か MacOS で日レセクライアント(monsiaj)をインストールして稼働していると想定しています。</p> 
-             <p><img class="center-block" src="images/030_004_network_kouchiku.png" alt="ネットワーク"></p> 
-                <div>
+                </div>
+                      <div class="frame">
+             <img class="center-block" src="images/030_003_network_kouchiku.PNG" alt="ネットワーク">
+             </div><!--frame-->
+               <div id="annys-tx">
                     <p>ここにANNYYSを導入する場合以下のような構成を推奨しています。</p> 
                     <p>サーバー機1台と診察室用の新たな端末２台を加え、既にある日レセ端末でもANNYYS_D版を使えるようにすると言う構成です。</p> 
-                </div>
-             <p><img class="center-block" src="images/030_005_network_kouchiku.png" alt="構成"></p> 
-                <div>
+             </div>
+               <div class="frame">
+             <img class="center-block" src="images/030_004_network_kouchiku.png" alt="構成">
+             </div><!--frame-->
+               <div id="annys-tx">
                     <p>（※プリンタはオプションです。）</p>
-                    <p class="padding-bottom30">端末ＰＣがWindows か MacOS であれば、FileMakerProと日レセクライアント(monsiaj)を同時にインストールする事は可能です。<br>ただし、日レセサポートベンダーから端末の供給やサポートを受けている場合は、該当ベンダーに確認が必要です。</p>
-                </div>
+                    <p>端末ＰＣがWindows か MacOS であれば、FileMakerProと日レセクライアント(monsiaj)を同時にインストールする事は可能です。<br>ただし、日レセサポートベンダーから端末の供給やサポートを受けている場合は、該当ベンダーに確認が必要です。</p>
+                </div><!--annys-tx-->
+        
+           
+                </div><!--contents_wrapper-->
+            </div><!--col-md-9-->
+                
+                
+               <div class="col-md-9" style="background-color:white;">
                 <!--ページタイトル-->
-                <h4 id="e">FileMaker Server(Advanced)およびFileMakerProのインストール</h4>
-                <!--本文-->
-                <div>
-                <p>端末として利用するPCに、FileMaker Pro、サーバー機にはFileMaker Serverをインストールします。</p>
+                
+                <div id="e" class="contents_wrapper padding-bottom10">
+                 <div class="hr_h3">
+                <h3 class="contents_title">FileMaker Server(Advanced)およびFileMakerProのインストール</h3>
+                </div><!--hr_h3-->
+              <p>端末として利用するPCに、FileMaker Pro、サーバー機にはFileMaker Serverをインストールします。</p>
                 <p>(特にWindows2008以後に） FileMaker Server(Advenced)をインストールする場合、<br>ファイヤーウォールの設定で必須ポートの開放を忘れないようにしてください</p>
-                </div>
-                <div style="border: solid black 1px;">
+                 <div style="border: solid black 1px; width: 80%; margin: 15px auto; padding: 10px;">
                     <p>[抜粋]<br>FileMaker Server入門ガイド　第 1 章クイックスタートインストール<br><br>サーバーコンピュータにファイアウォールがある場合は、ファイアウォールの必要なポートを開いて、<br>ユーザおよび管理者と通信できるようにします。
                     </p>
                     <ol>
@@ -255,20 +277,25 @@ $(window).scroll(function () {
                         <li>ポート 5013、5015、16004、16006、16008、16010、16012、16014、16016、16018、16020、16021、<br>および 50003 がマシン上で利用可能になっている必要がありますが、<br>ファイアウォールでは開きません。詳細については、23 ページの「1台のマシンの展開」を参照してください。</li>
                     </ol>
                 </div>
-                            </div><!--annys-tx-->
-                        </div><!--contents_wrapper-->
-
-                        <!--メニュー-->
-                        <div id="f" class="contents_wrapper padding-bottom10 margin-bottom30">
-                            <div class="hr_h3">
-                                 <h3 class="contents_title margin-top20">セキュリティ</h3>
-                            </div>
-                        <!--本文-->
-                               <div id="annys-tx">
-                    <p>ANNYYS_Dには以下のレベルでセキュリティが組み込まれています。<br>アクセスアカウント、及び、パスワードのデフォルト値は非常に簡単なものなので、実利用の際には変更して利用するようにしてください。</p>
                 
-                    <table border>
-                    <caption></caption>
+                </div><!--contents_wrapper-->
+            <!--<div class="col-xs-2" style="background-color:white;"></div>-->
+             <p></p>
+                 </div><!--col-md-9-->
+            
+            
+          
+             <div class="col-md-9 mo_none" style="background-color:white;">
+              <div id="f" class="contents_wrapper padding-bottom20 margin-bottom30">
+                   <div class="hr_h3">
+                    <h3 class="contents_title margin-top20">セキュリティ</h3>
+                   </div><!--hr_h3-->
+                <!--本文-->
+                   <div id="annys-tx">
+                    <p>ANNYYS_Dには以下のレベルでセキュリティが組み込まれています。<br>アクセスアカウント、及び、パスワードのデフォルト値は非常に簡単なものなので、実利用の際には変更して利用するようにしてください。</p>
+                    </div>
+   
+                <table border="1" class="sp_none">
                     <tr>
                         <th></th><th>LEVEL 1</th><th>LEVEL 2</th><th>LEVEL 3</th><th>LEVEL 4</th><th>LEVEL 5</th>
                     </tr>
@@ -307,25 +334,23 @@ $(window).scroll(function () {
                     </tr>
                     </table>
             
-                            </div><!--annys-tx-->
-                        </div><!--contents_wrapper-->
+             </div><!--contents_wrapper-->
+            </div><!--col-md-9-->
+                 
+                 
+            
+      
+    </div><!--right_box-->
 
-                    </div><!--col-md-9-->
-
-
-                </div><!--rightbox_clearfix-->
-            </div><!--wrapper_1180-->
     <!--//コンテンツ部終了//-->
-        </div><!--row-->
-    </div><!--contaner_fluid-->
+   </div><!--wrapper1180-->
+    </div><!--row-->
+    </div><!--container-fluid-->
     
     <!--ページトップへ戻る-->
      <p id="page-top"><a href="#wrap"></a></p>
-    <!--Footer設定-->
-    <footer>
-        <div class="container-fluid">
-            <p>Copyright © Msis,Inc. All Rights Reserved.</p>
-        </div>
-    </footer>
+    
+    <!--Footer設定--> 
+    <footer style="background-color:#7ba3ca"><p>Copyright © 2003 ANNYYS® All Rights Reserved.</p></footer>
   </body>
 </html>
