@@ -176,7 +176,7 @@ $(window).scroll(function () {
                             </div><!--hr_h3-->
                         <!--本文-->
                             <div id="annys-tx">
-                                <p class="padding-bottom30">ANNYYS_Dでは来院毎に受付を処理を行います。受付を行った際に受付番号が発行され、<br>患者ID、日付け、受付番号の3つのキーで受診内容を区別します。<br>午前と午後など同じ日に2回受診するような場合は2回受付処理を行います。<br>受付画面には<strong>L[メインメニュー]</strong>→<strong>B[外来受付]</strong>で受付画面へ移動します。</p>
+                                <p>ANNYYS_Dでは来院毎に受付を処理を行います。受付を行った際に受付番号が発行され、<br>患者ID、日付け、受付番号の3つのキーで受診内容を区別します。<br>午前と午後など同じ日に2回受診するような場合は2回受付処理を行います。<br>受付画面には<strong>L[メインメニュー]</strong>→<strong>B[外来受付]</strong>で受付画面へ移動します。</p>
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
 
@@ -189,16 +189,21 @@ $(window).scroll(function () {
                                <div id="annys-tx">
                                     <p><strong>B[+]</strong>を押すとポップアップが表示されます。</p>
                                     <p>ボックスに患者ＩＤを入力しentキーを押します。</p>
+                                    <div class="f_frame">
                                      <p><img class="" src="images/050_000_uketsuke.png" alt="外来受付"></p> 
+                                    </div><!--f_flame-->
                                      <p>該当患者名が表示され、<strong>B[受付]</strong>を押すと受付は完了です。</p>
                                      <p>診療科、医師、診療内容、受付時間等適宜変更してください。</p>
                                      <p>もし、登録済みの患者で診察カードが無いような場合は<strong>B[患者検索]</strong>ボタンを押せば、名前（漢字・カナ）で患者検索ができます。</p>
+                                     <div class="f_frame">
                                      <p><img class="" src="images/050_001_kanja_kensaku.png" alt="患者検索"></p>
+                                      </div><!--f_flame-->
                                      <p>検索で表示されたリストの名前・年齢・性別・住所などで本人であることが確認できれば、<br>該当リストをクリックして受付処理を完了させることもできます。</p>
-                                    <p><img class="" src="images/050_002_kanja_list.png" alt="患者リスト"></p>
-                                    <p class="padding-bottom30">※検索速度は登録患者数のデータ量によって変わります。<br>概ね１万件程度まではストレスなく動作可能と推測されます。</p>
-
-                            </div><!--annys-tx-->
+                                    <div class="f_frame">
+                                     <p><img class="" src="images/050_002_kanja_list.png" alt="患者リスト"></p>
+                                      </div><!--f_flame-->
+                                    <p>※検索速度は登録患者数のデータ量によって変わります。<br>概ね１万件程度まではストレスなく動作可能と推測されます。</p>
+                               </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
 
                         <!--メニュー-->
@@ -209,15 +214,21 @@ $(window).scroll(function () {
                         <!--本文-->
                                <div id="annys-tx">
                                     <p>受付処理をしても患者情報が登録されていない場合は患者名は表示されません。<br>このような場合新たに患者登録が必要ですが、ORCAと連携している場合は簡単に取り込むことが可能です。</p>
-                                    <p><img class="" src="images/050_003_kanja_list_0.png" alt="患者情報該当なし"></p> 
-                                    <p>患者ＩＤを入力し何も出てこないので<strong>L[患者検索]</strong>の<img class="" src="images/050_000_kanja_button.png" width="38" height="36" alt="患者ボタン">ボタンを押して患者情報画面を表示します。</p>
-                                    <p><img class="" src="images/050_003_kanja_info.png" alt="患者情報表示"></p>
-                                    <p>患者情報画面右上にある<strong>B[確認]</strong>を押すと日レセに登録のある患者情報が読み込まれます。</p>
+                                    <div class="f_frame"><p><img class="" src="images/050_003_kanja_list_0.png" alt="患者情報該当なし"></p> 
+                                    </div>
+                                        <p>患者ＩＤを入力し何も出てこないので<strong>L[患者検索]</strong>の<img class="icon" src="images/050_000_kanja_button.png" width="38" height="36" alt="患者ボタン">ボタンを押して患者情報画面を表示します。</p>
+                                    <div class="f_frame">
+                                        <p><img src="images/050_003_kanja_info.png" alt="患者情報表示"></p>
+                                    </div><!--f_frame-->
+                                        <p>患者情報画面右上にある<strong>B[確認]</strong>を押すと日レセに登録のある患者情報が読み込まれます。</p>
                                     <p><strong>B[戻る]</strong>で受付リストに戻ると、登録できた患者名が表示されています。</p>
+                                     <div class="f_frame">
                                     <p><img class="" src="images/050_003_kanja_list_1.png" alt="患者情報該当あり"></p>
+                                    </div><!--f_flame-->
                                     <p>※【ORCAの設定確認】<br>メインメニューから基本設定に切り替え、ORCAタブをクリックしてください。<br>接続確認ボタンにて、秒数が進む事を確認出来れば、通信されているとの事です。</p>
+                                     <div class="f_frame margin-bottom0">
                                     <p><img class="" src="images/050_004_kanja_yomikomi.png" alt="オルカ接続確認"></p>
-
+　　　　　　　　　　　　　　　　　　　　</div><!--f_frame-->
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
 
@@ -229,10 +240,18 @@ $(window).scroll(function () {
                         <!--本文-->
                                <div id="annys-tx">
                                     <p>受付リスト上にある<strong>B[♥]</strong>で当日のバイタルデータの記録が行えます。</p>
+                                      <div class="f_frame">
                                     <p><img class="" src="images/050_005_baitaru_button.png" alt="バイタルボタン"></p>
+                                      </div><!--f_flame-->
+                                      
+                                       <div class="f_frame">
                                     <p><img class="" src="images/050_005_baitaru_button2.png" alt="バイタル内容"></p>
+                                     </div><!--f_flame-->
                                     <p>記録されたバイタルデータは診察画面からも参照できます。<br><strong>T[バイタル]</strong>から内容を変更することもできます。</p>
-                                    <p><img class="" src="images/050_005_baitaru_shinsatsu.png" alt="バイタル記録変更"></p>
+                                    
+                                    <div class="f_frame">
+                                        <p><img class="" src="images/050_005_baitaru_shinsatsu.png" alt="バイタル記録変更"></p>
+                                    </div><!--f_flame-->
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
 
@@ -243,7 +262,9 @@ $(window).scroll(function () {
                             </div>
                         <!--本文-->
                                <div id="annys-tx">
+                                   <div class="f_frame">
                                     <p><img class="" src="images/050_006_uketsuke_joutai.png" alt="受付状態"></p>
+                                    </div><!--f_flame-->
                                     <p>受付リストでは、行中ほどに表示される「空欄」「会計待ち」「会計済み」で受付済み患者の現在の状態を把握できます。</p>
                                     <p>受付した時点では「空欄」で、まだ何も進行していない状態を表します。</p>
                                     <p>医師が診察を終了した時点で「会計待ち」となり、会計処理が行える事を表示しています。</p>
@@ -259,7 +280,9 @@ $(window).scroll(function () {
                         <!--本文-->
                                <div id="annys-tx">
                                     <p><strong>B[受付一覧]</strong>では受付リストを簡素化し一度に多くの行を見る事ができるリストです。こちらでも状態が確認できます。</p>
+                                    <div class="f_frame">
                                     <p><img class="" src="images/050_006_uketsuke_ichiran.png" alt="受付一覧"></p>
+                                    </div><!--f_flame-->
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
 
@@ -271,9 +294,13 @@ $(window).scroll(function () {
                         <!--本文-->
                                <div id="annys-tx">
                                     <p><strong>B[指示一覧]</strong>は処置室などで来院患者の診察状況を確認するための画面です。患者ごとに注射・処置・検査などが登録された内容がオンタイムで表示されるようになっています。</p>
+                                    <div class="f_frame">
                                     <p><img class="" src="images/050_007_shiji_ichiran.png" alt="指示一覧"></p>
+                                    </div><!--f_flame-->
                                     <p>表示された内容は、例えば<strong>[注]</strong>（注射）があった場合はそこをクリックすると指示内容として内容を確認することができます。</p>
+                                    <div class="f_frame">
                                     <p><img class="" src="images/050_007_shiji_chuusha.png" alt="注射"></p>
+                                    </div><!--f_flame-->
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
 
@@ -284,7 +311,9 @@ $(window).scroll(function () {
                             </div>
                         <!--本文-->
                                <div id="annys-tx">
-                                    <p><img class="" src="images/050_008_uketsuke_popup.png" alt="受付ポップアップ"></p>
+                                    <div class="f_frame"> 
+                                   <p><img class="" src="images/050_008_uketsuke_popup.png" alt="受付ポップアップ"></p>
+                                    </div><!--f_flame-->
                                     <p>基本の受付画面には診察内容をさらに細かく判断できるようチェックする部分が設けられています。<br>
                                     デフォルトではサンプルデータが入っていますが、この内容は自由に変更できます。<br>
                                     この部分の値が設定されている部分はEX_SOAPファイルの値一覧項目で、簡単に編集することができます。<br>
@@ -292,7 +321,9 @@ $(window).scroll(function () {
                                     オリジナルの値一覧などは全てこのファイルに保管されています。
                                     </p><br>
                                     <p>診察画面のアルファベット<strong>B[S]、B [O]、B [A]、B [P]</strong>を押すとポップアップが出てきます。</p>
+                                    <div class="f_frame"> 
                                     <p><img class="" src="images/050_008_uketsuke_naiyo.png" alt="受付内容"></p>
+                                    </div><!--f_flame-->
 
                                     <p>編集方法は次の通りです。</p>
                                     <ol>
