@@ -173,8 +173,7 @@ $(window).scroll(function () {
 
                         <!--本文-->
                             <div id="annys-tx">
-                                <p><em>マニュアルの表現に関して</em><br>
-                                    本マニュアルでは大文字の英語を組み合わせた記号表現があります。この意味以下のようになりますので、ご理解の上お読みいただけますようお願い申し上げます。</p>
+                                <p><em>マニュアルの表現に関して</em><br>本マニュアルでは大文字英語の記号表現があります。この意味以下のようになりますので、ご理解の上お読みいただけますようお願い申し上げます。</p>
                             <table border="1">
                                 <tr><th>記号</th><th>読み方</th><th>説明</th></tr>
                                 <tr><td>L(エル)</td><td>レイアウト</td><td>表示されている画面の名称</td></tr>
@@ -192,7 +191,6 @@ $(window).scroll(function () {
                         <!--本文-->
                             <div id="annys-tx">
                                 <p><img class="center-block" src="images/090_000_masterkanri.png" alt="マスター管理"></p> 
-                                <p><img class="center-block" src="images/090_000_masterkanri1.png" alt="マスター管理1"></p> 
                                 <p class="padding-bottom30">マスタ管理は各種マスタ情報を調べたり確認したりするためのデザインとなっています。マスタは随時更新されますが更新は別のDBManagerプログラムにおいて更新されます。</p>
 
                             </div><!--annys-tx-->
@@ -208,8 +206,6 @@ $(window).scroll(function () {
                                 <p><img class="center-block" src="images/090_000_settouroku.png" alt="セット登録"></p> 
                                 <p><img class="center-block" src="images/090_000_settouroku1.png" alt="セット登録1"></p> 
                                 <p>セット登録画面が開きます。セット登録は診察画面と同じ画面で診療行為を選択しながら登録する必要があります。<strong>B[SET登録]</strong>では、患者番号0,受付番号=0の受付内容が無効状態で診察画面を開き、セット登録が行えるようになっています。詳細は[診察画面]の<strong>T[診察セット登録]</strong>を参照してください。</p>
-                                <p><img class="center-block" src="images/090_000_settouroku2.png" alt="セット登録2"></p> 
-                                <p><img class="center-block" src="images/090_000_settouroku3.png" alt="セット登録3"></p> 
 
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
@@ -223,7 +219,6 @@ $(window).scroll(function () {
                             <div id="annys-tx">
                                 <p>データソース：DB_ANNYYS/tbl_byomei（※DBManager更新対象）</p>
                                 <p><img class="center-block" src="images/090_000_byoumei.png" alt="病名"></p> 
-                                <p><img class="center-block" src="images/090_000_byoumei1.png" alt="病名1"></p> 
                                 
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
@@ -237,7 +232,6 @@ $(window).scroll(function () {
                             <div id="annys-tx">
                                 <p>データソース：DB_ANNYYS/tbl_tensu（※DBManager更新対象）</p>
                                 <p><img class="center-block" src="images/090_000_shinryoukoui.png" alt="診療行為"></p> 
-                                <p><img class="center-block" src="images/090_000_shinryoukoui1.png" alt="診療行為1"></p> 
                                 <p>このレイアウトではDB_ANNYYS/tbl_tensu収録データのうち現在有効なもので診療行為に関るものを表示できるようになっています。主だった項目区分は上部に配置された各種ボタンで表示内容を切り替えられます。<br>
                                     ボタン：B[診察] B[医管] B[在宅] B[注射] B[処置] B[手術] B[検査] B[画像] B[その他] B[検索]</p>
                                 <p>【診療行為項目の採用登録】</p>
@@ -245,7 +239,6 @@ $(window).scroll(function () {
                                     <li>コード番号をクリックして青字にする事で L[診察画面] T[行為]リスト内に表示され選択できるようになります。</li>
                                     <li>青字をさらにクリックするとリスト対象から外れます。※DBManager更新対象テーブルです。</li>
                                 </ul>
-                                <p><img class="center-block" src="images/090_000_shinryoukoui2.png" alt="診療行為2"></p> 
                                 
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
@@ -259,15 +252,13 @@ $(window).scroll(function () {
                             <div id="annys-tx">
                                 <p>データソース：DB_ANNYYS/tbl_tensu（※DBManager更新対象）</p>
                                 <p><img class="center-block" src="images/090_000_yakuzai.png" alt="薬剤"></p> 
-                                <p><img class="center-block" src="images/090_000_yakuzai1.png" alt="薬剤1"></p> 
                                 <p>このレイアウトではDB_ANNYYS/tbl_tensu収録データのうち現在有効なもので薬剤・生薬に関るものを表示できるようになっています。主だった項目区分は上部に配置された各種ボタンで表示内容を切り替えられます。<br>
                                 ボタン：B[内服] B[外用] B[注射] B[生薬] B[造影] B[検索]</p>
                                 <p>【薬剤・生薬の採用登録】</p>
                                 <ul>
-                                    <li>コード番号をクリックして青字にする事で L[診察画面] T[薬剤]リスト内に表示され選択できるようになります。</li>
+                                    <li>コード番号をクリックして青字にする事で <strong>L[診察画面] T[薬剤]</strong>リスト内に表示され選択できるようになります。</li>
                                     <li>青字をさらにクリックするとリスト対象から外れます。</li>
                                 </ul>
-                                <p><img class="center-block" src="images/090_000_yakuzai2.png" alt="薬剤2"></p> 
 
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
@@ -281,7 +272,6 @@ $(window).scroll(function () {
                             <div id="annys-tx">
                                 <p>データソース：DB_ANNYYS/tbl_tensu（※DBManager更新対象）</p>
                                 <p><img class="center-block" src="images/090_000_zairyou.png" alt="材料"></p> 
-                                <p><img class="center-block" src="images/090_000_zairyou1.png" alt="材料1"></p> 
                                 <p>このレイアウトではDB_ANNYYS/tbl_tensu収録データのうち現在有効なもので特定機材に関るものを表示できるようになっています。主だった項目区分は上部に配置された各種ボタンで表示内容を切り替えられます。<br>
                                     ボタン：B[材料] B[フィルム] B[検索]</p>
                                 <p>【材料・フィルム・自費の採用登録】</p>
@@ -292,7 +282,6 @@ $(window).scroll(function () {
                                 <p>【自費項目の追加登録】</p>
                                 <p><strong>B[自費+]</strong>をクリックして新しく追加されたレコードにコード番号・名称・金額・単位を入力します。<br>
                                     ※ORCA連携の場合はORCA側の登録内容と同じコードで登録してください。</p>
-                                <p><img class="center-block" src="images/090_000_zairyou2.png" alt="材料2"></p> 
 
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
@@ -306,7 +295,6 @@ $(window).scroll(function () {
                             <div id="annys-tx">
                                 <p>データソース：DB_ANNYYS/tbl_tensu（※DBManager更新対象）</p>
                                 <p><img class="center-block" src="images/090_000_youhou.png" alt="用法"></p> 
-                                <p><img class="center-block" src="images/090_000_youhou1.png" alt="用法1"></p>
                                 <p>このレイアウトではDB_ANNYYS/tbl_tensu収録データのうち現在有効なものでコメントに関るものを表示できるようになっています。主だった項目区分は上部に配置された各種ボタンで表示内容を切り替えられます。<br>
                                     ボタン：B[用法] B[部位] B[定型] B[補足] B[数日] B[その他] B[検索]</p>
                                 <p>【用法・コメントの採用登録】</p>
@@ -331,7 +319,6 @@ $(window).scroll(function () {
                             <div id="annys-tx">
                                 <p>データソース：ANNYYS_D/tbl_inputcd(S[メンテナンス]>S[バックアップ],S[リストア]対象データ)</p>
                                 <p><img class="center-block" src="images/090_000_saiyou.png" alt="採用"></p> 
-                                <p><img class="center-block" src="images/090_000_saiyou1.png" alt="採用1"></p> 
                                 <p class="padding-bottom30">各マスタで採用登録を行ったデータです。採用登録したデータはANNYYS_D内のtbl_inputcdに収録されているので他のANNYYS_Dと内容が重複しません。そのため診療科や医師別に利用する項目だけを登録し診療行為入力を簡素化することができます。</p>
 
                             </div><!--annys-tx-->
