@@ -1111,12 +1111,12 @@ textarea {
 }
 
 a {
-  color: #337ab7;
+  color: #19538a;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #4e7eab;
   text-decoration: none;
   font-weight: bold;
 }
@@ -1124,6 +1124,34 @@ a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
+
+ol li a {
+  color: #333;
+  text-decoration: none;
+}
+ol li a:hover,
+ol li a:focus {
+  color: #0e3e6c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mh4 a {
+  color: #333;
+  text-decoration: none;
+}
+.mh4 a:hover,
+.mh4 a:focus {
+  color: #19538a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
 figure {
   margin: 0;
 }
@@ -1445,6 +1473,7 @@ ul,
 ol {
   margin-top: 0;
   margin-bottom: 10px;
+  margin-right: 10px;
 }
 ul ul,
 ol ul,
@@ -6958,7 +6987,7 @@ a:hover {
     
     
      .contents_title {
-    font-size: 26px;
+    font-size: 22px;
     padding: 20px 10px 0 5px;
     margin-top: 5px;;
     }
@@ -7204,7 +7233,14 @@ a:hover {
     text-align: center;
 }
                 
-   
+ /*IPマージン調整*/
+    
+    .tb-margin20 {
+        margin-top: 20px;
+    }
+       
+
+
 }
                 
  
@@ -7444,7 +7480,7 @@ a:hover {
     .contents_wrapper .float p {
         padding-left: 10px;
             margin-left:0;
-            padding-top: 25px;
+            padding-top: 8px;
             float: left;
             
     }
@@ -7480,7 +7516,11 @@ a:hover {
 }
    
     
-   
+     /*SPマージン調整*/
+    
+    .tb-margin20 {
+        margin-top: 20px;
+    }
     
     
 }
@@ -7736,6 +7776,11 @@ a:hover {
         margin-bottom: 0;
     }
     
+    .contents_wrapper .margin-bottom0 {
+        margin-bottom: 0;
+    }
+    
+    
     .margin-bottom10 {
         margin-bottom: 10px;
     }
@@ -7766,7 +7811,11 @@ a:hover {
         margin: 0 auto;
     }
     
-
+    /*TBマージン調整*/
+    
+    .tb-margin20 {
+        margin-top: 20px;
+    }
     
 }
  
@@ -7879,12 +7928,12 @@ a:hover {
      #fixedBox ul {
          width: 200px;
         margin-top: 20px;
-        padding-left: 13px;
+        padding-left: 2px;
         margin-top: 5px;
     }
     
      #fixedBox ul li {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     
      #fixedBox ul li a {
@@ -7898,8 +7947,16 @@ a:hover {
         background; #eee;
     }
     
+    #fixedBox .karteul li  {
+    margin-bottom: 0;
+    }
    
+      #fixedBox .karteul li a {
+        margin-bottom: 0;
+        font-size: 13.1px;
+    }
     
+     
    
 
 .mh4 {
