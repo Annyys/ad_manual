@@ -8047,6 +8047,9 @@ a:hover {
         line-height: 1.2;
     }
   
+    .contents_wrapper .divw {
+        margin-bottom: 20px;
+    }
     
     
     .frame {
@@ -8150,12 +8153,57 @@ a:hover {
         float: left;
     }
     
+     .contents_wrapper .w30 {
+        width: 30%;
+    } 
+    
+     .contents_wrapper .w40 {
+        width: 40%;
+    } 
+    
+     .contents_wrapper .w50 {
+        width: 50%;
+    } 
+    
+    .contents_wrapper .w60 {
+        width: 60%;
+    } 
+    
+     .contents_wrapper .w70 {
+        width: 70%;
+    } 
+    
+    .contents_wrapper .w80 {
+        width: 80%;
+    } 
+    
+    
+     .margin-top6 {
+        margin-top: 6px;
+    }
+    
+    .margin-top7 {
+        margin-top: 7px;
+    }
+    
+     .margin-top8 {
+        margin-top: 8px;
+    }
+    
     .margin-top10 {
         margin-top: 10px;
     }
     
+     .margin-top15 {
+        margin-top: 15px;
+    }
+    
     .margin-top20 {
         margin-top: 20px;
+    }
+    
+    .margin-top25 {
+        margin-top: 25px;
     }
     
     .margin-top30 {
@@ -8182,12 +8230,38 @@ a:hover {
         margin-bottom: 0;
     }
     
+    
+    
+    .margin-bottom5 {
+        margin-bottom: 5px;
+    }
+    
     .margin-bottom10 {
         margin-bottom: 10px;
     }
     
+     .margin-bottom15 {
+        margin-bottom: 15px;
+    }
+    
+    .margin-bottom18 {
+        margin-bottom: 18px;
+    }
+    
      .margin-bottom20 {
         margin-bottom: 20px;
+    }
+    
+      .contents_wrapper .margin-bottom20 {
+        margin-bottom: 20px;
+    }
+    
+     .margin-bottom25 {
+        margin-bottom: 25px;
+    }
+    
+       .contents_wrapper .margin-bottom30 {
+        margin-bottom: 30px;
     }
     
      .margin-bottom30 {
@@ -8204,6 +8278,10 @@ a:hover {
     
     .padding-bottom10 {
         padding-bottom: 10px;
+    }
+    
+     .padding-bottom15 {
+        padding-bottom: 15px;
     }
    
     .padding-bottom20 {

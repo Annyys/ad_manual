@@ -172,7 +172,7 @@ $(window).scroll(function () {
                         <div id="a" class="contents_wrapper padding-bottom10 margin-bottom30">
 
                             <div class="hr_h3">
-                                 <h3 class="contents_title margin-top20">来院受付</h3>
+                                 <h3 class="contents_title margin-top30">来院受付</h3>
                             </div><!--hr_h3-->
                         <!--本文-->
                             <div id="annys-tx">
@@ -268,7 +268,7 @@ $(window).scroll(function () {
                                     <p>受付リストでは、行中ほどに表示される「空欄」「会計待ち」「会計済み」で受付済み患者の現在の状態を把握できます。</p>
                                     <p>受付した時点では「空欄」で、まだ何も進行していない状態を表します。</p>
                                     <p>医師が診察を終了した時点で「会計待ち」となり、会計処理が行える事を表示しています。</p>
-                                    <p class="padding-bottom30">会計が終了したものは「会計済み」となり、会計終了時間などが日レセより取り込まれます。（<strong>B[本日]</strong>を押したときに読み込みます。）</p>
+                                    <p class="padding-bottom10">会計が終了したものは「会計済み」となり、会計終了時間などが日レセより取り込まれます。（<strong>B[本日]</strong>を押したときに読み込みます。）</p>
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
 
@@ -328,21 +328,25 @@ $(window).scroll(function () {
                                     <p>編集方法は次の通りです。</p>
                                     <ol>
                                         <li>EX_SOAP(.fmp12)ファイルを開きます<br>
-                                            <img class="" src="images/050_008_soap1.png" alt="ソープ1">
-                                            <img class="" src="images/050_008_soap2.png" alt="ソープ2">
-                                            <div style="border: solid 1px; width: 450px"><h4>なぜ別のファイル？</h4>
+                                            <img class="center-block w50" src="images/050_008_soap1.png" alt="ソープ1">
+                                            <img class="center-block w50" src="images/050_008_soap2.png" alt="ソープ2">
+                                            <br>
+                                            <div class="center-block divw" style="border: solid 2px #336699; width: 65%; border-radius: 10px; ">
+                                                <h4>　なぜ別のファイル？</h4>
                                                 <p>ANNYYS_Dがバージョンアップしたときでも（※）個々の設定した内容が<br>永続的に利用できるようにするため、このような方法を取っています。</p>
                                             </div>
                                         </li>
+                                        <p></p>
+                                        <br>
                                         <li>EX_SOAP(.fmp12)ファイルが前面に来ている状態で「ファイル」>「管理」＞「値一覧」を選択します。<br>
-                                            <img class="" src="images/050_008_file_button.png" alt="ファイルボタン"><br>
-                                            <img class="" src="images/050_008_soap3.png" alt="ソープ3"><br>
-                                            “ファイル「EX_SOAP」の値一覧の管理”リストにある「OD_V1」と「OD_V2」の値を編集します。<br>
+                                            <img class="center-block w30" src="images/050_008_file_button.png" alt="ファイルボタン"><br>
+                                            <img class="center-block w80" src="images/050_008_soap3.png" alt="ソープ3"><br>
+                                            ファイル「EX_SOAP」の値一覧の管理”リストにある「OD_V1」と「OD_V2」の値を編集します。<br>
                                             ※受付リスト内容のOD_V1は左側、OD_V2は右側に反映されます。                    
-                                        </li>
+                                        </li><br>
                                         <li>「値一覧の編集」画面では”カスタム値を使用”部分にテキスト入力してゆきます。<br>
-                                            項目ごとに改行で区切ります。<br>
-                                            <img class="" src="images/050_008_soap4.png" alt="ソープ4">
+                                            項目ごとに改行で区切ります。<br><br>
+                                            <img class="center-block" src="images/050_008_soap4.png" alt="ソープ4">
 
                                         </li>
                                     </ol>

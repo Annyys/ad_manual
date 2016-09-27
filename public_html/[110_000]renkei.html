@@ -167,9 +167,9 @@ $(window).scroll(function () {
             <div class="col-md-9" style="background-color:white;">
                 <!--ページタイトル-->
                 
-                <div id="a" class="contents_wrapper padding-bottom10 margin-bottom30">
+                <div id="a" class="contents_wrapper margin-bottom20">
                  <div class="hr_h3">
-                <h3 class="contents_title margin-top20">日レセ連携</h3>
+                <h3 class="contents_title margin-top30 padding-bottom10">日レセ連携</h3>
                 </div><!--hr_h3-->
                 <p><em>マニュアルの表現に関して</em><br>
                     本マニュアルでは大文字の英語を組み合わせた記号表現があります。この意味以下のようになりますので、ご理解の上お読みいただけますようお願い申し上げます。</p>
@@ -195,7 +195,7 @@ $(window).scroll(function () {
                 例：0001：山田太郎　=> 10001：山田太郎</p>
 
 
-                <p class="padding-bottom30">※本内容に一部日レセ上での会計情報の削除方法などを掲載しています。万が一実データの消失した場合などのトラブルに対して対応はできませんのであらかじめご了承ください。実際に操作する場合はサポートベンダー等のサポートの上で、慎重に行うようにしてください。</p>
+                <p class="padding-bottom20">※本内容に一部日レセ上での会計情報の削除方法などを掲載しています。万が一実データの消失した場合などのトラブルに対して対応はできませんのであらかじめご了承ください。実際に操作する場合はサポートベンダー等のサポートの上で、慎重に行うようにしてください。</p>
 
                 </div><!--contents_wrapper-->
             <!--<div class="col-xs-2" style="background-color:white;"></div>-->
@@ -209,10 +209,10 @@ $(window).scroll(function () {
                 <!--ページタイトル-->
                 
                 <!--メニュー-->
-             <div class="col-md-9" style="background-color:white;">
-                <div id="b" class="contents_wrapper padding-bottom10 margin-bottom30">
+             <div class="col-md-9  margin-bottom20" style="background-color:white;">
+                <div id="b" class="contents_wrapper padding-bottom10">
                  <div class="hr_h3">
-                  <h3 class="contents_title margin-top20">連携の方向とタイミング</h3>
+                  <h3 class="contents_title">連携の方向とタイミング</h3>
                  </div><!--hr_h3-->
                 <!--本文-->
                 <div id="annys-tx">
@@ -236,7 +236,7 @@ $(window).scroll(function () {
 
                     <p>予約情報は<strong>L[外来受付] B[診察] B[予約]</strong>を押し、予約日・予約時間を設定し確定した場合に日レセに送信されます。</p>
 
-                    <p class="padding-bottom30">日レセとANNYYS_Dの情報のやりとりに関する事ですが、日レセ側だけで業務を行う事も可能です。LANによる連携では設定の変更や新しい機器の導入、さらには想定しない様々な要因で何かしらドラブルが発生し情報のやりとりができなくなったりする事があります。このような場合でも完全に業務が停止しないよう、それぞれ単独でも業務が行える準備をしておいてください。</p>
+                    <p class="padding-bottom10">日レセとANNYYS_Dの情報のやりとりに関する事ですが、日レセ側だけで業務を行う事も可能です。LANによる連携では設定の変更や新しい機器の導入、さらには想定しない様々な要因で何かしらドラブルが発生し情報のやりとりができなくなったりする事があります。このような場合でも完全に業務が停止しないよう、それぞれ単独でも業務が行える準備をしておいてください。</p>
 
                 </div><!--annys-tx-->
                 </div><!--contents_wrapper-->
@@ -250,19 +250,25 @@ $(window).scroll(function () {
             </div>
             <div class="col-md-8" style="background-color:white;">
                 <!--ページタイトル-->
-                 <div class="col-md-9" style="background-color:white;">
-              <div id="c" class="contents_wrapper padding-bottom10 margin-bottom30">
+                 <div class="col-md-9 margin-bottom20" style="background-color:white;">
+              <div id="c" class="contents_wrapper padding-bottom10">
                    <div class="hr_h3">
-                <h3 class="contents_title margin-top20">患者情報</h3>
+                <h3 class="contents_title">患者情報</h3>
                  </div><!--hr_h3-->
                 <!--本文-->
                 <div id="annys-tx">
                     <p>ANNYYS_Dには登録が無く、日レセには登録済であること。</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_kanjajouhou.png" alt="患者情報"></p>
+                    </div><!--f_flame-->
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_kanjajouhou2.png" alt="患者情報2"></p>
+                     </div><!--f_flame-->
                     <p><strong>B[確認]</strong>で取込み（※既存情報は上書き更新されます。）</p>
+                      <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_kanjajouhou3.png" alt="患者情報3"></p>
-                    <p class="padding-bottom30">患者情報（名前・カナ・郵便番号・住所）<br>
+                     </div><!--f_flame-->
+                    <p class="padding-bottom10">患者情報（名前・カナ・郵便番号・住所）<br>
                     保健情報<br>
                     公費情報<br>
                     が読み込まれます。</p>
@@ -272,93 +278,121 @@ $(window).scroll(function () {
            
                 
         
-        <div class="col-md-9" style="background-color:white;">
-              <div id="d" class="contents_wrapper padding-bottom10 margin-bottom30">
+        <div class="col-md-9 margin-bottom20" style="background-color:white;">
+              <div id="d" class="contents_wrapper padding-bottom10">
                    <div class="hr_h3">
-                    <h3 class="contents_title margin-top20">受付登録</h3>
+                    <h3 class="contents_title">受付登録</h3>
                    </div><!--hr_h3-->
                 <!--本文-->
                 <div id="annys-tx">
                     <p><strong>L[外来受付] B[診察]</strong>で受付リクエストが日レセに送信されます。</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_uketsuketouroku.png" alt="受付登録"></p>
+                     </div><!--f_flame-->
                     <p><strong>L[診察画面]</strong>の患者情報部分に日レセから取得した患者の保険組合せ内容が表示されます。</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_uketsuketouroku1.png" alt="受付登録1"></p>
+                    </div><!--f_flame-->
                     <p>日レセに受付登録が無い場合は受付内容が登録されます。診療科、医師、診察内容、時間など登録した内容で送信されます。</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_uketsuketouroku2.png" alt="受付登録2"></p>
-               </div><!--annyy-tx-->
+                   </div><!--f_flame-->
+                    </div><!--annyy-tx-->
              </div><!--contents_wrapper-->
             </div><!--col-md-9-->
           
         
-        <div class="col-md-9" style="background-color:white;">
-              <div id="e" class="contents_wrapper padding-bottom10 margin-bottom30">
+        <div class="col-md-9  margin-bottom20" style="background-color:white;">
+              <div id="e" class="contents_wrapper padding-bottom10">
                    <div class="hr_h3">
-                    <h3 class="contents_title margin-top20">診療行為送信</h3>
+                    <h3 class="contents_title">診療行為送信</h3>
                    </div><!--hr_h3-->
                 <!--本文-->
                 <div id="annys-tx">
                     <p>会計オーダーは L[診察画面] B[終]で受付時に取得した保険情報と登録済みの病名(T[病名])とともに送信されます。</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_soushin.png" alt="診療行為送信"></p>
+                    </div><!--f_flame-->
                     <p>一緒に送信される保険情報と病名</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_soushin1.png" alt="診療行為送信1"></p>
+                    </div><!--f_flame-->
                     <p>日レセでは受付リストから該当患者を選択し下の [診療行為]ボタンを押すと送信した内容が表示されます。</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_soushin2.png" alt="診療行為送信2"></p>
+                     </div><!--f_flame-->
                     <p>日レセ診療行為入力画面で、送信された診療行為・保険・病名が確認できます。</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_soushin3.png" alt="診療行為送信3"></p>
-                    <p class="padding-bottom30">あとは日レセの仕様に従い会計処理を完了させてください。</p>
+                     </div><!--f_flame-->
+                    <p class="padding-bottom10">あとは日レセの仕様に従い会計処理を完了させてください。</p>
                </div><!--annyy-tx-->
              </div><!--contents_wrapper-->
             </div><!--col-md-9-->
           
         
-        <div class="col-md-9" style="background-color:white;">
-              <div id="f" class="contents_wrapper padding-bottom10 margin-bottom30">
+        <div class="col-md-9 margin-bottom20" style="background-color:white;">
+              <div id="f" class="contents_wrapper padding-bottom10">
                    <div class="hr_h3">
-                    <h3 class="contents_title margin-top20">診療行為訂正１（日レセで未会計）</h3>
+                    <h3 class="contents_title">診療行為訂正１（日レセで未会計）</h3>
                    </div><!--hr_h3-->
                 <!--本文-->
                 <div id="annys-tx">
                     <p>会計オーダー送信後、日レセ側でまた会計処理をしていない場合
                         <strong>L[診察画面] B[終]</strong>で表示されたダイアログから[削除]を選択し一旦削除リクエストを送信します。</p>
+                   
                     <p><img class="center-block" src="images/110_000_teisei.png" alt="診療行為訂正"></p>
+                    
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_teisei1.png" alt="診療行為訂正1"></p>
+                    </div><!--f_flame-->
                     <p>「削除処理完了」のメッセージが表示されたら削除完了です。
                     診療行為内容を修正し、再び<strong>L[診察画面] B[終]</strong>で診療行為内容を登録できます。</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_teisei2.png" alt="診療行為訂正2"></p>
-                    <p class="padding-bottom30">新しいUUIDが登録されます。</p>
+                    </div><!--f_flame-->
+                    <p class="padding-bottom10">新しいUUIDが登録されます。</p>
                </div><!--annyy-tx-->
              </div><!--contents_wrapper-->
             </div><!--col-md-9-->
           
         
-        <div class="col-md-9" style="background-color:white;">
-              <div id="g" class="contents_wrapper padding-bottom10 margin-bottom30">
+        <div class="col-md-9  margin-bottom20" style="background-color:white;">
+              <div id="g" class="contents_wrapper padding-bottom10">
                    <div class="hr_h3">
-                    <h3 class="contents_title margin-top20">診療行為訂正２（日レセで会計済）</h3>
+                    <h3 class="contents_title">診療行為訂正２（日レセで会計済）</h3>
                    </div><!--hr_h3-->
                 <!--本文-->
                 <div id="annys-tx">
                     <p>日レセ側で会計処理済みの場合は日レセで一旦会計内容を削除する必要があります。
                     日レセで診療行為画面を出して[Ｄｏ検索]をクリックします。</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_teisei_2.png" alt="診療行為訂正_2"></p>
+                    </div><!--f_flame-->
                     <p>[訂正診療日]という名称に変わったら下のリストから該当日を選択します。</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_teisei_21.png" alt="診療行為訂正_21"></p>
+                    </div><!--f_flame-->
                     <p>診療内容が展開されたら[クリア]→[登録]をクリックして削除処理を進め「継続分も含め受診履歴を削除します。<br>
                     というメッセージがでるので「ＯＫ」を押し削除処理を完了させます。</p>
                     <p>ANNYYS_Dでは<strong>L[診察画面] B[終]</strong>で表示されたダイアログから[再送信]を選択し診療行為を送信します。</p>
+                    
                     <p><img class="center-block" src="images/110_000_teisei_22.png" alt="診療行為訂正_22"></p>
+                    
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_teisei_23.png" alt="診療行為訂正_23"></p>
+                    </div><!--f_flame-->
                     <p>新しいUUIDが登録されます。</p>
-                    <p class="padding-bottom30">もし、ANNYYS_D側のUUIDを削除したい場合はS[日レセ]> S[UUID強制削除]を実行すると登録済みのUUIDが削除されます。</p>
+                    <p class="padding-bottom10">もし、ANNYYS_D側のUUIDを削除したい場合はS[日レセ]> S[UUID強制削除]を実行すると登録済みのUUIDが削除されます。</p>
                </div><!--annyy-tx-->
              </div><!--contents_wrapper-->
             </div><!--col-md-9-->
           
         
-        <div class="col-md-9" style="background-color:white;">
-              <div id="h" class="contents_wrapper padding-bottom10 margin-bottom30">
+        <div class="col-md-9  margin-bottom20" style="background-color:white;">
+              <div id="h" class="contents_wrapper padding-bottom10">
                    <div class="hr_h3">
-                    <h3 class="contents_title margin-top20">処方変更（院内⇔院外）</h3>
+                    <h3 class="contents_title">処方変更（院内⇔院外）</h3>
                    </div><!--hr_h3-->
                 <!--本文-->
                 <div id="annys-tx">
@@ -367,7 +401,7 @@ $(window).scroll(function () {
                     <p><img class="center-block" src="images/110_000_shohouhenkou.png" alt="処方変更"></p>
                     <p>基本設定が院外なので全て院外処方で受信されています。</p>
                     <p><img class="center-block" src="images/110_000_shohouhenkou1.png" alt="処方変更1"></p>
-                    <p class="padding-bottom30">院外を院内に変えるには処方の２１２の部分を２１１に変更します。これで院外処方が院内処方に変更できます。
+                    <p class="padding-bottom10">院外を院内に変えるには処方の２１２の部分を２１１に変更します。これで院外処方が院内処方に変更できます。
                     院内処方を院外処方に変えるにはこの逆の操作で行えます。
                     院内処方=２１１　院外処方＝２１２　となっています。
                     </p>
@@ -376,10 +410,10 @@ $(window).scroll(function () {
             </div><!--col-md-9-->
           
         
-        <div class="col-md-9" style="background-color:white;">
-              <div id="i" class="contents_wrapper padding-bottom10 margin-bottom30">
+        <div class="col-md-9 margin-bottom30" style="background-color:white;">
+              <div id="i" class="contents_wrapper padding-bottom10">
                    <div class="hr_h3">
-                    <h3 class="contents_title margin-top20">予約</h3>
+                    <h3 class="contents_title">予約</h3>
                    </div><!--hr_h3-->
                 <!--本文-->
                 <div id="annys-tx">
