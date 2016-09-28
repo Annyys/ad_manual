@@ -7228,7 +7228,7 @@ a:hover {
    }
    
     .contents_wrapper .f_frame .masterkousin {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
 }
@@ -7503,7 +7503,7 @@ a:hover {
    }
    
     .contents_wrapper .f_frame .masterkousin {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     text-align: center;
 }
@@ -7696,7 +7696,7 @@ a:hover {
    }
    
     .contents_wrapper .f_frame .masterkousin {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     text-align: center;
 }
@@ -7761,6 +7761,12 @@ a:hover {
     padding-top: 1px;
     height: auto;
 }
+
+/*画像大きさ調整*/
+
+.contents_wrapper .w50 {
+        width: 50%;
+    } 
 
     /*マージン調整*/
 
@@ -8074,7 +8080,7 @@ a:hover {
 }
 
 .contents_wrapper .f_frame .masterkousin {
-    width:70%;
+    width:50%;
     margin: 0 auto;
     text-align: center;
 }
