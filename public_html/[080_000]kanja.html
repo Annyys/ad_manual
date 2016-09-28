@@ -190,6 +190,7 @@ $(window).scroll(function () {
                                 <tr><td>T(タブ)</td><td>タブ</td><td>画面上のタブスペースのタイトル</td></tr>
                                 <tr><td>S(エス)</td><td>スクリプト</td><td>スクリプトメニューにあるスクリプト名</td></tr>
                             </table>
+                                <br>
                                 <p>例１）<strong>L[メインメニュー] B[外来受付]</strong><br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メインメニュー画面の、外来受付ボタン（を押す）となります。</p>
                                 <p class="padding-bottom10">例２）<strong>L[診療記録] T[病名] F[病名]</strong><br>
@@ -205,9 +206,9 @@ $(window).scroll(function () {
                                <div class="f_frame">
                                 <p><img class="center-block" src="images/080_000_kihonjouhou.png" alt="基本情報"></p> 
                                </div><!--f_frame-->
-                               <div class="f_frame">
+                               
                                 <p><img class="center-block" src="images/080_000_kihonjouhou1.png" alt="基本情報1"></p> 
-                               </div><!--f_frame-->
+                               
                                 <p>適宜項目名に従い情報を入力してください。<br>
                                 ※自宅電話１は他レコードと関連性があり同一データのものは<strong>T[世帯]</strong>にリストアップされるようになります。<br>
                                 <strong>B[地図]</strong>はブラウザを開きGoogleの地図を表示し住所所在地を確認できます。<br>
@@ -289,7 +290,7 @@ $(window).scroll(function () {
                             <div id="annys-tx">
                                <div class="f_frame">
                                 <p><img class="center-block" src="images/080_000_byoumei.png" alt="病名"></p> 
-
+                               </div><!--f_flame-->
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
                         <!--メニュー-->
@@ -347,7 +348,7 @@ $(window).scroll(function () {
                                 <p><img class="center-block" src="images/080_000_bunsho.png" alt="文書"></p> 
                                </div><!--f_frame-->
                                 <p>紹介状などの書類を閲覧・編集できます。<strong>B[文書]</strong>で該当の書類を表示できます。</p>
-                               </div><!--f_frame-->
+                              
                                 <p>病名を確認・登録・編集できます。<strong>L[診断] T[病名]</strong>で確認できます。</p>
                                <div class="f_frame">
                                 <p><img class="center-block" src="images/080_000_byoumei2.png" alt="病名2"></p> 
@@ -356,8 +357,11 @@ $(window).scroll(function () {
                                 <p class="padding-bottom30"><strong>L[診察画面] T[書類] T[文書]</strong>で確認できる情報と同一のものです。</p>
                                 
                             </div><!--annys-tx-->
+                            </div><!--contents_wrapper-->
+                            
+                            <div id="l" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="l" class="contents_title margin-top20">T[意見書]</h3>
+                                 <h3 class="contents_title margin-top20">T[意見書]</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -366,8 +370,11 @@ $(window).scroll(function () {
                                </div><!--f_frame-->
                                 <p>傷病手当金支給申請の「労務不能に関する意見」欄に記載する内容を記録するところです。<strong>L[診察画面] T[書類] T[意見書]</strong>で確認できる情報と同一のものです。<strong>B(><)</strong>で該当の内容を無効にするとカルテ１号用紙には印刷されません。</p>
                             </div><!--annys-tx-->
+                            </div><!--contents_wrapper-->
+                            
+                              <div id="m" class="contents_wrapper padding-bottom10 margin-bottom30">
                             <div class="hr_h3">
-                                 <h3 id="m" class="contents_title margin-top20">T[災害の疑い]</h3>
+                                 <h3 class="contents_title margin-top20">T[災害の疑い]</h3>
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
@@ -391,11 +398,12 @@ $(window).scroll(function () {
                                 <p><img class="center-block" src="images/080_000_baitaru.png" alt="バイタル"></p> 
                                </div><!--f_frame-->
                                 <p>バイタルデータを閲覧・編集できます。<strong>L[診察画面] T[バイタル]</strong>で確認できる情報と同一のものです。</p>
-                                    <tr><td><img class="center-block" src="images/080_000_rireki1.png" alt="履歴1"></td><td class="padding-bottom20">該当患者の印刷用カルテ２号用紙を全て表示します。</td></tr>
-                                    <tr><td><img class="center-block" src="images/080_000_rireki2.png" alt="履歴2"></td><td class="padding-bottom20">選択レコード以後のサマリデータを作成し直します。</td></tr>
-                                    <tr><td><img class="center-block" src="images/080_000_rireki3.png" alt="履歴3"></td><td class="padding-bottom20">該当レコードの診察画面を表示します。</td></tr>
-                                    <tr><td><img class="center-block" src="images/080_000_rireki4.png" alt="履歴4"></td><td class="padding-bottom20">該当レコードの印刷用カルテ２号用紙を表示します。</td></tr>
-                                    <tr><td><img class="center-block" src="images/080_000_rireki5.png" alt="履歴5"></td><td class="padding-bottom20">該当レコードのサマリデータを更新します。</td></tr>
+                                    <tr><td><img class="" style="width: 5%; margin: 10px 2% 3px 5%;" src="images/080_000_rireki1.png" alt="履歴1"></td><td class="padding-bottom20">該当患者の印刷用カルテ２号用紙を全て表示します。</td></tr><br>
+                                    <tr><td><img class="" style="width: 5%; margin: 3px 2%  3px 5%;" src="images/080_000_rireki2.png" alt="履歴2"></td><td class="padding-bottom20">選択レコード以後のサマリデータを作成し直します。</td></tr><br>
+                                    <tr><td><img class="" style="width: 5%; margin: 3px 2% 3px 5%;" src="images/080_000_rireki3.png" alt="履歴3"></td><td class="padding-bottom20">該当レコードの診察画面を表示します。</td></tr><br>
+                                    <tr><td><img class="" style="width: 5%; margin: 3px 2% 3px 5%;" src="images/080_000_rireki4.png" alt="履歴4"></td><td class="padding-bottom20">該当レコードの印刷用カルテ２号用紙を表示します。</td></tr><br>
+                                    <tr><td><img class="" style="width: 5%; margin: 3px 2% 10px 5%;" src="images/080_000_rireki5.png" alt="履歴5"></td><td class="padding-bottom20">該当レコードのサマリデータを更新します。</td></tr><br>
+                            <br>
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
                         <!--メニュー-->
