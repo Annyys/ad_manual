@@ -7232,7 +7232,14 @@ a:hover {
     margin: 0 auto;
     text-align: center;
 }
-                
+              
+.contents_wrapper .kouhi {
+        text-align: center;
+        width: 60%;
+        margin-top: 0px;
+        margin-bottom: 8px;
+    }
+
  /*IPマージン調整*/
     
     .tb-margin20 {
@@ -7441,6 +7448,13 @@ a:hover {
         border: 1px solie #eee;
     }
     
+      .contents_wrapper .kouhi {
+        text-align: center;
+        width: 60%;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    
     .frame img {
         text-align: center;
     }
@@ -7515,6 +7529,12 @@ a:hover {
     height: auto;
 }
    
+.contents_wrapper .kouhi {
+        text-align: center;
+        width: 60%;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
     
      /*SPマージン調整*/
     
@@ -7701,6 +7721,7 @@ a:hover {
     text-align: center;
 }
  
+   
 
 /*フッターTB*/
      footer {
