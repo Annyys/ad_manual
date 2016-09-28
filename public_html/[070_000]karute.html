@@ -229,9 +229,9 @@ $(window).scroll(function () {
                                     <div class="f_frame">
                                     <p><img class="" src="images/070_000_soap_nyuryoku.png" width="1000" height="727" alt="SOAP画面"></p> 
                                     </div>
-                                     <div class="f_frame">
-                                    <p><img class="" src="images/070_000_soap_nyuryoku2.png" width="1000" height="727" alt="SOAP内容"></p> 
-                                     </div>
+                               
+                                    <p><img class="center-block w40" src="images/070_000_soap_nyuryoku2.png" width="1000" height="727" alt="SOAP内容"></p> 
+                                     
                                     <p class="padding-bottom30">また、S,O,A,Pの文字（○枠の部分）をクリックすると、診療行為入力の補助画面、L[SOAP補助]が表示されます。こちらは入力を簡便化するために、定型内容を登録しておけるので必要な時は「定型を利用して部分的な修正を行う」などのような利用できます。</p>
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
@@ -250,7 +250,7 @@ $(window).scroll(function () {
                                     <div class="f_frame">
                                     <p><img class="" src="images/070_000_shinsatsu_nyuryoku.png" width="1000" height="727" alt="診察画面"></p>
                                     </div><!--f_frame-->
-                                    <h4 id="c1" style="padding-bottom :5px; padding-left:3%; font-size:20px ; border-bottom: 3px solid red; color: red;">重要</h4>
+                                    <h4 id="c1" style="padding-bottom :5px; padding-left:3%; font-size:24px ; border-bottom: 3px solid red; color: red; font-weight:bold;">重要</h4>
                                     <p>診察記録が完了したら必ず<strong>B[確]</strong>を押すようにしてください。このボタンを押したタイミングで記録のバックアップが取られますので「保全性・真正性」の意味で重要な機能が含まれています。</p>
 
 
@@ -277,14 +277,16 @@ $(window).scroll(function () {
                                     </div><!--f_frame-->
                                     <p>ペイントは簡単なソフトです。<br>
                                     そのまま記録してもかまいませんが、シェーマからイラストを編集する事も簡単です。</p>
-                                    <p><img class="center-block" src="images/070_000_gazou_nyuryoku3.png" width="171" height="50" alt="画像入力3"></p>
+                                    <p><img class="center-block w40" src="images/070_000_gazou_nyuryoku3.png" width="171" height="50" alt="画像入力3"></p>
                                     <p>右上の「貼り付け」部分をクリックして「ファイルから貼り付け」を選択します。</p>
                                     <p><img class="center-block" src="images/070_000_gazou_nyuryoku4.png" width="1000" height="727" alt="画像入力4"></p>
                                     <p>必要なシェーマを選択します。<br>
                                     ※一部シェーマはダウンロードしたファイルに梱包されていますので、解凍したものを利用のＰＣ上に配置しておくと便利です。</p>
+                                    <div class="f_frame">
                                     <p><img class="center-block" src="images/070_000_gazou_nyuryoku5.png" width="1000" height="727" alt="画像入力5"></p>
+                                    </div><!--f_frame-->
                                     <p>絵を書き終わったら、「選択」メニューから四角形選択を選びます。</p>
-                                    <p><img class="center-block" src="images/070_000_gazou_nyuryoku6.png" width="171" height="50" alt="画像入力6"></p>
+                                    <p><img class="center-block w30" src="images/070_000_gazou_nyuryoku6.png" width="171" height="50" alt="画像入力6"></p>
                                     <p>取込みたい場所を囲んだら画面左上の「コピー」をクリックします。</p>
                                     <div class="f_frame">
                                     <p><img class="" src="images/070_000_gazou_nyuryoku7.png" width="1000" height="727" alt="画像入力7"></p>
@@ -294,7 +296,9 @@ $(window).scroll(function () {
                                     <p>MacOSの場合、OS標準のペイントソフトがありませんが何かしらペイントフソフトウェアをインストールすれば同じようにスクリプトから呼び出せるようになります。<br>
                                         編集するスクリプトは<strong>S[F:診察画面/スケッチ]</strong>です。
                                     </p>
+                                    <div class="f_frame">
                                     <p><img class="center-block" src="images/070_000_gazou_nyuryoku8.png" width="1000" height="727" alt="画像入力8"></p>
+                                    </div><!--f_frame-->
                                     <p><img class="center-block" src="images/070_000_gazou_nyuryoku9.png" width="1000" height="727" alt="画像入力9"></p>
                                     <p>スクリプトのEventを送信部分を有効（代わりに「フィールドへ移動・・」は無効にする）にして、開きたいアプリケーションを指定すれば完了です。
                                     ※カスタマイズは<strong>L[基本設定] B[UserMemo]</strong>に記録しておき、アップデートやメンテナンスのときに同じ作業ができるように保管しておいてください。
@@ -317,6 +321,7 @@ $(window).scroll(function () {
                                             [643310182]生理食塩液　２０ｍＬ[.2管]
                                             </td><td>不意に入力されてしまった【注射薬剤】が必要なければカットしておく。</td></tr>
                                     </table>
+                                    <br>
                                     <p>【重要】診療行為欄はテキスト形式になっていて直接編集できますが、このスペースの内容で重要なのは以下の通りです。</p>
                                     <ul>
                                         <li>【？？】=診療行為の区分</li>
@@ -336,7 +341,7 @@ $(window).scroll(function () {
                         <!--本文-->
                                <div id="annys-tx">
                                     <p>T[行為] B[診医]</p>
-                                    <p><img class="center-block" src="images/070_000_shinsatsu.png" width="355" height="489" alt="診察"></p>
+                                    <p><img class="center-block w40" src="images/070_000_shinsatsu.png" width="355" height="489" alt="診察"></p>
                                     <p>初診・再診関連項目から該当する診療行為を選択します。</p>
                                     <table border="1">
                                         <tr><td>診療行為欄には例として以下のように入力されます。<br>
@@ -362,7 +367,7 @@ $(window).scroll(function () {
                         <!--本文-->
                                <div id="annys-tx">
                                 <p>T[行為] B[診医]</p>
-                                <p><img class="center-block" src="images/070_000_ikan.png" width="355" height="489" alt="医管"></p>
+                                <p><img class="center-block w40" src="images/070_000_ikan.png" width="355" height="489" alt="医管"></p>
                                 <p>医学管理料関連項目から該当する診療行為を選択します。<br>
                                 診療行為欄には例として以下のように入力されます。
                                 <table border="1">
@@ -392,7 +397,7 @@ $(window).scroll(function () {
                         <!--本文-->
                                <div id="annys-tx">
                                 <p>T[行為] B[診医]</p>
-                                <p><img class="center-block" src="images/070_000_zaitaku.png" width="355" height="489" alt="在宅"></p>
+                                <p><img class="center-block w40" src="images/070_000_zaitaku.png" width="355" height="489" alt="在宅"></p>
                                 <p>在宅医療関連項目から該当する診療行為を選択します。<br>
                                 【診察】や【医管】と同じ場所で下の方にリストされています。<br>
                                 診療行為欄には例として以下のように入力されます</p>
@@ -413,7 +418,7 @@ $(window).scroll(function () {
                         <!--本文-->
                                <div id="annys-tx">
                                 <p>T[薬剤] B[注射] R[在]</p>
-                                <p><img class="center-block" src="images/070_000_zaitakuyaku.png" width="355" height="489" alt="在宅薬"></p>
+                                <p><img class="center-block w40" src="images/070_000_zaitakuyaku.png" width="355" height="489" alt="在宅薬"></p>
                                 <p>【在宅】で在宅自己注射指導管理料などを算定した場合処方する注射薬剤を選択します。<br>
                                 <strong>T[薬剤] B[注射] R[在]</strong>を指定してから注射薬剤から適宜選択します。<br>
                                 診療行為欄には例として以下のように入力されます</p>
@@ -436,7 +441,7 @@ $(window).scroll(function () {
                         <!--本文-->
                                <div id="annys-tx">
                                     <p>T[機材] B[材料] R[在処]</p>
-                                    <p><img class="center-block" src="images/070_000_zaitakuzai.png" width="355" height="489" alt="在宅材"></p>
+                                    <p><img class="center-block w40" src="images/070_000_zaitakuzai.png" width="355" height="489" alt="在宅材"></p>
                                     <p>在宅処方として何らかの特定機材を算定する場合には<strong>R[在宅]</strong>を選択してください。処方せんに記載する場合には<strong>R[在処]</strong>を選択してください。<br>
                                     診療行為欄には例として以下のように入力されます</p>
                                     <table border="1">
@@ -458,19 +463,19 @@ $(window).scroll(function () {
                                     <p>【内服】<br>
                                         <strong>T[薬剤] B[内服]</strong>
                                     </p>
-                                    <p><img class="center-block" src="images/070_000_shohou1.png" width="355" height="489" alt="処方"></p>
+                                    <p><img class="center-block w40" src="images/070_000_shohou1.png" width="355" height="489" alt="処方"></p>
                                     <p>【頓服】<br>
                                         <strong>T[薬剤] B[内服] R[頓]</strong>
                                     </p>
-                                    <p><img class="center-block" src="images/070_000_shohou2.png" width="355" height="489" alt="処方2"></p>
+                                    <p><img class="center-block w40" src="images/070_000_shohou2.png" width="355" height="489" alt="処方2"></p>
                                     <p>目的の薬剤該当画面から薬剤を処方します。<br>
                                         表示されたダイアログで数量を確認します。</p>
-                                    <p><img class="" src="images/070_000_shohou3.png" width="410" height="206" alt="処方3"></p>
+                                    <p><img class="center-block w40" src="images/070_000_shohou3.png" width="410" height="206" alt="処方3"></p>
                                     <p>次に用法<strong>T[用法] B[用法]</strong>から用法を選択します。<br>
                                         ※薬剤に対して用法を選択した場合記憶されていますので２回目からは次の用法確認画面が出てきます。</p>
                                     <p><img class="center-block" src="images/070_000_shohou4.png" width="355" height="489" alt="処方4"></p>
                                     <p>内服・頓服の場合は日数または回数を確認します。</p>
-                                    <p><img class="center-block" src="images/070_000_shohou5.png" width="410" height="206" alt="処方5"></p>
+                                    <p><img class="center-block w40" src="images/070_000_shohou5.png" width="410" height="206" alt="処方5"></p>
                                     <p>複数薬剤がある場合はこれらを繰り返します。<br>
                                     診療行為欄には例として以下のように入力されます</p>
                                     <table border="1">
@@ -501,7 +506,7 @@ $(window).scroll(function () {
                                     <p>【外用】<br>
                                         <strong>T[薬剤] B[内服]</strong>
                                     </p>
-                                    <p><img class="center-block" src="images/070_000_shohou_gaiyou.png" width="355" height="489" alt="外用"></p>
+                                    <p><img class="center-block w40" src="images/070_000_shohou_gaiyou.png" width="355" height="489" alt="外用"></p>
                                     <p class="">【頓服】【外用】も同じ要領で入力します。<br>
                                         ※入力後に数量などの変更がある場合は直接修正してください。</p>
 
@@ -516,13 +521,13 @@ $(window).scroll(function () {
                         <!--本文-->
                                <div id="annys-tx">
                                     <p><strong>T[行為] B[注処]</strong></p>
-                                    <p><img class="center-block" src="images/070_000_hika1.png" width="355" height="489" alt="皮下"></p>
+                                    <p><img class="center-block w40" src="images/070_000_hika1.png" width="355" height="489" alt="皮下"></p>
                                     <p><strong>[130000510]皮内、皮下及び筋肉内注射</strong>を選択します。
                                     続けて<strong>T[薬剤] B[注射]</strong>から薬剤を選択します。
                                     </p>
-                                    <p><img class="center-block" src="images/070_000_hika2.png" width="355" height="172" alt="皮下2"></p>
+                                    <p><img class="center-block w40" src="images/070_000_hika2.png" width="355" height="172" alt="皮下2"></p>
                                     <p>表示されたダイアログで数量を確認します。</p>
-                                    <p><img class="center-block" src="images/070_000_hika3.png" width="410" height="206" alt="皮下3"></p>
+                                    <p><img class="center-block w40" src="images/070_000_hika3.png" width="410" height="206" alt="皮下3"></p>
                                     <p>診療行為欄には例として以下のように入力されます</p>
                                     <table border="1">
                                         <tr><td>【皮下筋注】<br>
@@ -530,6 +535,7 @@ $(window).scroll(function () {
                                         [621196302]インジゴカルミン注２０ｍｇ「第一三共」　０．４％５ｍＬ[2管]
                                         </td></tr>
                                     </table>
+                                    <br>
                                     <p class="">※入力後に数量などの変更がある場合は直接修正してください。</p>
 
                             </div><!--annys-tx-->
@@ -543,12 +549,12 @@ $(window).scroll(function () {
                         <!--本文-->
                                <div id="annys-tx">
                                    <p><strong>T[行為] B[注処]</strong></p>
-                                    <p><img class="" src="images/070_000_seichu.png" width="355" height="489" alt="静注"></p>
+                                    <p><img class="center-block w40" src="images/070_000_seichu.png" width="355" height="489" alt="静注"></p>
                                     <p><strong>[130003510]静脈内注射</strong>を選択します。<br>
                                         続けて<strong>T[薬剤] B[注射]</strong>から薬剤を選択します。</p>
-                                    <p><img class="" src="images/070_000_seichu2.png" width="355" height="172" alt="静注2"></p>
+                                    <p><img class="center-block w40" src="images/070_000_seichu2.png" width="355" height="172" alt="静注2"></p>
                                     <p>表示されたダイアログで数量を確認します。</p>
-                                    <p><img class="center-block" src="images/070_000_seichu3.png" width="355" height="172" alt="静注3"></p>
+                                    <p><img class="center-block w40" src="images/070_000_seichu3.png" width="355" height="172" alt="静注3"></p>
                                     <p>診療行為欄には例として以下のように入力されます</p>
                                     <table border="1">
                                         <tr><td>【静注】<br>
@@ -556,6 +562,7 @@ $(window).scroll(function () {
                                         [621196302]インジゴカルミン注２０ｍｇ「第一三共」　０．４％５ｍＬ[2管]
                                         </td></tr>
                                     </table>
+                                    <br>
                                     <p class="">※入力後に数量などの変更がある場合は直接修正してください。</p>
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
@@ -570,9 +577,9 @@ $(window).scroll(function () {
                                     <p><strong>T[行為] B[注処]</strong></p>
                                     <p>点滴注射関連項目から該当する診療行為を選択します。<br>
                                     続けて<strong>T[薬剤] B[注射]</strong>から薬剤を選択します。</p>
-                                    <p><img class="center-block" src="images/070_000_sonota2.png" width="355" height="172" alt="その他2"></p>
+                                    <p><img class="center-block w40" src="images/070_000_sonota2.png" width="355" height="172" alt="その他2"></p>
                                     <p>表示されたダイアログで数量を確認します。</p>
-                                    <p><img class="center-block" src="images/070_000_sonota3.png" width="410" height="206" alt="その他3"></p>
+                                    <p><img class="center-block w40" src="images/070_000_sonota3.png" width="410" height="206" alt="その他3"></p>
                                     <p>診療行為欄には例として以下のように入力されます</p>
                                     <table border="1">
                                         <tr><td>【点滴】<br>
@@ -580,6 +587,7 @@ $(window).scroll(function () {
                                         [643140045]ビタＣ注２５％　５００ｍｇ[1管]
                                         </td></tr>
                                     </table>
+                                    <br>
                                     <p>点滴注射の場合は以下のように入力されます</p>
                                     <table border="1">
                                         <tr><td>【点滴】<br>
@@ -587,6 +595,7 @@ $(window).scroll(function () {
                                         [643140045]ビタＣ注２５％　５００ｍｇ[1管]
                                         </td></tr>
                                     </table>
+                                    <br>
                                     <p class="">※入力後に数量などの変更がある場合は直接修正してください。</p>
 
                             </div><!--annys-tx-->
@@ -600,7 +609,7 @@ $(window).scroll(function () {
                         <!--本文-->
                                <div id="annys-tx">
                                     <p><strong>T[薬剤] B[注射]</strong></p>
-                                    <p><img class="center-block" src="images/070_000_chusha_yakuzai.png" width="355" height="489" alt="注射薬剤"></p>
+                                    <p><img class="center-block w40" src="images/070_000_chusha_yakuzai.png" width="355" height="489" alt="注射薬剤"></p>
                                     <p><strong>T[薬剤] B[注射]</strong>から注射薬剤を選択した場合、概ね点滴注射とみなされます。<br>
                                     点滴注射の場合、年齢や注射容量または入院・外来によって点数が違うためここで注射薬剤だけを選択するだけでもかまいません。（レセコンが自動判断できる場合。「日レセ可」）<br>
                                     診療行為欄には例として以下のように入力されます</p>
