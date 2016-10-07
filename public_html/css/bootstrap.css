@@ -7547,6 +7547,10 @@ a:hover {
         margin-top: 20px;
     }
     
+     .contents_wrapper .w30 {
+        width: 30%;
+    } 
+    
     
 }
  
@@ -7848,6 +7852,10 @@ a:hover {
     .tb-margin20 {
         margin-top: 20px;
     }
+    
+     .contents_wrapper .w30 {
+        width: 30%;
+    } 
     
 }
  
