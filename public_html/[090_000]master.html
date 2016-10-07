@@ -190,8 +190,10 @@ $(window).scroll(function () {
                             </div><!--annys-tx-->
                         <!--本文-->
                             <div id="annys-tx">
+                                <div class="f_frame">
                                 <p><img class="center-block" src="images/090_000_masterkanri.png" alt="マスター管理"></p> 
-                                <p class="padding-bottom30">マスタ管理は各種マスタ情報を調べたり確認したりするためのデザインとなっています。マスタは随時更新されますが更新は別のDBManagerプログラムにおいて更新されます。</p>
+                                </div>
+                                <p class="padding-bottom10">マスタ管理は各種マスタ情報を調べたり確認したりするためのデザインとなっています。マスタは随時更新されますが更新は別のDBManagerプログラムにおいて更新されます。</p>
 
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
@@ -203,8 +205,12 @@ $(window).scroll(function () {
                             </div>
                         <!--本文-->
                             <div id="annys-tx">
+                                <div class="f_frame">
                                 <p><img class="center-block" src="images/090_000_settouroku.png" alt="セット登録"></p> 
+                                 </div><!--f_flame-->
+                                 <div class="f_frame">
                                 <p><img class="center-block" src="images/090_000_settouroku1.png" alt="セット登録1"></p> 
+                                </div><!--f_flame-->
                                 <p>セット登録画面が開きます。セット登録は診察画面と同じ画面で診療行為を選択しながら登録する必要があります。<strong>B[SET登録]</strong>では、患者番号0,受付番号=0の受付内容が無効状態で診察画面を開き、セット登録が行えるようになっています。詳細は[診察画面]の<strong>T[診察セット登録]</strong>を参照してください。</p>
 
                             </div><!--annys-tx-->
@@ -218,7 +224,9 @@ $(window).scroll(function () {
                         <!--本文-->
                             <div id="annys-tx">
                                 <p>データソース：DB_ANNYYS/tbl_byomei（※DBManager更新対象）</p>
+                                <div class="f_frame">
                                 <p><img class="center-block" src="images/090_000_byoumei.png" alt="病名"></p> 
+                                </div>
                                 
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
@@ -231,7 +239,9 @@ $(window).scroll(function () {
                         <!--本文-->
                             <div id="annys-tx">
                                 <p>データソース：DB_ANNYYS/tbl_tensu（※DBManager更新対象）</p>
+                                <div class="f_frame">
                                 <p><img class="center-block" src="images/090_000_shinryoukoui.png" alt="診療行為"></p> 
+                                </div>
                                 <p>このレイアウトではDB_ANNYYS/tbl_tensu収録データのうち現在有効なもので診療行為に関るものを表示できるようになっています。主だった項目区分は上部に配置された各種ボタンで表示内容を切り替えられます。<br>
                                     ボタン：B[診察] B[医管] B[在宅] B[注射] B[処置] B[手術] B[検査] B[画像] B[その他] B[検索]</p>
                                 <p>【診療行為項目の採用登録】</p>
@@ -251,7 +261,9 @@ $(window).scroll(function () {
                         <!--本文-->
                             <div id="annys-tx">
                                 <p>データソース：DB_ANNYYS/tbl_tensu（※DBManager更新対象）</p>
+                                <div class="f_frame">
                                 <p><img class="center-block" src="images/090_000_yakuzai.png" alt="薬剤"></p> 
+                                </div>
                                 <p>このレイアウトではDB_ANNYYS/tbl_tensu収録データのうち現在有効なもので薬剤・生薬に関るものを表示できるようになっています。主だった項目区分は上部に配置された各種ボタンで表示内容を切り替えられます。<br>
                                 ボタン：B[内服] B[外用] B[注射] B[生薬] B[造影] B[検索]</p>
                                 <p>【薬剤・生薬の採用登録】</p>
@@ -271,7 +283,9 @@ $(window).scroll(function () {
                         <!--本文-->
                             <div id="annys-tx">
                                 <p>データソース：DB_ANNYYS/tbl_tensu（※DBManager更新対象）</p>
+                                <div class="f_frame">
                                 <p><img class="center-block" src="images/090_000_zairyou.png" alt="材料"></p> 
+                                </div>
                                 <p>このレイアウトではDB_ANNYYS/tbl_tensu収録データのうち現在有効なもので特定機材に関るものを表示できるようになっています。主だった項目区分は上部に配置された各種ボタンで表示内容を切り替えられます。<br>
                                     ボタン：B[材料] B[フィルム] B[検索]</p>
                                 <p>【材料・フィルム・自費の採用登録】</p>
@@ -294,7 +308,9 @@ $(window).scroll(function () {
                         <!--本文-->
                             <div id="annys-tx">
                                 <p>データソース：DB_ANNYYS/tbl_tensu（※DBManager更新対象）</p>
-                                <p><img class="center-block" src="images/090_000_youhou.png" alt="用法"></p> 
+                                 <div class="f_frame">
+                                <p><img class="center-block" src="images/090_000_youhou.png" alt="用法"></p>
+                                 </div>
                                 <p>このレイアウトではDB_ANNYYS/tbl_tensu収録データのうち現在有効なものでコメントに関るものを表示できるようになっています。主だった項目区分は上部に配置された各種ボタンで表示内容を切り替えられます。<br>
                                     ボタン：B[用法] B[部位] B[定型] B[補足] B[数日] B[その他] B[検索]</p>
                                 <p>【用法・コメントの採用登録】</p>
@@ -303,9 +319,15 @@ $(window).scroll(function () {
                                     <li>青字をさらにクリックするとリスト対象から外れます。</li>
                                     <li>用法が無い場合はフリーコメントコード[810000001]で入力してください。</li>
                                 </ul>
-                                <p><img class="center-block" src="images/090_000_youhou2.png" alt="用法2"></p>                             
-                                <p><img class="center-block" src="images/090_000_youhou3.png" alt="用法3"></p>                             
-                                <p><img class="center-block" src="images/090_000_youhou4.png" alt="用法4"></p>                             
+                                 <div class="f_frame">
+                                <p><img class="center-block" src="images/090_000_youhou2.png" alt="用法2"></p>  
+                                 </div>
+                                 <div class="f_frame">
+                                <p><img class="center-block" src="images/090_000_youhou3.png" alt="用法3"></p> 
+                                 </div>
+                                 <div class="f_frame">
+                                <p><img class="center-block" src="images/090_000_youhou4.png" alt="用法4"></p>
+                                 </div>
                             
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
@@ -318,8 +340,10 @@ $(window).scroll(function () {
                         <!--本文-->
                             <div id="annys-tx">
                                 <p>データソース：ANNYYS_D/tbl_inputcd(S[メンテナンス]>S[バックアップ],S[リストア]対象データ)</p>
+                                 <div class="f_frame">
                                 <p><img class="center-block" src="images/090_000_saiyou.png" alt="採用"></p> 
-                                <p class="padding-bottom30">各マスタで採用登録を行ったデータです。採用登録したデータはANNYYS_D内のtbl_inputcdに収録されているので他のANNYYS_Dと内容が重複しません。そのため診療科や医師別に利用する項目だけを登録し診療行為入力を簡素化することができます。</p>
+                                 </div>
+                                <p class="padding-bottom10">各マスタで採用登録を行ったデータです。採用登録したデータはANNYYS_D内のtbl_inputcdに収録されているので他のANNYYS_Dと内容が重複しません。そのため診療科や医師別に利用する項目だけを登録し診療行為入力を簡素化することができます。</p>
 
                             </div><!--annys-tx-->
                         </div><!--contents_wrapper-->
