@@ -7857,6 +7857,10 @@ a:hover {
         width: 30%;
     } 
     
+     .contents_wrapper .w40 {
+        width: 40%;
+    } 
+    
 }
  
 /* Mサイズ、デスクトップ : Medium Devices, Desktops */
@@ -8192,6 +8196,11 @@ a:hover {
     .contents_wrapper .float {
         float: left;
     }
+    
+    .contents_wrapper .w20 {
+        width: 20%;
+    } 
+    
     
      .contents_wrapper .w30 {
         width: 30%;

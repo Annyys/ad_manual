@@ -224,6 +224,7 @@ $(window).scroll(function () {
                         <tr><td>診療行為情報<br>病名も一緒に送信されます。</td><td>→<br>L[診察画面] B[終]<br></td><td>診療行為情報日レセのみで会計も可。</td></tr>
                         <tr><td>予約情報</td><td>→<br>L[外来受付] B[予約]確定時</td><td>予約情報<br>日レセで予約しても問題ありません。</td></tr>
                     </table>
+                    <br>
                     <p>ANNYYS_Dと日レセの連携に関する情報の関係はこのようになっています。</p>
 
                     <p>登録に関する業務（患者情報や保険・公費などの登録）は日レセ側で行うようにしてください。</p>
@@ -342,7 +343,7 @@ $(window).scroll(function () {
                     <p>会計オーダー送信後、日レセ側でまた会計処理をしていない場合
                         <strong>L[診察画面] B[終]</strong>で表示されたダイアログから[削除]を選択し一旦削除リクエストを送信します。</p>
                    
-                    <p><img class="center-block" src="images/110_000_teisei.png" alt="診療行為訂正"></p>
+                    <p><img class="center-block w50" src="images/110_000_teisei.png" alt="診療行為訂正"></p>
                     
                     <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_teisei1.png" alt="診療行為訂正1"></p>
@@ -378,7 +379,7 @@ $(window).scroll(function () {
                     というメッセージがでるので「ＯＫ」を押し削除処理を完了させます。</p>
                     <p>ANNYYS_Dでは<strong>L[診察画面] B[終]</strong>で表示されたダイアログから[再送信]を選択し診療行為を送信します。</p>
                     
-                    <p><img class="center-block" src="images/110_000_teisei_22.png" alt="診療行為訂正_22"></p>
+                    <p><img class="center-block w50" src="images/110_000_teisei_22.png" alt="診療行為訂正_22"></p>
                     
                     <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_teisei_23.png" alt="診療行為訂正_23"></p>
@@ -398,11 +399,17 @@ $(window).scroll(function () {
                 <!--本文-->
                 <div id="annys-tx">
                     <p>ANNYYS_Dでは基本設定に設定した処方（院内or院外）内容で日レセに情報が送信されます。たまに設定と違う方法で処方を処理したい場合はORCA側で処方内容を修正してください。</p>
+                     <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_shohouhenkou.png" alt="処方変更"></p>
+                    </div><!--f_flame-->
                     <p>例）院外処方を院内処方に変更する場合</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_shohouhenkou0.png" alt="処方変更0"></p>
+                    </div><!--f_flame-->
                     <p>基本設定が院外なので全て院外処方で受信されています。</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_shohouhenkou1.png" alt="処方変更1"></p>
+                    </div><!--f_flame-->
                     <p class="padding-bottom10">院外を院内に変えるには処方の２１２の部分を２１１に変更します。これで院外処方が院内処方に変更できます。
                     院内処方を院外処方に変えるにはこの逆の操作で行えます。
                     院内処方=２１１　院外処方＝２１２　となっています。
@@ -421,13 +428,17 @@ $(window).scroll(function () {
                 <div id="annys-tx">
                     <p>ANNYYS_Dで登録した予約情報も日レセに送信されます。
                         L[外来受付] B[予約]で予約内容を登録します。ポップアップに日時・時間、診療科、などをを入力します。</p>
+                    <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_yoyaku.png" alt="予約"></p>
+                    </div><!--f_flame-->
                     <p>予約完了のメッセージが表示されますので「OK」を押します。</p>
-                    <p><img class="center-block" src="images/110_000_yoyaku2.png" alt="予約2"></p>
+                    <p><img class="center-block w50" src="images/110_000_yoyaku2.png" alt="予約2"></p>
                     <p>送信された旨のメッセージが表示されますので「OK」を押します。</p>
-                    <p><img class="center-block" src="images/110_000_yoyaku3.png" alt="予約3"></p>
+                    <p><img class="center-block w50" src="images/110_000_yoyaku3.png" alt="予約3"></p>
                     <p>日レセでの予約登録画面で登録した予約内容が確認できます。</p>
+                     <div class="f_frame">
                     <p><img class="center-block" src="images/110_000_yoyaku4.png" alt="予約4"></p>
+                    </div>
                </div><!--annyy-tx-->
              </div><!--contents_wrapper-->
             </div><!--col-md-9-->
