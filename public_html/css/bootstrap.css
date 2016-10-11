@@ -7251,6 +7251,9 @@ a:hover {
         margin-top: 20px;
     }
        
+       .contents_wrapper .w30 {
+        width: 40%;
+    }
 
 
 }
@@ -7550,6 +7553,10 @@ a:hover {
      .contents_wrapper .w30 {
         width: 30%;
     } 
+    
+    .w30 {
+        width: 40%;
+    }
     
     
 }
