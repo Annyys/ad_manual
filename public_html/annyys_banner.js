@@ -1,0 +1,1 @@
+var TOP_URL="http://www.annyys.net/annyys_banner.html";
