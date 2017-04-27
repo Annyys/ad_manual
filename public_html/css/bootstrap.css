@@ -1108,6 +1108,7 @@ textarea {
 .navbar-form input {
     width: 200px;
     text-align: left;
+    display: none;
 }
 
 a {
@@ -7023,14 +7024,8 @@ a:hover {
 }
     
     
-    .mh4 {
-        margin-top: 10px;
-        font-weight: bold;
-    }
     
-    .navbar-form {
-  padding-bottom: 20px;
-}
+
 
 .menu-trigger,
 .menu-trigger span {
@@ -7045,7 +7040,7 @@ a:hover {
 }
 .menu-trigger span {
 	position: absolute;
-	left: 0;
+	left: 10px;
 	width: 100%;
 	height: 4px;
 	background-color: #333;
@@ -7055,11 +7050,15 @@ a:hover {
 	top: 0;
 }
 .menu-trigger span:nth-of-type(2) {
-	top: 20px;
+	top: 10px;
 }
 .menu-trigger span:nth-of-type(3) {
 	bottom: 0;
 }
+
+
+/*スリックナビ終わり*/
+
 
    /*TB画像調整*/
     .contents_wrapper img {
@@ -7682,6 +7681,7 @@ a:hover {
     
     .navbar-form {
   padding-bottom: 20px;
+  display: none;
 }
 
 .hr_h3 {
